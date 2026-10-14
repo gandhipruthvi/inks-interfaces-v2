@@ -1,8 +1,10 @@
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
-const V2_DIR = 'D:/Projects/Inks-Interfaces/portfolio-websites/inks-interfaces-v2';
-const projects = JSON.parse(fs.readFileSync(path.join(V2_DIR, 'src/data/projects.json'), 'utf-8'));
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const ROOT_DIR = path.resolve(__dirname, '..');
+const projects = JSON.parse(fs.readFileSync(path.join(ROOT_DIR, 'src/data/projects.json'), 'utf-8'));
 
 function escapeHtml(str) {
   if (!str) return '';
@@ -15,7 +17,7 @@ function escapeHtml(str) {
 }
 
 function generateCaseStudies() {
-  const workDir = path.join(V2_DIR, 'work');
+  const workDir = path.join(ROOT_DIR, 'work');
   if (!fs.existsSync(workDir)) {
     fs.mkdirSync(workDir, { recursive: true });
   }

@@ -1,8 +1,10 @@
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
-const V2_DIR = 'D:/Projects/Inks-Interfaces/portfolio-websites/inks-interfaces-v2';
-const projects = JSON.parse(fs.readFileSync(path.join(V2_DIR, 'src/data/projects.json'), 'utf-8'));
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const ROOT_DIR = path.resolve(__dirname, '..');
+const projects = JSON.parse(fs.readFileSync(path.join(ROOT_DIR, 'src/data/projects.json'), 'utf-8'));
 
 function generateWorkHtml() {
   // Collage items (all 28 items scattered at hand-placed positions)
@@ -183,7 +185,7 @@ function generateWorkHtml() {
 </body>
 </html>`;
 
-  fs.writeFileSync(path.join(V2_DIR, 'work.html'), html, 'utf-8');
+  fs.writeFileSync(path.join(ROOT_DIR, 'work.html'), html, 'utf-8');
   console.log('✅ Generated work.html with all 28 projects in Grid and List views');
 }
 

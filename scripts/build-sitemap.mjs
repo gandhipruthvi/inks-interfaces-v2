@@ -1,8 +1,10 @@
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
-const V2_DIR = 'D:/Projects/Inks-Interfaces/portfolio-websites/inks-interfaces-v2';
-const projects = JSON.parse(fs.readFileSync(path.join(V2_DIR, 'src/data/projects.json'), 'utf-8'));
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const ROOT_DIR = path.resolve(__dirname, '..');
+const projects = JSON.parse(fs.readFileSync(path.join(ROOT_DIR, 'src/data/projects.json'), 'utf-8'));
 
 function buildSitemap() {
   const baseUrl = 'https://inksandinterfaces.design';
@@ -39,7 +41,7 @@ function buildSitemap() {
 
   xml += `</urlset>\n`;
 
-  fs.writeFileSync(path.join(V2_DIR, 'public', 'sitemap.xml'), xml, 'utf-8');
+  fs.writeFileSync(path.join(ROOT_DIR, 'public', 'sitemap.xml'), xml, 'utf-8');
   console.log(`✅ Generated public/sitemap.xml with ${staticPages.length + projects.length} URLs`);
 
   // Also create public/robots.txt
@@ -49,7 +51,7 @@ Disallow: /_styleguide
 
 Sitemap: https://inksandinterfaces.design/sitemap.xml
 `;
-  fs.writeFileSync(path.join(V2_DIR, 'public', 'robots.txt'), robots, 'utf-8');
+  fs.writeFileSync(path.join(ROOT_DIR, 'public', 'robots.txt'), robots, 'utf-8');
   console.log('✅ Generated public/robots.txt');
 }
 

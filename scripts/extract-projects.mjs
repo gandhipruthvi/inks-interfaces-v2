@@ -1,9 +1,12 @@
 import fs from 'fs';
 import path from 'path';
 import sharp from 'sharp';
+import { fileURLToPath } from 'url';
 
-const OLD_SITE_DIR = 'D:/Projects/Inks-Interfaces/portfolio-websites/inks-interfaces-website';
-const V2_DIR = 'D:/Projects/Inks-Interfaces/portfolio-websites/inks-interfaces-v2';
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const ROOT_DIR = path.resolve(__dirname, '..');
+const OLD_SITE_DIR = path.resolve(ROOT_DIR, '../inks-interfaces-website');
+const V2_DIR = ROOT_DIR;
 
 const FEATURED_SLUGS = [
   'waggle',

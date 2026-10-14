@@ -1,10 +1,12 @@
 import sharp from 'sharp';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
-const V2_DIR = 'D:/Projects/Inks-Interfaces/portfolio-websites/inks-interfaces-v2';
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const ROOT_DIR = path.resolve(__dirname, '..');
 
 async function makeFavicon() {
-  const monogramPath = path.join(V2_DIR, 'public/brand/secondary-monogram.png');
+  const monogramPath = path.join(ROOT_DIR, 'public/brand/secondary-monogram.png');
   const monoResized = await sharp(monogramPath)
     .resize(48, 48, { fit: 'contain' })
     .toBuffer();
@@ -14,7 +16,7 @@ async function makeFavicon() {
   await sharp(svgBg)
     .composite([{ input: monoResized, gravity: 'center' }])
     .png()
-    .toFile(path.join(V2_DIR, 'public/favicon.png'));
+    .toFile(path.join(ROOT_DIR, 'public/favicon.png'));
 
   console.log('✅ Generated public/favicon.png on coral plate');
 }

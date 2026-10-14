@@ -1,9 +1,11 @@
 import fs from 'fs';
 import path from 'path';
 import sharp from 'sharp';
+import { fileURLToPath } from 'url';
 
-const V2_DIR = 'D:/Projects/Inks-Interfaces/portfolio-websites/inks-interfaces-v2';
-const projects = JSON.parse(fs.readFileSync(path.join(V2_DIR, 'src/data/projects.json'), 'utf-8'));
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const ROOT_DIR = path.resolve(__dirname, '..');
+const projects = JSON.parse(fs.readFileSync(path.join(ROOT_DIR, 'src/data/projects.json'), 'utf-8'));
 
 async function buildAtlas() {
   const ATLAS_SIZE = 2048;
@@ -24,7 +26,7 @@ async function buildAtlas() {
     const left = col * CELL_W;
     const top = row * CELL_H;
 
-    const imgPath = path.join(V2_DIR, 'public', p.cover.replace(/^\//, ''));
+    const imgPath = path.join(ROOT_DIR, 'public', p.cover.replace(/^\//, ''));
     if (!fs.existsSync(imgPath)) {
       console.warn(`Cover not found: ${imgPath}`);
       continue;
@@ -62,10 +64,10 @@ async function buildAtlas() {
   })
   .composite(composites)
   .webp({ quality: 85 })
-  .toFile(path.join(V2_DIR, 'public/assets/atlas.webp'));
+  .toFile(path.join(ROOT_DIR, 'public/assets/atlas.webp'));
 
   fs.writeFileSync(
-    path.join(V2_DIR, 'src/data/atlas-uvs.json'),
+    path.join(ROOT_DIR, 'src/data/atlas-uvs.json'),
     JSON.stringify(uvs, null, 2),
     'utf-8'
   );

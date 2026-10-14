@@ -1,9 +1,11 @@
 import fs from 'fs';
 import path from 'path';
 import assert from 'assert';
+import { fileURLToPath } from 'url';
 
-const V2_DIR = 'D:/Projects/Inks-Interfaces/portfolio-websites/inks-interfaces-v2';
-const jsonPath = path.join(V2_DIR, 'src', 'data', 'projects.json');
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const ROOT_DIR = path.resolve(__dirname, '..');
+const jsonPath = path.join(ROOT_DIR, 'src', 'data', 'projects.json');
 
 assert(fs.existsSync(jsonPath), 'projects.json must exist');
 const data = JSON.parse(fs.readFileSync(jsonPath, 'utf-8'));
@@ -22,7 +24,7 @@ for (const p of data) {
   if (p.featured) featuredCount++;
 
   // Verify cover image
-  const coverDiskPath = path.join(V2_DIR, 'public', p.cover.replace(/^\//, ''));
+  const coverDiskPath = path.join(ROOT_DIR, 'public', p.cover.replace(/^\//, ''));
   if (!fs.existsSync(coverDiskPath)) {
     console.error(`Missing cover image on disk: ${p.cover} (for ${p.slug})`);
     missingImages++;
@@ -30,7 +32,7 @@ for (const p of data) {
 
   // Verify gallery images
   for (const img of p.gallery) {
-    const diskPath = path.join(V2_DIR, 'public', img.replace(/^\//, ''));
+    const diskPath = path.join(ROOT_DIR, 'public', img.replace(/^\//, ''));
     if (!fs.existsSync(diskPath)) {
       console.error(`Missing gallery image on disk: ${img} (for ${p.slug})`);
       missingImages++;
