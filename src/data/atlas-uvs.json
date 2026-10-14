@@ -1,0 +1,226 @@
+[
+  {
+    "slug": "mickey-minnie-playschool",
+    "name": "Mickey Minnie Playschool",
+    "uMin": 0,
+    "uMax": 0.16650390625,
+    "vMin": 0.80029296875,
+    "vMax": 1
+  },
+  {
+    "slug": "zestee",
+    "name": "Zestee",
+    "uMin": 0.16650390625,
+    "uMax": 0.3330078125,
+    "vMin": 0.80029296875,
+    "vMax": 1
+  },
+  {
+    "slug": "vanya-luxe",
+    "name": "Vanya Luxe",
+    "uMin": 0.3330078125,
+    "uMax": 0.49951171875,
+    "vMin": 0.80029296875,
+    "vMax": 1
+  },
+  {
+    "slug": "piq",
+    "name": "PIQ",
+    "uMin": 0.49951171875,
+    "uMax": 0.666015625,
+    "vMin": 0.80029296875,
+    "vMax": 1
+  },
+  {
+    "slug": "the-ube-press",
+    "name": "The Ube Press",
+    "uMin": 0.666015625,
+    "uMax": 0.83251953125,
+    "vMin": 0.80029296875,
+    "vMax": 1
+  },
+  {
+    "slug": "globetap",
+    "name": "GlobeTap",
+    "uMin": 0.83251953125,
+    "uMax": 0.9990234375,
+    "vMin": 0.80029296875,
+    "vMax": 1
+  },
+  {
+    "slug": "terra-cork",
+    "name": "Terra Cork",
+    "uMin": 0,
+    "uMax": 0.16650390625,
+    "vMin": 0.6005859375,
+    "vMax": 0.80029296875
+  },
+  {
+    "slug": "ciao",
+    "name": "Ciao",
+    "uMin": 0.16650390625,
+    "uMax": 0.3330078125,
+    "vMin": 0.6005859375,
+    "vMax": 0.80029296875
+  },
+  {
+    "slug": "go-miles",
+    "name": "Go Miles",
+    "uMin": 0.3330078125,
+    "uMax": 0.49951171875,
+    "vMin": 0.6005859375,
+    "vMax": 0.80029296875
+  },
+  {
+    "slug": "oakmere",
+    "name": "Oakmere",
+    "uMin": 0.49951171875,
+    "uMax": 0.666015625,
+    "vMin": 0.6005859375,
+    "vMax": 0.80029296875
+  },
+  {
+    "slug": "matcha-den",
+    "name": "Matcha Den",
+    "uMin": 0.666015625,
+    "uMax": 0.83251953125,
+    "vMin": 0.6005859375,
+    "vMax": 0.80029296875
+  },
+  {
+    "slug": "the-saucy-heat",
+    "name": "The Saucy Heat",
+    "uMin": 0.83251953125,
+    "uMax": 0.9990234375,
+    "vMin": 0.6005859375,
+    "vMax": 0.80029296875
+  },
+  {
+    "slug": "lab-coat-media",
+    "name": "Lab Coat Media",
+    "uMin": 0,
+    "uMax": 0.16650390625,
+    "vMin": 0.40087890625,
+    "vMax": 0.6005859375
+  },
+  {
+    "slug": "waggle",
+    "name": "Waggle",
+    "uMin": 0.16650390625,
+    "uMax": 0.3330078125,
+    "vMin": 0.40087890625,
+    "vMax": 0.6005859375
+  },
+  {
+    "slug": "misomaki",
+    "name": "Misomaki",
+    "uMin": 0.3330078125,
+    "uMax": 0.49951171875,
+    "vMin": 0.40087890625,
+    "vMax": 0.6005859375
+  },
+  {
+    "slug": "hardin-jewels",
+    "name": "Hardin Jewels",
+    "uMin": 0.49951171875,
+    "uMax": 0.666015625,
+    "vMin": 0.40087890625,
+    "vMax": 0.6005859375
+  },
+  {
+    "slug": "evoque",
+    "name": "Evoque",
+    "uMin": 0.666015625,
+    "uMax": 0.83251953125,
+    "vMin": 0.40087890625,
+    "vMax": 0.6005859375
+  },
+  {
+    "slug": "trivid-yoga",
+    "name": "Trivid Yoga",
+    "uMin": 0.83251953125,
+    "uMax": 0.9990234375,
+    "vMin": 0.40087890625,
+    "vMax": 0.6005859375
+  },
+  {
+    "slug": "paperboat",
+    "name": "Paperboat",
+    "uMin": 0,
+    "uMax": 0.16650390625,
+    "vMin": 0.201171875,
+    "vMax": 0.40087890625
+  },
+  {
+    "slug": "woven-wax",
+    "name": "Woven Wax",
+    "uMin": 0.16650390625,
+    "uMax": 0.3330078125,
+    "vMin": 0.201171875,
+    "vMax": 0.40087890625
+  },
+  {
+    "slug": "golden-crust",
+    "name": "Golden Crust",
+    "uMin": 0.3330078125,
+    "uMax": 0.49951171875,
+    "vMin": 0.201171875,
+    "vMax": 0.40087890625
+  },
+  {
+    "slug": "royal-eats",
+    "name": "Royal Eats",
+    "uMin": 0.49951171875,
+    "uMax": 0.666015625,
+    "vMin": 0.201171875,
+    "vMax": 0.40087890625
+  },
+  {
+    "slug": "plush-paws",
+    "name": "Plush Paws",
+    "uMin": 0.666015625,
+    "uMax": 0.83251953125,
+    "vMin": 0.201171875,
+    "vMax": 0.40087890625
+  },
+  {
+    "slug": "pure-sip",
+    "name": "Pure Sip",
+    "uMin": 0.83251953125,
+    "uMax": 0.9990234375,
+    "vMin": 0.201171875,
+    "vMax": 0.40087890625
+  },
+  {
+    "slug": "rich-kanya",
+    "name": "Rich Kanya",
+    "uMin": 0,
+    "uMax": 0.16650390625,
+    "vMin": 0.00146484375,
+    "vMax": 0.201171875
+  },
+  {
+    "slug": "kitkat-protein-bar",
+    "name": "Kitkat Protein Bar",
+    "uMin": 0.16650390625,
+    "uMax": 0.3330078125,
+    "vMin": 0.00146484375,
+    "vMax": 0.201171875
+  },
+  {
+    "slug": "satori-bites",
+    "name": "Satori Bites",
+    "uMin": 0.3330078125,
+    "uMax": 0.49951171875,
+    "vMin": 0.00146484375,
+    "vMax": 0.201171875
+  },
+  {
+    "slug": "silver-sphere-tech",
+    "name": "Silver Sphere Tech",
+    "uMin": 0.49951171875,
+    "uMax": 0.666015625,
+    "vMin": 0.00146484375,
+    "vMax": 0.201171875
+  }
+]

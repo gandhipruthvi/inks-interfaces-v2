@@ -1,0 +1,76 @@
+/* ============================================================
+   inks & interfaces v2 — design tokens
+   ============================================================ */
+
+:root {
+  /* --- Palette (brand locked) --- */
+  --ink: #0B0B0B;          /* Base off-black */
+  --ink-pure: #000000;     /* Logo plates, pattern pure black */
+  --ink-2: #141414;        /* Raised surfaces, card backings */
+  --ink-3: #1A1A1A;        /* Smoke surface */
+  --paper: #F5F1EC;        /* Reading sections, paper background */
+  --paper-2: #ECE6DE;      /* Paper shadow tone / borders */
+  --coral: #F25B54;        /* Primary brand accent */
+  --coral-deep: #C9433D;   /* 3D shading tone */
+  --coral-80: #F47D77;
+  --coral-60: #F89F9B;
+  --coral-40: #FBC1BE;
+  --coral-20: #FDE2E1;
+  --ash: #8A8A8A;          /* Muted meta labels */
+  --ash-dark: #666666;
+  --line: rgba(245, 241, 236, 0.12);       /* Dark mode dividers */
+  --line-strong: rgba(245, 241, 236, 0.24);
+  --line-dark: rgba(11, 11, 11, 0.12);     /* Paper mode dividers */
+
+  /* --- Typography --- */
+  --font-primary: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+
+  /* Optional italic accent: defaults to Space Grotesk. Brand deviation if Instrument Serif is turned on */
+  --type-accent: var(--font-primary);
+  /* --type-accent: 'Instrument Serif', Georgia, serif; */
+
+  /* Type Scale */
+  --text-poster: clamp(64px, 14vw, 220px);
+  --text-hero: clamp(52px, 9vw, 150px);
+  --text-mega: clamp(40px, 6vw, 96px);
+  --text-h1: clamp(36px, 5vw, 64px);
+  --text-h2: clamp(28px, 3.8vw, 44px);
+  --text-h3: clamp(22px, 2.4vw, 32px);
+  --text-body-lg: clamp(18px, 1.4vw, 22px);
+  --text-body: 16px;
+  --text-body-sm: 14px;
+  --text-caption: 12px;
+  --text-mono-label: 11px;
+
+  /* Font Weights */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 128px;
+  --space-11: 192px;
+
+  /* Layout */
+  --content-max-width: 1440px;
+  --gutter: clamp(20px, 4vw, 64px);
+  --header-height: 80px;
+
+  /* Motion Tokens */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-io: cubic-bezier(0.76, 0, 0.24, 1);
+  --t-fast: 0.25s;
+  --t-base: 0.6s;
+  --t-slow: 1.2s;
+}

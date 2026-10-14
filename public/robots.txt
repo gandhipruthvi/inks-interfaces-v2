@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /_styleguide
+
+Sitemap: https://inksandinterfaces.design/sitemap.xml

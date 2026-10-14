@@ -1,0 +1,275 @@
+/* ============================================================
+   inks & interfaces v2 — /work page styles
+   ============================================================ */
+
+.work-page-header {
+  padding: calc(var(--header-height) + var(--space-8)) var(--gutter) var(--space-6);
+  position: relative;
+  overflow: hidden;
+}
+
+.work-header-title {
+  font-size: var(--text-hero);
+  font-weight: var(--fw-light);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.work-header-count {
+  font-family: var(--font-mono);
+  font-size: clamp(20px, 3vw, 36px);
+  color: var(--coral);
+  vertical-align: super;
+}
+
+/* Scattered Collage Hero (Madeline effect) */
+.collage-hero {
+  position: relative;
+  height: 60vh;
+  margin-top: var(--space-6);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--ink-2);
+  border: 1px solid var(--line);
+}
+
+.collage-item {
+  position: absolute;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 16px 36px rgba(0,0,0,0.5);
+  border: 1px solid var(--line);
+  will-change: transform;
+}
+
+.collage-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Sticky Controls */
+.work-controls-bar {
+  position: sticky;
+  top: var(--header-height);
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--gutter);
+  background: rgba(11, 11, 11, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.work-filter-chips {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.work-filter-chip {
+  font-family: var(--font-mono);
+  font-size: var(--text-mono-label);
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: var(--ink-2);
+  border: 1px solid var(--line);
+  color: var(--ash);
+  cursor: pointer;
+  transition: all var(--t-fast) var(--ease-out);
+}
+
+.work-filter-chip.active, .work-filter-chip:hover {
+  background: var(--coral);
+  color: var(--ink);
+  border-color: var(--coral);
+}
+
+.work-view-toggle {
+  display: flex;
+  gap: var(--space-2);
+  background: var(--ink-2);
+  padding: 4px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+}
+
+.view-btn {
+  font-family: var(--font-mono);
+  font-size: var(--text-mono-label);
+  padding: 6px 14px;
+  border-radius: 999px;
+  color: var(--ash);
+  cursor: pointer;
+  transition: all var(--t-fast) var(--ease-out);
+}
+
+.view-btn.active {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+/* Container for Work Grid and List */
+.work-container {
+  padding: var(--space-8) var(--gutter) var(--space-11);
+  min-height: 80vh;
+}
+
+/* Asymmetric 12-col Masonry Grid */
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--space-8) var(--space-6);
+}
+
+.work-grid-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform var(--t-fast) var(--ease-out);
+}
+
+.work-grid-card.span-7 {
+  grid-column: span 7;
+}
+
+.work-grid-card.span-5 {
+  grid-column: span 5;
+}
+
+.work-grid-card.span-4 {
+  grid-column: span 4;
+}
+
+.work-grid-card.span-8 {
+  grid-column: span 8;
+}
+
+.work-card-thumb {
+  width: 100%;
+  aspect-ratio: 16/10;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--ink-2);
+  border: 1px solid var(--line);
+  position: relative;
+  margin-bottom: var(--space-3);
+}
+
+.work-card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease-out);
+}
+
+.work-grid-card:hover .work-card-thumb img {
+  transform: scale(1.04);
+}
+
+.work-card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: var(--space-2);
+}
+
+.work-card-title {
+  font-size: var(--text-h3);
+  font-weight: var(--fw-medium);
+  letter-spacing: -0.02em;
+}
+
+.work-card-sub {
+  font-family: var(--font-mono);
+  font-size: var(--text-mono-label);
+  color: var(--ash);
+  text-transform: uppercase;
+}
+
+/* List View (Era List style) */
+.work-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.work-list-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr 80px;
+  align-items: center;
+  padding: var(--space-6) 0;
+  border-bottom: 1px solid var(--line);
+  transition: opacity 0.3s ease, padding 0.2s ease;
+  position: relative;
+}
+
+.work-list-row:hover {
+  padding-left: var(--space-4);
+  border-color: var(--coral);
+}
+
+.work-list-name {
+  font-size: clamp(24px, 3.2vw, 44px);
+  font-weight: var(--fw-light);
+  letter-spacing: -0.03em;
+}
+
+.work-list-category {
+  font-family: var(--font-mono);
+  font-size: var(--text-mono-label);
+  color: var(--coral);
+  text-transform: uppercase;
+}
+
+.work-list-services {
+  font-size: var(--text-body-sm);
+  color: var(--ash);
+}
+
+.work-list-year {
+  font-family: var(--font-mono);
+  font-size: var(--text-mono-label);
+  color: var(--ash);
+  text-align: right;
+}
+
+/* Concept Badge */
+.concept-tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  padding: 2px 8px;
+  background: rgba(242, 91, 84, 0.15);
+  border: 1px solid var(--coral);
+  color: var(--coral);
+  border-radius: 999px;
+  margin-left: var(--space-2);
+  vertical-align: middle;
+}
+
+@media (max-width: 900px) {
+  .work-grid-card.span-7,
+  .work-grid-card.span-5,
+  .work-grid-card.span-4,
+  .work-grid-card.span-8 {
+    grid-column: span 12;
+  }
+  .work-list-row {
+    grid-template-columns: 1fr auto;
+    gap: var(--space-2);
+  }
+  .work-list-services {
+    display: none;
+  }
+  .collage-hero {
+    height: 40vh;
+  }
+}

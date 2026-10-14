@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>styleguide — inks &amp; interfaces</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/styles/tokens.css">
+  <link rel="stylesheet" href="/src/styles/base.css">
+  <link rel="stylesheet" href="/src/styles/chrome.css">
+  <style>
+    .sg-container {
+      max-width: var(--content-max-width);
+      margin: 0 auto;
+      padding: calc(var(--header-height) + var(--space-8)) var(--gutter) var(--space-11);
+    }
+    .sg-section {
+      margin-bottom: var(--space-10);
+      padding-bottom: var(--space-8);
+      border-bottom: 1px solid var(--line);
+    }
+    .sg-grid-colors {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: var(--space-4);
+      margin-top: var(--space-5);
+    }
+    .sg-swatch {
+      height: 110px;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: var(--space-3);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .sg-swatch-name {
+      font-weight: var(--fw-bold);
+      font-size: var(--text-body-sm);
+    }
+    .sg-swatch-hex {
+      font-family: var(--font-mono);
+      font-size: var(--text-mono-label);
+      opacity: 0.8;
+    }
+    .sg-type-row {
+      margin-bottom: var(--space-6);
+      padding-bottom: var(--space-4);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .sg-space-bar {
+      background: var(--coral);
+      height: 24px;
+      border-radius: 4px;
+      margin-bottom: var(--space-2);
+    }
+    .sg-cursor-demos {
+      display: flex;
+      gap: var(--space-4);
+      flex-wrap: wrap;
+      margin-top: var(--space-5);
+    }
+    .sg-cursor-box {
+      width: 200px;
+      height: 120px;
+      background: var(--ink-2);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: var(--text-body-sm);
+      text-transform: lowercase;
+    }
+  </style>
+</head>
+<body>
+  <div class="grain-overlay" aria-hidden="true"></div>
+  <a class="skip-link" href="#main-content">skip to main content</a>
+
+  <header class="site-header">
+    <a href="/" class="header-brand" aria-label="inks and interfaces home">
+      <img src="/brand/wordmark-white-sm.webp" alt="inks &amp; interfaces" class="header-logo" width="115" height="36">
+    </a>
+    <nav class="header-nav" aria-label="primary navigation">
+      <a href="/work" class="nav-link">work</a>
+      <a href="/services" class="nav-link">services</a>
+      <a href="/studio" class="nav-link">studio</a>
+      <a href="/contact" class="nav-link">contact</a>
+    </nav>
+    <div class="header-right">
+      <div class="header-time" aria-live="polite">surat 00:00:00 ist</div>
+      <a href="/contact" class="coral-pill" data-magnetic>start a project</a>
+    </div>
+  </header>
+
+  <main id="main-content" class="sg-container">
+    <div class="sg-section">
+      <p class="mono-label">// design system foundation</p>
+      <h1 style="font-size: var(--text-hero); margin-top: var(--space-3);" data-reveal="lines">
+        system tokens &amp; motion
+      </h1>
+      <p style="font-size: var(--text-body-lg); color: var(--ash); margin-top: var(--space-4);" data-reveal="fade">
+        Space Grotesk primary typography, coral on ink black contrast, tactile 3D depth palette, and masked motion primitives.
+      </p>
+    </div>
+
+    <!-- 1. Color Palette -->
+    <section class="sg-section" aria-labelledby="heading-palette">
+      <p class="mono-label">// 01 — color palette</p>
+      <h2 id="heading-palette" style="font-size: var(--text-h2); margin: var(--space-2) 0 var(--space-4);">brand locked colors</h2>
+      
+      <div class="sg-grid-colors">
+        <div class="sg-swatch" style="background: var(--ink); color: var(--paper);">
+          <span class="sg-swatch-name">--ink (base)</span>
+          <span class="sg-swatch-hex">#0B0B0B</span>
+        </div>
+        <div class="sg-swatch" style="background: var(--ink-2); color: var(--paper);">
+          <span class="sg-swatch-name">--ink-2 (raised)</span>
+          <span class="sg-swatch-hex">#141414</span>
+        </div>
+        <div class="sg-swatch" style="background: var(--ink-3); color: var(--paper);">
+          <span class="sg-swatch-name">--ink-3 (smoke)</span>
+          <span class="sg-swatch-hex">#1A1A1A</span>
+        </div>
+        <div class="sg-swatch" style="background: var(--paper); color: var(--ink);">
+          <span class="sg-swatch-name">--paper (reading)</span>
+          <span class="sg-swatch-hex">#F5F1EC</span>
+        </div>
+        <div class="sg-swatch" style="background: var(--paper-2); color: var(--ink);">
+          <span class="sg-swatch-name">--paper-2 (shadow)</span>
+          <span class="sg-swatch-hex">#ECE6DE</span>
+        </div>
+        <div class="sg-swatch" style="background: var(--coral); color: var(--ink);">
+          <span class="sg-swatch-name">--coral (primary)</span>
+          <span class="sg-swatch-hex">#F25B54</span>
+        </div>
+        <div class="sg-swatch" style="background: var(--coral-deep); color: var(--paper);">
+          <span class="sg-swatch-name">--coral-deep (3D shade)</span>
+          <span class="sg-swatch-hex">#C9433D</span>
+        </div>
+        <div class="sg-swatch" style="background: var(--coral-80); color: var(--ink);">
+          <span class="sg-swatch-name">--coral-80</span>
+          <span class="sg-swatch-hex">#F47D77</span>
+        </div>
+        <div class="sg-swatch" style="background: var(--coral-20); color: var(--ink);">
+          <span class="sg-swatch-name">--coral-20</span>
+          <span class="sg-swatch-hex">#FDE2E1</span>
+        </div>
+        <div class="sg-swatch" style="background: var(--ash); color: var(--ink);">
+          <span class="sg-swatch-name">--ash (labels)</span>
+          <span class="sg-swatch-hex">#8A8A8A</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Typography Scale -->
+    <section class="sg-section" aria-labelledby="heading-type">
+      <p class="mono-label">// 02 — typography scale</p>
+      <h2 id="heading-type" style="font-size: var(--text-h2); margin: var(--space-2) 0 var(--space-5);">space grotesk contrasts</h2>
+
+      <div class="sg-type-row">
+        <span class="mono-label">poster (clamp 64px - 220px)</span>
+        <div style="font-size: var(--text-poster); font-weight: 300; line-height: 0.95;">growth.</div>
+      </div>
+
+      <div class="sg-type-row">
+        <span class="mono-label">hero (clamp 52px - 150px)</span>
+        <div style="font-size: var(--text-hero); font-weight: 300; line-height: 1.0;">brands founders sell with.</div>
+      </div>
+
+      <div class="sg-type-row">
+        <span class="mono-label">mega h1 (clamp 40px - 96px)</span>
+        <div style="font-size: var(--text-mega); font-weight: 300;">design that moves market caps.</div>
+      </div>
+
+      <div class="sg-type-row">
+        <span class="mono-label">section h2 (clamp 28px - 44px)</span>
+        <div style="font-size: var(--text-h2); font-weight: 400;">why two founders beat one bloated agency.</div>
+      </div>
+
+      <div class="sg-type-row">
+        <span class="mono-label">body large (clamp 18px - 22px)</span>
+        <div style="font-size: var(--text-body-lg); font-weight: 400;">
+          Strategy, identity, packaging and product design for founders who need to look as good as they are.
+        </div>
+      </div>
+
+      <div class="sg-type-row">
+        <span class="mono-label">jetbrains mono 11px (+0.12em tracking)</span>
+        <div class="mono-label" style="font-size: var(--text-mono-label); margin-top: var(--space-2);">
+          // 001 — BRAND STRATEGY · 2026 · SURAT, IN
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Cursor States -->
+    <section class="sg-section" aria-labelledby="heading-cursor">
+      <p class="mono-label">// 03 — cursor interactions</p>
+      <h2 id="heading-cursor" style="font-size: var(--text-h2); margin: var(--space-2) 0 var(--space-4);">magnetic &amp; hover states</h2>
+      <p style="color: var(--ash);">Hover over the elements below on desktop to test cursor modes:</p>
+      
+      <div class="sg-cursor-demos">
+        <div class="sg-cursor-box" data-cursor="view">hover: view mode</div>
+        <div class="sg-cursor-box" data-cursor="drag">hover: drag mode</div>
+        <div class="sg-cursor-box" data-cursor="hide">hover: hide cursor</div>
+        <button class="coral-pill" data-magnetic style="align-self: center;">magnetic button</button>
+      </div>
+    </section>
+
+    <!-- 4. Motion / Reveal Primitives -->
+    <section class="sg-section" aria-labelledby="heading-motion">
+      <p class="mono-label">// 04 — reveal primitives</p>
+      <h2 id="heading-motion" style="font-size: var(--text-h2); margin: var(--space-2) 0 var(--space-4);">masked text &amp; unclip reveals</h2>
+
+      <div style="margin-bottom: var(--space-7);">
+        <span class="mono-label">data-reveal="lines" (masked line rising)</span>
+        <h3 style="font-size: var(--text-h2); margin-top: var(--space-2);" data-reveal="lines">
+          every letter emerges from beneath an invisible threshold
+        </h3>
+      </div>
+
+      <div style="margin-bottom: var(--space-7);">
+        <span class="mono-label">data-reveal="image" (clip-path inset reveal)</span>
+        <div style="max-width: 480px; margin-top: var(--space-3);" data-reveal="image">
+          <img src="/assets/projects/waggle/waggle-8.webp" alt="Waggle Packaging Showcase" width="480" height="480" style="border-radius: 8px;">
+        </div>
+      </div>
+
+      <div>
+        <span class="mono-label">data-reveal="fade" (staggered cards)</span>
+        <div style="display: flex; gap: var(--space-4); margin-top: var(--space-3); flex-wrap: wrap;">
+          <div style="padding: var(--space-4); background: var(--ink-2); border: 1px solid var(--line); border-radius: 8px; width: 160px;" data-reveal="fade">outcome 01</div>
+          <div style="padding: var(--space-4); background: var(--ink-2); border: 1px solid var(--line); border-radius: 8px; width: 160px;" data-reveal="fade">outcome 02</div>
+          <div style="padding: var(--space-4); background: var(--ink-2); border: 1px solid var(--line); border-radius: 8px; width: 160px;" data-reveal="fade">outcome 03</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="mono-label" style="margin-bottom: var(--space-3);">// next steps</div>
+      <div class="footer-cta-headline">let's grow yours.</div>
+      <div class="footer-cta-action">
+        <a href="/contact" class="coral-pill" data-magnetic style="font-size: 18px; padding: 16px 36px;">
+          start a project &rarr;
+        </a>
+        <a href="mailto:letscreate.inksandinterfaces@gmail.com" style="color: var(--ash); font-size: var(--text-body-lg);">
+          letscreate.inksandinterfaces@gmail.com
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-middle">
+      <div class="footer-col">
+        <h5>navigation</h5>
+        <a href="/work">work</a>
+        <a href="/services">services</a>
+        <a href="/studio">studio</a>
+        <a href="/contact">contact</a>
+      </div>
+      <div class="footer-col">
+        <h5>social</h5>
+        <a href="https://www.instagram.com/inks.and.interfaces" target="_blank" rel="noopener">instagram</a>
+        <a href="https://x.com/Inks_Interfaces" target="_blank" rel="noopener">x / twitter</a>
+        <a href="https://www.behance.net/shivanirotliwala" target="_blank" rel="noopener">behance</a>
+      </div>
+      <div class="footer-col">
+        <h5>studio</h5>
+        <p>surat, gujarat, india</p>
+        <p>available globally</p>
+        <p class="mono-label" style="margin-top: var(--space-2); color: var(--coral);">booking q1 2027</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; 2026 inks &amp; interfaces &middot; made in surat</span>
+      <span>set in space grotesk &middot; with care</span>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>

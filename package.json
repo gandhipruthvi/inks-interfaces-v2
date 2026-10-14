@@ -1,0 +1,22 @@
+{
+  "name": "inks-interfaces-v2",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "node scripts/generate-case-studies.mjs && node scripts/build-sitemap.mjs && vite build",
+    "preview": "vite preview",
+    "check-data": "node scripts/check-data.mjs",
+    "images": "node scripts/images.mjs"
+  },
+  "dependencies": {
+    "gsap": "^3.12.5",
+    "lenis": "^1.1.18",
+    "three": "^0.170.0"
+  },
+  "devDependencies": {
+    "sharp": "^0.33.5",
+    "vite": "^5.4.10"
+  }
+}

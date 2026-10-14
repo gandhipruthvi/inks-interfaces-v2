@@ -1,0 +1,403 @@
+/* ============================================================
+   inks & interfaces v2 — case study styles (10 Beats)
+   ============================================================ */
+
+/* --- Beat 1: Hero & Spotlight Reveal --- */
+.cs-hero {
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: calc(var(--header-height) + var(--space-6)) var(--gutter) var(--space-8);
+  overflow: hidden;
+  background-color: var(--ink);
+}
+
+.cs-hero-backdrop {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.cs-hero-backdrop img.cs-cover-base {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.35;
+}
+
+/* Cursor Spotlight Reveal (§8.1 / Video 3) */
+.cs-spotlight-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  mask-image: radial-gradient(circle 220px at var(--spot-x, 50%) var(--spot-y, 50%), black 0%, transparent 100%);
+  -webkit-mask-image: radial-gradient(circle 220px at var(--spot-x, 50%) var(--spot-y, 50%), black 0%, transparent 100%);
+}
+
+.cs-spotlight-overlay img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: contrast(1.2) brightness(1.1);
+}
+
+.cs-hero-content {
+  position: relative;
+  z-index: 3;
+}
+
+.cs-hero-name {
+  font-size: clamp(64px, 15vw, 240px);
+  font-weight: var(--fw-light);
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+  margin-bottom: var(--space-6);
+  color: #FFFFFF;
+}
+
+.cs-hero-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--space-5);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--line);
+}
+
+.cs-meta-col span {
+  font-family: var(--font-mono);
+  font-size: var(--text-mono-label);
+  color: var(--ash);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.cs-meta-col strong {
+  font-size: var(--text-body-sm);
+  font-weight: var(--fw-medium);
+  color: var(--paper);
+}
+
+/* --- Beats 1-2: Founder + Problem (Paper Background) --- */
+.cs-problem-section {
+  background-color: var(--paper);
+  color: var(--ink);
+  padding: var(--space-11) var(--gutter);
+}
+
+.cs-problem-grid {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: var(--space-9);
+}
+
+.cs-problem-pullquote {
+  font-size: clamp(28px, 4vw, 52px);
+  font-weight: var(--fw-light);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+}
+
+.cs-problem-narrative h4 {
+  font-size: var(--text-h3);
+  font-weight: var(--fw-bold);
+  margin-bottom: var(--space-4);
+  color: var(--ink);
+}
+
+.cs-problem-narrative p {
+  font-size: var(--text-body-lg);
+  color: var(--ash-dark);
+  line-height: 1.6;
+}
+
+/* --- Beats 3-4: Market + Strategy --- */
+.cs-strategy-section {
+  background-color: var(--ink);
+  color: var(--paper);
+  padding: var(--space-11) var(--gutter);
+}
+
+.cs-strategy-grid {
+  display: grid;
+  grid-template-columns: 6fr 6fr;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+.cs-strategy-plate {
+  background-color: var(--coral);
+  color: var(--ink);
+  padding: var(--space-8);
+  border-radius: 12px;
+}
+
+.cs-strategy-plate h4 {
+  font-family: var(--font-mono);
+  font-size: var(--text-mono-label);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin-bottom: var(--space-3);
+  color: var(--ink);
+}
+
+.cs-strategy-statement {
+  font-size: clamp(22px, 2.5vw, 36px);
+  font-weight: var(--fw-medium);
+  line-height: 1.2;
+}
+
+/* --- Beat 5: Solution (Palette & Logo Plate) --- */
+.cs-solution-section {
+  background-color: var(--ink-2);
+  padding: var(--space-10) var(--gutter);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.cs-palette-row {
+  display: flex;
+  height: 80px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: var(--space-6) 0 var(--space-8);
+  border: 1px solid var(--line);
+}
+
+.cs-palette-swatch {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  padding: var(--space-2) var(--space-3);
+  font-family: var(--font-mono);
+  font-size: var(--text-mono-label);
+  transition: flex 0.4s var(--ease-out);
+}
+.cs-palette-swatch:hover {
+  flex: 2;
+}
+
+.cs-logo-showcase {
+  background: #000000; /* Strict solid #000 logo plate */
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  padding: var(--space-8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 240px;
+}
+
+.cs-logo-showcase img {
+  max-height: 120px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* --- Beat 6: Design Execution (Horizontal Pinned Gallery) --- */
+.cs-gallery-section {
+  position: relative;
+  background-color: var(--ink);
+  overflow: hidden;
+  padding: var(--space-9) 0;
+}
+
+.cs-gallery-header {
+  padding: 0 var(--gutter) var(--space-6);
+}
+
+.cs-horizontal-track {
+  display: flex;
+  gap: var(--space-6);
+  padding: 0 var(--gutter);
+  width: max-content;
+  will-change: transform;
+}
+
+.cs-gallery-item {
+  width: clamp(380px, 45vw, 760px);
+  height: 60vh;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--ink-2);
+  border: 1px solid var(--line);
+  flex-shrink: 0;
+  position: relative;
+}
+
+.cs-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --- Beat 7: Business Impact --- */
+.cs-impact-section {
+  background-color: var(--ink);
+  padding: var(--space-10) var(--gutter);
+  border-top: 1px solid var(--line);
+}
+
+.cs-impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-6);
+  margin-top: var(--space-6);
+}
+
+.cs-impact-card {
+  padding: var(--space-6);
+  background: var(--ink-2);
+  border-radius: 8px;
+  border: 1px solid var(--line);
+}
+
+.cs-impact-val {
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: var(--fw-light);
+  color: var(--coral);
+  font-variant-numeric: tabular-nums;
+}
+
+.cs-impact-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-mono-label);
+  color: var(--ash);
+  margin-top: var(--space-2);
+  text-transform: uppercase;
+}
+
+/* --- Beat 8: Founder Quote (Stillpoint Split) --- */
+.cs-quote-section {
+  background-color: var(--paper);
+  color: var(--ink);
+  padding: var(--space-11) var(--gutter);
+}
+
+.cs-quote-split {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+.cs-quote-img {
+  border-radius: 12px;
+  overflow: hidden;
+  height: 440px;
+}
+.cs-quote-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cs-quote-card {
+  padding: var(--space-8);
+  background: #FFFFFF;
+  border-radius: 12px;
+  border: 1px solid var(--paper-2);
+  box-shadow: 0 16px 36px rgba(0,0,0,0.06);
+}
+
+.cs-quote-card blockquote {
+  font-size: clamp(24px, 3.2vw, 42px);
+  font-weight: var(--fw-light);
+  line-height: 1.2;
+  margin-bottom: var(--space-4);
+  color: var(--ink);
+}
+
+/* --- Beat 9: Key Lessons --- */
+.cs-lessons-section {
+  background-color: var(--ink);
+  color: var(--paper);
+  padding: var(--space-10) var(--gutter);
+  border-top: 1px solid var(--line);
+}
+
+.cs-lessons-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  margin-top: var(--space-6);
+  max-width: 820px;
+}
+
+.cs-lesson-item {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: var(--space-4);
+}
+
+.cs-lesson-num {
+  font-family: var(--font-mono);
+  font-size: var(--text-body);
+  color: var(--coral);
+}
+
+/* --- Beat 10: CTA + Next Project Reel --- */
+.cs-next-section {
+  background-color: var(--ink);
+  padding: var(--space-11) var(--gutter) var(--space-9);
+  text-align: center;
+  position: relative;
+  border-top: 1px solid var(--line);
+}
+
+.cs-next-reel-card {
+  max-width: 720px;
+  margin: var(--space-8) auto 0;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  background: var(--ink-2);
+  border: 1px solid var(--line);
+  padding: var(--space-7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.cs-next-thumb {
+  width: 100%;
+  height: 320px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.cs-next-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.progress-ring-circle {
+  transition: stroke-dashoffset 0.1s linear;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+@media (max-width: 860px) {
+  .cs-problem-grid,
+  .cs-strategy-grid,
+  .cs-quote-split {
+    grid-template-columns: 1fr;
+  }
+  .cs-gallery-item {
+    width: 85vw;
+    height: 45vh;
+  }
+}

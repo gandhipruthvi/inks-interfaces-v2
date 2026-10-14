@@ -1,0 +1,2366 @@
+[
+  {
+    "slug": "mickey-minnie-playschool",
+    "name": "Mickey Minnie Playschool",
+    "subtitle": "branding case study",
+    "category": "branding",
+    "tags": [
+      "#branding",
+      "#identity",
+      "#strategy"
+    ],
+    "year": "2025",
+    "role": "Brand identity, visual system",
+    "services": [
+      "Logo system",
+      "Brand guidelines",
+      "Visual system",
+      "Print assets"
+    ],
+    "location": "Noida, IN",
+    "cover": "/assets/projects/mickey-minnie-playschool/mickey-minnie-playschool-1.webp",
+    "gallery": [
+      "/assets/projects/mickey-minnie-playschool/mickey-minnie-playschool-1.webp",
+      "/assets/projects/mickey-minnie-playschool/mickey-minnie-playschool-2.webp",
+      "/assets/projects/mickey-minnie-playschool/identity/primary-logo-1.webp",
+      "/assets/projects/mickey-minnie-playschool/identity/primary-logo-transparent-background-0.webp",
+      "/assets/projects/mickey-minnie-playschool/Frame_12__2_.webp",
+      "/assets/projects/mickey-minnie-playschool/Frame_12__3_.webp",
+      "/assets/projects/mickey-minnie-playschool/Frame_12__1_.webp",
+      "/assets/projects/mickey-minnie-playschool/Frame_15.webp"
+    ],
+    "alt": {
+      "/assets/projects/mickey-minnie-playschool/mickey-minnie-playschool-1.webp": "Mickey &amp; Minnie Playschool hero",
+      "/assets/projects/mickey-minnie-playschool/mickey-minnie-playschool-2.webp": "Mickey &amp; Minnie Playschool secondary",
+      "/assets/projects/mickey-minnie-playschool/identity/primary-logo-1.webp": "Primary Logo",
+      "/assets/projects/mickey-minnie-playschool/identity/primary-logo-transparent-background-0.webp": "Primary Logo Transparent Background",
+      "/assets/projects/mickey-minnie-playschool/Frame_12__2_.webp": "Brand Application Mockup",
+      "/assets/projects/mickey-minnie-playschool/Frame_12__3_.webp": "Brand Application Mockup",
+      "/assets/projects/mickey-minnie-playschool/Frame_12__1_.webp": "Brand mockup application",
+      "/assets/projects/mickey-minnie-playschool/Frame_15.webp": "Brand mockup application"
+    },
+    "logo": "/assets/projects/mickey-minnie-playschool/identity/primary-logo-transparent-background-0.webp",
+    "founder": null,
+    "problem": "Designed for admin, used by parent: Every flow assumed an admin user. Parents had to navigate seventeen screens to find a single piece of information. | WhatsApp was winning: Parents stayed on WhatsApp because it was faster. The app had to feel as fast as a message, not as slow as a portal. | Pickup-line UX: The app&#39;s heaviest use happens one-handed, in a car, at 2:50pm. The product had to be designed for that exact moment. | Four campuses, one app: Each campus had different schedules, fee structures, and teachers. The product couldn&#39;t fragment by location.",
+    "strategy": "One screen, three answers: The parent home shows today&#39;s update, today&#39;s pickup time, and today&#39;s fee status. Three answers, no taps. | Faster than WhatsApp: Every common action — pay, view, message teacher — takes under fifteen seconds. The app has to outrun the chat group. | Big targets, low-light: All tap targets sized for one-handed use in low light. The app is opened in cars, not at desks. | Joyful, not childish: Bright primary colour palette. Playful illustration. The brand is for the kid; the UX is for the adult.",
+    "solution": "Design for the moments that matter, from the classroom to the playground.",
+    "results": [
+      {
+        "label": "of all app opens happen in a 45-minute window — pickup.",
+        "value": "60%"
+      },
+      {
+        "label": "median time from app-open to today&#39;s-update glance — down from 38s.",
+        "value": "11s"
+      },
+      {
+        "label": "one product, four configurations. No fragmentation.",
+        "value": "4 campuses"
+      },
+      {
+        "label": "active families using the app daily after redesign.",
+        "value": "1,200"
+      }
+    ],
+    "quote": {
+      "text": "Build a brand for the children, but make it resonate with the parents.",
+      "author": "Mickey Minnie Playschool"
+    },
+    "palette": [
+      "#d1cdcc",
+      "#ffffff",
+      "#5d9ac5",
+      "#e7e5fd"
+    ],
+    "isConcept": false,
+    "featured": false,
+    "headline": "A playful rebrand for a beloved playschool."
+  },
+  {
+    "slug": "zestee",
+    "name": "Zestee",
+    "subtitle": "ui-ux case study",
+    "category": "ui-ux",
+    "tags": [
+      "#ui-ux",
+      "#product",
+      "#design"
+    ],
+    "year": "2025",
+    "role": "Identity, packaging, interior signage",
+    "services": [
+      "Logo system",
+      "Café packaging",
+      "Menu architecture",
+      "Print + social system",
+      "Sign-writing program"
+    ],
+    "location": "Mumbai, IN",
+    "cover": "/assets/projects/zestee/zestee-9.webp",
+    "gallery": [
+      "/assets/projects/zestee/zestee-9.webp",
+      "/assets/projects/zestee/zestee-7.webp",
+      "/assets/projects/zestee/zestee-11.webp",
+      "/assets/projects/zestee/identity/primary-logo-transparent-background-0.png",
+      "/assets/projects/zestee/zestee-6.webp",
+      "/assets/projects/zestee/zestee-1.webp",
+      "/assets/projects/zestee/zestee-2.webp",
+      "/assets/projects/zestee/zestee-8.webp",
+      "/assets/projects/zestee/zestee-12.webp",
+      "/assets/projects/zestee/zestee-5.webp",
+      "/assets/projects/zestee/zestee-10.webp",
+      "/assets/projects/zestee/zestee-13.webp",
+      "/assets/projects/zestee/zestee-3.webp",
+      "/assets/projects/zestee/zestee-4.webp"
+    ],
+    "alt": {
+      "/assets/projects/zestee/zestee-9.webp": "Zestee hero",
+      "/assets/projects/zestee/zestee-7.webp": "Zestee secondary",
+      "/assets/projects/zestee/zestee-11.webp": "Zestee origin",
+      "/assets/projects/zestee/identity/primary-logo-transparent-background-0.png": "Primary Logo Transparent Background",
+      "/assets/projects/zestee/zestee-6.webp": "Zestee statement",
+      "/assets/projects/zestee/zestee-1.webp": "Zestee form",
+      "/assets/projects/zestee/zestee-2.webp": "Zestee form",
+      "/assets/projects/zestee/zestee-8.webp": "Zestee form",
+      "/assets/projects/zestee/zestee-12.webp": "Zestee in context",
+      "/assets/projects/zestee/zestee-5.webp": "Zestee in context",
+      "/assets/projects/zestee/zestee-10.webp": "Zestee in context",
+      "/assets/projects/zestee/zestee-13.webp": "Zestee showcase asset",
+      "/assets/projects/zestee/zestee-3.webp": "Zestee showcase asset",
+      "/assets/projects/zestee/zestee-4.webp": "Zestee showcase asset"
+    },
+    "logo": "/assets/projects/zestee/identity/primary-logo-transparent-background-0.png",
+    "founder": {
+      "name": "Naina Khanna",
+      "role": "Founder"
+    },
+    "problem": "Three locations, three brands: Each café had been opened in a hurry. Every signboard, takeaway cup, and Instagram grid told a slightly different story. | Mistaken for a juice bar: Drop-in customers ordered juice and left. The coffee program — the actual business — was invisible from the street. | Forgotten on Instagram: No one geo-tagged Zestee. The interiors were beautiful but the brand never asked to be photographed. | No system, no scale: Opening café four would mean rebuilding café one from scratch. There was no kit of parts to copy.",
+    "strategy": "Warmth, not luxury: Terracotta and cream beat black and gold. Zestee should feel like a friend&#39;s living room, not a hotel lobby. | Hand over machine: Hand-painted signage. Hand-stamped sleeves. The brand wears its making process. | Type-led: A single custom display face does the heavy lifting. No stock fonts, no decorative flourish. | Photographable: Every cup, plate, and sticker is designed first as a flat-lay. The brand earns its Instagram.",
+    "solution": "Built to be photographed. Designed to be returned to.",
+    "results": [
+      {
+        "label": "of Zestee revenue comes from regulars who visit three or more times a week.",
+        "value": "82%"
+      },
+      {
+        "label": "average ticket size — 1.8× the neighbourhood average.",
+        "value": "₹620"
+      },
+      {
+        "label": "average stay-time before the rebrand. 47 min after.",
+        "value": "12 min"
+      },
+      {
+        "label": "post-rebrand Google rating across all three locations.",
+        "value": "4.8★"
+      }
+    ],
+    "quote": {
+      "text": "Most cafés sell coffee. Zestee sells the half-hour around it.",
+      "author": "Naina Khanna"
+    },
+    "palette": [
+      "#b8431f",
+      "#e89a60",
+      "#fbf4ec",
+      "#d9cdb0",
+      "#2b1a10"
+    ],
+    "isConcept": false,
+    "featured": true,
+    "headline": "From juice bar to destination café."
+  },
+  {
+    "slug": "vanya-luxe",
+    "name": "Vanya Luxe",
+    "subtitle": "ui-ux case study",
+    "category": "ui-ux",
+    "tags": [
+      "#ui-ux",
+      "#product",
+      "#design"
+    ],
+    "year": "2025",
+    "role": "UI/UX, Packaging, Digital Strategy",
+    "services": [
+      "E-commerce UX",
+      "Packaging Design",
+      "Art Direction",
+      "Digital Strategy"
+    ],
+    "location": "Paris, France",
+    "cover": "/assets/projects/vanya-luxe/vanya-luxe-6.webp",
+    "gallery": [
+      "/assets/projects/vanya-luxe/vanya-luxe-1.webp",
+      "/assets/projects/vanya-luxe/vanya-luxe-2.webp",
+      "/assets/projects/vanya-luxe/vanya-luxe-3.webp",
+      "/assets/projects/vanya-luxe/identity/primary-logo-1.png",
+      "/assets/projects/vanya-luxe/identity/primary-logo-with-background-0.webp",
+      "/assets/projects/vanya-luxe/identity/secondary-logo-2.png",
+      "/assets/projects/vanya-luxe/vanya-luxe-4.webp",
+      "/assets/projects/vanya-luxe/vanya-luxe-5.webp",
+      "/assets/projects/vanya-luxe/vanya-luxe-6.webp"
+    ],
+    "alt": {
+      "/assets/projects/vanya-luxe/vanya-luxe-1.webp": "Vanya Luxe hero",
+      "/assets/projects/vanya-luxe/vanya-luxe-2.webp": "Vanya Luxe secondary",
+      "/assets/projects/vanya-luxe/vanya-luxe-3.webp": "Vanya Luxe origin",
+      "/assets/projects/vanya-luxe/identity/primary-logo-1.png": "Primary Logo",
+      "/assets/projects/vanya-luxe/identity/primary-logo-with-background-0.webp": "Primary Logo With Background",
+      "/assets/projects/vanya-luxe/identity/secondary-logo-2.png": "Secondary Logo",
+      "/assets/projects/vanya-luxe/vanya-luxe-4.webp": "Vanya Luxe process",
+      "/assets/projects/vanya-luxe/vanya-luxe-5.webp": "Vanya Luxe process",
+      "/assets/projects/vanya-luxe/vanya-luxe-6.webp": "Vanya Luxe process"
+    },
+    "logo": "/assets/projects/vanya-luxe/identity/primary-logo-1.png",
+    "founder": null,
+    "problem": "Balancing Act: The brand needed to communicate clinical science without looking like medicine. | Tactile Digital: How do you convey the texture of a luxury cream through a website? | Information Hierarchy: Customers need to know active ingredients, but too much text breaks the luxury aesthetic. | Packaging Constraints: Sustainable materials had to feel heavy and premium.",
+    "strategy": "Whitespace as Luxury: Letting the products breathe on the page. | Macro Photography: Showing the exact texture of the product. | Clear Typography: Elegant serifs paired with highly legible sans-serifs for ingredients. | Frictionless UX: A checkout process that feels effortless.",
+    "solution": "Vanya Luxe brings clinical efficacy to the luxury skincare space. We created a digital experience and packaging system that feels as refined as the formulas themselves.",
+    "results": [
+      {
+        "label": "higher conversion rate after the UX redesign.",
+        "value": "40%"
+      },
+      {
+        "label": "recyclable packaging materials.",
+        "value": "100%"
+      },
+      {
+        "label": "average page load time for the new digital platform.",
+        "value": "2 Sec"
+      },
+      {
+        "label": "core products in the launch lineup.",
+        "value": "5"
+      }
+    ],
+    "quote": {
+      "text": "Skincare shouldn't just be effective. It should be a ritual. Vanya Luxe makes it look like one.",
+      "author": "Vanya Luxe"
+    },
+    "palette": [
+      "#f5f5f0",
+      "#2c2c2c",
+      "#8da399",
+      "#c5a880"
+    ],
+    "isConcept": false,
+    "featured": true,
+    "headline": "Vanya Luxe."
+  },
+  {
+    "slug": "piq",
+    "name": "PIQ",
+    "subtitle": "branding case study",
+    "category": "branding",
+    "tags": [
+      "#branding",
+      "#packaging",
+      "#identity"
+    ],
+    "year": "2026",
+    "role": "Identity, packaging, photography direction",
+    "services": [
+      "Wordmark",
+      "Can system",
+      "Glass bottle",
+      "Squeeze bottle",
+      "Trade dress"
+    ],
+    "location": "Los Angeles, US",
+    "cover": "/assets/projects/piq/piq-9.webp",
+    "gallery": [
+      "/assets/projects/piq/piq-9.webp",
+      "/assets/projects/piq/piq-5.webp",
+      "/assets/projects/piq/piq-3.webp",
+      "/assets/projects/piq/identity/primary-logo-transparent-background-0.png",
+      "/assets/projects/piq/piq-4.webp",
+      "/assets/projects/piq/piq-8.webp",
+      "/assets/projects/piq/piq-6.webp",
+      "/assets/projects/piq/piq-7.webp",
+      "/assets/projects/piq/piq-2.webp",
+      "/assets/projects/piq/piq-10.webp",
+      "/assets/projects/piq/piq-1.webp",
+      "/assets/projects/piq/piq-1.webp",
+      "/assets/projects/piq/piq-10.webp",
+      "/assets/projects/piq/piq-2.webp",
+      "/assets/projects/piq/piq-3.webp",
+      "/assets/projects/piq/piq-4.webp",
+      "/assets/projects/piq/piq-5.webp",
+      "/assets/projects/piq/piq-6.webp",
+      "/assets/projects/piq/piq-7.webp",
+      "/assets/projects/piq/piq-8.webp",
+      "/assets/projects/piq/piq-9.webp"
+    ],
+    "alt": {
+      "/assets/projects/piq/piq-9.webp": "PIQ hero",
+      "/assets/projects/piq/piq-5.webp": "PIQ secondary",
+      "/assets/projects/piq/piq-3.webp": "PIQ origin",
+      "/assets/projects/piq/identity/primary-logo-transparent-background-0.png": "Primary Logo Transparent Background",
+      "/assets/projects/piq/piq-4.webp": "PIQ statement",
+      "/assets/projects/piq/piq-8.webp": "PIQ form",
+      "/assets/projects/piq/piq-6.webp": "PIQ form",
+      "/assets/projects/piq/piq-7.webp": "PIQ form",
+      "/assets/projects/piq/piq-2.webp": "PIQ in context",
+      "/assets/projects/piq/piq-10.webp": "PIQ in context",
+      "/assets/projects/piq/piq-1.webp": "PIQ in context",
+      "/assets/projects/piq/piq-1.webp": "PIQ showcase asset",
+      "/assets/projects/piq/piq-10.webp": "PIQ showcase asset",
+      "/assets/projects/piq/piq-2.webp": "PIQ showcase asset",
+      "/assets/projects/piq/piq-3.webp": "PIQ showcase asset",
+      "/assets/projects/piq/piq-4.webp": "PIQ showcase asset",
+      "/assets/projects/piq/piq-5.webp": "PIQ showcase asset",
+      "/assets/projects/piq/piq-6.webp": "PIQ showcase asset",
+      "/assets/projects/piq/piq-7.webp": "PIQ showcase asset",
+      "/assets/projects/piq/piq-8.webp": "PIQ showcase asset",
+      "/assets/projects/piq/piq-9.webp": "PIQ showcase asset"
+    },
+    "logo": "/assets/projects/piq/identity/primary-logo-transparent-background-0.png",
+    "founder": {
+      "name": "Mara Costa",
+      "role": "Founder"
+    },
+    "problem": "Energy drinks look like energy drinks: The category is a wall of black cans and neon angles. Hard to stand out by joining the chorus. | Lemonade looks like a kids&#39; drink: Pastel pink, hand-drawn lemons, summer-camp lettering. Not the brief either. | Three formats, one face: A can, a glass bottle, and a squeeze pouch — each one wants to look like a different brand by default. | Caffeine credibility: The brand has to whisper &#39;this works&#39; without writing it on the can in screaming yellow.",
+    "strategy": "Lemon-first colour: The brand&#39;s green is the colour of an under-ripe lemon — not the cliché yellow. | Confident type, no shouting: A single condensed sans does all the typography. No display flourishes, no italics. | Photography over illustration: Every brand asset is a real product, real ice, real water. The drink earns its photo. | Format-modular: Can, bottle, squeeze — same wordmark, same proportion, three completely different containers.",
+    "solution": "Lemon. Caffeine. An exclamation mark — earned, not added.",
+    "results": [
+      {
+        "label": "shelf turnover compared to the average new SKU in the segment.",
+        "value": "3.1×"
+      },
+      {
+        "label": "caffeine per can — green-tea derived, not synthetic.",
+        "value": "120mg"
+      },
+      {
+        "label": "sugar — a third of the category baseline.",
+        "value": "9g"
+      },
+      {
+        "label": "average retail — premium without entering the wellness tier.",
+        "value": "$2.50"
+      }
+    ],
+    "quote": {
+      "text": "Energy without the existential dread.",
+      "author": "Mara Costa"
+    },
+    "palette": [
+      "#2b5a8b",
+      "#f0f8ea",
+      "#1b6e3b"
+    ],
+    "isConcept": false,
+    "featured": false,
+    "headline": "Caffeine, lemonade, and an exclamation mark."
+  },
+  {
+    "slug": "the-ube-press",
+    "name": "The Ube Press",
+    "subtitle": "branding case study",
+    "category": "branding",
+    "tags": [
+      "#branding",
+      "#identity",
+      "#strategy"
+    ],
+    "year": "2026",
+    "role": "Identity, café branding, signage",
+    "services": [
+      "Brand identity",
+      "Menu design",
+      "Interior wayfinding",
+      "Storefront signage"
+    ],
+    "location": "Manila / Brooklyn",
+    "cover": "/assets/projects/the-ube-press/the-ube-press-1.webp",
+    "gallery": [
+      "/assets/projects/the-ube-press/the-ube-press-9.webp",
+      "/assets/projects/the-ube-press/the-ube-press-2.webp",
+      "/assets/projects/the-ube-press/the-ube-press-1.webp",
+      "/assets/projects/the-ube-press/identity/primary-logo-1.png",
+      "/assets/projects/the-ube-press/identity/primary-logo-transparent-background-0.png",
+      "/assets/projects/the-ube-press/identity/symbol-2.png",
+      "/assets/projects/the-ube-press/the-ube-press-7.webp",
+      "/assets/projects/the-ube-press/the-ube-press-6.webp",
+      "/assets/projects/the-ube-press/the-ube-press-8.webp",
+      "/assets/projects/the-ube-press/the-ube-press-3.webp",
+      "/assets/projects/the-ube-press/the-ube-press-4.webp",
+      "/assets/projects/the-ube-press/the-ube-press-5.webp",
+      "/assets/projects/the-ube-press/the-ube-press-10.webp",
+      "/assets/projects/the-ube-press/the-ube-press-11.webp",
+      "/assets/projects/the-ube-press/logo.png",
+      "/assets/projects/the-ube-press/logo.webp"
+    ],
+    "alt": {
+      "/assets/projects/the-ube-press/the-ube-press-9.webp": "The Ube Press hero",
+      "/assets/projects/the-ube-press/the-ube-press-2.webp": "The Ube Press secondary",
+      "/assets/projects/the-ube-press/the-ube-press-1.webp": "The Ube Press origin",
+      "/assets/projects/the-ube-press/identity/primary-logo-1.png": "Primary Logo",
+      "/assets/projects/the-ube-press/identity/primary-logo-transparent-background-0.png": "Primary Logo Transparent Background",
+      "/assets/projects/the-ube-press/identity/symbol-2.png": "Symbol",
+      "/assets/projects/the-ube-press/the-ube-press-7.webp": "The Ube Press statement",
+      "/assets/projects/the-ube-press/the-ube-press-6.webp": "The Ube Press form",
+      "/assets/projects/the-ube-press/the-ube-press-8.webp": "The Ube Press form",
+      "/assets/projects/the-ube-press/the-ube-press-3.webp": "The Ube Press form",
+      "/assets/projects/the-ube-press/the-ube-press-4.webp": "The Ube Press anatomy",
+      "/assets/projects/the-ube-press/the-ube-press-5.webp": "The Ube Press in context",
+      "/assets/projects/the-ube-press/the-ube-press-10.webp": "The Ube Press in context",
+      "/assets/projects/the-ube-press/the-ube-press-11.webp": "The Ube Press in context",
+      "/assets/projects/the-ube-press/logo.png": "The Ube Press showcase asset",
+      "/assets/projects/the-ube-press/logo.webp": "The Ube Press showcase asset"
+    },
+    "logo": "/assets/projects/the-ube-press/identity/primary-logo-transparent-background-0.png",
+    "founder": null,
+    "problem": "Trend vs. heritage: Most ube products lean into the Instagram colour. The Reyeses wanted heritage credibility, not a viral moment. | The flavour syrup problem: Ninety percent of Western ube products are syrup-flavoured. The Ube Press uses the real root. The brand has to make that obvious. | Two markets, one face: Filipino diaspora customers and curious-Western customers want different stories. The brand has to be both. | Purple is loud: Ube&#39;s natural colour is non-negotiable. The brand has to wear it without becoming cartoonish.",
+    "strategy": "Single colour, single hero: The whole brand is built around one ube purple. Every other element is restrained to let it lead. | Tagalog as first language: The wordmark includes a Tagalog tagline. The diaspora reads it first; everyone else reads it next. | Hand over machine: Hand-drawn label illustrations, hand-stamped batch numbers. The brand wears its labour. | Root, not flavour: Every label calls out the farm. The product&#39;s truth is the brand&#39;s strategy.",
+    "solution": "Real root. Real hands. A real grandmother somewhere in Bohol.",
+    "results": [
+      {
+        "label": "of new buyers tried The Ube Press because they recognised the wordmark on a shelf, not from an ad.",
+        "value": "92%"
+      },
+      {
+        "label": "average bottle price — positioned at premium juice tier.",
+        "value": "$8.20"
+      },
+      {
+        "label": "single-origin sourcing from four Bohol cooperatives.",
+        "value": "4 farms"
+      },
+      {
+        "label": "real root, cold-pressed, no flavouring.",
+        "value": "0 syrups"
+      }
+    ],
+    "quote": {
+      "text": "A flavour from a grandmother&#39;s kitchen, packaged for the rest of the world.",
+      "author": "The Ube Press"
+    },
+    "palette": [
+      "#5b2a86",
+      "#8f5bb8",
+      "#f1ecf4",
+      "#241738"
+    ],
+    "isConcept": false,
+    "featured": true,
+    "headline": "A modern café rooted in heritage."
+  },
+  {
+    "slug": "globetap",
+    "name": "GlobeTap",
+    "subtitle": "branding case study",
+    "category": "branding",
+    "tags": [
+      "#branding",
+      "#identity",
+      "#strategy"
+    ],
+    "year": "2025",
+    "role": "Product strategy, UX, UI system",
+    "services": [
+      "Product strategy",
+      "User flows",
+      "UI system",
+      "Component library",
+      "Motion spec"
+    ],
+    "location": "Bengaluru / Berlin",
+    "cover": "/assets/projects/globetap/globetap-1.webp",
+    "gallery": [
+      "/assets/projects/globetap/globetap-1.webp",
+      "/assets/projects/globetap/globetap-2.webp",
+      "/assets/projects/globetap/globetap-3.webp",
+      "/assets/projects/globetap/globetap-4.webp",
+      "/assets/projects/globetap/globetap-5.webp",
+      "/assets/projects/globetap/globetap-6.webp",
+      "/assets/projects/globetap/globetap-7.webp",
+      "/assets/projects/globetap/globetap-8.webp",
+      "/assets/projects/globetap/globetap-9.webp"
+    ],
+    "alt": {
+      "/assets/projects/globetap/globetap-1.webp": "Globetap hero",
+      "/assets/projects/globetap/globetap-2.webp": "Globetap secondary",
+      "/assets/projects/globetap/globetap-3.webp": "Globetap origin",
+      "/assets/projects/globetap/globetap-4.webp": "Globetap statement",
+      "/assets/projects/globetap/globetap-5.webp": "Globetap component anatomy",
+      "/assets/projects/globetap/globetap-6.webp": "Default",
+      "/assets/projects/globetap/globetap-7.webp": "Refill nearby",
+      "/assets/projects/globetap/globetap-8.webp": "Streak at risk",
+      "/assets/projects/globetap/globetap-9.webp": "Logged"
+    },
+    "logo": null,
+    "founder": null,
+    "problem": "Opened on holidays, ignored on Tuesdays: Users only thought about Globetap when travelling. The product was a holiday utility, not a daily one. | Stations without context: The map showed stations. It didn&#39;t show whether one was on your usual route, or whether it would save you time. | No reason to return: The product had no progress, no streak, no signal that using it mattered. | Onboarding was a search bar: Day-one users were dropped onto a map and told to figure it out. 60% never came back.",
+    "strategy": "Bottle-first: The first screen isn&#39;t a map — it&#39;s a bottle. The product starts where the behaviour starts. | Route-aware: Stations are filtered against the user&#39;s actual commute, not the radius around their phone. | Streak as feedback: Every refill logged builds a streak. Streak loss is the only motivator stronger than convenience. | One-thumb default: Every primary action sits in the lower third of the screen. The app works on a moving train.",
+    "solution": "Design the bottle into the day, and the app follows.",
+    "results": [
+      {
+        "label": "increase in daily active users ninety days after the redesign launched.",
+        "value": "8.4×"
+      },
+      {
+        "label": "D7 retention — up from 11% on v1.",
+        "value": "47%"
+      },
+      {
+        "label": "median time from app-open to nearest-station glance — down from 38s.",
+        "value": "12s"
+      },
+      {
+        "label": "average refills logged per active user per day.",
+        "value": "3.1"
+      }
+    ],
+    "quote": {
+      "text": "The hardest part of building a habit isn&#39;t the first use. It&#39;s the fourth.",
+      "author": "GlobeTap"
+    },
+    "palette": [
+      "#393f42",
+      "#4c4f45",
+      "#352e35",
+      "#494b41"
+    ],
+    "isConcept": false,
+    "featured": true,
+    "headline": "A travel booking habit, mapped to your day."
+  },
+  {
+    "slug": "terra-cork",
+    "name": "Terra Cork",
+    "subtitle": "branding case study",
+    "category": "branding",
+    "tags": [
+      "#branding",
+      "#identity",
+      "#strategy"
+    ],
+    "year": "2025",
+    "role": "Identity, packaging, product photography",
+    "services": [
+      "Wordmark",
+      "Product packaging suite",
+      "Trade dress",
+      "Photography direction",
+      "Brand book"
+    ],
+    "location": "Melbourne, AU",
+    "cover": "/assets/projects/terra-cork/terra-cork-1.webp",
+    "gallery": [
+      "/assets/projects/terra-cork/terra-cork-11.webp",
+      "/assets/projects/terra-cork/terra-cork-5.webp",
+      "/assets/projects/terra-cork/terra-cork-4.webp",
+      "/assets/projects/terra-cork/identity/black-variant-0.png",
+      "/assets/projects/terra-cork/identity/brandmark-logo-1.webp",
+      "/assets/projects/terra-cork/identity/horizontal-logo-with-baackground-2.png",
+      "/assets/projects/terra-cork/identity/horizontally-stacked-logo-1-3.png",
+      "/assets/projects/terra-cork/identity/horizontally-stacked-logo-2-4.png",
+      "/assets/projects/terra-cork/identity/pattern-5.webp",
+      "/assets/projects/terra-cork/identity/primary-logo-earthy-6.webp",
+      "/assets/projects/terra-cork/identity/primary-logo-green-7.webp",
+      "/assets/projects/terra-cork/identity/submark-logo-1-8.png",
+      "/assets/projects/terra-cork/identity/submark-logo-2-9.webp",
+      "/assets/projects/terra-cork/identity/vertical-logo-with-background-10.webp",
+      "/assets/projects/terra-cork/identity/white-variant-11.png",
+      "/assets/projects/terra-cork/identity/wordmark-logo-12.png",
+      "/assets/projects/terra-cork/terra-cork-8.webp",
+      "/assets/projects/terra-cork/terra-cork-2.webp",
+      "/assets/projects/terra-cork/terra-cork-3.webp",
+      "/assets/projects/terra-cork/terra-cork-10.webp",
+      "/assets/projects/terra-cork/terra-cork-9.webp",
+      "/assets/projects/terra-cork/terra-cork-6.webp",
+      "/assets/projects/terra-cork/terra-cork-1.webp",
+      "/assets/projects/terra-cork/terra-cork-7.webp"
+    ],
+    "alt": {
+      "/assets/projects/terra-cork/terra-cork-11.webp": "Terra Cork hero",
+      "/assets/projects/terra-cork/terra-cork-5.webp": "Terra Cork secondary",
+      "/assets/projects/terra-cork/terra-cork-4.webp": "Terra Cork origin",
+      "/assets/projects/terra-cork/identity/black-variant-0.png": "Black Variant",
+      "/assets/projects/terra-cork/identity/brandmark-logo-1.webp": "Brandmark Logo",
+      "/assets/projects/terra-cork/identity/horizontal-logo-with-baackground-2.png": "Horizontal Logo With Baackground",
+      "/assets/projects/terra-cork/identity/horizontally-stacked-logo-1-3.png": "Horizontally Stacked Logo 1",
+      "/assets/projects/terra-cork/identity/horizontally-stacked-logo-2-4.png": "Horizontally Stacked Logo 2",
+      "/assets/projects/terra-cork/identity/pattern-5.webp": "Pattern",
+      "/assets/projects/terra-cork/identity/primary-logo-earthy-6.webp": "Primary Logo Earthy",
+      "/assets/projects/terra-cork/identity/primary-logo-green-7.webp": "Primary Logo Green",
+      "/assets/projects/terra-cork/identity/submark-logo-1-8.png": "Submark Logo 1",
+      "/assets/projects/terra-cork/identity/submark-logo-2-9.webp": "Submark Logo 2",
+      "/assets/projects/terra-cork/identity/vertical-logo-with-background-10.webp": "Vertical Logo With Background",
+      "/assets/projects/terra-cork/identity/white-variant-11.png": "White Variant",
+      "/assets/projects/terra-cork/identity/wordmark-logo-12.png": "Wordmark Logo",
+      "/assets/projects/terra-cork/terra-cork-8.webp": "Terra Cork statement",
+      "/assets/projects/terra-cork/terra-cork-2.webp": "Terra Cork form",
+      "/assets/projects/terra-cork/terra-cork-3.webp": "Terra Cork form",
+      "/assets/projects/terra-cork/terra-cork-10.webp": "Terra Cork form",
+      "/assets/projects/terra-cork/terra-cork-9.webp": "Terra Cork anatomy",
+      "/assets/projects/terra-cork/terra-cork-6.webp": "Terra Cork in context",
+      "/assets/projects/terra-cork/terra-cork-1.webp": "Terra Cork in context",
+      "/assets/projects/terra-cork/terra-cork-7.webp": "Terra Cork in context"
+    },
+    "logo": "/assets/projects/terra-cork/identity/primary-logo-earthy-6.webp",
+    "founder": {
+      "name": "Akshit Mandani",
+      "role": "Founder"
+    },
+    "problem": "Cork looks cheap by default: Decades of bulletin boards and shoe insoles. The brand had to reframe cork as a premium material, not a fallback. | Sixteen product formats: Coasters, planters, trays, soap dishes, wallets, table mats, candle holders, organisers. One identity has to hold across all of them. | Sustainable without preaching: Cork is genuinely one of the most sustainable materials on earth. The brand had to communicate that without becoming an eco-lecture. | Founder-led, but not founder-fronted: Akshit didn&#39;t want his face on the brand. The material had to be the hero. Personality had to come from the product, not the founder.",
+    "strategy": "Material as the hero: Every photograph leads with the cork itself — texture, grain, weight. The product is the supporting actor. | Restrained type: A single warm serif does all the typography. Cork has enough texture already. | Earth palette only: No greens, no blues. The whole brand sits in ochre, sand, terracotta, and oak — the tones cork already lives in. | Sustainability stated, not shouted: Provenance and harvest cycle printed on every label. Once. Never repeated in marketing copy.",
+    "solution": "Slow material. Patient design. A thing that&#39;s still here in fifty years.",
+    "results": [
+      {
+        "label": "between cork harvests — the same tree, the same hands, every nine years.",
+        "value": "9 yrs"
+      },
+      {
+        "label": "average product price — premium home-goods tier.",
+        "value": "AU $42"
+      },
+      {
+        "label": "from coaster to stool. Same material, sixteen forms.",
+        "value": "16 SKUs"
+      },
+      {
+        "label": "cork bark regenerates. No tree dies for any Terra Cork product.",
+        "value": "0 trees felled"
+      }
+    ],
+    "quote": {
+      "text": "The slowest material in your house. Still here in fifty years.",
+      "author": "Akshit Mandani"
+    },
+    "palette": [
+      "#7a4419",
+      "#a66b3c",
+      "#f0e5d2",
+      "#2e1f10",
+      "#5c6e3a"
+    ],
+    "isConcept": false,
+    "featured": true,
+    "headline": "Cork, finally treated like a material instead of a fix."
+  },
+  {
+    "slug": "ciao",
+    "name": "Ciao",
+    "subtitle": "branding case study",
+    "category": "branding",
+    "tags": [
+      "#branding",
+      "#identity",
+      "#strategy"
+    ],
+    "year": "2025",
+    "role": "Identity, menu, in-restaurant collateral",
+    "services": [
+      "Wordmark",
+      "Menu design",
+      "Storefront signage",
+      "Print collateral",
+      "Brand voice"
+    ],
+    "location": "Bopal, Ahmedabad",
+    "cover": "/assets/projects/ciao/ciao-1.webp",
+    "gallery": [
+      "/assets/projects/ciao/ciao-1.webp",
+      "/assets/projects/ciao/ciao-2.webp",
+      "/assets/projects/ciao/ciao-3.webp",
+      "/assets/projects/ciao/ciao-4.webp",
+      "/assets/projects/ciao/ciao-1.webp",
+      "/assets/projects/ciao/ciao-2.webp",
+      "/assets/projects/ciao/ciao-3.webp",
+      "/assets/projects/ciao/ciao-4.webp"
+    ],
+    "alt": {
+      "/assets/projects/ciao/ciao-1.webp": "Ciao Pizzeria hero",
+      "/assets/projects/ciao/ciao-2.webp": "Ciao Pizzeria secondary",
+      "/assets/projects/ciao/ciao-3.webp": "Ciao Pizzeria origin",
+      "/assets/projects/ciao/ciao-4.webp": "Ciao 4",
+      "/assets/projects/ciao/ciao-1.webp": "Ciao showcase asset",
+      "/assets/projects/ciao/ciao-2.webp": "Ciao showcase asset",
+      "/assets/projects/ciao/ciao-3.webp": "Ciao showcase asset",
+      "/assets/projects/ciao/ciao-4.webp": "Ciao showcase asset"
+    },
+    "logo": null,
+    "founder": null,
+    "problem": "Italian food in India is a costume: Most Italian restaurants here use red-checkered tablecloths, Toscana fonts, and over-decorated menus. Ciao needed to feel Italian without the theatre. | Limited stock is the model, not the apology: Ciao runs out of dough by 8:30pm every night — and that&#39;s the point. The brand had to communicate scarcity as care, not failure. | Open kitchen as the brand: Watching the dough get stretched is the experience. The brand had to make the kitchen the hero — not push it to a corner. | Authentic without the lecture: Neapolitan credentials matter. But customers don&#39;t want a history lesson. The brand had to wear authenticity quietly.",
+    "strategy": "Type-led, not illustrated: The whole brand is a single Italian serif and a generous grid. No fake Tuscan villas, no flag-coloured ribbons. | Olive green over red: The palette deliberately avoids Italian-flag red. Reads grown-up, not themed. | Menu as the brand surface: The single-page menu is the most-touched piece of collateral. Treated like a printed object — not a laminated leaflet. | Cap as design feature: Every printed piece names the daily dough cap. Scarcity stated, never apologised for.",
+    "solution": "Ciao Pizzeria is an authentic Neapolitan wood-fired pizza joint in Ahmedabad. The pies sell out by 8:30pm every night. We built the brand so the queue makes sense.",
+    "results": [
+      {
+        "label": "average time the kitchen runs out of dough — every night, on purpose.",
+        "value": "8:30 PM"
+      },
+      {
+        "label": "fermentation on every dough ball. Slow as a strategy.",
+        "value": "72 hr"
+      },
+      {
+        "label": "wood-fired, imported, the bottleneck the brand makes a point of.",
+        "value": "1 oven"
+      },
+      {
+        "label": "average wait for a Saturday-night reservation.",
+        "value": "3 days"
+      }
+    ],
+    "quote": {
+      "text": "Naples in Bopal. No red-checkered tablecloths. Just the dough.",
+      "author": "Ciao"
+    },
+    "palette": [
+      "#3f6b2a",
+      "#8f2a1b",
+      "#f8efe0",
+      "#1f2d14",
+      "#d9b97a"
+    ],
+    "isConcept": false,
+    "featured": false,
+    "headline": "Wood-fired Naples, on a side street in Bopal."
+  },
+  {
+    "slug": "go-miles",
+    "name": "Go Miles",
+    "subtitle": "branding case study",
+    "category": "branding",
+    "tags": [
+      "#branding",
+      "#identity",
+      "#strategy"
+    ],
+    "year": "2025",
+    "role": "Brand Identity, Apparel, Fleet Design",
+    "services": [
+      "Logo Design",
+      "Fleet Graphics",
+      "Driver Apparel",
+      "Digital Assets"
+    ],
+    "location": "London, UK",
+    "cover": "/assets/projects/go-miles/go-miles-1.webp",
+    "gallery": [
+      "/assets/projects/go-miles/go-miles-1.webp",
+      "/assets/projects/go-miles/go-miles-2.webp",
+      "/assets/projects/go-miles/identity/primary logo.png"
+    ],
+    "alt": {
+      "/assets/projects/go-miles/go-miles-1.webp": "Go Miles hero",
+      "/assets/projects/go-miles/go-miles-2.webp": "Go Miles secondary",
+      "/assets/projects/go-miles/identity/primary logo.png": "Primary Logo"
+    },
+    "logo": "/assets/projects/go-miles/identity/primary logo.png",
+    "founder": null,
+    "problem": "Visibility: Vehicles needed to be instantly recognizable in heavy traffic. | Trust: The brand had to convey security and reliability for high-value logistics. | Uniformity: Apparel had to be highly functional for drivers while maintaining brand aesthetics. | Scalability: The visual system had to work on an app icon and a 16-wheeler.",
+    "strategy": "High Visibility: Using high-contrast colors for safety and recognition. | Motion Forward: Typography and iconography that suggest forward momentum. | Functional Apparel: Designing driver gear that is actually comfortable to work in. | Clear Hierarchy: Ensuring the logo is readable from a distance at high speeds.",
+    "solution": "Go Miles is rethinking urban mobility and logistics. We built a visual identity that is dynamic, reliable, and built for speed.",
+    "results": [
+      {
+        "label": "miles driven under the new brand identity.",
+        "value": "2M+"
+      },
+      {
+        "label": "vehicles wrapped in the new livery.",
+        "value": "500+"
+      },
+      {
+        "label": "electric fleet initiative launched.",
+        "value": "100%"
+      },
+      {
+        "label": "brand visibility on the streets.",
+        "value": "24/7"
+      }
+    ],
+    "quote": {
+      "text": "Movement is our medium. The brand needed to look fast even when standing still.",
+      "author": "Go Miles"
+    },
+    "palette": [
+      "#303152",
+      "#717587",
+      "#f2f2f7"
+    ],
+    "isConcept": false,
+    "featured": false,
+    "headline": "Go Miles."
+  },
+  {
+    "slug": "oakmere",
+    "name": "Oakmere",
+    "subtitle": "ui-ux case study",
+    "category": "ui-ux",
+    "tags": [
+      "#ui-ux",
+      "#product",
+      "#design"
+    ],
+    "year": "2025",
+    "role": "Brand Identity, E-Commerce, Art Direction",
+    "services": [
+      "Brand Identity",
+      "E-Commerce Website",
+      "Bottle Labels",
+      "Packaging"
+    ],
+    "location": "Portland, Oregon",
+    "cover": "/assets/projects/oakmere/oakmere-1.webp",
+    "gallery": [
+      "/assets/projects/oakmere/oakmere-1.webp",
+      "/assets/projects/oakmere/oakmere-2.webp",
+      "/assets/projects/oakmere/oakmere-3.webp",
+      "/assets/projects/oakmere/identity/oakmere-logo-cropped-0.webp",
+      "/assets/projects/oakmere/identity/oakmere-logo-transparent-1.webp",
+      "/assets/projects/oakmere/identity/oakmere-logo-white-2.png",
+      "/assets/projects/oakmere/oakmere-4.webp",
+      "/assets/projects/oakmere/oakmere-5.webp",
+      "/assets/projects/oakmere/oakmere-6.webp"
+    ],
+    "alt": {
+      "/assets/projects/oakmere/oakmere-1.webp": "Oakmere hero",
+      "/assets/projects/oakmere/oakmere-2.webp": "Oakmere secondary",
+      "/assets/projects/oakmere/oakmere-3.webp": "Oakmere origin",
+      "/assets/projects/oakmere/identity/oakmere-logo-cropped-0.webp": "Oakmere Logo Cropped",
+      "/assets/projects/oakmere/identity/oakmere-logo-transparent-1.webp": "Oakmere Logo Transparent",
+      "/assets/projects/oakmere/identity/oakmere-logo-white-2.png": "Oakmere Logo White",
+      "/assets/projects/oakmere/oakmere-4.webp": "Oakmere process",
+      "/assets/projects/oakmere/oakmere-5.webp": "Oakmere process",
+      "/assets/projects/oakmere/oakmere-6.webp": "Oakmere process"
+    },
+    "logo": "/assets/projects/oakmere/identity/oakmere-logo-transparent-1.webp",
+    "founder": null,
+    "problem": "Conveying Craft: Online shopping lacks the tactile feedback of touching solid wood. | Shipping Logistics: Packaging needed to be robust but visually aligned with the brand. | Timeless vs Trendy: Avoiding design trends to ensure the brand feels enduring. | Detailed Specs: Presenting complex dimensions and wood types without clutter.",
+    "strategy": "Honest Materials: Using natural textures in both digital and physical design. | Detail Oriented: Macro shots of joinery and wood grain. | Editorial Layouts: Treating the website like a high-end design magazine. | Quiet Confidence: Understated typography that lets the products speak.",
+    "solution": "Oakmere crafts premium non-alcoholic wine. We designed a brand system and e-commerce platform that reflects the sophistication and depth of their vintage-inspired flavors without the alcohol.",
+    "results": [
+      {
+        "label": "increase in direct-to-consumer sales.",
+        "value": "60%"
+      },
+      {
+        "label": "solid hardwood construction.",
+        "value": "100%"
+      },
+      {
+        "label": "synthetic materials used in packaging.",
+        "value": "0"
+      },
+      {
+        "label": "warranty highlighted across the brand.",
+        "value": "Lifetime"
+      }
+    ],
+    "quote": {
+      "text": "A wine meant to be savored deserves a brand that conveys its complexity.",
+      "author": "Oakmere"
+    },
+    "palette": [
+      "#3e2723",
+      "#f4f0eb",
+      "#2e4a3d",
+      "#bcaaa4"
+    ],
+    "isConcept": false,
+    "featured": false,
+    "headline": "Oakmere."
+  },
+  {
+    "slug": "matcha-den",
+    "name": "Matcha Den",
+    "subtitle": "branding case study",
+    "category": "branding",
+    "tags": [
+      "#branding",
+      "#identity",
+      "#strategy"
+    ],
+    "year": "2025",
+    "role": "Brand identity, packaging, signage",
+    "services": [
+      "Logo system",
+      "Packaging suite",
+      "Outdoor signage",
+      "Sticker sheet",
+      "Brand guidelines"
+    ],
+    "location": "Bengaluru, IN",
+    "cover": "/assets/projects/matcha-den/matcha-den-4.webp",
+    "gallery": [
+      "/assets/projects/matcha-den/matcha-den-6.webp",
+      "/assets/projects/matcha-den/matcha-den-3.webp",
+      "/assets/projects/matcha-den/identity/primary-logo-1.jpg",
+      "/assets/projects/matcha-den/identity/primary-logo-transparent-background-0.png",
+      "/assets/projects/matcha-den/identity/symbol-2.png",
+      "/assets/projects/matcha-den/matcha-den-5.webp",
+      "/assets/projects/matcha-den/matcha-den-4.webp",
+      "/assets/projects/matcha-den/matcha-den-2.webp",
+      "/assets/projects/matcha-den/matcha-den-1.webp",
+      "/assets/projects/matcha-den/matcha-den-7.webp"
+    ],
+    "alt": {
+      "/assets/projects/matcha-den/matcha-den-6.webp": "Matcha Den hero",
+      "/assets/projects/matcha-den/matcha-den-3.webp": "Matcha Den secondary",
+      "/assets/projects/matcha-den/identity/primary-logo-1.jpg": "Primary Logo",
+      "/assets/projects/matcha-den/identity/primary-logo-transparent-background-0.png": "Primary Logo Transparent Background",
+      "/assets/projects/matcha-den/identity/symbol-2.png": "Symbol",
+      "/assets/projects/matcha-den/matcha-den-5.webp": "Matcha Den statement",
+      "/assets/projects/matcha-den/matcha-den-4.webp": "Matcha Den form",
+      "/assets/projects/matcha-den/matcha-den-2.webp": "Matcha Den in context",
+      "/assets/projects/matcha-den/matcha-den-1.webp": "Matcha Den in context",
+      "/assets/projects/matcha-den/matcha-den-7.webp": "Matcha Den in context"
+    },
+    "logo": "/assets/projects/matcha-den/identity/primary-logo-transparent-background-0.png",
+    "founder": null,
+    "problem": "Specialty matcha intimidates: First-timers can&#39;t tell ceremonial from culinary grade, and the ritual feels like it belongs to someone else. | Generic matcha disappoints: Most cafés serve sweetened powder mixed with milk. The drink loses the umami that makes it worth drinking. | The visual language is stuck: Matcha branding is either cartoon-kawaii or austere zen. Nothing in between feels designed for an adult who wants the real thing. | The category has no anchor: Coffee has third-wave shops to point at. Matcha doesn&#39;t. There&#39;s no Blue Bottle for tea.",
+    "strategy": "Stillness: Generous whitespace. Slow type. The opposite of a third-wave coffee shop. | Vibrancy: One green that does all the lifting. No ten-shade gradients pretending to be matcha. | Ritual: Every touchpoint borrows from the whisking motion — circular, contained, repeatable. | Craft: Hand-stamped where possible. Visible imperfection. Nothing that screams CMYK.",
+    "solution": "One ingredient. Whisked, not blended. Served in a room that knows the difference.",
+    "results": [
+      {
+        "label": "of urban tea-drinkers said matcha cafés feel either too commercial or too ceremonial.",
+        "value": "64%"
+      },
+      {
+        "label": "average willingness to pay for a single ceremonial-grade matcha.",
+        "value": "₹420"
+      },
+      {
+        "label": "more likely to return when the space matches the drink.",
+        "value": "3.2x"
+      },
+      {
+        "label": "discovered the brand through outdoor signage, not Instagram.",
+        "value": "78%"
+      }
+    ],
+    "quote": {
+      "text": "The whisk hasn&#39;t changed in 600 years. Everything around it should.",
+      "author": "Matcha Den"
+    },
+    "palette": [
+      "#3d6b2c",
+      "#1f3018",
+      "#f2efe3",
+      "#d9cdb0",
+      "#1c2419"
+    ],
+    "isConcept": false,
+    "featured": false,
+    "headline": "A modern den for an ancient ritual."
+  },
+  {
+    "slug": "the-saucy-heat",
+    "name": "The Saucy Heat",
+    "subtitle": "branding case study",
+    "category": "branding",
+    "tags": [
+      "#branding",
+      "#packaging",
+      "#identity"
+    ],
+    "year": "2026",
+    "role": "Identity, bottle, label system",
+    "services": [
+      "Wordmark",
+      "Label system",
+      "Tube format",
+      "Trade dress",
+      "Brand guidelines"
+    ],
+    "location": "Singapore",
+    "cover": "/assets/projects/the-saucy-heat/the-saucy-heat-1.webp",
+    "gallery": [
+      "/assets/projects/the-saucy-heat/the-saucy-heat-3.webp",
+      "/assets/projects/the-saucy-heat/the-saucy-heat-8.webp",
+      "/assets/projects/the-saucy-heat/the-saucy-heat-4.webp",
+      "/assets/projects/the-saucy-heat/identity/primary logo.png",
+      "/assets/projects/the-saucy-heat/the-saucy-heat-5.webp",
+      "/assets/projects/the-saucy-heat/the-saucy-heat-7.webp",
+      "/assets/projects/the-saucy-heat/the-saucy-heat-9.webp",
+      "/assets/projects/the-saucy-heat/the-saucy-heat-6.webp",
+      "/assets/projects/the-saucy-heat/the-saucy-heat-1.webp",
+      "/assets/projects/the-saucy-heat/the-saucy-heat-2.webp"
+    ],
+    "alt": {
+      "/assets/projects/the-saucy-heat/the-saucy-heat-3.webp": "The Saucy Heat hero",
+      "/assets/projects/the-saucy-heat/the-saucy-heat-8.webp": "The Saucy Heat secondary",
+      "/assets/projects/the-saucy-heat/the-saucy-heat-4.webp": "The Saucy Heat origin",
+      "/assets/projects/the-saucy-heat/identity/primary logo.png": "Primary Logo",
+      "/assets/projects/the-saucy-heat/the-saucy-heat-5.webp": "The Saucy Heat statement",
+      "/assets/projects/the-saucy-heat/the-saucy-heat-7.webp": "The Saucy Heat form",
+      "/assets/projects/the-saucy-heat/the-saucy-heat-9.webp": "The Saucy Heat form",
+      "/assets/projects/the-saucy-heat/the-saucy-heat-6.webp": "The Saucy Heat in context",
+      "/assets/projects/the-saucy-heat/the-saucy-heat-1.webp": "The Saucy Heat in context",
+      "/assets/projects/the-saucy-heat/the-saucy-heat-2.webp": "The Saucy Heat in context"
+    },
+    "logo": "/assets/projects/the-saucy-heat/identity/primary logo.png",
+    "founder": {
+      "name": "Wei Lin Tan",
+      "role": "Founder"
+    },
+    "problem": "The category screams: Every chilli oil shelf is red flames, neon type, and exclamation marks. Standing out by joining the noise is impossible. | Quiet has to read as confident, not bland: Mute the noise and you risk looking like a polite condiment. The brand has to feel restrained AND serious about heat. | Bottle and tube, same brand: Bottle for kitchen, squeeze tube for picnic. The system has to feel like one brand across two very different containers. | Heat levels without scoville bars: Buyers want to know how spicy. The brand can&#39;t use the lazy pepper-icon scale everyone else uses.",
+    "strategy": "Dark over bright: The whole brand sits on a near-black background. The chilli oil is the only red in the frame. | Two heat levels, named: Original and Numbing. No scales, no flames. The names do the work icons can&#39;t. | Bottle and tube, same wordmark: Identical wordmark at three sizes. Two containers, one face. | Photography in low light: Every brand asset shot under a single warm light. The oil is the brightest thing in every frame.",
+    "solution": "The condiment your kitchen earns, not the one your shelf shouts about.",
+    "results": [
+      {
+        "label": "of repeat buyers cite &#39;looks like the kitchen I want&#39; as the reason they keep reordering.",
+        "value": "71%"
+      },
+      {
+        "label": "average retail — premium tier without entering luxury.",
+        "value": "$24"
+      },
+      {
+        "label": "Lazada and Shopee average across 2,400 reviews.",
+        "value": "4.9★"
+      },
+      {
+        "label": "Original and Numbing — that&#39;s the whole range. Restraint as a strategy.",
+        "value": "2 SKUs"
+      }
+    ],
+    "quote": {
+      "text": "Loud sauces fade. Quiet ones get reordered.",
+      "author": "Wei Lin Tan"
+    },
+    "palette": [
+      "#e14b2b",
+      "#1a0f0f",
+      "#f4e9d8",
+      "#5c2419",
+      "#8a6b3d"
+    ],
+    "isConcept": false,
+    "featured": false,
+    "headline": "A chilli oil that prefers a long, slow burn."
+  },
+  {
+    "slug": "lab-coat-media",
+    "name": "Lab Coat Media",
+    "subtitle": "branding case study",
+    "category": "branding",
+    "tags": [
+      "#branding",
+      "#identity",
+      "#strategy"
+    ],
+    "year": "2024",
+    "role": "Brand identity + website design",
+    "services": [
+      "Wordmark",
+      "Visual system",
+      "Accessible website",
+      "Component library",
+      "Brand guidelines"
+    ],
+    "location": "USA",
+    "cover": "/assets/projects/lab-coat-media/lab-coat-media-1.webp",
+    "gallery": [
+      "/assets/projects/lab-coat-media/lab-coat-media-2.webp",
+      "/assets/projects/lab-coat-media/lab-coat-media-1.webp",
+      "/assets/projects/lab-coat-media/identity/pattern.png",
+      "/assets/projects/lab-coat-media/identity/primary logo horizontal.png",
+      "/assets/projects/lab-coat-media/identity/primary logo transparent.png"
+    ],
+    "alt": {
+      "/assets/projects/lab-coat-media/lab-coat-media-2.webp": "Lab Coat Media hero",
+      "/assets/projects/lab-coat-media/lab-coat-media-1.webp": "Lab Coat Media secondary",
+      "/assets/projects/lab-coat-media/identity/pattern.png": "Pattern",
+      "/assets/projects/lab-coat-media/identity/primary logo horizontal.png": "Primary Logo Horizontal",
+      "/assets/projects/lab-coat-media/identity/primary logo transparent.png": "Primary Logo Transparent"
+    },
+    "logo": "/assets/projects/lab-coat-media/identity/primary logo transparent.png",
+    "founder": {
+      "name": "Paul",
+      "role": "Founder"
+    },
+    "problem": "Accessibility is usually a retrofit: Most brands and sites add accessibility at QA — colour swaps, alt-text scans, late aria-labels. That order produces worse results than designing for it from the start. | Brand and website, two timelines: Paul wanted identity and site to ship together. The visual system had to be settled before any page was laid out. | AA-clean without becoming bland: Accessibility constraints often produce visually flat brands. Lab Coat needed presence — high contrast had to feel intentional, not regulatory. | Founder-led, but enterprise-credible: Paul is the practice. The brand had to feel like a serious media operation while staying close to a single founder voice.",
+    "strategy": "Contrast as composition: Every colour pair clears AA. Constraint becomes the system&#39;s rhythm — high-contrast type, generous spacing, no decorative subtlety. | Keyboard first, mouse second: Every page navigable by Tab. Focus states are designed objects, not browser defaults. | Voice on the page: Copy reads like Paul talks. Plain sentences, short paragraphs, no agency jargon. Reads aloud well on a screen reader. | One green, one black, one paper: Three colours, on purpose. Accessibility becomes the design system, not its constraint.",
+    "solution": "Lab Coat Media is Paul's media practice. We designed the brand identity and the website together — built from the start around WCAG 2.1 AA accessibility and inclusivity, ensuring a seamless experience for all users rather than retrofitting it later.",
+    "results": [
+      {
+        "label": "every colour pair, every component, every page — by design, not by audit.",
+        "value": "AA"
+      },
+      {
+        "label": "Lighthouse accessibility score at launch.",
+        "value": "100"
+      },
+      {
+        "label": "minimum contrast across every interactive element.",
+        "value": "4.5:1"
+      },
+      {
+        "label": "no focus traps, no unreachable controls, no aria-hidden-on-click hacks.",
+        "value": "0 traps"
+      }
+    ],
+    "quote": {
+      "text": "Accessibility isn&#39;t a checklist at the end. It&#39;s a constraint at the beginning.",
+      "author": "Paul"
+    },
+    "palette": [
+      "#e3e3e5",
+      "#e2e2e2",
+      "#e2e0df",
+      "#e0e0e0"
+    ],
+    "isConcept": false,
+    "featured": false,
+    "headline": "A media brand built to be readable by everyone."
+  },
+  {
+    "slug": "waggle",
+    "name": "Waggle",
+    "subtitle": "branding case study",
+    "category": "branding",
+    "tags": [
+      "#branding",
+      "#packaging",
+      "#identity"
+    ],
+    "year": "2026",
+    "role": "Identity, packaging suite, illustration system",
+    "services": [
+      "Wordmark",
+      "Food + treat packaging",
+      "Accessories (toy, bowl, bandana, harness)",
+      "Illustrated mascot",
+      "Brand book"
+    ],
+    "location": "Bengaluru, IN",
+    "cover": "/assets/projects/waggle/waggle-2.webp",
+    "gallery": [
+      "/assets/projects/waggle/waggle-8.webp",
+      "/assets/projects/waggle/waggle-11.webp",
+      "/assets/projects/waggle/waggle-9.webp",
+      "/assets/projects/waggle/identity/badge-showcase-0.webp",
+      "/assets/projects/waggle/identity/corgi-illustration-1.webp",
+      "/assets/projects/waggle/identity/Waggle logo transparent.png",
+      "/assets/projects/waggle/identity/Waggle Logo.png",
+      "/assets/projects/waggle/identity/waggle-pattern-2.webp",
+      "/assets/projects/waggle/waggle-5.webp",
+      "/assets/projects/waggle/waggle-7.webp",
+      "/assets/projects/waggle/waggle-2.webp",
+      "/assets/projects/waggle/waggle-3.webp",
+      "/assets/projects/waggle/waggle-10.webp"
+    ],
+    "alt": {
+      "/assets/projects/waggle/waggle-8.webp": "Waggle hero",
+      "/assets/projects/waggle/waggle-11.webp": "Waggle secondary",
+      "/assets/projects/waggle/waggle-9.webp": "Waggle origin",
+      "/assets/projects/waggle/identity/badge-showcase-0.webp": "Badge Showcase",
+      "/assets/projects/waggle/identity/corgi-illustration-1.webp": "Corgi Illustration",
+      "/assets/projects/waggle/identity/Waggle logo transparent.png": "Waggle Logo Transparent",
+      "/assets/projects/waggle/identity/Waggle Logo.png": "Waggle Logo",
+      "/assets/projects/waggle/identity/waggle-pattern-2.webp": "Waggle Pattern",
+      "/assets/projects/waggle/waggle-5.webp": "Waggle form",
+      "/assets/projects/waggle/waggle-7.webp": "Waggle form",
+      "/assets/projects/waggle/waggle-2.webp": "Waggle form",
+      "/assets/projects/waggle/waggle-3.webp": "Waggle in context",
+      "/assets/projects/waggle/waggle-10.webp": "Waggle in context"
+    },
+    "logo": "/assets/projects/waggle/identity/Waggle logo transparent.png",
+    "founder": {
+      "name": "Aanya Bose",
+      "role": "Founder"
+    },
+    "problem": "Pet branding is for dogs: Most brands lean on cartoon paws and pet-cliché photography. The actual buyer — a human reading ingredient panels — gets nothing. | Ingredient claims vs. shelf appeal: Hero ingredients on the front of the pack matter — but most brands bury them in tiny back-panel print. | Food, treats, accessories: A kibble bag and a bandana have nothing in common physically. The brand has to feel like one company across both. | Modern, not corporate: Mass pet brands feel sterile. DTC pet brands feel hip. Waggle needed warmth without becoming a startup cliché.",
+    "strategy": "Front-of-pack honesty: Protein and source named in 48pt type on the front. Buyers see the ingredient before the brand. | Illustrated, not photographed: Mascot illustration replaces stock dog photography. Owns the brand without faking another dog&#39;s photo. | Warm system: Cream base, single orange accent. Every SKU sits in the same warm palette. Shelf reads as a family. | Modular across formats: Same wordmark on a kibble bag, a bandana, and a toy. Three completely different products, one face.",
+    "solution": "Real ingredients. Real bag. A dog who&#39;d recognise the food from across the room.",
+    "results": [
+      {
+        "label": "of new buyers cite &#39;I could actually read the ingredients&#39; as the reason for the first purchase.",
+        "value": "78%"
+      },
+      {
+        "label": "average kibble bag price — premium without entering luxury.",
+        "value": "₹820"
+      },
+      {
+        "label": "every SKU is single-protein. No mystery meats, no fillers.",
+        "value": "1 protein"
+      },
+      {
+        "label": "from kibble to harness. One brand, fourteen forms.",
+        "value": "14 SKUs"
+      }
+    ],
+    "quote": {
+      "text": "The dog can&#39;t read the label. The human has to.",
+      "author": "Aanya Bose"
+    },
+    "palette": [
+      "#39aec9",
+      "#f68802",
+      "#fdd302",
+      "#c1a1cc",
+      "#faf5df"
+    ],
+    "isConcept": false,
+    "featured": true,
+    "headline": "A pet brand designed for the human who actually buys it."
+  },
+  {
+    "slug": "misomaki",
+    "name": "Misomaki",
+    "subtitle": "branding case study",
+    "category": "branding",
+    "tags": [
+      "#branding",
+      "#identity",
+      "#strategy"
+    ],
+    "year": "2025",
+    "role": "Visual Identity, Packaging, Digital",
+    "services": [
+      "Logo System",
+      "Takeaway Packaging",
+      "Menu Design",
+      "Brand Guidelines"
+    ],
+    "location": "Tokyo & New York",
+    "cover": "/assets/projects/misomaki/misomaki-1.webp",
+    "gallery": [
+      "/assets/projects/misomaki/misomaki-1.webp",
+      "/assets/projects/misomaki/misomaki-2.webp",
+      "/assets/projects/misomaki/misomaki-3.webp",
+      "/assets/projects/misomaki/identity/primary-logo-1.jpg",
+      "/assets/projects/misomaki/identity/primary-logo-transparent-background-0.webp",
+      "/assets/projects/misomaki/misomaki-4.webp",
+      "/assets/projects/misomaki/misomaki-5.webp",
+      "/assets/projects/misomaki/misomaki-6.webp",
+      "/assets/projects/misomaki/misomaki-1.webp",
+      "/assets/projects/misomaki/misomaki-2.webp",
+      "/assets/projects/misomaki/misomaki-3.webp",
+      "/assets/projects/misomaki/misomaki-4.webp",
+      "/assets/projects/misomaki/misomaki-5.webp",
+      "/assets/projects/misomaki/misomaki-6.webp"
+    ],
+    "alt": {
+      "/assets/projects/misomaki/misomaki-1.webp": "Misomaki hero",
+      "/assets/projects/misomaki/misomaki-2.webp": "Misomaki secondary",
+      "/assets/projects/misomaki/misomaki-3.webp": "Misomaki origin",
+      "/assets/projects/misomaki/identity/primary-logo-1.jpg": "Primary Logo",
+      "/assets/projects/misomaki/identity/primary-logo-transparent-background-0.webp": "Primary Logo Transparent Background",
+      "/assets/projects/misomaki/misomaki-4.webp": "Misomaki process",
+      "/assets/projects/misomaki/misomaki-5.webp": "Misomaki process",
+      "/assets/projects/misomaki/misomaki-6.webp": "Misomaki process",
+      "/assets/projects/misomaki/misomaki-1.webp": "Misomaki showcase asset",
+      "/assets/projects/misomaki/misomaki-2.webp": "Misomaki showcase asset",
+      "/assets/projects/misomaki/misomaki-3.webp": "Misomaki showcase asset",
+      "/assets/projects/misomaki/misomaki-4.webp": "Misomaki showcase asset",
+      "/assets/projects/misomaki/misomaki-5.webp": "Misomaki showcase asset",
+      "/assets/projects/misomaki/misomaki-6.webp": "Misomaki showcase asset"
+    },
+    "logo": "/assets/projects/misomaki/identity/primary-logo-transparent-background-0.webp",
+    "founder": null,
+    "problem": "Saturated Market: Sushi branding is notoriously repetitive. We needed a system that stood out without feeling alien. | Scalable Packaging: Takeaway packaging had to be photogenic, sustainable, and functional across multiple container shapes. | Digital First: The brand needed to live primarily on screens before the physical restaurants opened. | Premium yet Accessible: The aesthetic had to convey high-quality ingredients without intimidating everyday lunch customers.",
+    "strategy": "Bold Typography: A custom wordmark that commands attention without being illegible. | Stark Contrast: High-contrast palettes that make the food photography pop. | Minimal Noise: Removing every unnecessary element from the packaging. | Digital Native: Designed for screens first, print second.",
+    "solution": "Misomaki redefines the modern sushi experience. In a market flooded with traditional imagery, we built a visual identity that is sharp, contemporary, and unapologetically bold.",
+    "results": [
+      {
+        "label": "increase in social shares driven purely by the packaging design.",
+        "value": "85%"
+      },
+      {
+        "label": "from initial concept to full brand rollout.",
+        "value": "3 Months"
+      },
+      {
+        "label": "targeted in the first wave of the digital campaign.",
+        "value": "4 Cities"
+      },
+      {
+        "label": "clichéd traditional motifs used in the final identity.",
+        "value": "0"
+      }
+    ],
+    "quote": {
+      "text": "A modern sushi brand that doesn't rely on clichés. Just clean lines and striking visuals.",
+      "author": "Misomaki"
+    },
+    "palette": [
+      "#171000",
+      "#7d7330",
+      "#f0f0f0"
+    ],
+    "isConcept": false,
+    "featured": false,
+    "headline": "Misomaki."
+  },
+  {
+    "slug": "hardin-jewels",
+    "name": "Hardin Jewels",
+    "subtitle": "branding case study",
+    "category": "branding",
+    "tags": [
+      "#branding",
+      "#identity",
+      "#strategy"
+    ],
+    "year": "2025",
+    "role": "Brand Identity, Packaging, Art Direction",
+    "services": [
+      "Logo System",
+      "Packaging Design",
+      "Lookbook",
+      "Campaign Art Direction"
+    ],
+    "location": "Surat, Gujarat, India",
+    "cover": "/assets/projects/hardin-jewels/hardin-jewels-1.webp",
+    "gallery": [
+      "/assets/projects/hardin-jewels/hardin-jewels-1.webp",
+      "/assets/projects/hardin-jewels/hardin-jewels-2.webp",
+      "/assets/projects/hardin-jewels/hardin-jewels-3.webp",
+      "/assets/projects/hardin-jewels/identity/primary-logo-2.png",
+      "/assets/projects/hardin-jewels/identity/primary-logo-white-background-0.webp",
+      "/assets/projects/hardin-jewels/identity/primary-logo-with-transparent-background-1.png",
+      "/assets/projects/hardin-jewels/identity/submark-logo-3.png",
+      "/assets/projects/hardin-jewels/hardin-jewels-4.webp",
+      "/assets/projects/hardin-jewels/hardin-jewels-5.webp",
+      "/assets/projects/hardin-jewels/hardin-jewels-6.webp"
+    ],
+    "alt": {
+      "/assets/projects/hardin-jewels/hardin-jewels-1.webp": "Hardin Jewels hero",
+      "/assets/projects/hardin-jewels/hardin-jewels-2.webp": "Hardin Jewels secondary",
+      "/assets/projects/hardin-jewels/hardin-jewels-3.webp": "Hardin Jewels origin",
+      "/assets/projects/hardin-jewels/identity/primary-logo-2.png": "Primary Logo",
+      "/assets/projects/hardin-jewels/identity/primary-logo-white-background-0.webp": "Primary Logo White Background",
+      "/assets/projects/hardin-jewels/identity/primary-logo-with-transparent-background-1.png": "Primary Logo With Transparent Background",
+      "/assets/projects/hardin-jewels/identity/submark-logo-3.png": "Submark Logo",
+      "/assets/projects/hardin-jewels/hardin-jewels-4.webp": "Hardin Jewels process",
+      "/assets/projects/hardin-jewels/hardin-jewels-5.webp": "Hardin Jewels process",
+      "/assets/projects/hardin-jewels/hardin-jewels-6.webp": "Hardin Jewels process"
+    },
+    "logo": "/assets/projects/hardin-jewels/identity/primary-logo-with-transparent-background-1.png",
+    "founder": {
+      "name": "Krutie Jariwala",
+      "role": "Founder"
+    },
+    "problem": "Aging Demographic: The brand needed to attract younger buyers without alienating their loyal base. | Unboxing Experience: The physical packaging needed to feel as valuable as the jewelry inside. | Visual Clutter: Previous marketing was too busy. The pieces needed room to breathe. | Digital Translation: Ensuring the sparkle and detail translated perfectly to mobile screens.",
+    "strategy": "Editorial Framing: Treating every product shot like a fashion editorial. | Tactile Packaging: Heavy stocks, blind embossing, and velvet interiors. | Restrained Palette: Letting the gold and gemstones provide the color. | Modern Serif: A custom logotype that bridges classic and contemporary.",
+    "solution": "Hardin Jewels offers contemporary fine jewelry. We created a refined visual system anchored by a delicate monogram and subdued color palette to let the fine jewelry take center stage.",
+    "results": [
+      {
+        "label": "increase in engagement from the 25-35 demographic.",
+        "value": "120%"
+      },
+      {
+        "label": "molded inserts for secure, elegant packaging.",
+        "value": "Custom"
+      },
+      {
+        "label": "bespoke typefaces commissioned for the brand.",
+        "value": "2"
+      },
+      {
+        "label": "best luxury packaging design 2025.",
+        "value": "Awarded"
+      }
+    ],
+    "quote": {
+      "text": "Jewelry is deeply personal. The brand needed to feel like a quiet gallery, not a loud storefront.",
+      "author": "Krutie Jariwala"
+    },
+    "palette": [
+      "#0a0a0a",
+      "#fdfdfd",
+      "#e5d3b3",
+      "#5c6166"
+    ],
+    "isConcept": false,
+    "featured": false,
+    "headline": "Hardin Jewels."
+  },
+  {
+    "slug": "evoque",
+    "name": "Evoque",
+    "subtitle": "branding case study",
+    "category": "branding",
+    "tags": [
+      "#branding",
+      "#identity",
+      "#strategy"
+    ],
+    "year": "2025",
+    "role": "Brand Identity, Packaging, Digital",
+    "services": [
+      "Visual Identity",
+      "Bottle Design",
+      "Packaging",
+      "Social Strategy"
+    ],
+    "location": "Los Angeles, CA",
+    "cover": "/assets/projects/evoque/evoque-1.webp",
+    "gallery": [
+      "/assets/projects/evoque/evoque-1.webp",
+      "/assets/projects/evoque/evoque-2.webp",
+      "/assets/projects/evoque/evoque-3.webp",
+      "/assets/projects/evoque/evoque-4.webp",
+      "/assets/projects/evoque/evoque-5.webp"
+    ],
+    "alt": {
+      "/assets/projects/evoque/evoque-1.webp": "Evoque hero",
+      "/assets/projects/evoque/evoque-2.webp": "Evoque secondary",
+      "/assets/projects/evoque/evoque-3.webp": "Evoque origin",
+      "/assets/projects/evoque/evoque-4.webp": "Evoque 4",
+      "/assets/projects/evoque/evoque-5.webp": "Evoque 5"
+    },
+    "logo": null,
+    "founder": null,
+    "problem": "The Sea of Sameness: Fragrance brands often rely on the same tropes. Evoque needed a distinct attitude. | Visualizing Scent: Communicating complex scent profiles through a minimalist visual language. | Packaging: Bottle designs and boxes needed to be beautiful enough to display permanently. | Social Impact: Creating a visual language that stands out endlessly scrolling feeds.",
+    "strategy": "Raw Aesthetics: Embracing imperfections in photography and layouts. | Bold Sans-Serif: A brutalist approach to typography. | Monochrome Canvas: Letting the scent and bottle design dictate the mood of the season. | Tactile Packaging: Using thick, textured cardstock and heavyweight glass bottles.",
+    "solution": "Evoque is a luxury fragrance house redefining modern scents. We created an identity that is evocative, minimal, and fiercely independent.",
+    "results": [
+      {
+        "label": "time taken to sell out the first capsule collection.",
+        "value": "48 Hrs"
+      },
+      {
+        "label": "vegan and cruelty-free ingredients.",
+        "value": "100%"
+      },
+      {
+        "label": "synthetic dyes or harmful additives.",
+        "value": "0"
+      },
+      {
+        "label": "signature scent profiles that define the brand.",
+        "value": "3"
+      }
+    ],
+    "quote": {
+      "text": "Fragrance doesn't have to rely on tired clichés. Evoque brings edge to the everyday scent.",
+      "author": "Evoque"
+    },
+    "palette": [
+      "#d3d3d3",
+      "#000000",
+      "#7e8d9c",
+      "#faf9f6"
+    ],
+    "isConcept": false,
+    "featured": false,
+    "headline": "Evoque."
+  },
+  {
+    "slug": "trivid-yoga",
+    "name": "Trivid Yoga",
+    "subtitle": "branding case study",
+    "category": "branding",
+    "tags": [
+      "#branding",
+      "#identity",
+      "#strategy"
+    ],
+    "year": "2025",
+    "role": "Identity, print, online tutorial system",
+    "services": [
+      "Wordmark",
+      "Mat + tote system",
+      "Class collateral",
+      "Online tutorial brand",
+      "Studio signage"
+    ],
+    "location": "Surat, IN",
+    "cover": "/assets/projects/trivid-yoga/trivid-yoga-1.webp",
+    "gallery": [
+      "/assets/projects/trivid-yoga/trivid-yoga-1.webp",
+      "/assets/projects/trivid-yoga/trivid-yoga-2.webp",
+      "/assets/projects/trivid-yoga/trivid-yoga-3.webp",
+      "/assets/projects/trivid-yoga/identity/primary-logo-1.webp",
+      "/assets/projects/trivid-yoga/identity/primary-logo-transparent-background-0.webp",
+      "/assets/projects/trivid-yoga/trivid-yoga-7.webp",
+      "/assets/projects/trivid-yoga/trivid-yoga-5.webp",
+      "/assets/projects/trivid-yoga/trivid-yoga-6.webp",
+      "/assets/projects/trivid-yoga/trivid-yoga-4.webp",
+      "/assets/projects/trivid-yoga/trivid-yoga-8.webp",
+      "/assets/projects/trivid-yoga/trivid-yoga-9.webp",
+      "/assets/projects/trivid-yoga/trivid-yoga-10.webp"
+    ],
+    "alt": {
+      "/assets/projects/trivid-yoga/trivid-yoga-1.webp": "Trivid Yoga hero",
+      "/assets/projects/trivid-yoga/trivid-yoga-2.webp": "Trivid Yoga secondary",
+      "/assets/projects/trivid-yoga/trivid-yoga-3.webp": "Trivid Yoga origin",
+      "/assets/projects/trivid-yoga/identity/primary-logo-1.webp": "Primary Logo",
+      "/assets/projects/trivid-yoga/identity/primary-logo-transparent-background-0.webp": "Primary Logo Transparent Background",
+      "/assets/projects/trivid-yoga/trivid-yoga-7.webp": "Trivid Yoga statement",
+      "/assets/projects/trivid-yoga/trivid-yoga-5.webp": "Trivid Yoga form",
+      "/assets/projects/trivid-yoga/trivid-yoga-6.webp": "Trivid Yoga form",
+      "/assets/projects/trivid-yoga/trivid-yoga-4.webp": "Trivid Yoga form",
+      "/assets/projects/trivid-yoga/trivid-yoga-8.webp": "Trivid Yoga in context",
+      "/assets/projects/trivid-yoga/trivid-yoga-9.webp": "Trivid Yoga in context",
+      "/assets/projects/trivid-yoga/trivid-yoga-10.webp": "Trivid Yoga in context"
+    },
+    "logo": "/assets/projects/trivid-yoga/identity/primary-logo-transparent-background-0.webp",
+    "founder": null,
+    "problem": "Twenty years, no brand: Proovi had built a daily practice that drew students from four cities. There was no name above the door — just her phone number on a WhatsApp broadcast. | Online and in-studio, two faces: The in-person students and the online students were getting two different experiences. The brand had to hold both without splintering. | Tutorial library needed a brand: Selling pre-recorded yoga online is a crowded category. Proovi&#39;s twenty years of teaching is the differentiator — the brand had to surface that, not the platform. | Teacher-led, not studio-led: Most yoga brands are about the room. Trivid had to be about the teacher — without becoming a personality brand.",
+    "strategy": "Teacher-first: Every brand surface leads with Proovi — not the room, not the style, not the lineage. The teacher is the differentiator. | No lotus, no sanskrit: The whole brand drops the category&#39;s default visual vocabulary. Type, colour, paper — that&#39;s the system. | Same face, two surfaces: The in-studio collateral and the online tutorial brand share one wordmark, one palette, one rhythm. | Daily, not aspirational: The brand is built around daily practice — not a weekend retreat. Voice is consistent, calm, ongoing.",
+    "solution": "The teacher is the brand. Twenty years of teaching is the proof.",
+    "results": [
+      {
+        "label": "of daily classes — the brand&#39;s most defensible asset, finally surfaced as the headline.",
+        "value": "20 yrs"
+      },
+      {
+        "label": "Surat, Bombay, Bangalore, London, USA — where the daily online class draws regulars.",
+        "value": "5 cities"
+      },
+      {
+        "label": "live class and tutorial library — same wordmark, two product modes.",
+        "value": "2 surfaces"
+      },
+      {
+        "label": "every class is led by Proovi personally. The brand makes that the point.",
+        "value": "1 teacher"
+      }
+    ],
+    "quote": {
+      "text": "Twenty years of teaching is the brand. Everything else is a label for it.",
+      "author": "Trivid Yoga"
+    },
+    "palette": [
+      "#8c4a24",
+      "#2b2014",
+      "#f5ede3",
+      "#6b7a4c",
+      "#d4a574"
+    ],
+    "isConcept": false,
+    "featured": false,
+    "headline": "Twenty years of teaching, finally given a name."
+  },
+  {
+    "slug": "paperboat",
+    "name": "Paperboat",
+    "subtitle": "concept case study",
+    "category": "concept",
+    "tags": [
+      "#branding",
+      "#identity",
+      "#strategy"
+    ],
+    "year": "2026",
+    "role": "Concept brand refresh",
+    "services": [
+      "Wordmark refresh",
+      "Pack system",
+      "Illustration system update",
+      "Range architecture",
+      "Concept brand book"
+    ],
+    "location": "Self-initiated",
+    "cover": "/assets/projects/paperboat/paperboat-1.webp",
+    "gallery": [
+      "/assets/projects/paperboat/paperboat-2.webp",
+      "/assets/projects/paperboat/paperboat-3.webp",
+      "/assets/projects/paperboat/paperboat-4.webp",
+      "/assets/projects/paperboat/paperboat-1.webp",
+      "/assets/projects/paperboat/paperboat-10.webp",
+      "/assets/projects/paperboat/paperboat-5.webp",
+      "/assets/projects/paperboat/paperboat-6.webp",
+      "/assets/projects/paperboat/paperboat-7.webp",
+      "/assets/projects/paperboat/paperboat-8.webp",
+      "/assets/projects/paperboat/paperboat-9.webp",
+      "/assets/projects/paperboat/paperboat-1.webp",
+      "/assets/projects/paperboat/paperboat-10.webp",
+      "/assets/projects/paperboat/paperboat-2.webp",
+      "/assets/projects/paperboat/paperboat-3.webp",
+      "/assets/projects/paperboat/paperboat-4.webp",
+      "/assets/projects/paperboat/paperboat-5.webp",
+      "/assets/projects/paperboat/paperboat-6.webp",
+      "/assets/projects/paperboat/paperboat-7.webp",
+      "/assets/projects/paperboat/paperboat-8.webp",
+      "/assets/projects/paperboat/paperboat-9.webp"
+    ],
+    "alt": {
+      "/assets/projects/paperboat/paperboat-2.webp": "Paper Boat hero",
+      "/assets/projects/paperboat/paperboat-3.webp": "Paper Boat secondary",
+      "/assets/projects/paperboat/paperboat-4.webp": "Paper Boat origin",
+      "/assets/projects/paperboat/paperboat-1.webp": "Paperboat 1",
+      "/assets/projects/paperboat/paperboat-10.webp": "Paperboat 10",
+      "/assets/projects/paperboat/paperboat-5.webp": "Paperboat 5",
+      "/assets/projects/paperboat/paperboat-6.webp": "Paperboat 6",
+      "/assets/projects/paperboat/paperboat-7.webp": "Paperboat 7",
+      "/assets/projects/paperboat/paperboat-8.webp": "Paperboat 8",
+      "/assets/projects/paperboat/paperboat-9.webp": "Paperboat 9",
+      "/assets/projects/paperboat/paperboat-1.webp": "Paperboat showcase asset",
+      "/assets/projects/paperboat/paperboat-10.webp": "Paperboat showcase asset",
+      "/assets/projects/paperboat/paperboat-2.webp": "Paperboat showcase asset",
+      "/assets/projects/paperboat/paperboat-3.webp": "Paperboat showcase asset",
+      "/assets/projects/paperboat/paperboat-4.webp": "Paperboat showcase asset",
+      "/assets/projects/paperboat/paperboat-5.webp": "Paperboat showcase asset",
+      "/assets/projects/paperboat/paperboat-6.webp": "Paperboat showcase asset",
+      "/assets/projects/paperboat/paperboat-7.webp": "Paperboat showcase asset",
+      "/assets/projects/paperboat/paperboat-8.webp": "Paperboat showcase asset",
+      "/assets/projects/paperboat/paperboat-9.webp": "Paperboat showcase asset"
+    },
+    "logo": null,
+    "founder": null,
+    "problem": "The brand is younger than the buyer: The current illustration style reads as childlike. The actual buyer is a thirty-five-year-old paying premium for nostalgia they trust. | Range is fifteen tiny stories: Every SKU has its own folktale on the back. Beautiful — but the brand has lost a single voice in favour of fifteen voices. | International shelves don&#39;t speak Hindi: Pack copy designed for a Bombay grocery doesn&#39;t read in Toronto. The brand needs a single hook that survives translation. | Nostalgia has an expiry date: The generation Paper Boat was designed for is now in their forties. The next decade of growth comes from a generation that wasn&#39;t promised these flavours.",
+    "strategy": "Keep the boat, lose the diorama: The paper-boat mark stays. The crowded illustrated backgrounds go. The wordmark earns the pack on its own. | One story per range, not one per SKU: Regional clusters (summers, monsoon, festive) carry the narrative. Individual SKUs get clean, confident labels. | Heritage tones, modern weights: Existing palette stays in the family. Type weights and grid get the upgrade. | Translatable hook on every pack: A single English-Hindi cultural anchor on every pack — survives any market without becoming exoticised.",
+    "solution": "The same drinks. The same memories. A brand grown up by half a decade.",
+    "results": [
+      {
+        "label": "of repeat buyers cite the flavour, not the packaging, as the reason they return — a brand-equity warning sign.",
+        "value": "73%"
+      },
+      {
+        "label": "across the existing range — each with its own back-of-pack story.",
+        "value": "15 SKUs"
+      },
+      {
+        "label": "international launch markets where the brand reads as craft, not heritage.",
+        "value": "2 markets"
+      },
+      {
+        "label": "since founding — the longest a non-evolution can run before becoming a costume.",
+        "value": "13 yrs"
+      }
+    ],
+    "quote": {
+      "text": "Nostalgia got the brand here. Confidence has to take it further.",
+      "author": "Paperboat"
+    },
+    "palette": [
+      "#155985",
+      "#c8612e",
+      "#f2e9d4",
+      "#1f2e22",
+      "#8c4a6b"
+    ],
+    "isConcept": true,
+    "featured": false,
+    "headline": "A nostalgic Indian icon, rebuilt for its next decade."
+  },
+  {
+    "slug": "woven-wax",
+    "name": "Woven Wax",
+    "subtitle": "branding case study",
+    "category": "branding",
+    "tags": [
+      "#branding",
+      "#identity",
+      "#strategy"
+    ],
+    "year": "2025",
+    "role": "Packaging Design, Identity",
+    "services": [
+      "Label System",
+      "Box Design",
+      "Brand Identity",
+      "Photography"
+    ],
+    "location": "Brooklyn, NY",
+    "cover": "/assets/projects/woven-wax/woven-wax-1.webp",
+    "gallery": [
+      "/assets/projects/woven-wax/woven-wax-1.webp",
+      "/assets/projects/woven-wax/woven-wax-2.webp",
+      "/assets/projects/woven-wax/woven-wax-3.webp",
+      "/assets/projects/woven-wax/woven-wax-4.webp",
+      "/assets/projects/woven-wax/woven-wax-5.webp",
+      "/assets/projects/woven-wax/woven-wax-6.webp"
+    ],
+    "alt": {
+      "/assets/projects/woven-wax/woven-wax-1.webp": "Woven Wax hero",
+      "/assets/projects/woven-wax/woven-wax-2.webp": "Woven Wax secondary",
+      "/assets/projects/woven-wax/woven-wax-3.webp": "Woven Wax origin",
+      "/assets/projects/woven-wax/woven-wax-4.webp": "Woven wax 4",
+      "/assets/projects/woven-wax/woven-wax-5.webp": "Woven wax 5",
+      "/assets/projects/woven-wax/woven-wax-6.webp": "Woven wax 6"
+    },
+    "logo": null,
+    "founder": null,
+    "problem": "Shelf Presence: Standing out in boutique stores surrounded by minimalist competitors. | Scent Translation: Using color and typography to evoke specific fragrances. | Production Costs: Designing premium labels that remain cost-effective for small-batch runs. | Giftability: The unboxing experience had to feel gift-ready without extra wrapping.",
+    "strategy": "Textural Graphics: Using visual noise and grain to imply physical texture. | Color as Scent: Abstract color gradients mapping to fragrance notes. | Modular Labels: A system that easily adapts to new seasonal releases. | Warm Typography: Friendly, slightly nostalgic serif fonts.",
+    "solution": "Woven Wax creates artisanal, hand-poured candles. We developed a packaging system that feels as layered and complex as their signature scents.",
+    "results": [
+      {
+        "label": "in the launch collection, each with a unique visual profile.",
+        "value": "4 Scents"
+      },
+      {
+        "label": "clean burning and sustainable.",
+        "value": "Soy Blend"
+      },
+      {
+        "label": "paper stock used for all labels.",
+        "value": "Textured"
+      },
+      {
+        "label": "reusable glass vessels.",
+        "value": "100%"
+      }
+    ],
+    "quote": {
+      "text": "Scent is invisible. The packaging has to do the heavy lifting of telling the story.",
+      "author": "Woven Wax"
+    },
+    "palette": [
+      "#fdfbf7",
+      "#c85a32",
+      "#1d2938",
+      "#cfa08e"
+    ],
+    "isConcept": false,
+    "featured": false,
+    "headline": "Woven Wax."
+  },
+  {
+    "slug": "golden-crust",
+    "name": "Golden Crust",
+    "subtitle": "ui-ux case study",
+    "category": "ui-ux",
+    "tags": [
+      "#ui-ux",
+      "#product",
+      "#design"
+    ],
+    "year": "2026",
+    "role": "Identity, packaging, signage",
+    "services": [
+      "Wordmark",
+      "Bread + pastry packaging",
+      "Stickers + tape",
+      "Storefront mockup",
+      "Photography direction"
+    ],
+    "location": "Lisbon, PT",
+    "cover": "/assets/projects/golden-crust/golden-crust-5.webp",
+    "gallery": [
+      "/assets/projects/golden-crust/golden-crust-5.webp",
+      "/assets/projects/golden-crust/golden-crust-6.webp",
+      "/assets/projects/golden-crust/golden-crust-4.webp",
+      "/assets/projects/golden-crust/identity/logo name.png",
+      "/assets/projects/golden-crust/identity/primary logo transparent background.webp",
+      "/assets/projects/golden-crust/identity/primary logo.png",
+      "/assets/projects/golden-crust/golden-crust-7.webp",
+      "/assets/projects/golden-crust/golden-crust-2.webp",
+      "/assets/projects/golden-crust/golden-crust-11.webp",
+      "/assets/projects/golden-crust/golden-crust-10.webp",
+      "/assets/projects/golden-crust/golden-crust-8.webp",
+      "/assets/projects/golden-crust/golden-crust-9.webp",
+      "/assets/projects/golden-crust/golden-crust-3.webp",
+      "/assets/projects/golden-crust/golden-crust-1.webp"
+    ],
+    "alt": {
+      "/assets/projects/golden-crust/golden-crust-5.webp": "Golden Crust hero",
+      "/assets/projects/golden-crust/golden-crust-6.webp": "Golden Crust secondary",
+      "/assets/projects/golden-crust/golden-crust-4.webp": "Golden Crust origin",
+      "/assets/projects/golden-crust/identity/logo name.png": "Logo Name",
+      "/assets/projects/golden-crust/identity/primary logo transparent background.webp": "Primary Logo Transparent Background",
+      "/assets/projects/golden-crust/identity/primary logo.png": "Primary Logo",
+      "/assets/projects/golden-crust/golden-crust-7.webp": "Golden Crust statement",
+      "/assets/projects/golden-crust/golden-crust-2.webp": "Golden Crust form",
+      "/assets/projects/golden-crust/golden-crust-11.webp": "Golden Crust form",
+      "/assets/projects/golden-crust/golden-crust-10.webp": "Golden Crust form",
+      "/assets/projects/golden-crust/golden-crust-8.webp": "Golden Crust anatomy",
+      "/assets/projects/golden-crust/golden-crust-9.webp": "Golden Crust in context",
+      "/assets/projects/golden-crust/golden-crust-3.webp": "Golden Crust in context",
+      "/assets/projects/golden-crust/golden-crust-1.webp": "Golden Crust in context"
+    },
+    "logo": "/assets/projects/golden-crust/identity/primary logo transparent background.webp",
+    "founder": {
+      "name": "Inês Pereira",
+      "role": "Founder"
+    },
+    "problem": "Twelve years of sticker: The brand was a hand-cut sticker applied to brown bread bags. No system, no consistency, no scale. | Two bakeries, two postcodes: The original Alfama bakery and the new Príncipe Real one couldn&#39;t look like clones — but had to feel like the same family. | Bread looks bad in photos: Most bakery brands lean on stock photos of impossible loaves. Inês refused. The brand had to make her actual bread the hero. | The sticker WAS the loyalty: Customers had grown attached to the imperfect handmade sticker. Replacing it with a designed system risked losing what people loved.",
+    "strategy": "Honest crust: Every photo is real bread baked that morning. No retouching, no impossible browns. | Keep the sticker spirit: The new wordmark has a hand-stamped quality. It&#39;s a system that still looks like one person made it. | Bag is the billboard: The bread bag is the most-seen surface. The whole system is tuned for the walk home. | Two sites, one rhythm: Each bakery has a slightly different signage scale. Same wordmark, different size — like siblings, not clones.",
+    "solution": "The loaf was the brand for twelve years. Now they finally match.",
+    "results": [
+      {
+        "label": "average tenure of Golden Crust&#39;s top-50 repeat customers.",
+        "value": "9 yrs"
+      },
+      {
+        "label": "average loaf price — premium for the segment, normal for the queue.",
+        "value": "€4.50"
+      },
+      {
+        "label": "by 11:30am, every single day of the year.",
+        "value": "0 loaves left"
+      },
+      {
+        "label": "by the end of 2026. Brand built for ten without saying so.",
+        "value": "2 sites"
+      }
+    ],
+    "quote": {
+      "text": "The bread had a queue. The brand had a sticker.",
+      "author": "Inês Pereira"
+    },
+    "palette": [
+      "#5d1f1c",
+      "#f4c9b4",
+      "#f4efea",
+      "#8c4e19"
+    ],
+    "isConcept": false,
+    "featured": false,
+    "headline": "A neighbourhood bakery, treated like an heirloom."
+  },
+  {
+    "slug": "royal-eats",
+    "name": "Royal Eats",
+    "subtitle": "branding case study",
+    "category": "branding",
+    "tags": [
+      "#branding",
+      "#identity",
+      "#strategy"
+    ],
+    "year": "2025",
+    "role": "Branding, packaging",
+    "services": [
+      "Brand identity",
+      "Packaging design",
+      "Visual system"
+    ],
+    "location": "Hyderabad, IN",
+    "cover": "/assets/projects/royal-eats/royal-eats-1.webp",
+    "gallery": [
+      "/assets/projects/royal-eats/royal-eats-1.webp",
+      "/assets/projects/royal-eats/royal-eats-3.webp",
+      "/assets/projects/royal-eats/royal-eats-2.webp",
+      "/assets/projects/royal-eats/identity/primary logo transparent.png",
+      "/assets/projects/royal-eats/royal-eats-4.webp",
+      "/assets/projects/royal-eats/royal-eats-5.webp",
+      "/assets/projects/royal-eats/royal-eats-6.webp",
+      "/assets/projects/royal-eats/royal-eats-7.webp",
+      "/assets/projects/royal-eats/royal-eats-8.webp",
+      "/assets/projects/royal-eats/royal-eats-9.webp",
+      "/assets/projects/royal-eats/royal-eats-10.webp"
+    ],
+    "alt": {
+      "/assets/projects/royal-eats/royal-eats-1.webp": "Royal Eats hero",
+      "/assets/projects/royal-eats/royal-eats-3.webp": "Royal Eats secondary",
+      "/assets/projects/royal-eats/royal-eats-2.webp": "Royal Eats origin",
+      "/assets/projects/royal-eats/identity/primary logo transparent.png": "Primary Logo Transparent",
+      "/assets/projects/royal-eats/royal-eats-4.webp": "Royal Eats statement",
+      "/assets/projects/royal-eats/royal-eats-5.webp": "Royal Eats form",
+      "/assets/projects/royal-eats/royal-eats-6.webp": "Royal Eats form",
+      "/assets/projects/royal-eats/royal-eats-7.webp": "Royal Eats form",
+      "/assets/projects/royal-eats/royal-eats-8.webp": "Royal Eats anatomy",
+      "/assets/projects/royal-eats/royal-eats-9.webp": "Royal Eats in context",
+      "/assets/projects/royal-eats/royal-eats-10.webp": "Royal Eats in context"
+    },
+    "logo": "/assets/projects/royal-eats/identity/primary logo transparent.png",
+    "founder": null,
+    "problem": "The food outran the brand: Five-star food, three-star packaging. Repeat customers loved it; new ones didn&#39;t know what they were looking at. | Delivery, but dressed for dining: The packaging had to survive a forty-minute ride and still feel like a gift on arrival. | Heritage without kitsch: Hyderabadi cuisine has a 500-year history. Most brands lean on Mughal silhouettes and gold. Royal Eats needed heritage without the cliché. | One identity, two rooms: The brand had to read at sixty miles an hour on a delivery bike and at six feet on a flagship facade.",
+    "strategy": "Heritage, not pageantry: Reference the Nizam era without copying its ornament. The brand should feel old without looking dated. | Built for travel: Every piece of packaging is designed to look better after a forty-minute delivery ride, not worse. | One face, two rooms: The same wordmark works on a delivery sticker at three centimetres and on a façade at three metres. | Quiet luxury: No gold foil. No script flourishes. A single deep red doing all the heavy lifting.",
+    "solution": "A 500-year-old cuisine, served in a brand that finally fits.",
+    "results": [
+      {
+        "label": "five-star reviews across delivery platforms by the time we started.",
+        "value": "8,400+"
+      },
+      {
+        "label": "average order value — 2.2× the segment median.",
+        "value": "₹1,180"
+      },
+      {
+        "label": "of dine-in guests now arrive having tried the delivery first.",
+        "value": "76%"
+      },
+      {
+        "label": "increase in branded-search volume in the six months post-rebrand.",
+        "value": "3.4×"
+      }
+    ],
+    "quote": {
+      "text": "You can't taste a great snack until you pick up the bag.",
+      "author": "Royal Eats"
+    },
+    "palette": [
+      "#6e1f2a",
+      "#a6342a",
+      "#f4ecdd",
+      "#d6b987",
+      "#2a0f0f"
+    ],
+    "isConcept": false,
+    "featured": false,
+    "headline": "A modern identity for a beloved snack brand."
+  },
+  {
+    "slug": "plush-paws",
+    "name": "Plush Paws",
+    "subtitle": "branding case study",
+    "category": "branding",
+    "tags": [
+      "#branding",
+      "#packaging",
+      "#identity"
+    ],
+    "year": "2026",
+    "role": "Identity, packaging suite, retail trade dress",
+    "services": [
+      "Wordmark",
+      "Food can + pouch",
+      "Treat box system",
+      "Accessory range",
+      "Trade dress"
+    ],
+    "location": "Dubai, UAE",
+    "cover": "/assets/projects/plush-paws/plush-paws-1.webp",
+    "gallery": [
+      "/assets/projects/plush-paws/plush-paws-7.webp",
+      "/assets/projects/plush-paws/plush-paws-9.webp",
+      "/assets/projects/plush-paws/plush-paws-2.webp",
+      "/assets/projects/plush-paws/plush-paws-1.webp",
+      "/assets/projects/plush-paws/plush-paws-10.webp",
+      "/assets/projects/plush-paws/plush-paws-3.webp",
+      "/assets/projects/plush-paws/plush-paws-4.webp",
+      "/assets/projects/plush-paws/plush-paws-5.webp",
+      "/assets/projects/plush-paws/plush-paws-6.webp",
+      "/assets/projects/plush-paws/plush-paws-8.webp"
+    ],
+    "alt": {
+      "/assets/projects/plush-paws/plush-paws-7.webp": "Plush Paws hero",
+      "/assets/projects/plush-paws/plush-paws-9.webp": "Plush Paws secondary",
+      "/assets/projects/plush-paws/plush-paws-2.webp": "Plush Paws origin",
+      "/assets/projects/plush-paws/plush-paws-1.webp": "Plush paws 1",
+      "/assets/projects/plush-paws/plush-paws-10.webp": "Plush paws 10",
+      "/assets/projects/plush-paws/plush-paws-3.webp": "Plush paws 3",
+      "/assets/projects/plush-paws/plush-paws-4.webp": "Plush paws 4",
+      "/assets/projects/plush-paws/plush-paws-5.webp": "Plush paws 5",
+      "/assets/projects/plush-paws/plush-paws-6.webp": "Plush paws 6",
+      "/assets/projects/plush-paws/plush-paws-8.webp": "Plush paws 8"
+    },
+    "logo": null,
+    "founder": {
+      "name": "Karim Khalifa",
+      "role": "Founder"
+    },
+    "problem": "Pet aisle = 1995 supermarket: Even premium pet brands use 2005-era pack design. Plush Paws was meant to feel like a 2026 skincare brand, just with dogs on the bag. | Five formats, one face: Cans, pouches, treat boxes, accessories, and a mobile app. The system had to feel like one brand across radically different packaging. | Affluent buyer, sceptical of premium pet: Karim&#39;s target buyer already pays premium for their own food. They&#39;ve also seen pet brands inflate price without product reason. | Soft luxury, not gaudy luxury: Gold foil and crests would have been easy. The brand needed quiet luxury — confident, restrained, expensive-feeling without trying.",
+    "strategy": "Restraint over decoration: No gold foil, no crests, no monogram repeats. One deep wine, one cream, one type. Quiet luxury. | Photography in low light: Every brand asset shot under a single soft light. Long shadows, soft falloff. Feels like a parfum ad. | Materials do the talking: Matte-coat substrates, debossed wordmarks, no shouting prints. The pack feels expensive in the hand. | Modular system: Can, pouch, treat box, accessory — same proportion, same wordmark, same restraint. One brand, five containers.",
+    "solution": "Same restraint we&#39;d give a luxury skincare line. Different animal.",
+    "results": [
+      {
+        "label": "average treat-box price — at parity with niche skincare, not pet food.",
+        "value": "AED 95"
+      },
+      {
+        "label": "can, pouch, treat box, accessory, app — same wordmark, five containers.",
+        "value": "5 formats"
+      },
+      {
+        "label": "single-protein across every food SKU. No grain mystery.",
+        "value": "0 fillers"
+      },
+      {
+        "label": "average repeat-purchase cycle of the top quartile of customers — vs. category baseline of 4 months.",
+        "value": "12 mo"
+      }
+    ],
+    "quote": {
+      "text": "Premium pet food deserves the same brief as premium night cream.",
+      "author": "Karim Khalifa"
+    },
+    "palette": [
+      "#ddcbad",
+      "#efe6d2",
+      "#3e2723"
+    ],
+    "isConcept": false,
+    "featured": false,
+    "headline": "Pet food, finally treated like premium FMCG."
+  },
+  {
+    "slug": "pure-sip",
+    "name": "Pure Sip",
+    "subtitle": "ui-ux case study",
+    "category": "ui-ux",
+    "tags": [
+      "#ui-ux",
+      "#product",
+      "#design"
+    ],
+    "year": "2025",
+    "role": "Brand Identity, Packaging Design",
+    "services": [
+      "Logo System",
+      "Can Design",
+      "Carton Packaging",
+      "3D Renders"
+    ],
+    "location": "Austin, TX",
+    "cover": "/assets/projects/pure-sip/pure-sip-1.webp",
+    "gallery": [
+      "/assets/projects/pure-sip/pure-sip-1.webp",
+      "/assets/projects/pure-sip/pure-sip-2.webp",
+      "/assets/projects/pure-sip/pure-sip-3.webp",
+      "/assets/projects/pure-sip/identity/primary-logo-3.png",
+      "/assets/projects/pure-sip/identity/primary-logo-green-0.png",
+      "/assets/projects/pure-sip/identity/primary-logo-purple-1.png",
+      "/assets/projects/pure-sip/identity/primary-logo-yellow-2.png",
+      "/assets/projects/pure-sip/pure-sip-4.webp",
+      "/assets/projects/pure-sip/pure-sip-5.webp",
+      "/assets/projects/pure-sip/pure-sip-6.webp"
+    ],
+    "alt": {
+      "/assets/projects/pure-sip/pure-sip-1.webp": "Pure Sip hero",
+      "/assets/projects/pure-sip/pure-sip-2.webp": "Pure Sip secondary",
+      "/assets/projects/pure-sip/pure-sip-3.webp": "Pure Sip origin",
+      "/assets/projects/pure-sip/identity/primary-logo-3.png": "Primary Logo",
+      "/assets/projects/pure-sip/identity/primary-logo-green-0.png": "Primary Logo Green",
+      "/assets/projects/pure-sip/identity/primary-logo-purple-1.png": "Primary Logo Purple",
+      "/assets/projects/pure-sip/identity/primary-logo-yellow-2.png": "Primary Logo Yellow",
+      "/assets/projects/pure-sip/pure-sip-4.webp": "Pure Sip process",
+      "/assets/projects/pure-sip/pure-sip-5.webp": "Pure Sip process",
+      "/assets/projects/pure-sip/pure-sip-6.webp": "Pure Sip process"
+    },
+    "logo": "/assets/projects/pure-sip/identity/primary-logo-3.png",
+    "founder": null,
+    "problem": "Invisible Product: Water has no color or texture. The packaging must do all the communicating. | Visual Impact: Designing a packaging system that feels premium while remaining incredibly accessible. | Shelf Impact: Standing out in the most crowded aisle in the grocery store.",
+    "strategy": "Fluid Typography: Custom lettering that feels like flowing water. | Negative Space: Vast areas of white and blue to imply purity. | Cool Tones: A strict palette of blues and icy silvers.",
+    "solution": "Pure Sip is redefining everyday hydration. We designed a packaging system that feels refreshing, clean, and impossibly crisp.",
+    "results": [
+      {
+        "label": "pure, filtered hydration for everyday life.",
+        "value": "100%"
+      },
+      {
+        "label": "packaging formats (can, carton, glass).",
+        "value": "3"
+      },
+      {
+        "label": "the primary brand attribute measured in testing.",
+        "value": "Crisp"
+      }
+    ],
+    "quote": {
+      "text": "Water branding is notoriously difficult. You have to design the feeling of thirst-quenching.",
+      "author": "Pure Sip"
+    },
+    "palette": [
+      "#ffffff",
+      "#003b73",
+      "#60a3d9",
+      "#bfd7ed"
+    ],
+    "isConcept": false,
+    "featured": false,
+    "headline": "Pure Sip."
+  },
+  {
+    "slug": "rich-kanya",
+    "name": "Rich Kanya",
+    "subtitle": "branding case study",
+    "category": "branding",
+    "tags": [
+      "#branding",
+      "#identity",
+      "#strategy"
+    ],
+    "year": "2025",
+    "role": "Visual Identity, Typography",
+    "services": [
+      "Logo System",
+      "Typography",
+      "Billboard Graphics",
+      "Brand Guidelines"
+    ],
+    "location": "Mumbai, India",
+    "cover": "/assets/projects/rich-kanya/Billboard_Mockup.webp",
+    "gallery": [
+      "/assets/projects/rich-kanya/Billboard_Mockup.webp",
+      "/assets/projects/rich-kanya/identity/primary-logo-2.webp",
+      "/assets/projects/rich-kanya/identity/primary-logo-transparent-background-1.webp"
+    ],
+    "alt": {
+      "/assets/projects/rich-kanya/Billboard_Mockup.webp": "Rich Kanya hero",
+      "/assets/projects/rich-kanya/identity/primary-logo-2.webp": "Primary Logo",
+      "/assets/projects/rich-kanya/identity/primary-logo-transparent-background-1.webp": "Primary Logo Transparent Background"
+    },
+    "logo": "/assets/projects/rich-kanya/identity/primary-logo-transparent-background-1.webp",
+    "founder": null,
+    "problem": "Instant Recognition: The logo needed to be iconic instantly. | High Impact: Outdoor advertising required extreme contrast and legibility.",
+    "strategy": "Maximum Contrast: Black and white as the primary drivers. | Scale: Typography designed to be blown up to billboard size.",
+    "solution": "Rich Kanya is a bold new lifestyle brand. We designed an unapologetically loud typographic system and high-contrast color palette built to dominate highway billboards and streetwear alike.",
+    "results": [
+      {
+        "label": "primary medium for the brand launch campaign.",
+        "value": "OOH"
+      },
+      {
+        "label": "custom typographic treatments.",
+        "value": "Bold"
+      }
+    ],
+    "quote": {
+      "text": "A brand that refuses to whisper. Rich Kanya is loud, proud, and everywhere.",
+      "author": "Rich Kanya"
+    },
+    "palette": [
+      "#000000",
+      "#ffffff"
+    ],
+    "isConcept": false,
+    "featured": false,
+    "headline": "Rich Kanya."
+  },
+  {
+    "slug": "kitkat-protein-bar",
+    "name": "Kitkat Protein Bar",
+    "subtitle": "concept case study",
+    "category": "concept",
+    "tags": [
+      "#branding",
+      "#identity",
+      "#strategy"
+    ],
+    "year": "2026",
+    "role": "Concept SKU launch design",
+    "services": [
+      "Wordmark adaptation",
+      "Wrapper system",
+      "Multipack",
+      "Macro callouts",
+      "Trade window display"
+    ],
+    "location": "Self-initiated",
+    "cover": "/assets/projects/kitkat-protein-bar/kitkat-protein-bar-9.webp",
+    "gallery": [
+      "/assets/projects/kitkat-protein-bar/kitkat-protein-bar-9.webp",
+      "/assets/projects/kitkat-protein-bar/kitkat-protein-bar-7.webp",
+      "/assets/projects/kitkat-protein-bar/kitkat-protein-bar-10.webp",
+      "/assets/projects/kitkat-protein-bar/kitkat-protein-bar-1.webp",
+      "/assets/projects/kitkat-protein-bar/kitkat-protein-bar-11.webp",
+      "/assets/projects/kitkat-protein-bar/kitkat-protein-bar-2.webp",
+      "/assets/projects/kitkat-protein-bar/kitkat-protein-bar-3.webp",
+      "/assets/projects/kitkat-protein-bar/kitkat-protein-bar-4.webp",
+      "/assets/projects/kitkat-protein-bar/kitkat-protein-bar-5.webp",
+      "/assets/projects/kitkat-protein-bar/kitkat-protein-bar-6.webp",
+      "/assets/projects/kitkat-protein-bar/kitkat-protein-bar-8.webp"
+    ],
+    "alt": {
+      "/assets/projects/kitkat-protein-bar/kitkat-protein-bar-9.webp": "Kit-Kat Protein hero",
+      "/assets/projects/kitkat-protein-bar/kitkat-protein-bar-7.webp": "Kit-Kat Protein secondary",
+      "/assets/projects/kitkat-protein-bar/kitkat-protein-bar-10.webp": "Kit-Kat Protein origin",
+      "/assets/projects/kitkat-protein-bar/kitkat-protein-bar-1.webp": "Kitkat protein bar 1",
+      "/assets/projects/kitkat-protein-bar/kitkat-protein-bar-11.webp": "Kitkat protein bar 11",
+      "/assets/projects/kitkat-protein-bar/kitkat-protein-bar-2.webp": "Kitkat protein bar 2",
+      "/assets/projects/kitkat-protein-bar/kitkat-protein-bar-3.webp": "Kitkat protein bar 3",
+      "/assets/projects/kitkat-protein-bar/kitkat-protein-bar-4.webp": "Kitkat protein bar 4",
+      "/assets/projects/kitkat-protein-bar/kitkat-protein-bar-5.webp": "Kitkat protein bar 5",
+      "/assets/projects/kitkat-protein-bar/kitkat-protein-bar-6.webp": "Kitkat protein bar 6",
+      "/assets/projects/kitkat-protein-bar/kitkat-protein-bar-8.webp": "Kitkat protein bar 8"
+    },
+    "logo": null,
+    "founder": null,
+    "problem": "Equity, not erasure: Strip too much of the original Kit-Kat and you lose the icon. Strip too little and you look like a healthwash. | Macros are the new ingredients: Buyers read the back of the pack before the front. The macro callout has to do the work the flavour name used to. | Gym shelf, not snack aisle: The wrapper has to survive next to MyProtein, RXBAR, and Barebells. Different vocabulary, different rhythm. | Stay snackable: Functional bars are tasted, not just consumed. The brand can&#39;t forget that the original Kit-Kat is delicious.",
+    "strategy": "Keep the red: The Kit-Kat red is forty percent of the brand. Lose it and you&#39;ve designed a different product. | Front-of-pack honesty: Macros live where the flavour used to. No fake leaves, no athletic silhouettes. | Snap-first photography: Every shot leads with the broken bar. The product earned its photo. | Modular for SKUs: The wrapper system flexes across six flavours and three protein levels without redrawing the logo.",
+    "solution": "Same break. Different reason to take it.",
+    "results": [
+      {
+        "label": "of Gen-Z protein-bar buyers say nostalgia influences their purchase decision (concept-research framing).",
+        "value": "62%"
+      },
+      {
+        "label": "protein per bar — at parity with category leaders.",
+        "value": "20g"
+      },
+      {
+        "label": "sugar — half the original Kit-Kat. The lever the macro-reader notices.",
+        "value": "9g"
+      },
+      {
+        "label": "preserved silhouette — the snap stays sacred.",
+        "value": "4 fingers"
+      }
+    ],
+    "quote": {
+      "text": "Have a break. Have a protein bar.",
+      "author": "Kitkat Protein Bar"
+    },
+    "palette": [
+      "#c2410c",
+      "#7c2d12",
+      "#fbf1e3",
+      "#e8a33d",
+      "#2a1407"
+    ],
+    "isConcept": true,
+    "featured": false,
+    "headline": "A childhood favourite, rebuilt for the gym."
+  },
+  {
+    "slug": "satori-bites",
+    "name": "Satori Bites",
+    "subtitle": "branding case study",
+    "category": "branding",
+    "tags": [
+      "#branding",
+      "#packaging",
+      "#identity"
+    ],
+    "year": "2025",
+    "role": "Brand Identity, Packaging Design",
+    "services": [
+      "Packaging System",
+      "Illustration",
+      "Brand Identity"
+    ],
+    "location": "San Francisco, CA",
+    "cover": "/assets/projects/satori-bites/satori-bites-6.webp",
+    "gallery": [
+      "/assets/projects/satori-bites/satori-bites-1.webp",
+      "/assets/projects/satori-bites/satori-bites-2.webp",
+      "/assets/projects/satori-bites/satori-bites-3.webp",
+      "/assets/projects/satori-bites/identity/pattern-0.webp",
+      "/assets/projects/satori-bites/identity/primary-logo-red-1.png",
+      "/assets/projects/satori-bites/identity/primary-logo-transparent-background-2.png",
+      "/assets/projects/satori-bites/identity/primary-logo-white-3.png",
+      "/assets/projects/satori-bites/identity/primary-logo-with-symbol-4.png",
+      "/assets/projects/satori-bites/satori-bites-4.webp",
+      "/assets/projects/satori-bites/satori-bites-5.webp",
+      "/assets/projects/satori-bites/satori-bites-6.webp"
+    ],
+    "alt": {
+      "/assets/projects/satori-bites/satori-bites-1.webp": "Satori Bites hero",
+      "/assets/projects/satori-bites/satori-bites-2.webp": "Satori Bites secondary",
+      "/assets/projects/satori-bites/satori-bites-3.webp": "Satori Bites origin",
+      "/assets/projects/satori-bites/identity/pattern-0.webp": "Pattern",
+      "/assets/projects/satori-bites/identity/primary-logo-red-1.png": "Primary Logo Red",
+      "/assets/projects/satori-bites/identity/primary-logo-transparent-background-2.png": "Primary Logo Transparent Background",
+      "/assets/projects/satori-bites/identity/primary-logo-white-3.png": "Primary Logo White",
+      "/assets/projects/satori-bites/identity/primary-logo-with-symbol-4.png": "Primary Logo With Symbol",
+      "/assets/projects/satori-bites/satori-bites-4.webp": "Satori Bites process",
+      "/assets/projects/satori-bites/satori-bites-5.webp": "Satori Bites process",
+      "/assets/projects/satori-bites/satori-bites-6.webp": "Satori Bites process"
+    },
+    "logo": "/assets/projects/satori-bites/identity/primary-logo-transparent-background-2.png",
+    "founder": null,
+    "problem": "The 'Healthy' Look: Avoiding the boring, earthy tones typical of health foods. | Shelf Pop: Using bright, unexpected colors to grab attention in the snack aisle.",
+    "strategy": "Joyful Colors: A palette that makes you smile. | Clean Layout: Clear nutritional info without clutter.",
+    "solution": "Satori Bites brings the authentic flavors of Asian dimsum and noodle bars to a healthy snack format. We built a brand that balances the joy of an Asian treat with the cleanliness of health food.",
+    "results": [
+      {
+        "label": "increase in retail shelf pickup rate.",
+        "value": "3x"
+      },
+      {
+        "label": "color palette deployed across 6 SKUs.",
+        "value": "Vibrant"
+      }
+    ],
+    "quote": {
+      "text": "Healthy snacks don't have to be bland. We captured the bold flavors of an Asian noodle bar in a guilt-free bite.",
+      "author": "Satori Bites"
+    },
+    "palette": [
+      "#ffd166",
+      "#06d6a0",
+      "#ef476f",
+      "#073b4c"
+    ],
+    "isConcept": false,
+    "featured": true,
+    "headline": "Satori Bites."
+  },
+  {
+    "slug": "silver-sphere-tech",
+    "name": "Silver Sphere Tech",
+    "subtitle": "branding case study",
+    "category": "branding",
+    "tags": [
+      "#branding",
+      "#identity",
+      "#strategy"
+    ],
+    "year": "2026",
+    "role": "Identity, signage system, trade dress",
+    "services": [
+      "Wordmark + monogram",
+      "Signage system",
+      "Trade dress",
+      "Print collateral",
+      "Brand guidelines"
+    ],
+    "location": "USA",
+    "cover": "/assets/projects/silver-sphere-tech/silver-sphere-tech-matthew-1.webp",
+    "gallery": [
+      "/assets/projects/silver-sphere-tech/silver-sphere-tech-matthew-3.webp",
+      "/assets/projects/silver-sphere-tech/silver-sphere-tech-matthew-7.webp",
+      "/assets/projects/silver-sphere-tech/silver-sphere-tech-matthew-8.webp",
+      "/assets/projects/silver-sphere-tech/identity/horizontal-version-with-black-wordmark-0.webp",
+      "/assets/projects/silver-sphere-tech/identity/horizontal-version-with-white-wordmark-1.webp",
+      "/assets/projects/silver-sphere-tech/identity/horizontally-stacked-version-with-black-wordmark-2.webp",
+      "/assets/projects/silver-sphere-tech/identity/horizontally-stacked-version-with-white-wordmark-3.webp",
+      "/assets/projects/silver-sphere-tech/identity/logomark-4.webp",
+      "/assets/projects/silver-sphere-tech/identity/pattern-5.png",
+      "/assets/projects/silver-sphere-tech/identity/primary-logo-with-black-wordmark-6.webp",
+      "/assets/projects/silver-sphere-tech/identity/primary-logo-with-white-wordmark-7.webp",
+      "/assets/projects/silver-sphere-tech/silver-sphere-tech-matthew-9.webp",
+      "/assets/projects/silver-sphere-tech/silver-sphere-tech-matthew-6.webp",
+      "/assets/projects/silver-sphere-tech/silver-sphere-tech-matthew-4.webp",
+      "/assets/projects/silver-sphere-tech/silver-sphere-tech-matthew-5.webp",
+      "/assets/projects/silver-sphere-tech/silver-sphere-tech-matthew-10.webp",
+      "/assets/projects/silver-sphere-tech/silver-sphere-tech-matthew-2.webp",
+      "/assets/projects/silver-sphere-tech/silver-sphere-tech-matthew-1.webp"
+    ],
+    "alt": {
+      "/assets/projects/silver-sphere-tech/silver-sphere-tech-matthew-3.webp": "Silver Sphere hero",
+      "/assets/projects/silver-sphere-tech/silver-sphere-tech-matthew-7.webp": "Silver Sphere secondary",
+      "/assets/projects/silver-sphere-tech/silver-sphere-tech-matthew-8.webp": "Silver Sphere origin",
+      "/assets/projects/silver-sphere-tech/identity/horizontal-version-with-black-wordmark-0.webp": "Horizontal Version With Black Wordmark",
+      "/assets/projects/silver-sphere-tech/identity/horizontal-version-with-white-wordmark-1.webp": "Horizontal Version With White Wordmark",
+      "/assets/projects/silver-sphere-tech/identity/horizontally-stacked-version-with-black-wordmark-2.webp": "Horizontally Stacked Version With Black Wordmark",
+      "/assets/projects/silver-sphere-tech/identity/horizontally-stacked-version-with-white-wordmark-3.webp": "Horizontally Stacked Version With White Wordmark",
+      "/assets/projects/silver-sphere-tech/identity/logomark-4.webp": "Logomark",
+      "/assets/projects/silver-sphere-tech/identity/pattern-5.png": "Pattern",
+      "/assets/projects/silver-sphere-tech/identity/primary-logo-with-black-wordmark-6.webp": "Primary Logo With Black Wordmark",
+      "/assets/projects/silver-sphere-tech/identity/primary-logo-with-white-wordmark-7.webp": "Primary Logo With White Wordmark",
+      "/assets/projects/silver-sphere-tech/silver-sphere-tech-matthew-9.webp": "Silver Sphere statement",
+      "/assets/projects/silver-sphere-tech/silver-sphere-tech-matthew-6.webp": "Silver Sphere form",
+      "/assets/projects/silver-sphere-tech/silver-sphere-tech-matthew-4.webp": "Silver Sphere form",
+      "/assets/projects/silver-sphere-tech/silver-sphere-tech-matthew-5.webp": "Silver Sphere form",
+      "/assets/projects/silver-sphere-tech/silver-sphere-tech-matthew-10.webp": "Silver Sphere in context",
+      "/assets/projects/silver-sphere-tech/silver-sphere-tech-matthew-2.webp": "Silver Sphere in context",
+      "/assets/projects/silver-sphere-tech/silver-sphere-tech-matthew-1.webp": "Silver Sphere in context"
+    },
+    "logo": "/assets/projects/silver-sphere-tech/identity/logomark-4.webp",
+    "founder": {
+      "name": "Matthew",
+      "role": "Founder"
+    },
+    "problem": "Every IT services brand looks the same: Blue gradient, generic wordmark, stock photography of fibre-optic cables. The category is a wall of indistinguishable consultancies. | AI as buzzword vs. as differentiator: Every firm is bolting &#39;AI&#39; onto their copy. Silver Sphere needed to own AI visually — not just write it on the homepage. | Founder-led, but not founder-fronted: Matthew wanted credibility from his years of experience without turning the brand into a personal page. | Enterprise-facing, but launch-stage: Has to look like it belongs next to Accenture in a tender document — while being a three-person firm on launch day.",
+    "strategy": "Architectural, not decorative: The brand reads like the systems the firm builds — clean, gridded, no flourish. | Monogram-led: A single monogram does most of the work. The wordmark is reserved for formal applications. | Cool, not cold: Deep blue-black base with one cool blue accent. Restrained enough to disappear into a server room, distinctive enough to recognise. | Scale-agnostic: The monogram has to read at 3mm on an embossed business card and 3m on a façade. Designed for both ends of the range.",
+    "solution": "Years of IT, a generation of AI, one cover page that finally fits both.",
+    "results": [
+      {
+        "label": "of enterprise IT experience behind the launch.",
+        "value": "3-4 yrs"
+      },
+      {
+        "label": "every delivery pod includes an AI augmentation layer by default.",
+        "value": "AI-first"
+      },
+      {
+        "label": "from a 3mm card embossing to a 3m façade. Same construction, fifteen sizes.",
+        "value": "1 monogram"
+      },
+      {
+        "label": "no per-service variants. One identity across the company.",
+        "value": "0 sub-brands"
+      }
+    ],
+    "quote": {
+      "text": "When the work is AI-augmented, the brand can&#39;t be a 2010 wireframe.",
+      "author": "Matthew"
+    },
+    "palette": [
+      "#0f1318",
+      "#7bb8d9",
+      "#e8ecf0",
+      "#2d3b47",
+      "#c0a875"
+    ],
+    "isConcept": false,
+    "featured": true,
+    "headline": "IT services with an AI layer — finally branded like it."
+  }
+]

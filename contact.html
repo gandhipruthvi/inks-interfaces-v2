@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>contact &amp; inquiry — inks &amp; interfaces</title>
+  <meta name="description" content="Start a project with inks &amp; interfaces. Direct access to our founders for branding, rebranding and digital." />
+  <link rel="canonical" href="https://inksandinterfaces.design/contact" />
+  <link rel="icon" href="/brand/secondary-monogram.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/styles/tokens.css">
+  <link rel="stylesheet" href="/src/styles/base.css">
+  <link rel="stylesheet" href="/src/styles/chrome.css">
+  <link rel="stylesheet" href="/src/styles/secondary.css">
+</head>
+<body>
+  <div class="grain-overlay" aria-hidden="true"></div>
+  <a class="skip-link" href="#main-content">skip to main content</a>
+
+  <!-- Header -->
+  <header class="site-header">
+    <a href="/" class="header-brand" aria-label="inks and interfaces home">
+      <img src="/brand/wordmark-white-sm.webp" alt="inks &amp; interfaces" class="header-logo" width="115" height="36">
+    </a>
+    <nav class="header-nav" aria-label="primary navigation">
+      <a href="/work" class="nav-link">work</a>
+      <a href="/services" class="nav-link">services</a>
+      <a href="/studio" class="nav-link">studio</a>
+      <a href="/contact" class="nav-link active">contact</a>
+    </nav>
+    <div class="header-right">
+      <div class="header-time" aria-live="polite">surat 00:00:00 ist</div>
+      <a href="/contact" class="coral-pill" data-magnetic>start a project</a>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <header class="page-header page-header--split">
+      <div class="page-header-copy">
+      <p class="mono-label" style="margin-bottom: var(--space-3);" data-reveal="fade">// start a project</p>
+      <h1 class="page-title" data-reveal="lines">
+        let's build yours.
+      </h1>
+      <p class="page-intro" data-reveal="fade">
+        Tell us about your venture, current inflection points, and timelines. We review every inquiry within 24 hours.
+      </p>
+      <p class="mono-label page-3d-hint">start typing below and watch the ink</p>
+      </div>
+      <div class="page-3d-panel ink-drop" aria-hidden="true"></div>
+    </header>
+
+    <!-- Contact Form on Paper -->
+    <section class="contact-section" aria-label="Project Inquiry Form">
+      <div class="contact-layout">
+        <!-- Left: Studio Details & Direct Links -->
+        <div>
+          <p class="mono-label" style="color: var(--coral);">// direct studio line</p>
+          <h2 style="font-size: var(--text-h2); font-weight: 300; margin: var(--space-3) 0 var(--space-6);">
+            prefer email or a scheduled call?
+          </h2>
+
+          <div style="margin-bottom: var(--space-6);">
+            <span class="mono-label" style="display: block; margin-bottom: 4px;">email</span>
+            <a href="mailto:letscreate.inksandinterfaces@gmail.com" style="font-size: var(--text-body-lg); color: var(--ink); text-decoration: underline;">
+              letscreate.inksandinterfaces@gmail.com
+            </a>
+          </div>
+
+          <div style="margin-bottom: var(--space-6);">
+            <span class="mono-label" style="display: block; margin-bottom: 4px;">studio location</span>
+            <p style="font-size: var(--text-body); color: var(--ink);">
+              Surat, Gujarat, India &middot; Operating globally across IST, GMT, and EST timezones.
+            </p>
+          </div>
+
+          <div style="margin-bottom: var(--space-6);">
+            <span class="mono-label" style="display: block; margin-bottom: 4px;">availability</span>
+            <p style="font-size: var(--text-body); color: var(--coral); font-weight: 500;">
+              Currently booking new projects for Q1 2027.
+            </p>
+          </div>
+
+          <div style="margin-top: var(--space-8); padding-top: var(--space-6); border-top: 1px solid var(--paper-2);">
+            <span class="mono-label" style="display: block; margin-bottom: 8px;">calendar booking</span>
+            <a href="https://cal.com/inks-interfaces" target="_blank" rel="noopener" class="coral-pill" data-magnetic style="background: var(--ink); color: #FFFFFF !important;">
+              book a 20-min discovery call &nearr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Inquiry Form -->
+        <div>
+          <form class="contact-form" aria-label="Project details form">
+            <div class="form-error-msg" style="color: var(--coral); font-size: 13px; font-family: var(--font-mono); margin-bottom: var(--space-3);"></div>
+
+            <div class="form-group">
+              <label for="nameInput">your name *</label>
+              <input type="text" id="nameInput" class="form-input" placeholder="your name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="emailInput">work email *</label>
+              <input type="email" id="emailInput" class="form-input" placeholder="you@yourcompany.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="companyInput">company or project name</label>
+              <input type="text" id="companyInput" class="form-input" placeholder="your brand or business">
+            </div>
+
+            <div class="form-group">
+              <label>what do you need to build?</label>
+              <select class="form-select">
+                <option value="full-system">Full brand system (strategy + identity + website)</option>
+                <option value="rebrand">Rebrand of an existing business</option>
+                <option value="new-identity">New brand identity</option>
+                <option value="digital-product">Website or digital product</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>approximate investment range</label>
+              <input type="hidden" id="budgetInput" value="5L-10L">
+              <div class="budget-options">
+                <button type="button" class="budget-chip" data-val="2L-5L">&#8377;2L &ndash; 5L</button>
+                <button type="button" class="budget-chip active" data-val="5L-10L">&#8377;5L &ndash; 10L</button>
+                <button type="button" class="budget-chip" data-val="10L+">&#8377;10L+</button>
+                <button type="button" class="budget-chip" data-val="intl">$5k &ndash; $15k</button>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="messageInput">project summary &amp; goals</label>
+              <textarea id="messageInput" class="form-textarea" rows="4" placeholder="Tell us about what you're making, who it's for, and why now..."></textarea>
+            </div>
+
+            <button type="submit" class="contact-submit-btn coral-pill" data-magnetic style="width: 100%; padding: 16px; font-size: 16px; position: relative; overflow: hidden;">
+              <canvas class="contact-splash-canvas" style="position: absolute; inset: 0; pointer-events: none;" aria-hidden="true"></canvas>
+              <span>send project inquiry &rarr;</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <div class="pattern-band pattern-band--drift" aria-hidden="true"></div>
+
+    <!-- FAQ Accordion Section -->
+    <section class="faq-section" aria-label="Frequently Asked Questions">
+      <div style="max-width: 840px; margin: 0 auto;">
+        <p class="mono-label" style="color: var(--coral);">// answers</p>
+        <h2 style="font-size: var(--text-h2); font-weight: 300; margin: var(--space-2) 0 var(--space-6);">frequently asked questions.</h2>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>What does a typical studio project cost?</span>
+            <span>+</span>
+          </div>
+          <div class="faq-answer">
+            Every project is fixed-fee and scoped after a 20-minute call, so you get one number up front and no hourly overruns. <!-- TODO: add real starting prices once confirmed by the founders -->
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>How long does a rebrand take?</span>
+            <span>+</span>
+          </div>
+          <div class="faq-answer">
+            Most identity and rebrand projects run 4 to 6 weeks from kickoff to final files. A website adds roughly 4 weeks.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Do you work with founders outside India?</span>
+            <span>+</span>
+          </div>
+          <div class="faq-answer">
+            Yes. We work asynchronously across time zones with clear milestones and a weekly live check-in.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Who actually works on my brand?</span>
+            <span>+</span>
+          </div>
+          <div class="faq-answer">
+            Only our founders: Shivani Rotliwala leads brand strategy and visual craft; Sakhi directs interactive design and engineering. We never outsource your core work to juniors.
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="footer-middle">
+      <div class="footer-col">
+        <h5>navigation</h5>
+        <a href="/work">work</a>
+        <a href="/services">services</a>
+        <a href="/studio">studio</a>
+        <a href="/contact">contact</a>
+      </div>
+      <div class="footer-col">
+        <h5>social</h5>
+        <a href="https://www.instagram.com/inks.and.interfaces" target="_blank" rel="noopener">instagram</a>
+        <a href="https://x.com/Inks_Interfaces" target="_blank" rel="noopener">x / twitter</a>
+        <a href="https://www.behance.net/shivanirotliwala" target="_blank" rel="noopener">behance</a>
+      </div>
+      <div class="footer-col">
+        <h5>studio</h5>
+        <p>surat, gujarat, india</p>
+        <p>available globally</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 inks &amp; interfaces &middot; made in surat</span>
+      <span>set in space grotesk &middot; with care</span>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/js/pages/contact.js"></script>
+</body>
+</html>

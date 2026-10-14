@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>lost in the ink (404) — inks &amp; interfaces</title>
+  <link rel="icon" href="/brand/secondary-monogram.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/styles/tokens.css">
+  <link rel="stylesheet" href="/src/styles/base.css">
+  <link rel="stylesheet" href="/src/styles/chrome.css">
+  <link rel="stylesheet" href="/src/styles/secondary.css">
+</head>
+<body>
+  <div class="grain-overlay" aria-hidden="true"></div>
+  <a class="skip-link" href="#main-content">skip to main content</a>
+
+  <header class="site-header">
+    <a href="/" class="header-brand" aria-label="inks and interfaces home">
+      <img src="/brand/wordmark-white-sm.webp" alt="inks &amp; interfaces" class="header-logo" width="115" height="36">
+    </a>
+    <nav class="header-nav" aria-label="primary navigation">
+      <a href="/work" class="nav-link">work</a>
+      <a href="/services" class="nav-link">services</a>
+      <a href="/studio" class="nav-link">studio</a>
+      <a href="/contact" class="nav-link">contact</a>
+    </nav>
+    <div class="header-right">
+      <a href="/contact" class="coral-pill" data-magnetic>start a project</a>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="notfound-hero" aria-label="Page Not Found">
+      <div style="position: relative; margin-bottom: var(--space-4);">
+        <div class="notfound-code">404</div>
+        <!-- Missed ink drop graphic -->
+        <div class="ink-drop-miss" style="position: absolute; top: 0; left: 50%; width: 20px; height: 20px; background: var(--coral); border-radius: 50%; pointer-events: none;" aria-hidden="true"></div>
+      </div>
+
+      <h1 style="font-size: var(--text-h2); font-weight: 300; margin-bottom: var(--space-3);">this page got lost in the ink.</h1>
+      <p style="color: var(--ash); max-width: 44ch; margin-bottom: var(--space-8);">
+        The link you followed has dissolved or moved. Here are three brands we recently shipped instead:
+      </p>
+
+      <div style="display: flex; gap: var(--space-4); flex-wrap: wrap; justify-content: center; margin-bottom: var(--space-8);">
+        <a href="/work/waggle" class="coral-pill" style="background: var(--ink-2); color: var(--paper) !important; border: 1px solid var(--line);">Waggle &nearr;</a>
+        <a href="/work/terra-cork" class="coral-pill" style="background: var(--ink-2); color: var(--paper) !important; border: 1px solid var(--line);">Terra Cork &nearr;</a>
+        <a href="/work/zestee" class="coral-pill" style="background: var(--ink-2); color: var(--paper) !important; border: 1px solid var(--line);">Zestee &nearr;</a>
+      </div>
+
+      <a href="/" class="hero-work-link">&larr; back to home</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <span>&copy; 2026 inks &amp; interfaces &middot; made in surat</span>
+      <span>set in space grotesk &middot; with care</span>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/js/pages/notfound.js"></script>
+</body>
+</html>
