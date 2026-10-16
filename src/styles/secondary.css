@@ -62,9 +62,36 @@
   border-radius: 14px;
   overflow: hidden;
 }
-.page-3d-panel.studio-room { background: #eeeae5; height: auto; aspect-ratio: 1448 / 1086; }
-.page-3d-panel.studio-room img { width: 100%; height: 100%; object-fit: cover; transition: opacity .6s ease; }
-.page-3d-panel.studio-room.is-3d img { opacity: 0; }
+.page-3d-panel.studio-room {
+  background: transparent;
+  height: auto;
+  aspect-ratio: 1448 / 1086;
+  border-radius: 0;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1200px;
+}
+.page-3d-panel.studio-room picture {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.page-3d-panel.studio-room img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1448 / 1086;
+  object-fit: contain;
+  display: block;
+  will-change: transform;
+  transform-style: preserve-3d;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.45));
+  transition: filter 0.6s ease;
+}
+.page-3d-panel.studio-room:hover img {
+  filter: drop-shadow(0 28px 56px rgba(0, 0, 0, 0.65));
+}
 
 /* contact: type only, poster-scale headline over a facts row */
 .page-header--type { padding-top: calc(var(--header-height) + var(--space-9)); }
@@ -97,6 +124,7 @@
 @media (max-width: 900px) {
   .page-header--split { grid-template-columns: 1fr; }
   .page-3d-panel { height: 58vw; min-height: 300px; }
+  .page-3d-panel.studio-room { height: auto; min-height: 0; }
 }
 
 /* --- Services bento --------------------------------------------------- */

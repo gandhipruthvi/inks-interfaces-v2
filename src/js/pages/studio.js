@@ -12,11 +12,55 @@ gsap.registerPlugin(ScrollTrigger);
 document.addEventListener('DOMContentLoaded', () => {
   bootstrapApp();
 
-  // The studio as a live 3D diorama; the still render stays underneath as the
-  // fallback (no WebGL, or reduced motion) and fades out once the scene draws.
+  // Subtle 3D Studio diorama animation: float + mouse parallax tilt
   const room = document.querySelector('.studio-room');
-  if (room && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    import('../scenes/studioRoom.js').then((m) => { if (m.initStudioRoom(room)) room.classList.add('is-3d'); });
+  const dioramaImg = room?.querySelector('img');
+  const prefersReduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (room && dioramaImg && !prefersReduced) {
+    // 1. Entrance reveal
+    gsap.fromTo(dioramaImg,
+      { opacity: 0, y: 24, scale: 0.97 },
+      { opacity: 1, y: 0, scale: 1, duration: 1.1, ease: 'power3.out' }
+    );
+
+    // 2. Ambient gentle float
+    gsap.to(room, {
+      y: -10,
+      duration: 3.2,
+      ease: 'sine.inOut',
+      yoyo: true,
+      repeat: -1,
+      delay: 0.3
+    });
+
+    // 3. Interactive mouse parallax tilt
+    window.addEventListener('mousemove', (e) => {
+      const rect = room.getBoundingClientRect();
+      if (rect.bottom < 0 || rect.top > window.innerHeight) return;
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
+      const normX = (e.clientX - centerX) / (window.innerWidth / 2);
+      const normY = (e.clientY - centerY) / (window.innerHeight / 2);
+
+      gsap.to(dioramaImg, {
+        rotateX: -normY * 5,
+        rotateY: normX * 5,
+        transformPerspective: 1000,
+        transformOrigin: 'center center',
+        duration: 0.7,
+        ease: 'power2.out'
+      });
+    }, { passive: true });
+
+    document.addEventListener('mouseleave', () => {
+      gsap.to(dioramaImg, {
+        rotateX: 0,
+        rotateY: 0,
+        duration: 0.9,
+        ease: 'power3.out'
+      });
+    });
   }
 
   // 1. Reuse hanging ID cards in Studio

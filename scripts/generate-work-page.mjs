@@ -28,7 +28,7 @@ function generateWorkHtml() {
     return `
       <article class="work-grid-card ${span}" data-category="${p.category}" data-industry="${p.industry}" data-cursor="view" data-cursor-label="${p.slug}">
         <a href="/work/${p.slug}" class="work-card-thumb" aria-label="${p.name} case study">
-          <img src="${p.cover}" alt="${p.alt[p.cover] || p.name}" loading="lazy" width="800" height="500">
+          <img src="${p.cover}" alt="${p.alt[p.cover] || p.name}" loading="lazy">
         </a>
         <div class="work-card-meta">
           <div>

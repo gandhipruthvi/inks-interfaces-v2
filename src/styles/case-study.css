@@ -280,8 +280,18 @@ main :is(p, h1, h2, h3, h4, li, blockquote, strong, span) { overflow-wrap: break
   background: var(--ink-2);
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.55);
   transition: transform .7s var(--ease-out), opacity .5s var(--ease-out), filter .5s var(--ease-out);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.cs-layer-item img { width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+.cs-layer-item img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  pointer-events: none;
+}
 .cs-layer-caption {
   text-align: center;
   margin: var(--space-5) auto 0;
@@ -344,12 +354,19 @@ main :is(p, h1, h2, h3, h4, li, blockquote, strong, span) { overflow-wrap: break
 .cs-quote-img {
   border-radius: 12px;
   overflow: hidden;
-  height: 440px;
+  height: auto;
+  max-height: 520px;
+  background: var(--ink-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .cs-quote-img img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  max-height: 520px;
+  object-fit: contain;
+  display: block;
 }
 
 .cs-quote-card {
@@ -424,15 +441,21 @@ main :is(p, h1, h2, h3, h4, li, blockquote, strong, span) { overflow-wrap: break
 
 .cs-next-thumb {
   width: 100%;
-  height: 320px;
+  height: auto;
   border-radius: 8px;
   overflow: hidden;
+  background: var(--ink-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .cs-next-thumb img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  max-height: 360px;
+  object-fit: contain;
+  display: block;
 }
 
 .cs-next-reel-card:hover { border-color: var(--coral); transform: translateY(-4px); }
@@ -447,7 +470,7 @@ main :is(p, h1, h2, h3, h4, li, blockquote, strong, span) { overflow-wrap: break
   }
   .cs-layer { height: 58vw; min-height: 260px; }
   .cs-layer-item { width: 82vw; margin-left: -41vw; }
-  .cs-next-thumb { height: 200px; }
-  .cs-quote-img { height: 280px; }
+  .cs-next-thumb { height: auto; }
+  .cs-quote-img { height: auto; max-height: 380px; }
   .cs-problem-grid { gap: var(--space-6); }
 }

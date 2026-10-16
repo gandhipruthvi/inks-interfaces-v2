@@ -63,7 +63,7 @@ function generateCaseStudies() {
     // 4. Gallery items (layer carousel: one image in front, neighbours stacked behind)
     const galleryHtml = p.gallery.map((img, i) => `
         <figure class="cs-layer-item" data-index="${i}">
-          <img src="${img}" alt="${escapeHtml(p.alt[img] || p.name)}" ${i < 3 ? '' : 'loading="lazy"'} width="1200" height="900" draggable="false">
+          <img src="${img}" alt="${escapeHtml(p.alt[img] || p.name)}" ${i < 3 ? '' : 'loading="lazy"'} draggable="false">
         </figure>`).join('');
 
     // "Title: detail | Title: detail" strings from the old site become a real list
