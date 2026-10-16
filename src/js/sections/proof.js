@@ -3,22 +3,94 @@
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import projects from '../../data/projects.json';
+import reviews from '../../data/reviews.json';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const cover = (p) => `/work-media/${p.slug}/cover-1280.webp`;
+// ponytail: these two logo files have no alpha channel; re-check if logos are swapped
+const OPAQUE_LOGOS = { 'vanya-luxe': 'is-light-ground', 'the-saucy-heat': 'is-dark-ground' };
 
 export function initProofSection(section) {
   initMarquee(section.querySelector('.marquee-container'));
   initStories(section.querySelector('.story'));
+  initReviews(section.querySelector('.reviews'));
   initCounters(section);
+}
+
+// Quote deck: cards fan out either side of the front card, tinted in the
+// coral family. Arrows, arrow keys, swipe, click a side card; auto-advances
+// every 6s unless the deck is hovered or focused.
+const TINTS = ['#FDE2E1', '#F5F1EC', '#FBC1BE', '#FFFFFF'];
+function initReviews(root) {
+  if (!root) return;
+  const deck = root.querySelector('.reviews-deck');
+  const count = root.querySelector('.reviews-count');
+  const n = reviews.length;
+  let current = 0;
+
+  deck.innerHTML = reviews.map((r, i) => {
+    const initials = r.name.split(' ').map((w) => w[0]).join('').toLowerCase();
+    return `<figure class="review-card" data-i="${i}" style="--tint: ${TINTS[i % TINTS.length]}">
+      <p class="mono-label review-project"><a href="/work/${r.slug}" tabindex="-1">${r.role.split(', ')[1].toLowerCase()} &nearr;</a></p>
+      <blockquote>&ldquo;${r.quote}&rdquo;</blockquote>
+      <figcaption><span class="review-avatar" aria-hidden="true">${initials}</span><span><strong>${r.name}</strong><span>${r.role}</span></span></figcaption>
+    </figure>`;
+  }).join('');
+  const cards = [...deck.children];
+
+  const layout = () => {
+    cards.forEach((c, i) => {
+      let k = i - current;
+      if (k > n / 2) k -= n;
+      if (k < -n / 2) k += n;
+      const a = Math.abs(k);
+      c.style.transform = `translateX(${k * 58}%) translateY(${a * 26}px) rotate(${k * 5}deg) scale(${1 - a * 0.07})`;
+      c.style.zIndex = String(10 - a);
+      c.style.opacity = a > 1 ? '0' : '1';
+      c.classList.toggle('is-front', a === 0);
+      c.setAttribute('aria-hidden', a ? 'true' : 'false');
+      c.querySelector('a').tabIndex = a ? -1 : 0;
+    });
+    count.textContent = `${String(current + 1).padStart(2, '0')} / ${String(n).padStart(2, '0')}`;
+  };
+  let last = performance.now();
+  const go = (d) => { current = (current + d + n) % n; last = performance.now(); layout(); };
+
+  root.querySelector('.reviews-prev').addEventListener('click', () => go(-1));
+  root.querySelector('.reviews-next').addEventListener('click', () => go(1));
+  deck.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') go(-1);
+    if (e.key === 'ArrowRight') go(1);
+  });
+  let x0 = null;
+  deck.addEventListener('pointerdown', (e) => { x0 = e.clientX; });
+  deck.addEventListener('pointerup', (e) => {
+    if (x0 === null) return;
+    const dx = e.clientX - x0; x0 = null;
+    if (Math.abs(dx) > 50) return go(dx < 0 ? 1 : -1);
+    const card = e.target.closest('.review-card');
+    if (card && !card.classList.contains('is-front')) { e.preventDefault(); current = +card.dataset.i; last = performance.now(); layout(); }
+  });
+  layout();
+
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  let held = false, onScreen = false;
+  root.addEventListener('pointerenter', () => { held = true; });
+  root.addEventListener('pointerleave', () => { held = false; last = performance.now(); });
+  root.addEventListener('focusin', () => { held = true; });
+  root.addEventListener('focusout', () => { held = false; });
+  new IntersectionObserver(([en]) => { onScreen = en.isIntersecting; last = performance.now(); }).observe(root);
+  setInterval(() => {
+    if (!held && onScreen && !document.hidden && performance.now() - last > 6000) go(1);
+  }, 250);
 }
 
 function initMarquee(box) {
   if (!box) return;
   const logos = projects.filter((p) => p.logo && !p.isConcept);
   const plate = (p, hidden) =>
-    `<a class="marquee-logo-plate" href="/work/${p.slug}" ${hidden ? 'aria-hidden="true" tabindex="-1"' : ''}>
+    `<a class="marquee-logo-plate${OPAQUE_LOGOS[p.slug] ? ' ' + OPAQUE_LOGOS[p.slug] : ''}" href="/work/${p.slug}" ${hidden ? 'aria-hidden="true" tabindex="-1"' : ''}>
        <img src="${encodeURI(p.logo)}" alt="${hidden ? '' : p.name}" loading="lazy">
      </a>`;
   const row = (list) => list.map((p) => plate(p)).join('') + list.map((p) => plate(p, true)).join('');
@@ -93,6 +165,23 @@ function initStories(root) {
 
   layout();
   fill();
+
+  // Auto-advance every 5s; hovering, focusing or dragging the deck holds it.
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  let held = false, onScreen = false, last = performance.now();
+  const shell = root.querySelector('.story-card-shell') || root;
+  const hold = (v) => () => { held = v; last = performance.now(); };
+  shell.addEventListener('pointerenter', hold(true));
+  shell.addEventListener('pointerleave', hold(false));
+  shell.addEventListener('focusin', hold(true));
+  shell.addEventListener('focusout', hold(false));
+  root.querySelectorAll('.story-prev, .story-next').forEach((b) => b.addEventListener('click', () => { last = performance.now(); }));
+  new IntersectionObserver(([en]) => { onScreen = en.isIntersecting; last = performance.now(); }).observe(root);
+  setInterval(() => {
+    if (held || drag || !onScreen || document.hidden || performance.now() - last < 5000) return;
+    last = performance.now();
+    go(1);
+  }, 250);
 }
 
 function initCounters(section) {

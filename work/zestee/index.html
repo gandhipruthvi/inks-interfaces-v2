@@ -97,7 +97,7 @@
           </div>
           <div class="cs-meta-col">
             <span>deliverables</span>
-            <div style="font-size: 13px; color: var(--paper); line-height: 1.4;"><span>Logo system</span><span>Café packaging</span><span>Menu architecture</span><span>Print + social system</span><span>Sign-writing program</span></div>
+            <div class="cs-meta-list"><span>Logo system</span><span>Café packaging</span><span>Menu architecture</span><span>Print + social system</span><span>Sign-writing program</span></div>
           </div>
         </div>
       </div>
@@ -114,7 +114,7 @@
         </div>
         <div class="cs-problem-narrative">
           <h4>What needed to change</h4>
-          <p>Three locations, three brands: Each café had been opened in a hurry. Every signboard, takeaway cup, and Instagram grid told a slightly different story. | Mistaken for a juice bar: Drop-in customers ordered juice and left. The coffee program — the actual business — was invisible from the street. | Forgotten on Instagram: No one geo-tagged Zestee. The interiors were beautiful but the brand never asked to be photographed. | No system, no scale: Opening café four would mean rebuilding café one from scratch. There was no kit of parts to copy.</p>
+          <ul class="cs-points"><li><strong>Three locations, three brands</strong><span>Each café had been opened in a hurry. Every signboard, takeaway cup, and Instagram grid told a slightly different story.</span></li><li><strong>Mistaken for a juice bar</strong><span>Drop-in customers ordered juice and left. The coffee program — the actual business — was invisible from the street.</span></li><li><strong>Forgotten on Instagram</strong><span>No one geo-tagged Zestee. The interiors were beautiful but the brand never asked to be photographed.</span></li><li><strong>No system, no scale</strong><span>Opening café four would mean rebuilding café one from scratch. There was no kit of parts to copy.</span></li></ul>
         </div>
       </div>
     </section>
@@ -122,14 +122,12 @@
     <!-- BEATS 3–4: MARKET + STRATEGY -->
     <section class="cs-strategy-section" aria-label="Strategic Approach">
       <div class="cs-strategy-grid">
-        <div>
+        <div class="cs-strategy-copy">
           <p class="mono-label" style="color: var(--coral); margin-bottom: var(--space-3);">// strategic positioning</p>
           <h3 style="font-size: var(--text-h2); font-weight: 300; line-height: 1.1; letter-spacing: -0.03em;">
             Designing for the human decision maker, not an algorithm.
           </h3>
-          <p style="color: var(--ash); font-size: var(--text-body); margin-top: var(--space-4); line-height: 1.6;">
-            Warmth, not luxury: Terracotta and cream beat black and gold. Zestee should feel like a friend&amp;#39;s living room, not a hotel lobby. | Hand over machine: Hand-painted signage. Hand-stamped sleeves. The brand wears its making process. | Type-led: A single custom display face does the heavy lifting. No stock fonts, no decorative flourish. | Photographable: Every cup, plate, and sticker is designed first as a flat-lay. The brand earns its Instagram.
-          </p>
+          <ul class="cs-points"><li><strong>Warmth, not luxury</strong><span>Terracotta and cream beat black and gold. Zestee should feel like a friend&#039;s living room, not a hotel lobby.</span></li><li><strong>Hand over machine</strong><span>Hand-painted signage. Hand-stamped sleeves. The brand wears its making process.</span></li><li><strong>Type-led</strong><span>A single custom display face does the heavy lifting. No stock fonts, no decorative flourish.</span></li><li><strong>Photographable</strong><span>Every cup, plate, and sticker is designed first as a flat-lay. The brand earns its Instagram.</span></li></ul>
         </div>
 
         <div class="cs-strategy-plate">
@@ -153,15 +151,15 @@
           <span>#b8431f</span>
         </div>
       
-        <div class="cs-palette-swatch" style="background: #e89a60; color: #FFFFFF;">
+        <div class="cs-palette-swatch" style="background: #e89a60; color: #0B0B0B;">
           <span>#e89a60</span>
         </div>
       
-        <div class="cs-palette-swatch" style="background: #fbf4ec; color: #FFFFFF;">
+        <div class="cs-palette-swatch" style="background: #fbf4ec; color: #0B0B0B;">
           <span>#fbf4ec</span>
         </div>
       
-        <div class="cs-palette-swatch" style="background: #d9cdb0; color: #FFFFFF;">
+        <div class="cs-palette-swatch" style="background: #d9cdb0; color: #0B0B0B;">
           <span>#d9cdb0</span>
         </div>
       
@@ -179,72 +177,66 @@
     
     </section>
 
-    <!-- BEAT 6: DESIGN EXECUTION (Horizontal Pinned Gallery) -->
+    <!-- BEAT 6: DESIGN EXECUTION (Layer carousel) -->
     <section class="cs-gallery-section" aria-label="Design Showcase">
       <div class="cs-gallery-header">
-        <p class="mono-label">// craft &amp; execution</p>
-        <h3 style="font-size: var(--text-h2); font-weight: 300; margin-top: var(--space-2);">in the wild &middot; horizontal gallery</h3>
+        <div>
+          <p class="mono-label">// craft &amp; execution</p>
+          <h3 style="font-size: var(--text-h2); font-weight: 300; margin-top: var(--space-2);">in the wild.</h3>
+        </div>
+        <div class="cs-layer-controls">
+          <span class="mono-label cs-layer-count" aria-live="polite">01 / 14</span>
+          <button class="cs-layer-btn cs-layer-prev" aria-label="Previous image">&larr;</button>
+          <button class="cs-layer-btn cs-layer-next" aria-label="Next image">&rarr;</button>
+        </div>
       </div>
 
-      <div class="cs-horizontal-track">
+      <div class="cs-layer" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Zestee gallery, use arrow keys to browse">
         
-      <div class="cs-gallery-item">
-        <img src="/assets/projects/zestee/zestee-9.webp" alt="Zestee hero" loading="lazy" width="760" height="520">
+        <figure class="cs-layer-item" data-index="0">
+          <img src="/assets/projects/zestee/zestee-9.webp" alt="Zestee hero"  width="1200" height="900" draggable="false">
+        </figure>
+        <figure class="cs-layer-item" data-index="1">
+          <img src="/assets/projects/zestee/zestee-7.webp" alt="Zestee secondary"  width="1200" height="900" draggable="false">
+        </figure>
+        <figure class="cs-layer-item" data-index="2">
+          <img src="/assets/projects/zestee/zestee-11.webp" alt="Zestee origin"  width="1200" height="900" draggable="false">
+        </figure>
+        <figure class="cs-layer-item" data-index="3">
+          <img src="/assets/projects/zestee/identity/primary-logo-transparent-background-0.png" alt="Primary Logo Transparent Background" loading="lazy" width="1200" height="900" draggable="false">
+        </figure>
+        <figure class="cs-layer-item" data-index="4">
+          <img src="/assets/projects/zestee/zestee-6.webp" alt="Zestee statement" loading="lazy" width="1200" height="900" draggable="false">
+        </figure>
+        <figure class="cs-layer-item" data-index="5">
+          <img src="/assets/projects/zestee/zestee-1.webp" alt="Zestee form" loading="lazy" width="1200" height="900" draggable="false">
+        </figure>
+        <figure class="cs-layer-item" data-index="6">
+          <img src="/assets/projects/zestee/zestee-2.webp" alt="Zestee form" loading="lazy" width="1200" height="900" draggable="false">
+        </figure>
+        <figure class="cs-layer-item" data-index="7">
+          <img src="/assets/projects/zestee/zestee-8.webp" alt="Zestee form" loading="lazy" width="1200" height="900" draggable="false">
+        </figure>
+        <figure class="cs-layer-item" data-index="8">
+          <img src="/assets/projects/zestee/zestee-12.webp" alt="Zestee in context" loading="lazy" width="1200" height="900" draggable="false">
+        </figure>
+        <figure class="cs-layer-item" data-index="9">
+          <img src="/assets/projects/zestee/zestee-5.webp" alt="Zestee in context" loading="lazy" width="1200" height="900" draggable="false">
+        </figure>
+        <figure class="cs-layer-item" data-index="10">
+          <img src="/assets/projects/zestee/zestee-10.webp" alt="Zestee in context" loading="lazy" width="1200" height="900" draggable="false">
+        </figure>
+        <figure class="cs-layer-item" data-index="11">
+          <img src="/assets/projects/zestee/zestee-13.webp" alt="Zestee showcase asset" loading="lazy" width="1200" height="900" draggable="false">
+        </figure>
+        <figure class="cs-layer-item" data-index="12">
+          <img src="/assets/projects/zestee/zestee-3.webp" alt="Zestee showcase asset" loading="lazy" width="1200" height="900" draggable="false">
+        </figure>
+        <figure class="cs-layer-item" data-index="13">
+          <img src="/assets/projects/zestee/zestee-4.webp" alt="Zestee showcase asset" loading="lazy" width="1200" height="900" draggable="false">
+        </figure>
       </div>
-    
-      <div class="cs-gallery-item">
-        <img src="/assets/projects/zestee/zestee-7.webp" alt="Zestee secondary" loading="lazy" width="760" height="520">
-      </div>
-    
-      <div class="cs-gallery-item">
-        <img src="/assets/projects/zestee/zestee-11.webp" alt="Zestee origin" loading="lazy" width="760" height="520">
-      </div>
-    
-      <div class="cs-gallery-item">
-        <img src="/assets/projects/zestee/identity/primary-logo-transparent-background-0.png" alt="Primary Logo Transparent Background" loading="lazy" width="760" height="520">
-      </div>
-    
-      <div class="cs-gallery-item">
-        <img src="/assets/projects/zestee/zestee-6.webp" alt="Zestee statement" loading="lazy" width="760" height="520">
-      </div>
-    
-      <div class="cs-gallery-item">
-        <img src="/assets/projects/zestee/zestee-1.webp" alt="Zestee form" loading="lazy" width="760" height="520">
-      </div>
-    
-      <div class="cs-gallery-item">
-        <img src="/assets/projects/zestee/zestee-2.webp" alt="Zestee form" loading="lazy" width="760" height="520">
-      </div>
-    
-      <div class="cs-gallery-item">
-        <img src="/assets/projects/zestee/zestee-8.webp" alt="Zestee form" loading="lazy" width="760" height="520">
-      </div>
-    
-      <div class="cs-gallery-item">
-        <img src="/assets/projects/zestee/zestee-12.webp" alt="Zestee in context" loading="lazy" width="760" height="520">
-      </div>
-    
-      <div class="cs-gallery-item">
-        <img src="/assets/projects/zestee/zestee-5.webp" alt="Zestee in context" loading="lazy" width="760" height="520">
-      </div>
-    
-      <div class="cs-gallery-item">
-        <img src="/assets/projects/zestee/zestee-10.webp" alt="Zestee in context" loading="lazy" width="760" height="520">
-      </div>
-    
-      <div class="cs-gallery-item">
-        <img src="/assets/projects/zestee/zestee-13.webp" alt="Zestee showcase asset" loading="lazy" width="760" height="520">
-      </div>
-    
-      <div class="cs-gallery-item">
-        <img src="/assets/projects/zestee/zestee-3.webp" alt="Zestee showcase asset" loading="lazy" width="760" height="520">
-      </div>
-    
-      <div class="cs-gallery-item">
-        <img src="/assets/projects/zestee/zestee-4.webp" alt="Zestee showcase asset" loading="lazy" width="760" height="520">
-      </div>
-    
-      </div>
+      <p class="cs-layer-caption mono-label" aria-hidden="true"></p>
     </section>
 
     <!-- BEAT 7: BUSINESS IMPACT (Conditional) -->
@@ -334,53 +326,19 @@
         start a project &rarr;
       </a>
 
-      <!-- Next Project Auto-Reel Card -->
-      <div class="cs-next-reel-card" data-next-url="/work/vanya-luxe">
+      <!-- Next project: opens on click only -->
+      <a class="cs-next-reel-card" href="/work/vanya-luxe" data-cursor="view" data-cursor-label="open">
         <span class="mono-label" style="color: var(--coral);">// up next</span>
         <h3 style="font-size: var(--text-h2); font-weight: 300;">Vanya Luxe</h3>
         <div class="cs-next-thumb">
           <img src="/assets/projects/vanya-luxe/vanya-luxe-6.webp" alt="Vanya Luxe" loading="lazy">
         </div>
-        
-        <div style="display: flex; align-items: center; gap: var(--space-3); margin-top: var(--space-3);">
-          <!-- Auto-navigate circular progress ring -->
-          <svg width="60" height="60" aria-hidden="true">
-            <circle cx="30" cy="30" r="26" stroke="rgba(245,241,236,0.15)" stroke-width="3" fill="none"/>
-            <circle class="progress-ring-circle" cx="30" cy="30" r="26" stroke="var(--coral)" stroke-width="3" fill="none"/>
-          </svg>
-          <a href="/work/vanya-luxe" class="hero-work-link">open next case study &rarr;</a>
-        </div>
-      </div>
+        <span class="hero-work-link">open next case study &rarr;</span>
+      </a>
     </section>
   </main>
 
-  <!-- Global Footer -->
-  <footer class="site-footer">
-    <div class="footer-middle">
-      <div class="footer-col">
-        <h5>navigation</h5>
-        <a href="/work">work</a>
-        <a href="/services">services</a>
-        <a href="/studio">studio</a>
-        <a href="/contact">contact</a>
-      </div>
-      <div class="footer-col">
-        <h5>social</h5>
-        <a href="https://www.instagram.com/inks.and.interfaces" target="_blank" rel="noopener">instagram</a>
-        <a href="https://x.com/Inks_Interfaces" target="_blank" rel="noopener">x / twitter</a>
-        <a href="https://www.behance.net/shivanirotliwala" target="_blank" rel="noopener">behance</a>
-      </div>
-      <div class="footer-col">
-        <h5>studio</h5>
-        <p>surat, gujarat, india</p>
-        <p>available globally</p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>&copy; 2026 inks &amp; interfaces &middot; made in surat</span>
-      <span>set in space grotesk &middot; with care</span>
-    </div>
-  </footer>
+  <footer class="site-footer"></footer>
 
   <script type="module" src="/src/js/pages/case-study.js"></script>
 </body>

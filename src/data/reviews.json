@@ -1,0 +1,26 @@
+[
+  {
+    "quote": "Shivani and the team treated our app and our packaging with the same obsessive care. We shipped <em>three weeks early</em>, and our retention curve looks like a new product.",
+    "name": "Aniket Sharma",
+    "role": "co-founder, Go Miles",
+    "slug": "go-miles"
+  },
+  {
+    "quote": "Getting an accessible product right is hard. This team made it look <em>almost easy</em>. Our WCAG audit passed first try.",
+    "name": "Paul Chen",
+    "role": "director, Lab Coat Media",
+    "slug": "lab-coat-media"
+  },
+  {
+    "quote": "\"We want it to feel like the café itself.\" Somehow they nailed it. The packaging gets us tagged on Instagram <em>every day</em>.",
+    "name": "Alex Roe",
+    "role": "founder, Satori Bites",
+    "slug": "satori-bites"
+  },
+  {
+    "quote": "A small studio with the taste of a big one. They handled our entire identity launch, print, web and packaging, without missing a beat.",
+    "name": "Jordan Kapoor",
+    "role": "creative director, Vanya Luxe",
+    "slug": "vanya-luxe"
+  }
+]

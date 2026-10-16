@@ -2,6 +2,11 @@
    inks & interfaces v2 — case study styles (10 Beats)
    ============================================================ */
 
+/* Text must never leave its box: grid/flex children may shrink below their
+   content width, and long unbroken strings (urls, hex lists) wrap. */
+main :is(p, h1, h2, h3, h4, li, blockquote, strong, span) { overflow-wrap: break-word; }
+.cs-problem-grid > *, .cs-strategy-grid > *, .cs-quote-split > *, .cs-hero-meta-grid > * { min-width: 0; }
+
 /* --- Beat 1: Hero & Spotlight Reveal --- */
 .cs-hero {
   position: relative;
@@ -56,13 +61,14 @@
 }
 
 .cs-hero-name {
-  font-size: clamp(64px, 15vw, 240px);
+  font-size: clamp(56px, 13vw, 220px);
   font-weight: var(--fw-light);
   line-height: 0.9;
   letter-spacing: -0.05em;
   margin-bottom: var(--space-6);
   color: #FFFFFF;
 }
+.cs-hero-name--long { font-size: clamp(44px, 9vw, 150px); }
 
 .cs-hero-meta-grid {
   display: grid;
@@ -87,6 +93,27 @@
   font-weight: var(--fw-medium);
   color: var(--paper);
 }
+.cs-meta-list { display: flex; flex-wrap: wrap; gap: 4px 6px; }
+.cs-meta-list span {
+  font-family: var(--font-primary);
+  font-size: 12px;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--paper);
+  margin: 0;
+  padding: 3px 9px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+}
+
+/* "title: detail" lists from the old case studies */
+.cs-points { display: grid; gap: var(--space-4); margin-top: var(--space-5); }
+.cs-points li { display: grid; gap: 4px; padding-left: var(--space-4); border-left: 2px solid var(--coral); }
+.cs-points strong { font-size: var(--text-body); font-weight: var(--fw-medium); }
+.cs-points span { font-size: var(--text-body-sm); line-height: 1.6; color: var(--ash); }
+.cs-problem-narrative .cs-points strong { color: var(--ink); }
+.cs-problem-narrative .cs-points span { color: var(--ash-dark); }
+.cs-strategy-copy > p { color: var(--ash); margin-top: var(--space-4); line-height: 1.6; }
 
 /* --- Beats 1-2: Founder + Problem (Paper Background) --- */
 .cs-problem-section {
@@ -153,7 +180,7 @@
 }
 
 .cs-strategy-statement {
-  font-size: clamp(22px, 2.5vw, 36px);
+  font-size: clamp(20px, 2.2vw, 32px);
   font-weight: var(--fw-medium);
   line-height: 1.2;
 }
@@ -168,7 +195,8 @@
 
 .cs-palette-row {
   display: flex;
-  height: 80px;
+  flex-wrap: wrap;
+  min-height: 80px;
   border-radius: 8px;
   overflow: hidden;
   margin: var(--space-6) 0 var(--space-8);
@@ -176,7 +204,10 @@
 }
 
 .cs-palette-swatch {
-  flex: 1;
+  flex: 1 1 96px;
+  min-height: 80px;
+  min-width: 0;
+  overflow: hidden;
   display: flex;
   align-items: flex-end;
   padding: var(--space-2) var(--space-3);
@@ -205,41 +236,59 @@
   object-fit: contain;
 }
 
-/* --- Beat 6: Design Execution (Horizontal Pinned Gallery) --- */
+/* --- Beat 6: Design Execution (Layer carousel) --- */
 .cs-gallery-section {
   position: relative;
   background-color: var(--ink);
   overflow: hidden;
-  padding: var(--space-9) 0;
+  padding: var(--space-10) 0 var(--space-9);
 }
 
 .cs-gallery-header {
-  padding: 0 var(--gutter) var(--space-6);
-}
-
-.cs-horizontal-track {
   display: flex;
-  gap: var(--space-6);
-  padding: 0 var(--gutter);
-  width: max-content;
-  will-change: transform;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: var(--space-5);
+  flex-wrap: wrap;
+  padding: 0 var(--gutter) var(--space-7);
 }
+.cs-layer-controls { display: flex; align-items: center; gap: var(--space-3); }
+.cs-layer-count { color: var(--paper); margin-right: var(--space-3); font-variant-numeric: tabular-nums; }
+.cs-layer-btn {
+  width: 48px; height: 48px; border-radius: 50%;
+  border: 1px solid var(--line-strong); color: var(--paper); font-size: 18px;
+  transition: background-color var(--t-fast) var(--ease-out), color var(--t-fast), border-color var(--t-fast);
+}
+.cs-layer-btn:hover { background: var(--coral); border-color: var(--coral); color: var(--ink); }
 
-.cs-gallery-item {
-  width: clamp(380px, 45vw, 760px);
-  height: 60vh;
-  border-radius: 12px;
+.cs-layer {
+  position: relative;
+  height: clamp(300px, 64vh, 660px);
+  touch-action: pan-y;
+  user-select: none;
+  cursor: grab;
+}
+.cs-layer:active { cursor: grabbing; }
+.cs-layer-item {
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 50%;
+  width: min(72vw, 980px);
+  margin-left: calc(min(72vw, 980px) / -2);
+  border-radius: 14px;
   overflow: hidden;
   background: var(--ink-2);
-  border: 1px solid var(--line);
-  flex-shrink: 0;
-  position: relative;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.55);
+  transition: transform .7s var(--ease-out), opacity .5s var(--ease-out), filter .5s var(--ease-out);
 }
-
-.cs-gallery-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.cs-layer-item img { width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+.cs-layer-caption {
+  text-align: center;
+  margin: var(--space-5) auto 0;
+  padding: 0 var(--gutter);
+  max-width: 70ch;
+  min-height: 1em;
+  color: var(--ash);
 }
 
 /* --- Beat 7: Business Impact --- */
@@ -357,6 +406,8 @@
 }
 
 .cs-next-reel-card {
+  color: inherit;
+  transition: border-color var(--t-fast) var(--ease-out), transform .5s var(--ease-out);
   max-width: 720px;
   margin: var(--space-8) auto 0;
   border-radius: 16px;
@@ -384,11 +435,9 @@
   object-fit: cover;
 }
 
-.progress-ring-circle {
-  transition: stroke-dashoffset 0.1s linear;
-  transform: rotate(-90deg);
-  transform-origin: 50% 50%;
-}
+.cs-next-reel-card:hover { border-color: var(--coral); transform: translateY(-4px); }
+.cs-next-thumb img { transition: transform .8s var(--ease-out); }
+.cs-next-reel-card:hover .cs-next-thumb img { transform: scale(1.04); }
 
 @media (max-width: 860px) {
   .cs-problem-grid,
@@ -396,8 +445,9 @@
   .cs-quote-split {
     grid-template-columns: 1fr;
   }
-  .cs-gallery-item {
-    width: 85vw;
-    height: 45vh;
-  }
+  .cs-layer { height: 58vw; min-height: 260px; }
+  .cs-layer-item { width: 82vw; margin-left: -41vw; }
+  .cs-next-thumb { height: 200px; }
+  .cs-quote-img { height: 280px; }
+  .cs-problem-grid { gap: var(--space-6); }
 }

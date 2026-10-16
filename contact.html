@@ -31,24 +31,27 @@
       <a href="/contact" class="nav-link active">contact</a>
     </nav>
     <div class="header-right">
-      <div class="header-time" aria-live="polite">surat 00:00:00 ist</div>
+      <div class="header-time" aria-live="polite">india 00:00:00 ist</div>
       <a href="/contact" class="coral-pill" data-magnetic>start a project</a>
     </div>
   </header>
 
   <main id="main-content">
-    <header class="page-header page-header--split">
-      <div class="page-header-copy">
-      <p class="mono-label" style="margin-bottom: var(--space-3);" data-reveal="fade">// start a project</p>
+    <header class="page-header page-header--type">
+      <p class="mono-label" data-reveal="fade">// start a project</p>
       <h1 class="page-title" data-reveal="lines">
         let's build yours.
       </h1>
-      <p class="page-intro" data-reveal="fade">
-        Tell us about your venture, current inflection points, and timelines. We review every inquiry within 24 hours.
-      </p>
-      <p class="mono-label page-3d-hint">start typing below and watch the ink</p>
+      <div class="page-header-meta" data-reveal="fade">
+        <p class="page-intro">
+          Tell us about your venture, current inflection points, and timelines. We review every inquiry within 24 hours.
+        </p>
+        <dl class="contact-facts">
+          <div><dt>reply</dt><dd>within 24 hours</dd></div>
+          <div><dt>booking</dt><dd>q1 2027</dd></div>
+          <div><dt>based in</dt><dd>india &middot; available globally</dd></div>
+        </dl>
       </div>
-      <div class="page-3d-panel ink-drop" aria-hidden="true"></div>
     </header>
 
     <!-- Contact Form on Paper -->
@@ -71,7 +74,7 @@
           <div style="margin-bottom: var(--space-6);">
             <span class="mono-label" style="display: block; margin-bottom: 4px;">studio location</span>
             <p style="font-size: var(--text-body); color: var(--ink);">
-              Surat, Gujarat, India &middot; Operating globally across IST, GMT, and EST timezones.
+              Based in India &middot; Available Globally. We work across IST, GMT, and EST timezones.
             </p>
           </div>
 
@@ -83,9 +86,10 @@
           </div>
 
           <div style="margin-top: var(--space-8); padding-top: var(--space-6); border-top: 1px solid var(--paper-2);">
-            <span class="mono-label" style="display: block; margin-bottom: 8px;">calendar booking</span>
-            <a href="https://cal.com/inks-interfaces" target="_blank" rel="noopener" class="coral-pill" data-magnetic style="background: var(--ink); color: #FFFFFF !important;">
-              book a 20-min discovery call &nearr;
+            <span class="mono-label" style="display: block; margin-bottom: 8px;">discovery call</span>
+            <!-- TODO: swap for the Calendly embed once the founders set it up -->
+            <a href="mailto:letscreate.inksandinterfaces@gmail.com?subject=Project%20Discovery%20Call" class="coral-pill" data-magnetic style="background: var(--ink); color: #FFFFFF !important;">
+              request a 20-min discovery call &nearr;
             </a>
           </div>
         </div>
@@ -121,13 +125,23 @@
             </div>
 
             <div class="form-group">
-              <label>approximate investment range</label>
-              <input type="hidden" id="budgetInput" value="5L-10L">
-              <div class="budget-options">
-                <button type="button" class="budget-chip" data-val="2L-5L">&#8377;2L &ndash; 5L</button>
-                <button type="button" class="budget-chip active" data-val="5L-10L">&#8377;5L &ndash; 10L</button>
-                <button type="button" class="budget-chip" data-val="10L+">&#8377;10L+</button>
-                <button type="button" class="budget-chip" data-val="intl">$5k &ndash; $15k</button>
+              <span class="form-label" id="budgetLabel">approximate investment range</span>
+              <input type="hidden" id="budgetInput" value="INR 1L-3L">
+              <div class="currency-toggle" role="radiogroup" aria-label="Select currency">
+                <button type="button" class="curr-btn active" role="radio" aria-checked="true" data-currency="INR">INR (&#8377;)</button>
+                <button type="button" class="curr-btn" role="radio" aria-checked="false" data-currency="USD">USD ($)</button>
+              </div>
+              <div class="budget-options" data-currency="INR" role="group" aria-labelledby="budgetLabel">
+                <button type="button" class="budget-chip active" aria-pressed="true" data-val="1L-3L">&#8377;1L &ndash; &#8377;3L</button>
+                <button type="button" class="budget-chip" aria-pressed="false" data-val="3L-5L">&#8377;3L &ndash; &#8377;5L</button>
+                <button type="button" class="budget-chip" aria-pressed="false" data-val="5L-10L">&#8377;5L &ndash; &#8377;10L</button>
+                <button type="button" class="budget-chip" aria-pressed="false" data-val="10L+">&#8377;10L+</button>
+              </div>
+              <div class="budget-options" data-currency="USD" role="group" aria-labelledby="budgetLabel" hidden>
+                <button type="button" class="budget-chip" aria-pressed="false" data-val="1.2k-3.5k">$1.2k &ndash; $3.5k</button>
+                <button type="button" class="budget-chip" aria-pressed="false" data-val="3.5k-6k">$3.5k &ndash; $6k</button>
+                <button type="button" class="budget-chip" aria-pressed="false" data-val="6k-12k">$6k &ndash; $12k</button>
+                <button type="button" class="budget-chip" aria-pressed="false" data-val="12k+">$12k+</button>
               </div>
             </div>
 
@@ -189,40 +203,14 @@
             <span>+</span>
           </div>
           <div class="faq-answer">
-            Only our founders: Shivani Rotliwala leads brand strategy and visual craft; Sakhi directs interactive design and engineering. We never outsource your core work to juniors.
+            Only our founders: Shivani Rotliwala leads brand strategy and visual craft; Sakhi Rotliwala directs interactive design and engineering. We never outsource your core work to juniors.
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Global Footer -->
-  <footer class="site-footer">
-    <div class="footer-middle">
-      <div class="footer-col">
-        <h5>navigation</h5>
-        <a href="/work">work</a>
-        <a href="/services">services</a>
-        <a href="/studio">studio</a>
-        <a href="/contact">contact</a>
-      </div>
-      <div class="footer-col">
-        <h5>social</h5>
-        <a href="https://www.instagram.com/inks.and.interfaces" target="_blank" rel="noopener">instagram</a>
-        <a href="https://x.com/Inks_Interfaces" target="_blank" rel="noopener">x / twitter</a>
-        <a href="https://www.behance.net/shivanirotliwala" target="_blank" rel="noopener">behance</a>
-      </div>
-      <div class="footer-col">
-        <h5>studio</h5>
-        <p>surat, gujarat, india</p>
-        <p>available globally</p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>&copy; 2026 inks &amp; interfaces &middot; made in surat</span>
-      <span>set in space grotesk &middot; with care</span>
-    </div>
-  </footer>
+  <footer class="site-footer"></footer>
 
   <script type="module" src="/src/js/pages/contact.js"></script>
 </body>

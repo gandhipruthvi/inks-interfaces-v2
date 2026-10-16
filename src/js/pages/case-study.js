@@ -3,10 +3,6 @@ import '../../styles/base.css';
 import '../../styles/case-study.css';
 
 import { bootstrapApp } from '../main.js';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', () => {
   bootstrapApp();
@@ -14,10 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const hero = document.querySelector('.cs-hero');
   const spotlight = document.querySelector('.cs-spotlight-overlay');
   const gallerySection = document.querySelector('.cs-gallery-section');
-  const horizontalTrack = document.querySelector('.cs-horizontal-track');
-  const nextCard = document.querySelector('.cs-next-reel-card');
-  const progressCircle = document.querySelector('.progress-ring-circle');
-  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   // 1. Cursor Spotlight Reveal (220px soft circular mask)
   if (hero && spotlight) {
@@ -52,57 +44,57 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 2. Horizontal Pinned Gallery Scroll
-  if (gallerySection && horizontalTrack && !prefersReduced) {
-    const totalScroll = horizontalTrack.scrollWidth - window.innerWidth + 120;
-    if (totalScroll > 0) {
-      ScrollTrigger.create({
-        trigger: gallerySection,
-        start: 'top top',
-        end: `+=${totalScroll}`,
-        pin: true,
-        scrub: 1,
-        onUpdate: (self) => {
-          gsap.set(horizontalTrack, {
-            x: -self.progress * totalScroll
-          });
-        }
-      });
-    }
-  }
-
-  // 3. Next Project Reel Auto-Navigate & Progress Ring
-  if (nextCard && !prefersReduced) {
-    const nextUrl = nextCard.dataset.nextUrl;
-    let progress = 0;
-    let navigating = false;
-    const circumference = 2 * Math.PI * 26; // r=26
-
-    if (progressCircle) {
-      progressCircle.style.strokeDasharray = `${circumference} ${circumference}`;
-      progressCircle.style.strokeDashoffset = `${circumference}`;
-    }
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.intersectionRatio > 0.6 && !navigating && nextUrl) {
-          navigating = true;
-          let currentOffset = circumference;
-          const interval = setInterval(() => {
-            progress += 5;
-            currentOffset = circumference - (progress / 100) * circumference;
-            if (progressCircle) {
-              progressCircle.style.strokeDashoffset = `${currentOffset}`;
-            }
-            if (progress >= 100) {
-              clearInterval(interval);
-              window.location.href = nextUrl;
-            }
-          }, 35);
-        }
-      });
-    }, { threshold: [0.6] });
-
-    observer.observe(nextCard);
-  }
+  // 2. Layer carousel: the active image sits in front, neighbours step back on
+  // both sides. Arrows, arrow keys, swipe/drag, or click a side image.
+  const layer = document.querySelector('.cs-layer');
+  if (layer) initLayerCarousel(layer, gallerySection);
 });
+
+function initLayerCarousel(layer, section) {
+  const items = [...layer.querySelectorAll('.cs-layer-item')];
+  const count = section.querySelector('.cs-layer-count');
+  const caption = section.querySelector('.cs-layer-caption');
+  const n = items.length, pad = (v) => String(v).padStart(2, '0');
+  let active = 0;
+
+  const render = () => {
+    items.forEach((el, i) => {
+      // shortest signed distance around the loop, so the stack wraps
+      let k = i - active;
+      if (k > n / 2) k -= n;
+      if (k < -n / 2) k += n;
+      const a = Math.abs(k);
+      el.style.transform = `translateX(${k * 22}%) scale(${1 - Math.min(a, 4) * 0.12})`;
+      el.style.zIndex = String(100 - a);
+      el.style.opacity = a > 3 ? '0' : '1';
+      el.style.filter = a ? `brightness(${1 - Math.min(a, 3) * 0.18})` : 'none';
+      el.classList.toggle('is-active', a === 0);
+      el.setAttribute('aria-hidden', a ? 'true' : 'false');
+    });
+    count.textContent = `${pad(active + 1)} / ${pad(n)}`;
+    caption.textContent = items[active].querySelector('img').alt;
+  };
+  const go = (d) => { active = (active + d + n) % n; render(); };
+
+  section.querySelector('.cs-layer-prev').addEventListener('click', () => go(-1));
+  section.querySelector('.cs-layer-next').addEventListener('click', () => go(1));
+  layer.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') { e.preventDefault(); go(-1); }
+    if (e.key === 'ArrowRight') { e.preventDefault(); go(1); }
+  });
+
+  // drag / swipe; a short tap on a side image brings it forward
+  let x0 = null, moved = 0;
+  layer.addEventListener('pointerdown', (e) => { x0 = e.clientX; moved = 0; });
+  layer.addEventListener('pointermove', (e) => { if (x0 !== null) moved = e.clientX - x0; });
+  layer.addEventListener('pointerup', (e) => {
+    if (x0 === null) return;
+    x0 = null;
+    if (Math.abs(moved) > 50) return go(moved < 0 ? 1 : -1);
+    const hit = e.target.closest('.cs-layer-item');
+    if (hit && !hit.classList.contains('is-active')) { active = +hit.dataset.index; render(); }
+  });
+  layer.addEventListener('pointercancel', () => { x0 = null; });
+
+  render();
+}

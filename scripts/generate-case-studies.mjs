@@ -6,9 +6,19 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT_DIR = path.resolve(__dirname, '..');
 const projects = JSON.parse(fs.readFileSync(path.join(ROOT_DIR, 'src/data/projects.json'), 'utf-8'));
 
+// projects.json text was scraped from HTML, so some of it is already entity-encoded.
+// Decode first so it isn't escaped twice (that's how "that&#39;s" reached the page).
+const decode = (s) => s.replace(/&#0?39;/g, "'").replace(/&quot;/g, '"').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
+
+// label colour for a palette swatch: ink on light swatches, white on dark ones
+const isLight = (hex) => {
+  const n = parseInt(hex.replace('#', '').slice(0, 6), 16);
+  return (0.299 * (n >> 16) + 0.587 * ((n >> 8) & 255) + 0.114 * (n & 255)) / 255 > 0.6;
+};
+
 function escapeHtml(str) {
   if (!str) return '';
-  return str
+  return decode(String(str))
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
@@ -38,7 +48,7 @@ function generateCaseStudies() {
     // 2. Palette swatches
     const paletteHtml = (p.palette || ['#f25b54', '#141414', '#f5f1ec'])
       .map(hex => `
-        <div class="cs-palette-swatch" style="background: ${hex}; color: ${hex === '#f5f1ec' ? '#0B0B0B' : '#FFFFFF'};">
+        <div class="cs-palette-swatch" style="background: ${hex}; color: ${isLight(hex) ? '#0B0B0B' : '#FFFFFF'};">
           <span>${hex}</span>
         </div>
       `).join('');
@@ -50,12 +60,21 @@ function generateCaseStudies() {
       </div>
     ` : '';
 
-    // 4. Gallery items (Horizontal track)
-    const galleryHtml = p.gallery.map((img) => `
-      <div class="cs-gallery-item">
-        <img src="${img}" alt="${escapeHtml(p.alt[img] || p.name)}" loading="lazy" width="760" height="520">
-      </div>
-    `).join('');
+    // 4. Gallery items (layer carousel: one image in front, neighbours stacked behind)
+    const galleryHtml = p.gallery.map((img, i) => `
+        <figure class="cs-layer-item" data-index="${i}">
+          <img src="${img}" alt="${escapeHtml(p.alt[img] || p.name)}" ${i < 3 ? '' : 'loading="lazy"'} width="1200" height="900" draggable="false">
+        </figure>`).join('');
+
+    // "Title: detail | Title: detail" strings from the old site become a real list
+    const points = (txt) => !txt.includes(' | ')
+      ? `<p>${escapeHtml(txt)}</p>`
+      : `<ul class="cs-points">${txt.split(' | ').map((s) => {
+          const i = s.indexOf(': ');
+          return i > 0 && i < 80
+            ? `<li><strong>${escapeHtml(s.slice(0, i))}</strong><span>${escapeHtml(s.slice(i + 2))}</span></li>`
+            : `<li><span>${escapeHtml(s)}</span></li>`;
+        }).join('')}</ul>`;
 
     // 5. Impact / Results (Strictly omit if empty, no placeholders)
     let impactHtml = '';
@@ -186,7 +205,7 @@ function generateCaseStudies() {
 
       <div class="cs-hero-content">
         <p class="mono-label" style="color: var(--coral); margin-bottom: var(--space-2);">// ${p.category} &middot; ${p.year}</p>
-        <h1 class="cs-hero-name">${escapeHtml(p.name)}</h1>
+        <h1 class="cs-hero-name${p.name.length > 14 ? ' cs-hero-name--long' : ''}">${escapeHtml(p.name)}</h1>
 
         <div class="cs-hero-meta-grid">
           <div class="cs-meta-col">
@@ -203,7 +222,7 @@ function generateCaseStudies() {
           </div>
           <div class="cs-meta-col">
             <span>deliverables</span>
-            <div style="font-size: 13px; color: var(--paper); line-height: 1.4;">${deliverablesHtml}</div>
+            <div class="cs-meta-list">${deliverablesHtml}</div>
           </div>
         </div>
       </div>
@@ -220,7 +239,7 @@ function generateCaseStudies() {
         </div>
         <div class="cs-problem-narrative">
           <h4>What needed to change</h4>
-          <p>${escapeHtml(p.problem || p.solution || 'Building brand authority in a category crowded with superficial commodity offerings.')}</p>
+          ${points(p.problem || p.solution || 'Building brand authority in a category crowded with superficial commodity offerings.')}
         </div>
       </div>
     </section>
@@ -228,14 +247,12 @@ function generateCaseStudies() {
     <!-- BEATS 3–4: MARKET + STRATEGY -->
     <section class="cs-strategy-section" aria-label="Strategic Approach">
       <div class="cs-strategy-grid">
-        <div>
+        <div class="cs-strategy-copy">
           <p class="mono-label" style="color: var(--coral); margin-bottom: var(--space-3);">// strategic positioning</p>
           <h3 style="font-size: var(--text-h2); font-weight: 300; line-height: 1.1; letter-spacing: -0.03em;">
             Designing for the human decision maker, not an algorithm.
           </h3>
-          <p style="color: var(--ash); font-size: var(--text-body); margin-top: var(--space-4); line-height: 1.6;">
-            ${escapeHtml(p.strategy || 'Aligning tangible physical craft with rapid digital product responsiveness.')}
-          </p>
+          ${points(p.strategy || 'Aligning tangible physical craft with rapid digital product responsiveness.')}
         </div>
 
         <div class="cs-strategy-plate">
@@ -261,16 +278,24 @@ function generateCaseStudies() {
       ${logoHtml}
     </section>
 
-    <!-- BEAT 6: DESIGN EXECUTION (Horizontal Pinned Gallery) -->
+    <!-- BEAT 6: DESIGN EXECUTION (Layer carousel) -->
     <section class="cs-gallery-section" aria-label="Design Showcase">
       <div class="cs-gallery-header">
-        <p class="mono-label">// craft &amp; execution</p>
-        <h3 style="font-size: var(--text-h2); font-weight: 300; margin-top: var(--space-2);">in the wild &middot; horizontal gallery</h3>
+        <div>
+          <p class="mono-label">// craft &amp; execution</p>
+          <h3 style="font-size: var(--text-h2); font-weight: 300; margin-top: var(--space-2);">in the wild.</h3>
+        </div>
+        <div class="cs-layer-controls">
+          <span class="mono-label cs-layer-count" aria-live="polite">01 / ${String(p.gallery.length).padStart(2, '0')}</span>
+          <button class="cs-layer-btn cs-layer-prev" aria-label="Previous image">&larr;</button>
+          <button class="cs-layer-btn cs-layer-next" aria-label="Next image">&rarr;</button>
+        </div>
       </div>
 
-      <div class="cs-horizontal-track">
+      <div class="cs-layer" tabindex="0" role="region" aria-roledescription="carousel" aria-label="${escapeHtml(p.name)} gallery, use arrow keys to browse">
         ${galleryHtml}
       </div>
+      <p class="cs-layer-caption mono-label" aria-hidden="true"></p>
     </section>
 
     <!-- BEAT 7: BUSINESS IMPACT (Conditional) -->
@@ -319,53 +344,19 @@ function generateCaseStudies() {
         start a project &rarr;
       </a>
 
-      <!-- Next Project Auto-Reel Card -->
-      <div class="cs-next-reel-card" data-next-url="/work/${nextProject.slug}">
+      <!-- Next project: opens on click only -->
+      <a class="cs-next-reel-card" href="/work/${nextProject.slug}" data-cursor="view" data-cursor-label="open">
         <span class="mono-label" style="color: var(--coral);">// up next</span>
         <h3 style="font-size: var(--text-h2); font-weight: 300;">${escapeHtml(nextProject.name)}</h3>
         <div class="cs-next-thumb">
           <img src="${nextProject.cover}" alt="${escapeHtml(nextProject.name)}" loading="lazy">
         </div>
-        
-        <div style="display: flex; align-items: center; gap: var(--space-3); margin-top: var(--space-3);">
-          <!-- Auto-navigate circular progress ring -->
-          <svg width="60" height="60" aria-hidden="true">
-            <circle cx="30" cy="30" r="26" stroke="rgba(245,241,236,0.15)" stroke-width="3" fill="none"/>
-            <circle class="progress-ring-circle" cx="30" cy="30" r="26" stroke="var(--coral)" stroke-width="3" fill="none"/>
-          </svg>
-          <a href="/work/${nextProject.slug}" class="hero-work-link">open next case study &rarr;</a>
-        </div>
-      </div>
+        <span class="hero-work-link">open next case study &rarr;</span>
+      </a>
     </section>
   </main>
 
-  <!-- Global Footer -->
-  <footer class="site-footer">
-    <div class="footer-middle">
-      <div class="footer-col">
-        <h5>navigation</h5>
-        <a href="/work">work</a>
-        <a href="/services">services</a>
-        <a href="/studio">studio</a>
-        <a href="/contact">contact</a>
-      </div>
-      <div class="footer-col">
-        <h5>social</h5>
-        <a href="https://www.instagram.com/inks.and.interfaces" target="_blank" rel="noopener">instagram</a>
-        <a href="https://x.com/Inks_Interfaces" target="_blank" rel="noopener">x / twitter</a>
-        <a href="https://www.behance.net/shivanirotliwala" target="_blank" rel="noopener">behance</a>
-      </div>
-      <div class="footer-col">
-        <h5>studio</h5>
-        <p>surat, gujarat, india</p>
-        <p>available globally</p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>&copy; 2026 inks &amp; interfaces &middot; made in surat</span>
-      <span>set in space grotesk &middot; with care</span>
-    </div>
-  </footer>
+  <footer class="site-footer"></footer>
 
   <script type="module" src="/src/js/pages/case-study.js"></script>
 </body>

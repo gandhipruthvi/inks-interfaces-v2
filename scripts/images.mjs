@@ -27,6 +27,15 @@ async function processImages() {
           .toFile(coverOut);
         processed++;
       }
+      // small thumbs for the page loader's flying cards
+      const thumbOut = path.join(targetDir, 'thumb-360.webp');
+      if (!fs.existsSync(thumbOut)) {
+        await sharp(coverPath)
+          .resize(360, 450, { fit: 'cover' })
+          .webp({ quality: 72 })
+          .toFile(thumbOut);
+        processed++;
+      }
     }
   }
 

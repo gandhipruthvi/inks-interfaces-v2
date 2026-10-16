@@ -39,7 +39,7 @@
     },
     "image": "https://inksandinterfaces.design/assets/projects/globetap/globetap-1.webp",
     "dateCreated": "2025",
-    "genre": "branding"
+    "genre": "ui-ux"
   }
   </script>
 </head>
@@ -79,7 +79,7 @@
       </div>
 
       <div class="cs-hero-content">
-        <p class="mono-label" style="color: var(--coral); margin-bottom: var(--space-2);">// branding &middot; 2025</p>
+        <p class="mono-label" style="color: var(--coral); margin-bottom: var(--space-2);">// ui-ux &middot; 2025</p>
         <h1 class="cs-hero-name">GlobeTap</h1>
 
         <div class="cs-hero-meta-grid">
@@ -89,7 +89,7 @@
           </div>
           <div class="cs-meta-col">
             <span>category</span>
-            <strong>branding</strong>
+            <strong>ui-ux</strong>
           </div>
           <div class="cs-meta-col">
             <span>year</span>
@@ -97,7 +97,7 @@
           </div>
           <div class="cs-meta-col">
             <span>deliverables</span>
-            <div style="font-size: 13px; color: var(--paper); line-height: 1.4;"><span>Product strategy</span><span>User flows</span><span>UI system</span><span>Component library</span><span>Motion spec</span></div>
+            <div class="cs-meta-list"><span>Product strategy</span><span>User flows</span><span>UI system</span><span>Component library</span><span>Motion spec</span></div>
           </div>
         </div>
       </div>
@@ -114,7 +114,7 @@
         </div>
         <div class="cs-problem-narrative">
           <h4>What needed to change</h4>
-          <p>Opened on holidays, ignored on Tuesdays: Users only thought about Globetap when travelling. The product was a holiday utility, not a daily one. | Stations without context: The map showed stations. It didn&amp;#39;t show whether one was on your usual route, or whether it would save you time. | No reason to return: The product had no progress, no streak, no signal that using it mattered. | Onboarding was a search bar: Day-one users were dropped onto a map and told to figure it out. 60% never came back.</p>
+          <ul class="cs-points"><li><strong>Opened on holidays, ignored on Tuesdays</strong><span>Users only thought about Globetap when travelling. The product was a holiday utility, not a daily one.</span></li><li><strong>Stations without context</strong><span>The map showed stations. It didn&#039;t show whether one was on your usual route, or whether it would save you time.</span></li><li><strong>No reason to return</strong><span>The product had no progress, no streak, no signal that using it mattered.</span></li><li><strong>Onboarding was a search bar</strong><span>Day-one users were dropped onto a map and told to figure it out. 60% never came back.</span></li></ul>
         </div>
       </div>
     </section>
@@ -122,14 +122,12 @@
     <!-- BEATS 3–4: MARKET + STRATEGY -->
     <section class="cs-strategy-section" aria-label="Strategic Approach">
       <div class="cs-strategy-grid">
-        <div>
+        <div class="cs-strategy-copy">
           <p class="mono-label" style="color: var(--coral); margin-bottom: var(--space-3);">// strategic positioning</p>
           <h3 style="font-size: var(--text-h2); font-weight: 300; line-height: 1.1; letter-spacing: -0.03em;">
             Designing for the human decision maker, not an algorithm.
           </h3>
-          <p style="color: var(--ash); font-size: var(--text-body); margin-top: var(--space-4); line-height: 1.6;">
-            Bottle-first: The first screen isn&amp;#39;t a map — it&amp;#39;s a bottle. The product starts where the behaviour starts. | Route-aware: Stations are filtered against the user&amp;#39;s actual commute, not the radius around their phone. | Streak as feedback: Every refill logged builds a streak. Streak loss is the only motivator stronger than convenience. | One-thumb default: Every primary action sits in the lower third of the screen. The app works on a moving train.
-          </p>
+          <ul class="cs-points"><li><strong>Bottle-first</strong><span>The first screen isn&#039;t a map — it&#039;s a bottle. The product starts where the behaviour starts.</span></li><li><strong>Route-aware</strong><span>Stations are filtered against the user&#039;s actual commute, not the radius around their phone.</span></li><li><strong>Streak as feedback</strong><span>Every refill logged builds a streak. Streak loss is the only motivator stronger than convenience.</span></li><li><strong>One-thumb default</strong><span>Every primary action sits in the lower third of the screen. The app works on a moving train.</span></li></ul>
         </div>
 
         <div class="cs-strategy-plate">
@@ -171,52 +169,51 @@
       
     </section>
 
-    <!-- BEAT 6: DESIGN EXECUTION (Horizontal Pinned Gallery) -->
+    <!-- BEAT 6: DESIGN EXECUTION (Layer carousel) -->
     <section class="cs-gallery-section" aria-label="Design Showcase">
       <div class="cs-gallery-header">
-        <p class="mono-label">// craft &amp; execution</p>
-        <h3 style="font-size: var(--text-h2); font-weight: 300; margin-top: var(--space-2);">in the wild &middot; horizontal gallery</h3>
+        <div>
+          <p class="mono-label">// craft &amp; execution</p>
+          <h3 style="font-size: var(--text-h2); font-weight: 300; margin-top: var(--space-2);">in the wild.</h3>
+        </div>
+        <div class="cs-layer-controls">
+          <span class="mono-label cs-layer-count" aria-live="polite">01 / 09</span>
+          <button class="cs-layer-btn cs-layer-prev" aria-label="Previous image">&larr;</button>
+          <button class="cs-layer-btn cs-layer-next" aria-label="Next image">&rarr;</button>
+        </div>
       </div>
 
-      <div class="cs-horizontal-track">
+      <div class="cs-layer" tabindex="0" role="region" aria-roledescription="carousel" aria-label="GlobeTap gallery, use arrow keys to browse">
         
-      <div class="cs-gallery-item">
-        <img src="/assets/projects/globetap/globetap-1.webp" alt="Globetap hero" loading="lazy" width="760" height="520">
+        <figure class="cs-layer-item" data-index="0">
+          <img src="/assets/projects/globetap/globetap-1.webp" alt="Globetap hero"  width="1200" height="900" draggable="false">
+        </figure>
+        <figure class="cs-layer-item" data-index="1">
+          <img src="/assets/projects/globetap/globetap-2.webp" alt="Globetap secondary"  width="1200" height="900" draggable="false">
+        </figure>
+        <figure class="cs-layer-item" data-index="2">
+          <img src="/assets/projects/globetap/globetap-3.webp" alt="Globetap origin"  width="1200" height="900" draggable="false">
+        </figure>
+        <figure class="cs-layer-item" data-index="3">
+          <img src="/assets/projects/globetap/globetap-4.webp" alt="Globetap statement" loading="lazy" width="1200" height="900" draggable="false">
+        </figure>
+        <figure class="cs-layer-item" data-index="4">
+          <img src="/assets/projects/globetap/globetap-5.webp" alt="Globetap component anatomy" loading="lazy" width="1200" height="900" draggable="false">
+        </figure>
+        <figure class="cs-layer-item" data-index="5">
+          <img src="/assets/projects/globetap/globetap-6.webp" alt="Default" loading="lazy" width="1200" height="900" draggable="false">
+        </figure>
+        <figure class="cs-layer-item" data-index="6">
+          <img src="/assets/projects/globetap/globetap-7.webp" alt="Refill nearby" loading="lazy" width="1200" height="900" draggable="false">
+        </figure>
+        <figure class="cs-layer-item" data-index="7">
+          <img src="/assets/projects/globetap/globetap-8.webp" alt="Streak at risk" loading="lazy" width="1200" height="900" draggable="false">
+        </figure>
+        <figure class="cs-layer-item" data-index="8">
+          <img src="/assets/projects/globetap/globetap-9.webp" alt="Logged" loading="lazy" width="1200" height="900" draggable="false">
+        </figure>
       </div>
-    
-      <div class="cs-gallery-item">
-        <img src="/assets/projects/globetap/globetap-2.webp" alt="Globetap secondary" loading="lazy" width="760" height="520">
-      </div>
-    
-      <div class="cs-gallery-item">
-        <img src="/assets/projects/globetap/globetap-3.webp" alt="Globetap origin" loading="lazy" width="760" height="520">
-      </div>
-    
-      <div class="cs-gallery-item">
-        <img src="/assets/projects/globetap/globetap-4.webp" alt="Globetap statement" loading="lazy" width="760" height="520">
-      </div>
-    
-      <div class="cs-gallery-item">
-        <img src="/assets/projects/globetap/globetap-5.webp" alt="Globetap component anatomy" loading="lazy" width="760" height="520">
-      </div>
-    
-      <div class="cs-gallery-item">
-        <img src="/assets/projects/globetap/globetap-6.webp" alt="Default" loading="lazy" width="760" height="520">
-      </div>
-    
-      <div class="cs-gallery-item">
-        <img src="/assets/projects/globetap/globetap-7.webp" alt="Refill nearby" loading="lazy" width="760" height="520">
-      </div>
-    
-      <div class="cs-gallery-item">
-        <img src="/assets/projects/globetap/globetap-8.webp" alt="Streak at risk" loading="lazy" width="760" height="520">
-      </div>
-    
-      <div class="cs-gallery-item">
-        <img src="/assets/projects/globetap/globetap-9.webp" alt="Logged" loading="lazy" width="760" height="520">
-      </div>
-    
-      </div>
+      <p class="cs-layer-caption mono-label" aria-hidden="true"></p>
     </section>
 
     <!-- BEAT 7: BUSINESS IMPACT (Conditional) -->
@@ -259,7 +256,7 @@
             </div>
             <div class="cs-quote-card">
               <p class="mono-label" style="color: var(--coral); margin-bottom: var(--space-3);">// founder voice</p>
-              <blockquote>&ldquo;The hardest part of building a habit isn&amp;#39;t the first use. It&amp;#39;s the fourth.&rdquo;</blockquote>
+              <blockquote>&ldquo;The hardest part of building a habit isn&#039;t the first use. It&#039;s the fourth.&rdquo;</blockquote>
               <div class="mono-label" style="color: var(--ash-dark);">GlobeTap</div>
             </div>
           </div>
@@ -300,59 +297,25 @@
     <section class="cs-next-section" aria-label="Next Case Study">
       <p class="mono-label">// building next?</p>
       <h2 style="font-size: var(--text-h1); font-weight: 300; margin: var(--space-3) 0 var(--space-4);">
-        building in branding? send us your brief.
+        building in ui-ux? send us your brief.
       </h2>
       <a href="/contact" class="coral-pill" data-magnetic style="font-size: 18px; padding: 14px 32px;">
         start a project &rarr;
       </a>
 
-      <!-- Next Project Auto-Reel Card -->
-      <div class="cs-next-reel-card" data-next-url="/work/terra-cork">
+      <!-- Next project: opens on click only -->
+      <a class="cs-next-reel-card" href="/work/terra-cork" data-cursor="view" data-cursor-label="open">
         <span class="mono-label" style="color: var(--coral);">// up next</span>
         <h3 style="font-size: var(--text-h2); font-weight: 300;">Terra Cork</h3>
         <div class="cs-next-thumb">
           <img src="/assets/projects/terra-cork/terra-cork-1.webp" alt="Terra Cork" loading="lazy">
         </div>
-        
-        <div style="display: flex; align-items: center; gap: var(--space-3); margin-top: var(--space-3);">
-          <!-- Auto-navigate circular progress ring -->
-          <svg width="60" height="60" aria-hidden="true">
-            <circle cx="30" cy="30" r="26" stroke="rgba(245,241,236,0.15)" stroke-width="3" fill="none"/>
-            <circle class="progress-ring-circle" cx="30" cy="30" r="26" stroke="var(--coral)" stroke-width="3" fill="none"/>
-          </svg>
-          <a href="/work/terra-cork" class="hero-work-link">open next case study &rarr;</a>
-        </div>
-      </div>
+        <span class="hero-work-link">open next case study &rarr;</span>
+      </a>
     </section>
   </main>
 
-  <!-- Global Footer -->
-  <footer class="site-footer">
-    <div class="footer-middle">
-      <div class="footer-col">
-        <h5>navigation</h5>
-        <a href="/work">work</a>
-        <a href="/services">services</a>
-        <a href="/studio">studio</a>
-        <a href="/contact">contact</a>
-      </div>
-      <div class="footer-col">
-        <h5>social</h5>
-        <a href="https://www.instagram.com/inks.and.interfaces" target="_blank" rel="noopener">instagram</a>
-        <a href="https://x.com/Inks_Interfaces" target="_blank" rel="noopener">x / twitter</a>
-        <a href="https://www.behance.net/shivanirotliwala" target="_blank" rel="noopener">behance</a>
-      </div>
-      <div class="footer-col">
-        <h5>studio</h5>
-        <p>surat, gujarat, india</p>
-        <p>available globally</p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>&copy; 2026 inks &amp; interfaces &middot; made in surat</span>
-      <span>set in space grotesk &middot; with care</span>
-    </div>
-  </footer>
+  <footer class="site-footer"></footer>
 
   <script type="module" src="/src/js/pages/case-study.js"></script>
 </body>

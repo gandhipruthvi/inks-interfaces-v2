@@ -3,29 +3,41 @@ import '../../styles/base.css';
 import '../../styles/secondary.css';
 
 import { bootstrapApp } from '../main.js';
-import gsap from 'gsap';
-import { initInkDrop } from '../scenes/inkDrop.js';
-
 document.addEventListener('DOMContentLoaded', () => {
   bootstrapApp();
-  const dropHost = document.querySelector('.ink-drop');
-  const drop = dropHost ? initInkDrop(dropHost, document.querySelector('.contact-form')) : null;
 
   const form = document.querySelector('.contact-form');
   const submitBtn = document.querySelector('.contact-submit-btn');
   const splashCanvas = document.querySelector('.contact-splash-canvas');
   const budgetChips = document.querySelectorAll('.budget-chip');
+  const budgetGroups = document.querySelectorAll('.budget-options');
+  const currBtns = document.querySelectorAll('.curr-btn');
   const budgetInput = document.querySelector('#budgetInput');
   const faqItems = document.querySelectorAll('.faq-item');
 
-  // Budget chips selection
-  budgetChips.forEach((chip) => {
-    chip.addEventListener('click', () => {
-      budgetChips.forEach((c) => c.classList.remove('active'));
-      chip.classList.add('active');
-      if (budgetInput) {
-        budgetInput.value = chip.dataset.val;
-      }
+  // One currency at a time; the hidden field always carries "<CUR> <range>"
+  let currency = 'INR';
+  const pick = (chip) => {
+    budgetChips.forEach((c) => {
+      c.classList.toggle('active', c === chip);
+      c.setAttribute('aria-pressed', c === chip);
+    });
+    if (budgetInput) budgetInput.value = `${currency} ${chip.dataset.val}`;
+  };
+  budgetChips.forEach((chip) => chip.addEventListener('click', () => pick(chip)));
+
+  currBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      if (btn.dataset.currency === currency) return;
+      // keep the same tier (low / mid / high) when switching currency
+      const tier = [...document.querySelectorAll(`.budget-options[data-currency="${currency}"] .budget-chip`)].findIndex((c) => c.classList.contains('active'));
+      currency = btn.dataset.currency;
+      currBtns.forEach((b) => {
+        b.classList.toggle('active', b === btn);
+        b.setAttribute('aria-checked', b === btn);
+      });
+      budgetGroups.forEach((g) => { g.hidden = g.dataset.currency !== currency; });
+      pick(document.querySelectorAll(`.budget-options[data-currency="${currency}"] .budget-chip`)[Math.max(0, tier)]);
     });
   });
 
@@ -60,7 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       // Ink Drop Splash Animation
-      drop?.splash();
       submitBtn.disabled = true;
       let dropY = -20;
       let splashRadius = 0;

@@ -3,7 +3,7 @@
    ============================================================ */
 
 .work-page-header {
-  padding: calc(var(--header-height) + var(--space-8)) var(--gutter) var(--space-6);
+  padding: var(--space-8) var(--gutter) var(--space-6);
   position: relative;
   overflow: hidden;
 }
@@ -18,43 +18,55 @@
   gap: var(--space-3);
 }
 
-.work-header-count {
-  font-family: var(--font-mono);
-  font-size: clamp(20px, 3vw, 36px);
-  color: var(--coral);
-  vertical-align: super;
-}
-
-/* Scattered Collage Hero (Madeline effect) */
-.collage-hero {
+/* Orbit gallery hero: covers circle the headline (positioned by work.js) */
+.work-orbit {
   position: relative;
-  height: 60vh;
-  margin-top: var(--space-6);
-  border-radius: 12px;
+  height: calc(100dvh - var(--header-height) - 120px);
+  min-height: 560px;
+  padding: 0;
   overflow: hidden;
+  isolation: isolate;
+}
+.wo-stage {
+  position: absolute; inset: 0;
+  touch-action: pan-y;
+  cursor: grab;
+  user-select: none;
+}
+.wo-stage.is-dragging { cursor: grabbing; }
+.wo-card {
+  position: absolute; left: 50%; top: 50%;
+  width: var(--size, 120px); aspect-ratio: 1;
+  border-radius: 14px; overflow: hidden;
   background: var(--ink-2);
-  border: 1px solid var(--line);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, .5);
+  will-change: transform, filter, opacity;
 }
-
-.collage-item {
-  position: absolute;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 16px 36px rgba(0,0,0,0.5);
-  border: 1px solid var(--line);
-  will-change: transform;
+.wo-card img { width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+.wo-copy {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  z-index: 200;            /* above every cover so the headline always reads */
+  width: min(720px, calc(100% - 2 * var(--gutter)));
+  text-align: center;
+  pointer-events: none;
 }
-
-.collage-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.wo-copy .work-header-title { justify-content: center; margin: var(--space-3) 0 var(--space-4); text-shadow: 0 2px 30px rgba(11, 11, 11, .9); }
+.wo-sub { color: var(--paper); opacity: .8; font-size: var(--text-body-lg); margin: 0 auto; max-width: 48ch; text-shadow: 0 2px 20px rgba(11, 11, 11, .9); }
+.wo-hint { margin-top: var(--space-5); color: var(--coral) !important; }
+.wo-label {
+  position: absolute; top: 0; left: 0; z-index: 210;
+  padding: 6px 12px; border-radius: 999px;
+  background: var(--coral); color: var(--ink) !important;
+  pointer-events: none; opacity: 0; transition: opacity .2s ease;
 }
+.wo-label.is-on { opacity: 1; }
 
-/* Sticky Controls */
+/* Sticky Controls: first thing under the header; slides up with it when the header hides */
 .work-controls-bar {
   position: sticky;
   top: var(--header-height);
+  margin-top: var(--header-height);
+  transition: transform 0.4s var(--ease-out);
   z-index: 100;
   display: flex;
   justify-content: space-between;
@@ -69,10 +81,29 @@
   border-bottom: 1px solid var(--line);
 }
 
+body:has(.site-header.header-hidden) .work-controls-bar { transform: translateY(calc(-1 * var(--header-height))); }
+
+.work-filter-tiers {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
 .work-filter-chips {
   display: flex;
   gap: var(--space-2);
   flex-wrap: wrap;
+}
+
+/* industry tier sits under scope as quieter outline pills */
+.work-filter-chips--industry .work-filter-chip {
+  background: transparent;
+  padding: 6px 14px;
+}
+.work-filter-chips--industry .work-filter-chip.active {
+  background: var(--paper);
+  border-color: var(--paper);
+  color: var(--ink);
 }
 
 .work-filter-chip {
@@ -87,7 +118,12 @@
   transition: all var(--t-fast) var(--ease-out);
 }
 
-.work-filter-chip.active, .work-filter-chip:hover {
+.work-filter-chip:hover {
+  color: var(--paper);
+  border-color: var(--paper);
+}
+
+.work-filter-chip.active {
   background: var(--coral);
   color: var(--ink);
   border-color: var(--coral);
@@ -119,8 +155,8 @@
 
 /* Container for Work Grid and List */
 .work-container {
-  padding: var(--space-8) var(--gutter) var(--space-11);
-  min-height: 80vh;
+  padding: var(--space-8) var(--gutter) var(--space-7);
+  min-height: 40vh;   /* keeps the footer from jumping up when a filter returns few projects */
 }
 
 /* Asymmetric 12-col Masonry Grid */
@@ -153,15 +189,28 @@
   grid-column: span 8;
 }
 
+.work-grid-card.span-6 {
+  grid-column: span 6;
+}
+
+.work-empty {
+  padding: var(--space-8) 0;
+}
+
 .work-card-thumb {
   width: 100%;
-  aspect-ratio: 16/10;
+  aspect-ratio: 4/3;
   border-radius: 10px;
   overflow: hidden;
   background: var(--ink-2);
   border: 1px solid var(--line);
   position: relative;
   margin-bottom: var(--space-3);
+}
+
+.span-7 .work-card-thumb,
+.span-8 .work-card-thumb {
+  aspect-ratio: 16/10;
 }
 
 .work-card-thumb img {
@@ -171,7 +220,12 @@
   transition: transform 0.6s var(--ease-out);
 }
 
-.work-grid-card:hover .work-card-thumb img {
+.work-grid-card:hover .span-7 .work-card-thumb,
+.span-8 .work-card-thumb {
+  aspect-ratio: 16/10;
+}
+
+.work-card-thumb img {
   transform: scale(1.04);
 }
 
@@ -191,8 +245,10 @@
 .work-card-sub {
   font-family: var(--font-mono);
   font-size: var(--text-mono-label);
+  letter-spacing: 0.12em;
   color: var(--ash);
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 /* List View (Era List style) */
@@ -259,7 +315,8 @@
   .work-grid-card.span-7,
   .work-grid-card.span-5,
   .work-grid-card.span-4,
-  .work-grid-card.span-8 {
+  .work-grid-card.span-8,
+  .work-grid-card.span-6 {
     grid-column: span 12;
   }
   .work-list-row {
@@ -269,7 +326,21 @@
   .work-list-services {
     display: none;
   }
-  .collage-hero {
-    height: 40vh;
-  }
 }
+
+/* Floating cover that follows the cursor in list view (positioned by work.js) */
+.services-cursor-preview {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 60;
+  width: 280px;
+  aspect-ratio: 4 / 3;
+  border-radius: 10px;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5);
+}
+.services-cursor-preview img { width: 100%; height: 100%; object-fit: cover; }
+@media (hover: none) { .services-cursor-preview { display: none; } }

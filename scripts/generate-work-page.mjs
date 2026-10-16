@@ -6,27 +6,27 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT_DIR = path.resolve(__dirname, '..');
 const projects = JSON.parse(fs.readFileSync(path.join(ROOT_DIR, 'src/data/projects.json'), 'utf-8'));
 
-function generateWorkHtml() {
-  // Collage items (all 28 items scattered at hand-placed positions)
-  const collageHtml = projects.map((p, i) => {
-    const left = (i * 13) % 85;
-    const top = (i * 19) % 70;
-    const width = 120 + ((i * 29) % 80);
-    const zIndex = 1 + (i % 6);
-    return `
-      <div class="collage-item" style="left: ${left}%; top: ${top}%; width: ${width}px; z-index: ${zIndex};">
-        <img src="${p.cover}" alt="${p.name} showcase" loading="lazy">
-      </div>
-    `;
-  }).join('');
+const SCOPES = { branding: 'branding', 'ui-ux': 'ui/ux', packaging: 'packaging', concept: 'concept' };
+const INDUSTRIES = { 'f-and-b': 'f&amp;b', d2c: 'd2c', 'tech-saas': 'tech/saas', luxury: 'luxury', 'pet-care': 'pet care', wellness: 'wellness' };
+const chips = (tier, map, allLabel) =>
+  `<button class="work-filter-chip active" data-${tier}="all" aria-pressed="true">${allLabel}</button>` +
+  Object.entries(map).map(([k, label]) => `<button class="work-filter-chip" data-${tier}="${k}" aria-pressed="false">${label}</button>`).join('');
 
-  // Grid view items (asymmetric spans: 7/5, 4/8 alternating)
-  const spanPatterns = ['span-7', 'span-5', 'span-4', 'span-8', 'span-5', 'span-7', 'span-8', 'span-4'];
+function generateWorkHtml() {
+  // Orbit gallery covers: every project, placed on a sphere by work.js.
+  // aria-hidden + tabindex -1: the grid/list below is the accessible index.
+  const orbitHtml = projects.map((p, i) => `
+          <a class="wo-card" href="/work/${p.slug}" tabindex="-1" data-name="${p.name}" style="--tilt: ${((i * 37) % 36) - 18}deg">
+            <img src="/work-media/${p.slug}/thumb-360.webp" alt="" width="360" height="450" loading="${i < 12 ? 'eager' : 'lazy'}" draggable="false">
+          </a>`).join('');
+
+  // Grid view items (row pairs: 7/5, 4/8, 6/6)
+  const spanPatterns = ['span-7', 'span-5', 'span-4', 'span-8', 'span-6', 'span-6'];
   const gridHtml = projects.map((p, i) => {
     const span = spanPatterns[i % spanPatterns.length];
     const conceptTag = p.isConcept ? `<span class="concept-tag">concept</span>` : '';
     return `
-      <article class="work-grid-card ${span}" data-category="${p.category}" data-cursor="view" data-cursor-label="${p.slug}">
+      <article class="work-grid-card ${span}" data-category="${p.category}" data-industry="${p.industry}" data-cursor="view" data-cursor-label="${p.slug}">
         <a href="/work/${p.slug}" class="work-card-thumb" aria-label="${p.name} case study">
           <img src="${p.cover}" alt="${p.alt[p.cover] || p.name}" loading="lazy" width="800" height="500">
         </a>
@@ -34,7 +34,7 @@ function generateWorkHtml() {
           <div>
             <h2 class="work-card-title"><a href="/work/${p.slug}">${p.name}</a>${conceptTag}</h2>
           </div>
-          <div class="work-card-sub">${p.category} &middot; ${p.year}</div>
+          <div class="work-card-sub">${SCOPES[p.category]} &middot; ${p.year}</div>
         </div>
       </article>
     `;
@@ -45,9 +45,9 @@ function generateWorkHtml() {
     const conceptTag = p.isConcept ? `<span class="concept-tag">concept</span>` : '';
     const servicesStr = p.services.slice(0, 3).join(', ');
     return `
-      <div class="work-list-row" data-category="${p.category}" data-cover="${p.cover}">
+      <div class="work-list-row" data-category="${p.category}" data-industry="${p.industry}" data-cover="${p.cover}">
         <h2 class="work-list-name"><a href="/work/${p.slug}">${p.name}</a>${conceptTag}</h2>
-        <span class="work-list-category">${p.category}</span>
+        <span class="work-list-category">${SCOPES[p.category]}</span>
         <span class="work-list-services">${servicesStr}</span>
         <span class="work-list-year">${p.year}</span>
       </div>
@@ -87,34 +87,21 @@ function generateWorkHtml() {
       <a href="/contact" class="nav-link">contact</a>
     </nav>
     <div class="header-right">
-      <div class="header-time" aria-live="polite">surat 00:00:00 ist</div>
+      <div class="header-time" aria-live="polite">india 00:00:00 ist</div>
       <a href="/contact" class="coral-pill" data-magnetic>start a project</a>
     </div>
   </header>
 
   <main id="main-content">
-    <header class="work-page-header">
-      <p class="mono-label" style="margin-bottom: var(--space-3);" data-reveal="fade">// archive of craft</p>
-      <h1 class="work-header-title" data-reveal="lines">
-        the work <span class="work-header-count">28</span>
-      </h1>
-      <p style="color: var(--ash); max-width: 54ch; font-size: var(--text-body-lg); margin-top: var(--space-3);" data-reveal="fade">
-        Twenty-eight founders, brand systems, and digital interfaces. Built to earn trust, command premium pricing, and convert.
-      </p>
-
-      <!-- Signature Scattered Collage Hero -->
-      <div class="collage-hero" aria-hidden="true">
-        ${collageHtml}
-      </div>
-    </header>
-
-    <!-- Sticky Filter & View Controls -->
+    <!-- Filter & view controls: top of the page, sticky under the header -->
     <div class="work-controls-bar" role="toolbar" aria-label="Work Controls">
-      <div class="work-filter-chips">
-        <button class="work-filter-chip active" data-filter="all">all (28)</button>
-        <button class="work-filter-chip" data-filter="branding">branding</button>
-        <button class="work-filter-chip" data-filter="ui-ux">ui-ux</button>
-        <button class="work-filter-chip" data-filter="concept">concept</button>
+      <div class="work-filter-tiers">
+        <div class="work-filter-chips" role="group" aria-label="Filter by scope">
+          ${chips('scope', SCOPES, `all (${projects.length})`)}
+        </div>
+        <div class="work-filter-chips work-filter-chips--industry" role="group" aria-label="Filter by industry">
+          ${chips('industry', INDUSTRIES, 'all sectors')}
+        </div>
       </div>
 
       <div class="work-view-toggle">
@@ -123,8 +110,22 @@ function generateWorkHtml() {
       </div>
     </div>
 
+    <!-- Orbit gallery: the covers circle the headline in 3D; drag to spin, click to open -->
+    <header class="work-page-header work-orbit">
+      <div class="wo-stage" aria-hidden="true">${orbitHtml}
+      </div>
+      <div class="wo-copy">
+        <p class="mono-label" data-reveal="fade">// archive of craft</p>
+        <h1 class="work-header-title" data-reveal="lines">the ${projects.length} identities</h1>
+        <p class="wo-sub" data-reveal="fade">Selected brand strategies, tactile packaging systems, and digital flagships engineered for ambitious founders.</p>
+        <p class="wo-hint mono-label" aria-hidden="true">drag to spin &middot; click a cover to open it</p>
+      </div>
+      <p class="wo-label mono-label" aria-hidden="true"></p>
+    </header>
+
     <!-- Main Content Work Container -->
     <div class="work-container">
+      <p class="work-empty mono-label" hidden>nothing in this combination yet. try another sector.</p>
       <!-- Grid View (Asymmetric 12-col masonry) -->
       <div class="work-grid" aria-label="Project Grid View">
         ${gridHtml}
@@ -142,44 +143,7 @@ function generateWorkHtml() {
     </div>
   </main>
 
-  <!-- Global Footer -->
-  <footer class="site-footer">
-    <div class="footer-top">
-      <div class="mono-label" style="margin-bottom: var(--space-3);">// let's build</div>
-      <div class="footer-cta-headline">let's grow yours.</div>
-      <div class="footer-cta-action">
-        <a href="/contact" class="coral-pill" data-magnetic style="font-size: 18px; padding: 16px 36px;">
-          start a project &rarr;
-        </a>
-      </div>
-    </div>
-
-    <div class="footer-middle">
-      <div class="footer-col">
-        <h5>navigation</h5>
-        <a href="/work">work</a>
-        <a href="/services">services</a>
-        <a href="/studio">studio</a>
-        <a href="/contact">contact</a>
-      </div>
-      <div class="footer-col">
-        <h5>social</h5>
-        <a href="https://www.instagram.com/inks.and.interfaces" target="_blank" rel="noopener">instagram</a>
-        <a href="https://x.com/Inks_Interfaces" target="_blank" rel="noopener">x / twitter</a>
-        <a href="https://www.behance.net/shivanirotliwala" target="_blank" rel="noopener">behance</a>
-      </div>
-      <div class="footer-col">
-        <h5>studio</h5>
-        <p>surat, gujarat, india</p>
-        <p>available globally</p>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <span>&copy; 2026 inks &amp; interfaces &middot; made in surat</span>
-      <span>set in space grotesk &middot; with care</span>
-    </div>
-  </footer>
+  <footer class="site-footer"></footer>
 
   <script type="module" src="/src/js/pages/work.js"></script>
 </body>

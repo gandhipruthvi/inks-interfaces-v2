@@ -23,6 +23,10 @@ for (const p of data) {
 
   if (p.featured) featuredCount++;
 
+  assert(['branding', 'ui-ux', 'packaging', 'concept'].includes(p.category), `Unknown category "${p.category}" for ${p.slug}`);
+  assert(typeof p.industry === 'string' && p.industry, `Missing industry for ${p.slug}`);
+  assert.strictEqual(new Set(p.gallery).size, p.gallery.length, `Duplicate gallery images for ${p.slug}`);
+
   // Verify cover image
   const coverDiskPath = path.join(ROOT_DIR, 'public', p.cover.replace(/^\//, ''));
   if (!fs.existsSync(coverDiskPath)) {

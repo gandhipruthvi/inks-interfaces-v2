@@ -3,105 +3,64 @@
    ============================================================ */
 
 /* --- Page loader ---------------------------------------------------
-   Brand deviation (requested): the brand book bans gradients on coral/black.
-   The loader is the one place we use a moving coral→ink→paper mesh. */
+   Solid #000 plate (the wordmark only ships in white, and the brand puts it on
+   black). Four quadrant panels make the plate so the exit can wipe them apart. */
 html:not(.is-loaded) body { overflow: hidden; }
 
-/* Paint the gradient before any JS runs so there's never a black flash */
+/* Paint the plate before any JS runs so nothing flashes */
 html:not(.is-loaded) body::after {
   content: '';
   position: fixed;
   inset: 0;
   z-index: 10000;
-  background: var(--loader-mesh);
-}
-
-:root {
-  --loader-mesh:
-    radial-gradient(60% 70% at 18% 22%, #F25B54 0%, transparent 62%),
-    radial-gradient(55% 60% at 82% 78%, #C9433D 0%, transparent 60%),
-    radial-gradient(50% 50% at 78% 18%, #F5F1EC 0%, transparent 58%),
-    radial-gradient(70% 70% at 25% 85%, #2a1210 0%, transparent 70%),
-    #0B0B0B;
-}
-
-.page-loader {
-  position: fixed;
-  inset: 0;
-  z-index: 10001;
-  display: grid;
-  place-items: center;
-  overflow: hidden;
-  background: #0B0B0B;
-  clip-path: inset(0 0 0 0);
-  transition: clip-path 1.1s var(--ease-io);
-}
-.page-loader.is-leaving { clip-path: inset(0 0 100% 0); }
-
-.page-loader-mesh {
-  position: absolute;
-  inset: -25%;
-  background: var(--loader-mesh);
-  filter: blur(40px) saturate(1.05);
-  animation: loaderDrift 9s ease-in-out infinite alternate;
-}
-@keyframes loaderDrift {
-  0%   { transform: translate3d(-4%, -3%, 0) rotate(0deg) scale(1); }
-  50%  { transform: translate3d(3%, 4%, 0) rotate(8deg) scale(1.08); }
-  100% { transform: translate3d(-2%, 5%, 0) rotate(-6deg) scale(1.04); }
-}
-.page-loader::after { /* film grain over the mesh */
-  content: '';
-  position: absolute;
-  inset: 0;
-  opacity: .18;
-  mix-blend-mode: overlay;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-}
-
-.page-loader-center {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--space-5);
-  transition: transform .9s var(--ease-io), opacity .5s var(--ease-out);
-}
-.page-loader.is-leaving .page-loader-center { transform: translateY(-40px); opacity: 0; }
-
-/* Monogram always sits on a solid black plate (brand rule) */
-.page-loader-plate {
-  display: grid;
-  place-items: center;
-  width: 96px;
-  height: 96px;
-  border-radius: 22px;
   background: #000;
-  animation: platePulse 2.4s ease-in-out infinite;
 }
-.page-loader-plate img { width: 56px; height: auto; }
-@keyframes platePulse { 50% { transform: scale(.94); } }
 
-.page-loader-count {
-  font-family: var(--font-mono);
-  font-size: 13px;
-  letter-spacing: .2em;
-  color: var(--paper);
-  font-variant-numeric: tabular-nums;
+.page-loader { position: fixed; inset: 0; z-index: 10001; pointer-events: none; }
+html:not(.is-loaded) .page-loader { pointer-events: auto; }
+
+.ld-q { position: absolute; width: calc(50% + 1px); height: calc(50% + 1px); background: #000; } /* +1px: no hairline seams */
+.ld-q--tl { top: 0; left: 0; }
+.ld-q--tr { top: 0; right: 0; }
+.ld-q--bl { bottom: 0; left: 0; }
+.ld-q--br { bottom: 0; right: 0; }
+
+.ld-stage { position: absolute; inset: 0; overflow: hidden; transition: opacity .3s ease; }
+
+/* faint layout guides, like the reference's alignment marks */
+.ld-guide--v {
+  position: absolute; left: 50%; top: 0; bottom: 0; width: 1px;
+  background: rgba(245, 241, 236, .08); transform-origin: top;
 }
-.page-loader-label {
-  position: absolute;
-  bottom: var(--space-6);
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-  font-family: var(--font-mono);
-  font-size: var(--text-mono-label);
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  color: rgba(245, 241, 236, .75);
-  white-space: nowrap;
+.ld-tick { position: absolute; width: 14px; height: 14px; opacity: 0; }
+.ld-tick::before, .ld-tick::after { content: ''; position: absolute; background: rgba(245, 241, 236, .3); }
+.ld-tick::before { width: 14px; height: 1px; top: 0; }
+.ld-tick::after { width: 1px; height: 14px; left: 0; }
+.ld-tick--tl { top: var(--space-6); left: var(--space-6); }
+.ld-tick--tr { top: var(--space-6); right: var(--space-6); transform: scaleX(-1); }
+.ld-tick--bl { bottom: var(--space-6); left: var(--space-6); transform: scaleY(-1); }
+.ld-tick--br { bottom: var(--space-6); right: var(--space-6); transform: scale(-1); }
+
+.ld-words {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  max-width: none; white-space: nowrap;
+  font-size: 15px; letter-spacing: -0.01em; color: var(--paper);
+}
+.ld-words span { display: inline-block; opacity: 0; }
+
+.ld-mark {
+  position: absolute; left: 50%; top: 50%;
+  width: clamp(160px, 18vw, 260px); height: auto;
+  margin: calc(clamp(160px, 18vw, 260px) * -0.156) 0 0 calc(clamp(160px, 18vw, 260px) * -0.5);
+  opacity: 0;
+}
+
+.ld-card {
+  position: absolute; top: 0; left: 0;
+  width: clamp(88px, 9vw, 140px); height: auto; aspect-ratio: 4 / 5;
+  object-fit: cover; border-radius: 10px;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, .5);
+  will-change: transform, filter;
 }
 
 /* --- Signature pattern bands ----------------------------------------
@@ -213,5 +172,5 @@ html:not(.is-loaded) body::after {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .page-loader-mesh, .page-loader-plate, .pattern-band--drift { animation: none; }
+  .pattern-band--drift { animation: none; }
 }

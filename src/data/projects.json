@@ -74,7 +74,8 @@
     ],
     "isConcept": false,
     "featured": false,
-    "headline": "A playful rebrand for a beloved playschool."
+    "headline": "A playful rebrand for a beloved playschool.",
+    "industry": "education"
   },
   {
     "slug": "zestee",
@@ -168,7 +169,8 @@
     ],
     "isConcept": false,
     "featured": true,
-    "headline": "From juice bar to destination café."
+    "headline": "From juice bar to destination café.",
+    "industry": "f-and-b"
   },
   {
     "slug": "vanya-luxe",
@@ -247,13 +249,14 @@
     ],
     "isConcept": false,
     "featured": true,
-    "headline": "Vanya Luxe."
+    "headline": "Vanya Luxe.",
+    "industry": "luxury"
   },
   {
     "slug": "piq",
     "name": "PIQ",
     "subtitle": "branding case study",
-    "category": "branding",
+    "category": "packaging",
     "tags": [
       "#branding",
       "#packaging",
@@ -281,40 +284,20 @@
       "/assets/projects/piq/piq-7.webp",
       "/assets/projects/piq/piq-2.webp",
       "/assets/projects/piq/piq-10.webp",
-      "/assets/projects/piq/piq-1.webp",
-      "/assets/projects/piq/piq-1.webp",
-      "/assets/projects/piq/piq-10.webp",
-      "/assets/projects/piq/piq-2.webp",
-      "/assets/projects/piq/piq-3.webp",
-      "/assets/projects/piq/piq-4.webp",
-      "/assets/projects/piq/piq-5.webp",
-      "/assets/projects/piq/piq-6.webp",
-      "/assets/projects/piq/piq-7.webp",
-      "/assets/projects/piq/piq-8.webp",
-      "/assets/projects/piq/piq-9.webp"
+      "/assets/projects/piq/piq-1.webp"
     ],
     "alt": {
-      "/assets/projects/piq/piq-9.webp": "PIQ hero",
-      "/assets/projects/piq/piq-5.webp": "PIQ secondary",
-      "/assets/projects/piq/piq-3.webp": "PIQ origin",
-      "/assets/projects/piq/identity/primary-logo-transparent-background-0.png": "Primary Logo Transparent Background",
-      "/assets/projects/piq/piq-4.webp": "PIQ statement",
-      "/assets/projects/piq/piq-8.webp": "PIQ form",
-      "/assets/projects/piq/piq-6.webp": "PIQ form",
-      "/assets/projects/piq/piq-7.webp": "PIQ form",
-      "/assets/projects/piq/piq-2.webp": "PIQ in context",
-      "/assets/projects/piq/piq-10.webp": "PIQ in context",
-      "/assets/projects/piq/piq-1.webp": "PIQ in context",
-      "/assets/projects/piq/piq-1.webp": "PIQ showcase asset",
-      "/assets/projects/piq/piq-10.webp": "PIQ showcase asset",
-      "/assets/projects/piq/piq-2.webp": "PIQ showcase asset",
-      "/assets/projects/piq/piq-3.webp": "PIQ showcase asset",
-      "/assets/projects/piq/piq-4.webp": "PIQ showcase asset",
+      "/assets/projects/piq/piq-9.webp": "PIQ showcase asset",
       "/assets/projects/piq/piq-5.webp": "PIQ showcase asset",
+      "/assets/projects/piq/piq-3.webp": "PIQ showcase asset",
+      "/assets/projects/piq/identity/primary-logo-transparent-background-0.png": "Primary Logo Transparent Background",
+      "/assets/projects/piq/piq-4.webp": "PIQ showcase asset",
+      "/assets/projects/piq/piq-8.webp": "PIQ showcase asset",
       "/assets/projects/piq/piq-6.webp": "PIQ showcase asset",
       "/assets/projects/piq/piq-7.webp": "PIQ showcase asset",
-      "/assets/projects/piq/piq-8.webp": "PIQ showcase asset",
-      "/assets/projects/piq/piq-9.webp": "PIQ showcase asset"
+      "/assets/projects/piq/piq-2.webp": "PIQ showcase asset",
+      "/assets/projects/piq/piq-10.webp": "PIQ showcase asset",
+      "/assets/projects/piq/piq-1.webp": "PIQ showcase asset"
     },
     "logo": "/assets/projects/piq/identity/primary-logo-transparent-background-0.png",
     "founder": {
@@ -353,7 +336,8 @@
     ],
     "isConcept": false,
     "featured": false,
-    "headline": "Caffeine, lemonade, and an exclamation mark."
+    "headline": "Caffeine, lemonade, and an exclamation mark.",
+    "industry": "d2c"
   },
   {
     "slug": "the-ube-press",
@@ -446,13 +430,14 @@
     ],
     "isConcept": false,
     "featured": true,
-    "headline": "A modern café rooted in heritage."
+    "headline": "A modern café rooted in heritage.",
+    "industry": "f-and-b"
   },
   {
     "slug": "globetap",
     "name": "GlobeTap",
     "subtitle": "branding case study",
-    "category": "branding",
+    "category": "ui-ux",
     "tags": [
       "#branding",
       "#identity",
@@ -526,7 +511,8 @@
     ],
     "isConcept": false,
     "featured": true,
-    "headline": "A travel booking habit, mapped to your day."
+    "headline": "A travel booking habit, mapped to your day.",
+    "industry": "tech-saas"
   },
   {
     "slug": "terra-cork",
@@ -640,7 +626,8 @@
     ],
     "isConcept": false,
     "featured": true,
-    "headline": "Cork, finally treated like a material instead of a fix."
+    "headline": "Cork, finally treated like a material instead of a fix.",
+    "industry": "d2c"
   },
   {
     "slug": "ciao",
@@ -667,17 +654,9 @@
       "/assets/projects/ciao/ciao-1.webp",
       "/assets/projects/ciao/ciao-2.webp",
       "/assets/projects/ciao/ciao-3.webp",
-      "/assets/projects/ciao/ciao-4.webp",
-      "/assets/projects/ciao/ciao-1.webp",
-      "/assets/projects/ciao/ciao-2.webp",
-      "/assets/projects/ciao/ciao-3.webp",
       "/assets/projects/ciao/ciao-4.webp"
     ],
     "alt": {
-      "/assets/projects/ciao/ciao-1.webp": "Ciao Pizzeria hero",
-      "/assets/projects/ciao/ciao-2.webp": "Ciao Pizzeria secondary",
-      "/assets/projects/ciao/ciao-3.webp": "Ciao Pizzeria origin",
-      "/assets/projects/ciao/ciao-4.webp": "Ciao 4",
       "/assets/projects/ciao/ciao-1.webp": "Ciao showcase asset",
       "/assets/projects/ciao/ciao-2.webp": "Ciao showcase asset",
       "/assets/projects/ciao/ciao-3.webp": "Ciao showcase asset",
@@ -719,7 +698,8 @@
     ],
     "isConcept": false,
     "featured": false,
-    "headline": "Wood-fired Naples, on a side street in Bopal."
+    "headline": "Wood-fired Naples, on a side street in Bopal.",
+    "industry": "f-and-b"
   },
   {
     "slug": "go-miles",
@@ -785,7 +765,8 @@
     ],
     "isConcept": false,
     "featured": false,
-    "headline": "Go Miles."
+    "headline": "Go Miles.",
+    "industry": "tech-saas"
   },
   {
     "slug": "oakmere",
@@ -864,7 +845,8 @@
     ],
     "isConcept": false,
     "featured": false,
-    "headline": "Oakmere."
+    "headline": "Oakmere.",
+    "industry": "luxury"
   },
   {
     "slug": "matcha-den",
@@ -947,13 +929,14 @@
     ],
     "isConcept": false,
     "featured": false,
-    "headline": "A modern den for an ancient ritual."
+    "headline": "A modern den for an ancient ritual.",
+    "industry": "f-and-b"
   },
   {
     "slug": "the-saucy-heat",
     "name": "The Saucy Heat",
     "subtitle": "branding case study",
-    "category": "branding",
+    "category": "packaging",
     "tags": [
       "#branding",
       "#packaging",
@@ -1033,7 +1016,8 @@
     ],
     "isConcept": false,
     "featured": false,
-    "headline": "A chilli oil that prefers a long, slow burn."
+    "headline": "A chilli oil that prefers a long, slow burn.",
+    "industry": "f-and-b"
   },
   {
     "slug": "lab-coat-media",
@@ -1108,13 +1092,14 @@
     ],
     "isConcept": false,
     "featured": false,
-    "headline": "A media brand built to be readable by everyone."
+    "headline": "A media brand built to be readable by everyone.",
+    "industry": "tech-saas"
   },
   {
     "slug": "waggle",
     "name": "Waggle",
     "subtitle": "branding case study",
-    "category": "branding",
+    "category": "packaging",
     "tags": [
       "#branding",
       "#packaging",
@@ -1200,7 +1185,8 @@
     ],
     "isConcept": false,
     "featured": true,
-    "headline": "A pet brand designed for the human who actually buys it."
+    "headline": "A pet brand designed for the human who actually buys it.",
+    "industry": "pet-care"
   },
   {
     "slug": "misomaki",
@@ -1230,26 +1216,14 @@
       "/assets/projects/misomaki/identity/primary-logo-transparent-background-0.webp",
       "/assets/projects/misomaki/misomaki-4.webp",
       "/assets/projects/misomaki/misomaki-5.webp",
-      "/assets/projects/misomaki/misomaki-6.webp",
-      "/assets/projects/misomaki/misomaki-1.webp",
-      "/assets/projects/misomaki/misomaki-2.webp",
-      "/assets/projects/misomaki/misomaki-3.webp",
-      "/assets/projects/misomaki/misomaki-4.webp",
-      "/assets/projects/misomaki/misomaki-5.webp",
       "/assets/projects/misomaki/misomaki-6.webp"
     ],
     "alt": {
-      "/assets/projects/misomaki/misomaki-1.webp": "Misomaki hero",
-      "/assets/projects/misomaki/misomaki-2.webp": "Misomaki secondary",
-      "/assets/projects/misomaki/misomaki-3.webp": "Misomaki origin",
-      "/assets/projects/misomaki/identity/primary-logo-1.jpg": "Primary Logo",
-      "/assets/projects/misomaki/identity/primary-logo-transparent-background-0.webp": "Primary Logo Transparent Background",
-      "/assets/projects/misomaki/misomaki-4.webp": "Misomaki process",
-      "/assets/projects/misomaki/misomaki-5.webp": "Misomaki process",
-      "/assets/projects/misomaki/misomaki-6.webp": "Misomaki process",
       "/assets/projects/misomaki/misomaki-1.webp": "Misomaki showcase asset",
       "/assets/projects/misomaki/misomaki-2.webp": "Misomaki showcase asset",
       "/assets/projects/misomaki/misomaki-3.webp": "Misomaki showcase asset",
+      "/assets/projects/misomaki/identity/primary-logo-1.jpg": "Primary Logo",
+      "/assets/projects/misomaki/identity/primary-logo-transparent-background-0.webp": "Primary Logo Transparent Background",
       "/assets/projects/misomaki/misomaki-4.webp": "Misomaki showcase asset",
       "/assets/projects/misomaki/misomaki-5.webp": "Misomaki showcase asset",
       "/assets/projects/misomaki/misomaki-6.webp": "Misomaki showcase asset"
@@ -1288,7 +1262,8 @@
     ],
     "isConcept": false,
     "featured": false,
-    "headline": "Misomaki."
+    "headline": "Misomaki.",
+    "industry": "f-and-b"
   },
   {
     "slug": "hardin-jewels",
@@ -1372,7 +1347,8 @@
     ],
     "isConcept": false,
     "featured": false,
-    "headline": "Hardin Jewels."
+    "headline": "Hardin Jewels.",
+    "industry": "luxury"
   },
   {
     "slug": "evoque",
@@ -1443,7 +1419,8 @@
     ],
     "isConcept": false,
     "featured": false,
-    "headline": "Evoque."
+    "headline": "Evoque.",
+    "industry": "luxury"
   },
   {
     "slug": "trivid-yoga",
@@ -1530,7 +1507,8 @@
     ],
     "isConcept": false,
     "featured": false,
-    "headline": "Twenty years of teaching, finally given a name."
+    "headline": "Twenty years of teaching, finally given a name.",
+    "industry": "wellness"
   },
   {
     "slug": "paperboat",
@@ -1563,34 +1541,14 @@
       "/assets/projects/paperboat/paperboat-6.webp",
       "/assets/projects/paperboat/paperboat-7.webp",
       "/assets/projects/paperboat/paperboat-8.webp",
-      "/assets/projects/paperboat/paperboat-9.webp",
-      "/assets/projects/paperboat/paperboat-1.webp",
-      "/assets/projects/paperboat/paperboat-10.webp",
-      "/assets/projects/paperboat/paperboat-2.webp",
-      "/assets/projects/paperboat/paperboat-3.webp",
-      "/assets/projects/paperboat/paperboat-4.webp",
-      "/assets/projects/paperboat/paperboat-5.webp",
-      "/assets/projects/paperboat/paperboat-6.webp",
-      "/assets/projects/paperboat/paperboat-7.webp",
-      "/assets/projects/paperboat/paperboat-8.webp",
       "/assets/projects/paperboat/paperboat-9.webp"
     ],
     "alt": {
-      "/assets/projects/paperboat/paperboat-2.webp": "Paper Boat hero",
-      "/assets/projects/paperboat/paperboat-3.webp": "Paper Boat secondary",
-      "/assets/projects/paperboat/paperboat-4.webp": "Paper Boat origin",
-      "/assets/projects/paperboat/paperboat-1.webp": "Paperboat 1",
-      "/assets/projects/paperboat/paperboat-10.webp": "Paperboat 10",
-      "/assets/projects/paperboat/paperboat-5.webp": "Paperboat 5",
-      "/assets/projects/paperboat/paperboat-6.webp": "Paperboat 6",
-      "/assets/projects/paperboat/paperboat-7.webp": "Paperboat 7",
-      "/assets/projects/paperboat/paperboat-8.webp": "Paperboat 8",
-      "/assets/projects/paperboat/paperboat-9.webp": "Paperboat 9",
-      "/assets/projects/paperboat/paperboat-1.webp": "Paperboat showcase asset",
-      "/assets/projects/paperboat/paperboat-10.webp": "Paperboat showcase asset",
       "/assets/projects/paperboat/paperboat-2.webp": "Paperboat showcase asset",
       "/assets/projects/paperboat/paperboat-3.webp": "Paperboat showcase asset",
       "/assets/projects/paperboat/paperboat-4.webp": "Paperboat showcase asset",
+      "/assets/projects/paperboat/paperboat-1.webp": "Paperboat showcase asset",
+      "/assets/projects/paperboat/paperboat-10.webp": "Paperboat showcase asset",
       "/assets/projects/paperboat/paperboat-5.webp": "Paperboat showcase asset",
       "/assets/projects/paperboat/paperboat-6.webp": "Paperboat showcase asset",
       "/assets/projects/paperboat/paperboat-7.webp": "Paperboat showcase asset",
@@ -1633,7 +1591,8 @@
     ],
     "isConcept": true,
     "featured": false,
-    "headline": "A nostalgic Indian icon, rebuilt for its next decade."
+    "headline": "A nostalgic Indian icon, rebuilt for its next decade.",
+    "industry": "f-and-b"
   },
   {
     "slug": "woven-wax",
@@ -1706,7 +1665,8 @@
     ],
     "isConcept": false,
     "featured": false,
-    "headline": "Woven Wax."
+    "headline": "Woven Wax.",
+    "industry": "d2c"
   },
   {
     "slug": "golden-crust",
@@ -1799,7 +1759,8 @@
     ],
     "isConcept": false,
     "featured": false,
-    "headline": "A neighbourhood bakery, treated like an heirloom."
+    "headline": "A neighbourhood bakery, treated like an heirloom.",
+    "industry": "f-and-b"
   },
   {
     "slug": "royal-eats",
@@ -1882,13 +1843,14 @@
     ],
     "isConcept": false,
     "featured": false,
-    "headline": "A modern identity for a beloved snack brand."
+    "headline": "A modern identity for a beloved snack brand.",
+    "industry": "f-and-b"
   },
   {
     "slug": "plush-paws",
     "name": "Plush Paws",
     "subtitle": "branding case study",
-    "category": "branding",
+    "category": "packaging",
     "tags": [
       "#branding",
       "#packaging",
@@ -1966,7 +1928,8 @@
     ],
     "isConcept": false,
     "featured": false,
-    "headline": "Pet food, finally treated like premium FMCG."
+    "headline": "Pet food, finally treated like premium FMCG.",
+    "industry": "pet-care"
   },
   {
     "slug": "pure-sip",
@@ -2043,7 +2006,8 @@
     ],
     "isConcept": false,
     "featured": false,
-    "headline": "Pure Sip."
+    "headline": "Pure Sip.",
+    "industry": "d2c"
   },
   {
     "slug": "rich-kanya",
@@ -2100,7 +2064,8 @@
     ],
     "isConcept": false,
     "featured": false,
-    "headline": "Rich Kanya."
+    "headline": "Rich Kanya.",
+    "industry": "wellness"
   },
   {
     "slug": "kitkat-protein-bar",
@@ -2185,13 +2150,14 @@
     ],
     "isConcept": true,
     "featured": false,
-    "headline": "A childhood favourite, rebuilt for the gym."
+    "headline": "A childhood favourite, rebuilt for the gym.",
+    "industry": "f-and-b"
   },
   {
     "slug": "satori-bites",
     "name": "Satori Bites",
     "subtitle": "branding case study",
-    "category": "branding",
+    "category": "packaging",
     "tags": [
       "#branding",
       "#packaging",
@@ -2259,7 +2225,8 @@
     ],
     "isConcept": false,
     "featured": true,
-    "headline": "Satori Bites."
+    "headline": "Satori Bites.",
+    "industry": "f-and-b"
   },
   {
     "slug": "silver-sphere-tech",
@@ -2361,6 +2328,7 @@
     ],
     "isConcept": false,
     "featured": true,
-    "headline": "IT services with an AI layer — finally branded like it."
+    "headline": "IT services with an AI layer — finally branded like it.",
+    "industry": "tech-saas"
   }
 ]

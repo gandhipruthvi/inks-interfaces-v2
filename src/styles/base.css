@@ -249,14 +249,28 @@ img, picture, svg, video {
   align-items: center;
   justify-content: space-between;
   padding: 0 var(--gutter);
-  transition: transform 0.4s var(--ease-out);
-  mix-blend-mode: difference;
+  transition: transform 0.4s var(--ease-out), color 0.3s ease;
+  /* No mix-blend-mode here: difference turned the coral CTA teal over paper.
+     nav.js toggles .header-on-light instead. */
   color: #FFFFFF;
 }
 
 .site-header.header-hidden {
   transform: translateY(-100%);
 }
+
+.site-header.header-on-light {
+  color: var(--ink);
+}
+.site-header .header-logo {
+  transition: filter 0.3s ease;
+}
+.site-header.header-on-light .header-logo {
+  filter: invert(1);
+}
+/* the mobile menu is ink, so keep the header light while it's open */
+.site-header:has(~ .mobile-nav-overlay.is-open) { color: #FFFFFF; }
+.site-header:has(~ .mobile-nav-overlay.is-open) .header-logo { filter: none; }
 
 .site-header .header-brand {
   display: flex;
@@ -457,6 +471,39 @@ img, picture, svg, video {
   gap: var(--space-4);
   font-size: var(--text-caption);
   color: var(--ash);
+}
+
+/* --- Floating back-to-top --- */
+.back-to-top-btn {
+  position: fixed;
+  bottom: 32px;
+  right: var(--gutter);
+  z-index: 900;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: var(--ink-2);
+  color: var(--paper);
+  border: 1px solid var(--line-strong);
+  font-family: var(--font-mono);
+  font-size: var(--text-mono-label);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(16px);
+  transition: opacity 0.3s var(--ease-out), transform 0.3s var(--ease-out), border-color 0.2s ease, color 0.2s ease;
+}
+.back-to-top-btn.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+.back-to-top-btn:hover {
+  border-color: var(--coral);
+  color: var(--coral);
 }
 
 /* --- Reveal Helpers (§3 / §1.4) --- */

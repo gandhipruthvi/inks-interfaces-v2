@@ -395,26 +395,64 @@
 
 /* ===================== additions (v2.1) ===================== */
 
-/* Hero copy rises once the loader lifts (pure CSS, keyed off html.is-loaded) */
-.hero-section { height: 100dvh; min-height: 640px; }
-.hero-content { justify-content: flex-end; gap: var(--space-8); }
-.hero-copy-block { max-width: min(58vw, 860px); }
-.hero-headline { font-size: clamp(48px, 7vw, 120px); margin-bottom: var(--space-5); }
+/* Hero: a paper desk. Layers: headline (1) < tools canvas (2) < copy, toolbar (3).
+   Copy rises once the loader lifts (pure CSS, keyed off html.is-loaded). */
+.hero-section { height: 100dvh; min-height: 640px; background: var(--paper); color: var(--ink); isolation: isolate; }
+.hero-title-layer {
+  position: absolute; z-index: 1; left: 0; right: 0;
+  top: calc(var(--header-height) + var(--space-5));
+  padding: 0 var(--gutter);
+  pointer-events: none;
+}
+.hero-canvas-container { z-index: 2; touch-action: pan-y; cursor: grab; }
+.hero-canvas-container.is-grabbing { cursor: grabbing; }
+.hero-content { z-index: 3; justify-content: flex-end; gap: var(--space-7); }
+.hero-copy-block { max-width: min(46vw, 640px); }
+.hero-headline {
+  font-size: clamp(64px, 12vw, 216px);
+  font-weight: var(--fw-medium);
+  line-height: .88;
+  letter-spacing: -0.055em;
+  color: var(--ink);
+  margin: var(--space-3) 0 0;
+}
+.hero-eyebrow { color: var(--ash-dark) !important; }
+.hero-subline { color: var(--ash-dark); margin-bottom: var(--space-6); }
+.hero-section .hero-work-link { color: var(--ink); border-color: var(--line-dark); }
+.hero-section .hero-scroll-indicator, .hero-section .hero-footer-row .mono-label { color: var(--ash-dark); }
 .hero-line { display: block; overflow: hidden; padding-bottom: .06em; }
-.hero-line > span { display: block; transform: translateY(110%); transition: transform 1.4s var(--ease-out); }
+.hero-line > span { display: block; transform: translateY(110%); transition: transform 1.2s var(--ease-out); }
 .hero-eyebrow, .hero-subline, .hero-actions, .hero-footer-row {
   opacity: 0; transform: translateY(16px);
-  transition: opacity 1.2s var(--ease-out), transform 1.2s var(--ease-out);
+  transition: opacity 1s var(--ease-out), transform 1s var(--ease-out);
 }
-html.is-loaded .hero-line > span { transform: none; transition-delay: 1.5s; }
-html.is-loaded .hero-line:nth-child(2) > span { transition-delay: 1.62s; }
-html.is-loaded .hero-eyebrow { opacity: 1; transform: none; transition-delay: 1.4s; }
-html.is-loaded .hero-subline { opacity: 1; transform: none; transition-delay: 1.85s; }
-html.is-loaded .hero-actions { opacity: 1; transform: none; transition-delay: 2s; }
-html.is-loaded .hero-footer-row { opacity: 1; transform: none; transition-delay: 2.2s; }
-.hero-subline { color: rgba(245, 241, 236, .72); }
+html.is-loaded .hero-line > span { transform: none; transition-delay: .35s; }
+html.is-loaded .hero-line:nth-child(2) > span { transition-delay: .47s; }
+html.is-loaded .hero-eyebrow { opacity: 1; transform: none; transition-delay: .3s; }
+html.is-loaded .hero-subline { opacity: 1; transform: none; transition-delay: .7s; }
+html.is-loaded .hero-actions { opacity: 1; transform: none; transition-delay: .8s; }
+html.is-loaded .hero-footer-row { opacity: 1; transform: none; transition-delay: 1.6s; }
+
+/* toolbar, like a row of desk switches */
+.hero-footer-row { align-items: center; gap: var(--space-5); }
+.hero-toolbar-wrap { display: flex; flex-direction: column; align-items: center; gap: var(--space-2); }
+.hero-hint { color: var(--ash-dark) !important; }
+.hero-toolbar { display: flex; gap: 6px; flex-wrap: wrap; justify-content: center; }
+.hero-tool {
+  padding: 8px 16px; border-radius: 999px;
+  background: #fff; color: var(--ink);
+  font-size: var(--text-body-sm); font-weight: var(--fw-medium); text-transform: lowercase;
+  box-shadow: 0 1px 0 rgba(11,11,11,.06), 0 6px 16px rgba(11,11,11,.06);
+  transition: background-color var(--t-fast) var(--ease-out), color var(--t-fast) var(--ease-out), transform var(--t-fast) var(--ease-out);
+}
+.hero-tool:hover { transform: translateY(-2px); }
+.hero-tool.is-on { background: var(--ink); color: var(--paper); }
+
 @media (max-width: 900px) {
   .hero-copy-block { max-width: 100%; }
+  .hero-footer-row { flex-wrap: wrap; justify-content: center; }
+  .hero-footer-row > .hero-scroll-indicator, .hero-footer-row > .mono-label { display: none; }
+  .hero-hint { display: none; }
 }
 
 /* --- Library ring --- */
@@ -499,15 +537,66 @@ html.is-loaded .hero-footer-row { opacity: 1; transform: none; transition-delay:
 .marquee-container:hover .marquee-track,
 .marquee-container:focus-within .marquee-track { animation-play-state: paused; }
 @keyframes marquee { to { transform: translateX(calc(-50% - var(--space-4) / 2)); } }
+/* Logos as white marks on solid #000 plates, normalised to a 120x56 optical box */
 .marquee-logo-plate {
-  width: 176px; height: 104px; flex-shrink: 0; display: grid; place-items: center; padding: 22px;
-  background: var(--paper); border-radius: 8px;
-  transition: background-color .4s var(--ease-out), transform .5s var(--ease-out);
+  width: 168px; height: 96px; flex-shrink: 0; display: grid; place-items: center; padding: 20px 24px;
+  background: #000; border: 1px solid var(--line); border-radius: 8px; isolation: isolate;
+  transition: background-color .4s var(--ease-out), border-color .4s var(--ease-out), transform .5s var(--ease-out);
 }
-.marquee-logo-plate:hover { background: #fff; transform: translateY(-3px); }
-/* multiply drops white logo backgrounds into the paper plate; grey until hovered */
-.marquee-logo-plate img { max-width: 100%; max-height: 100%; object-fit: contain; mix-blend-mode: multiply; filter: grayscale(1) contrast(1.1); opacity: .85; transition: filter .5s var(--ease-out), opacity .5s; }
-.marquee-logo-plate:hover img { filter: none; opacity: 1; }
+/* hover: the plate turns paper and the logo shows in its own colours */
+.marquee-logo-plate:hover, .marquee-logo-plate:focus-visible { background: var(--paper); border-color: var(--paper); transform: translateY(-3px); }
+.marquee-logo-plate img {
+  width: 120px; height: 56px; object-fit: contain;
+  /* invert keeps knocked-out detail in badge logos (a flat white silhouette blobs them) */
+  filter: grayscale(1) invert(1) contrast(1.3); opacity: .85; transition: opacity .5s var(--ease-out), filter .4s var(--ease-out);
+}
+/* logos delivered on an opaque ground: push that ground to black, screen drops it */
+.marquee-logo-plate.is-light-ground img { mix-blend-mode: screen; }
+.marquee-logo-plate.is-dark-ground img { filter: grayscale(1) brightness(.8) contrast(2.2); mix-blend-mode: screen; }
+.marquee-logo-plate:hover img, .marquee-logo-plate:focus-visible img { opacity: 1; filter: none; mix-blend-mode: normal; }
+
+/* --- Proof: reviews quote deck --- */
+.reviews { padding: 0 var(--gutter) var(--space-10); }
+.reviews-head { display: flex; justify-content: space-between; align-items: flex-end; gap: var(--space-5); margin-bottom: var(--space-7); }
+.reviews-title { font-size: var(--text-h1); font-weight: var(--fw-light); margin-top: var(--space-2); }
+.reviews-nav { display: flex; gap: var(--space-2); }
+.reviews-nav button {
+  width: 48px; height: 48px; border-radius: 50%;
+  border: 1px solid var(--line-strong); color: var(--paper); font-size: 18px;
+  transition: background-color var(--t-fast), color var(--t-fast), border-color var(--t-fast);
+}
+.reviews-nav button:hover { background: var(--coral); border-color: var(--coral); color: var(--ink); }
+.reviews-deck {
+  position: relative; height: clamp(360px, 38vw, 440px);
+  touch-action: pan-y; user-select: none;
+}
+.review-card {
+  position: absolute; top: 0; left: 50%;
+  width: min(440px, 78vw); margin-left: calc(min(440px, 78vw) / -2); min-height: 300px;
+  display: flex; flex-direction: column; gap: var(--space-5);
+  padding: var(--space-6);
+  border-radius: 22px;
+  background: var(--tint); color: var(--ink);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, .45);
+  transform-origin: 50% 120%;
+  transition: transform .8s var(--ease-out), opacity .6s var(--ease-out);
+  cursor: pointer;
+}
+.review-card.is-front { cursor: default; }
+.review-project a { color: var(--ash-dark); }
+.review-project a:hover { color: var(--coral); }
+.review-card blockquote { font-size: clamp(19px, 1.7vw, 24px); line-height: 1.35; letter-spacing: -.01em; flex: 1; }
+.review-card blockquote em { font-style: normal; color: var(--coral-deep); }
+.review-card figcaption { display: flex; align-items: center; gap: var(--space-3); padding-top: var(--space-4); border-top: 1px solid var(--line-dark); }
+.review-card figcaption strong { display: block; font-weight: var(--fw-medium); }
+.review-card figcaption span span { font-size: var(--text-body-sm); color: var(--ash-dark); }
+.review-avatar {
+  display: grid; place-items: center; flex: none;
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--ink); color: var(--paper);
+  font-family: var(--font-mono); font-size: var(--text-mono-label); letter-spacing: .06em;
+}
+.reviews-count { text-align: center; margin-top: var(--space-4); }
 
 /* --- Proof: story deck (coral frame, paper card) --- */
 .story { padding: 0 var(--gutter) var(--space-10); }

@@ -9,15 +9,15 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-// three.js loads only on pages that show a 3D scene
-function lazyScene(selector, load) {
-  const el = document.querySelector(selector);
-  if (el) load().then((init) => init(el));
-}
-
 document.addEventListener('DOMContentLoaded', () => {
   bootstrapApp();
-  lazyScene('.pattern-relief', () => import('../scenes/patternRelief.js').then((m) => m.initPatternRelief));
+
+  // The studio as a live 3D diorama; the still render stays underneath as the
+  // fallback (no WebGL, or reduced motion) and fades out once the scene draws.
+  const room = document.querySelector('.studio-room');
+  if (room && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    import('../scenes/studioRoom.js').then((m) => { if (m.initStudioRoom(room)) room.classList.add('is-3d'); });
+  }
 
   // 1. Reuse hanging ID cards in Studio
   const foundersSection = document.querySelector('.founders-section');
@@ -25,48 +25,15 @@ document.addEventListener('DOMContentLoaded', () => {
     initBadgesSection(foundersSection);
   }
 
-  // 2. Staircase Block Reveal Transition (§9 / Video 1)
-  const staircaseBars = document.querySelectorAll('.staircase-bar');
-  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  if (staircaseBars.length > 0 && !prefersReduced) {
-    ScrollTrigger.create({
-      trigger: '.staircase-wrapper',
-      start: 'top 80%',
-      once: true,
-      onEnter: () => {
-        gsap.to(staircaseBars, {
-          scaleX: 1,
-          duration: 0.65,
-          ease: 'power3.inOut',
-          stagger: 0.08,
-          onComplete: () => {
-            gsap.to(staircaseBars, {
-              transformOrigin: 'right',
-              scaleX: 0,
-              duration: 0.65,
-              ease: 'power3.inOut',
-              stagger: 0.08
-            });
-          }
-        });
-      }
-    });
-  }
-
-  // 3. Signature draw-on animation
-  const sigImg = document.querySelector('.founders-signature');
-  if (sigImg && !prefersReduced) {
-    ScrollTrigger.create({
-      trigger: sigImg,
-      start: 'top 85%',
-      once: true,
-      onEnter: () => {
-        gsap.fromTo(sigImg,
-          { clipPath: 'inset(0 100% 0 0)', opacity: 0 },
-          { clipPath: 'inset(0 0% 0 0)', opacity: 1, duration: 1.4, ease: 'power2.out' }
-        );
-      }
-    });
+  // 2. Coral wipe into the founders section, scrubbed so it can't end on a hard cut
+  const wipe = document.querySelector('.section-wipe span');
+  if (wipe && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    gsap.fromTo(wipe,
+      { clipPath: 'inset(0% 0% 0% 0%)' },
+      {
+        clipPath: 'inset(0% 0% 100% 0%)',
+        ease: 'power2.inOut',
+        scrollTrigger: { trigger: '.section-wipe', start: 'top 85%', end: 'top 30%', scrub: 0.6 }
+      });
   }
 });

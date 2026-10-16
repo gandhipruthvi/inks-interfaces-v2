@@ -38,3 +38,8 @@ export function initScroll() {
 export function getLenis() {
   return lenis;
 }
+
+export function scrollToTop() {
+  if (lenis) lenis.scrollTo(0, { duration: 1.2 });
+  else window.scrollTo({ top: 0, behavior: 'smooth' });
+}

@@ -97,7 +97,7 @@
           </div>
           <div class="cs-meta-col">
             <span>deliverables</span>
-            <div style="font-size: 13px; color: var(--paper); line-height: 1.4;"><span>Logo System</span><span>Can Design</span><span>Carton Packaging</span><span>3D Renders</span></div>
+            <div class="cs-meta-list"><span>Logo System</span><span>Can Design</span><span>Carton Packaging</span><span>3D Renders</span></div>
           </div>
         </div>
       </div>
@@ -114,7 +114,7 @@
         </div>
         <div class="cs-problem-narrative">
           <h4>What needed to change</h4>
-          <p>Invisible Product: Water has no color or texture. The packaging must do all the communicating. | Visual Impact: Designing a packaging system that feels premium while remaining incredibly accessible. | Shelf Impact: Standing out in the most crowded aisle in the grocery store.</p>
+          <ul class="cs-points"><li><strong>Invisible Product</strong><span>Water has no color or texture. The packaging must do all the communicating.</span></li><li><strong>Visual Impact</strong><span>Designing a packaging system that feels premium while remaining incredibly accessible.</span></li><li><strong>Shelf Impact</strong><span>Standing out in the most crowded aisle in the grocery store.</span></li></ul>
         </div>
       </div>
     </section>
@@ -122,14 +122,12 @@
     <!-- BEATS 3–4: MARKET + STRATEGY -->
     <section class="cs-strategy-section" aria-label="Strategic Approach">
       <div class="cs-strategy-grid">
-        <div>
+        <div class="cs-strategy-copy">
           <p class="mono-label" style="color: var(--coral); margin-bottom: var(--space-3);">// strategic positioning</p>
           <h3 style="font-size: var(--text-h2); font-weight: 300; line-height: 1.1; letter-spacing: -0.03em;">
             Designing for the human decision maker, not an algorithm.
           </h3>
-          <p style="color: var(--ash); font-size: var(--text-body); margin-top: var(--space-4); line-height: 1.6;">
-            Fluid Typography: Custom lettering that feels like flowing water. | Negative Space: Vast areas of white and blue to imply purity. | Cool Tones: A strict palette of blues and icy silvers.
-          </p>
+          <ul class="cs-points"><li><strong>Fluid Typography</strong><span>Custom lettering that feels like flowing water.</span></li><li><strong>Negative Space</strong><span>Vast areas of white and blue to imply purity.</span></li><li><strong>Cool Tones</strong><span>A strict palette of blues and icy silvers.</span></li></ul>
         </div>
 
         <div class="cs-strategy-plate">
@@ -149,7 +147,7 @@
       <!-- Palette Bands -->
       <div class="cs-palette-row" aria-label="Color Palette">
         
-        <div class="cs-palette-swatch" style="background: #ffffff; color: #FFFFFF;">
+        <div class="cs-palette-swatch" style="background: #ffffff; color: #0B0B0B;">
           <span>#ffffff</span>
         </div>
       
@@ -161,7 +159,7 @@
           <span>#60a3d9</span>
         </div>
       
-        <div class="cs-palette-swatch" style="background: #bfd7ed; color: #FFFFFF;">
+        <div class="cs-palette-swatch" style="background: #bfd7ed; color: #0B0B0B;">
           <span>#bfd7ed</span>
         </div>
       
@@ -175,56 +173,54 @@
     
     </section>
 
-    <!-- BEAT 6: DESIGN EXECUTION (Horizontal Pinned Gallery) -->
+    <!-- BEAT 6: DESIGN EXECUTION (Layer carousel) -->
     <section class="cs-gallery-section" aria-label="Design Showcase">
       <div class="cs-gallery-header">
-        <p class="mono-label">// craft &amp; execution</p>
-        <h3 style="font-size: var(--text-h2); font-weight: 300; margin-top: var(--space-2);">in the wild &middot; horizontal gallery</h3>
+        <div>
+          <p class="mono-label">// craft &amp; execution</p>
+          <h3 style="font-size: var(--text-h2); font-weight: 300; margin-top: var(--space-2);">in the wild.</h3>
+        </div>
+        <div class="cs-layer-controls">
+          <span class="mono-label cs-layer-count" aria-live="polite">01 / 10</span>
+          <button class="cs-layer-btn cs-layer-prev" aria-label="Previous image">&larr;</button>
+          <button class="cs-layer-btn cs-layer-next" aria-label="Next image">&rarr;</button>
+        </div>
       </div>
 
-      <div class="cs-horizontal-track">
+      <div class="cs-layer" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Pure Sip gallery, use arrow keys to browse">
         
-      <div class="cs-gallery-item">
-        <img src="/assets/projects/pure-sip/pure-sip-1.webp" alt="Pure Sip hero" loading="lazy" width="760" height="520">
+        <figure class="cs-layer-item" data-index="0">
+          <img src="/assets/projects/pure-sip/pure-sip-1.webp" alt="Pure Sip hero"  width="1200" height="900" draggable="false">
+        </figure>
+        <figure class="cs-layer-item" data-index="1">
+          <img src="/assets/projects/pure-sip/pure-sip-2.webp" alt="Pure Sip secondary"  width="1200" height="900" draggable="false">
+        </figure>
+        <figure class="cs-layer-item" data-index="2">
+          <img src="/assets/projects/pure-sip/pure-sip-3.webp" alt="Pure Sip origin"  width="1200" height="900" draggable="false">
+        </figure>
+        <figure class="cs-layer-item" data-index="3">
+          <img src="/assets/projects/pure-sip/identity/primary-logo-3.png" alt="Primary Logo" loading="lazy" width="1200" height="900" draggable="false">
+        </figure>
+        <figure class="cs-layer-item" data-index="4">
+          <img src="/assets/projects/pure-sip/identity/primary-logo-green-0.png" alt="Primary Logo Green" loading="lazy" width="1200" height="900" draggable="false">
+        </figure>
+        <figure class="cs-layer-item" data-index="5">
+          <img src="/assets/projects/pure-sip/identity/primary-logo-purple-1.png" alt="Primary Logo Purple" loading="lazy" width="1200" height="900" draggable="false">
+        </figure>
+        <figure class="cs-layer-item" data-index="6">
+          <img src="/assets/projects/pure-sip/identity/primary-logo-yellow-2.png" alt="Primary Logo Yellow" loading="lazy" width="1200" height="900" draggable="false">
+        </figure>
+        <figure class="cs-layer-item" data-index="7">
+          <img src="/assets/projects/pure-sip/pure-sip-4.webp" alt="Pure Sip process" loading="lazy" width="1200" height="900" draggable="false">
+        </figure>
+        <figure class="cs-layer-item" data-index="8">
+          <img src="/assets/projects/pure-sip/pure-sip-5.webp" alt="Pure Sip process" loading="lazy" width="1200" height="900" draggable="false">
+        </figure>
+        <figure class="cs-layer-item" data-index="9">
+          <img src="/assets/projects/pure-sip/pure-sip-6.webp" alt="Pure Sip process" loading="lazy" width="1200" height="900" draggable="false">
+        </figure>
       </div>
-    
-      <div class="cs-gallery-item">
-        <img src="/assets/projects/pure-sip/pure-sip-2.webp" alt="Pure Sip secondary" loading="lazy" width="760" height="520">
-      </div>
-    
-      <div class="cs-gallery-item">
-        <img src="/assets/projects/pure-sip/pure-sip-3.webp" alt="Pure Sip origin" loading="lazy" width="760" height="520">
-      </div>
-    
-      <div class="cs-gallery-item">
-        <img src="/assets/projects/pure-sip/identity/primary-logo-3.png" alt="Primary Logo" loading="lazy" width="760" height="520">
-      </div>
-    
-      <div class="cs-gallery-item">
-        <img src="/assets/projects/pure-sip/identity/primary-logo-green-0.png" alt="Primary Logo Green" loading="lazy" width="760" height="520">
-      </div>
-    
-      <div class="cs-gallery-item">
-        <img src="/assets/projects/pure-sip/identity/primary-logo-purple-1.png" alt="Primary Logo Purple" loading="lazy" width="760" height="520">
-      </div>
-    
-      <div class="cs-gallery-item">
-        <img src="/assets/projects/pure-sip/identity/primary-logo-yellow-2.png" alt="Primary Logo Yellow" loading="lazy" width="760" height="520">
-      </div>
-    
-      <div class="cs-gallery-item">
-        <img src="/assets/projects/pure-sip/pure-sip-4.webp" alt="Pure Sip process" loading="lazy" width="760" height="520">
-      </div>
-    
-      <div class="cs-gallery-item">
-        <img src="/assets/projects/pure-sip/pure-sip-5.webp" alt="Pure Sip process" loading="lazy" width="760" height="520">
-      </div>
-    
-      <div class="cs-gallery-item">
-        <img src="/assets/projects/pure-sip/pure-sip-6.webp" alt="Pure Sip process" loading="lazy" width="760" height="520">
-      </div>
-    
-      </div>
+      <p class="cs-layer-caption mono-label" aria-hidden="true"></p>
     </section>
 
     <!-- BEAT 7: BUSINESS IMPACT (Conditional) -->
@@ -309,53 +305,19 @@
         start a project &rarr;
       </a>
 
-      <!-- Next Project Auto-Reel Card -->
-      <div class="cs-next-reel-card" data-next-url="/work/rich-kanya">
+      <!-- Next project: opens on click only -->
+      <a class="cs-next-reel-card" href="/work/rich-kanya" data-cursor="view" data-cursor-label="open">
         <span class="mono-label" style="color: var(--coral);">// up next</span>
         <h3 style="font-size: var(--text-h2); font-weight: 300;">Rich Kanya</h3>
         <div class="cs-next-thumb">
           <img src="/assets/projects/rich-kanya/Billboard_Mockup.webp" alt="Rich Kanya" loading="lazy">
         </div>
-        
-        <div style="display: flex; align-items: center; gap: var(--space-3); margin-top: var(--space-3);">
-          <!-- Auto-navigate circular progress ring -->
-          <svg width="60" height="60" aria-hidden="true">
-            <circle cx="30" cy="30" r="26" stroke="rgba(245,241,236,0.15)" stroke-width="3" fill="none"/>
-            <circle class="progress-ring-circle" cx="30" cy="30" r="26" stroke="var(--coral)" stroke-width="3" fill="none"/>
-          </svg>
-          <a href="/work/rich-kanya" class="hero-work-link">open next case study &rarr;</a>
-        </div>
-      </div>
+        <span class="hero-work-link">open next case study &rarr;</span>
+      </a>
     </section>
   </main>
 
-  <!-- Global Footer -->
-  <footer class="site-footer">
-    <div class="footer-middle">
-      <div class="footer-col">
-        <h5>navigation</h5>
-        <a href="/work">work</a>
-        <a href="/services">services</a>
-        <a href="/studio">studio</a>
-        <a href="/contact">contact</a>
-      </div>
-      <div class="footer-col">
-        <h5>social</h5>
-        <a href="https://www.instagram.com/inks.and.interfaces" target="_blank" rel="noopener">instagram</a>
-        <a href="https://x.com/Inks_Interfaces" target="_blank" rel="noopener">x / twitter</a>
-        <a href="https://www.behance.net/shivanirotliwala" target="_blank" rel="noopener">behance</a>
-      </div>
-      <div class="footer-col">
-        <h5>studio</h5>
-        <p>surat, gujarat, india</p>
-        <p>available globally</p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>&copy; 2026 inks &amp; interfaces &middot; made in surat</span>
-      <span>set in space grotesk &middot; with care</span>
-    </div>
-  </footer>
+  <footer class="site-footer"></footer>
 
   <script type="module" src="/src/js/pages/case-study.js"></script>
 </body>

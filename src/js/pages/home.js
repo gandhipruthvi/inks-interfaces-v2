@@ -3,7 +3,6 @@ import '../../styles/base.css';
 import '../../styles/home.css';
 
 import { bootstrapApp } from '../main.js';
-import { initHeroScene } from '../scenes/hero.js';
 import { initOrbitSection } from '../sections/orbit.js';
 import { initCapabilities } from '../sections/capabilities.js';
 import { initBadgesSection } from '../sections/badges.js';
@@ -13,7 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
   bootstrapApp();
 
   const hero = document.querySelector('.hero-canvas-container');
-  if (hero) initHeroScene({ container: hero });
+  // the desk of tools is three.js, so it loads in its own chunk
+  if (hero) import('../scenes/hero.js').then((m) => m.initHeroScene({ container: hero }));
 
   const orbit = document.querySelector('.orbit-section');
   if (orbit) initOrbitSection(orbit);
