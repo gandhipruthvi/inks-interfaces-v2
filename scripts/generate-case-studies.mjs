@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import sharp from 'sharp';
 import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -26,13 +27,30 @@ function escapeHtml(str) {
     .replace(/'/g, '&#039;');
 }
 
-function generateCaseStudies() {
+// Image size (for width/height attrs) and, for logos, which plate keeps them visible:
+// a transparent mark drawn in dark ink goes on paper, everything else on black.
+async function inspect(url) {
+  const file = path.join(ROOT_DIR, 'public', url);
+  const { width, height, hasAlpha } = await sharp(file).metadata();
+  if (!hasAlpha) return { width, height, plate: 'dark' };
+  const { data } = await sharp(file).resize(64, 64, { fit: 'inside' }).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+  let lum = 0, weight = 0;
+  for (let i = 0; i < data.length; i += 4) {
+    const a = data[i + 3] / 255;
+    lum += a * (0.299 * data[i] + 0.587 * data[i + 1] + 0.114 * data[i + 2]) / 255;
+    weight += a;
+  }
+  const transparent = weight < (data.length / 4) * 0.9;
+  return { width, height, plate: transparent && lum / weight < 0.45 ? 'light' : 'dark' };
+}
+
+async function generateCaseStudies() {
   const workDir = path.join(ROOT_DIR, 'work');
   if (!fs.existsSync(workDir)) {
     fs.mkdirSync(workDir, { recursive: true });
   }
 
-  projects.forEach((p, idx) => {
+  for (const [idx, p] of projects.entries()) {
     const slugDir = path.join(workDir, p.slug);
     if (!fs.existsSync(slugDir)) {
       fs.mkdirSync(slugDir, { recursive: true });
@@ -53,18 +71,29 @@ function generateCaseStudies() {
         </div>
       `).join('');
 
-    // 3. Logo showcase (Solid #000 plate)
-    const logoHtml = p.logo ? `
-      <div class="cs-logo-showcase">
-        <img src="${p.logo}" alt="${escapeHtml(p.name)} logo" loading="lazy">
+    // 3. Brand assets (logos, marks, patterns) live in identity/ folders; they get their
+    // own grid here. Everything else is a mockup and goes to the gallery.
+    const isAsset = (img) => img.includes('/identity/');
+    const assets = [...new Set([p.logo, ...p.gallery.filter(isAsset)].filter(Boolean))];
+    const mockups = p.gallery.filter((img) => !isAsset(img));
+    const info = Object.fromEntries(await Promise.all([...assets, ...mockups].map(async (img) => [img, await inspect(img)])));
+    const label = (img) => escapeHtml(p.alt[img] || `${p.name} logo`);
+
+    const assetsHtml = assets.length ? `
+      <div class="cs-assets${assets.length === 1 ? ' cs-assets--single' : ''}" aria-label="Brand assets">
+        ${assets.map((img) => `
+        <figure class="cs-asset cs-asset--${info[img].plate}">
+          <div class="cs-asset-plate"><img src="${img}" alt="${label(img)}" width="${info[img].width}" height="${info[img].height}" loading="lazy"></div>
+          <figcaption class="mono-label">${label(img)}</figcaption>
+        </figure>`).join('')}
       </div>
     ` : '';
 
-    // 4. Gallery items (layer carousel: one image in front, neighbours stacked behind)
-    const galleryHtml = p.gallery.map((img, i) => `
-        <figure class="cs-layer-item" data-index="${i}">
-          <img src="${img}" alt="${escapeHtml(p.alt[img] || p.name)}" ${i < 3 ? '' : 'loading="lazy"'} draggable="false">
-        </figure>`).join('');
+    // 4. Gallery: masonry at each image's own aspect ratio; click opens the lightbox
+    const galleryHtml = mockups.map((img, i) => `
+        <button class="cs-gallery-item" type="button" data-index="${i}" aria-label="Enlarge: ${escapeHtml(p.alt[img] || p.name)}">
+          <img src="${img}" alt="${escapeHtml(p.alt[img] || p.name)}" width="${info[img].width}" height="${info[img].height}" loading="lazy">
+        </button>`).join('');
 
     // "Title: detail | Title: detail" strings from the old site become a real list
     const points = (txt) => !txt.includes(' | ')
@@ -99,7 +128,7 @@ function generateCaseStudies() {
     // 6. Founder Quote (Strictly omit if null)
     let quoteHtml = '';
     if (p.quote && p.quote.text) {
-      const quoteImg = p.gallery[1] || p.cover;
+      const quoteImg = mockups[1] || p.cover;
       quoteHtml = `
         <section class="cs-quote-section" aria-label="Founder Perspective">
           <div class="cs-quote-split">
@@ -274,29 +303,31 @@ function generateCaseStudies() {
         ${paletteHtml}
       </div>
 
-      <!-- Logo Showcase on Solid #000 Plate -->
-      ${logoHtml}
+      <!-- Brand assets: logos, marks, patterns -->
+      ${assetsHtml}
     </section>
 
-    <!-- BEAT 6: DESIGN EXECUTION (Layer carousel) -->
-    <section class="cs-gallery-section" aria-label="Design Showcase">
+    <!-- BEAT 6: DESIGN EXECUTION (masonry gallery + lightbox) -->
+    ${mockups.length ? `<section class="cs-gallery-section" aria-label="Design Showcase">
       <div class="cs-gallery-header">
-        <div>
-          <p class="mono-label">// craft &amp; execution</p>
-          <h3 style="font-size: var(--text-h2); font-weight: 300; margin-top: var(--space-2);">in the wild.</h3>
-        </div>
-        <div class="cs-layer-controls">
-          <span class="mono-label cs-layer-count" aria-live="polite">01 / ${String(p.gallery.length).padStart(2, '0')}</span>
-          <button class="cs-layer-btn cs-layer-prev" aria-label="Previous image">&larr;</button>
-          <button class="cs-layer-btn cs-layer-next" aria-label="Next image">&rarr;</button>
-        </div>
+        <p class="mono-label">// craft &amp; execution</p>
+        <h3 style="font-size: var(--text-h2); font-weight: 300; margin-top: var(--space-2);">in the wild.</h3>
       </div>
 
-      <div class="cs-layer" tabindex="0" role="region" aria-roledescription="carousel" aria-label="${escapeHtml(p.name)} gallery, use arrow keys to browse">
+      <div class="cs-gallery-grid">
         ${galleryHtml}
       </div>
-      <p class="cs-layer-caption mono-label" aria-hidden="true"></p>
-    </section>
+
+      <dialog class="cs-lightbox" aria-label="${escapeHtml(p.name)} gallery viewer">
+        <button class="cs-lb-btn cs-lb-close" type="button" aria-label="Close">&times;</button>
+        <button class="cs-lb-btn cs-lb-prev" type="button" aria-label="Previous image">&larr;</button>
+        <figure class="cs-lb-figure">
+          <img class="cs-lb-img" alt="">
+          <figcaption class="mono-label"><span class="cs-lb-count"></span><span class="cs-lb-caption"></span></figcaption>
+        </figure>
+        <button class="cs-lb-btn cs-lb-next" type="button" aria-label="Next image">&rarr;</button>
+      </dialog>
+    </section>` : ''}
 
     <!-- BEAT 7: BUSINESS IMPACT (Conditional) -->
     ${impactHtml}
@@ -363,9 +394,9 @@ function generateCaseStudies() {
 </html>`;
 
     fs.writeFileSync(path.join(slugDir, 'index.html'), html, 'utf-8');
-  });
+  }
 
   console.log(`✅ Generated ${projects.length} case study pages in /work/<slug>/index.html`);
 }
 
-generateCaseStudies();
+generateCaseStudies().catch((e) => { console.error(e); process.exit(1); });

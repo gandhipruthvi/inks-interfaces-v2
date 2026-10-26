@@ -165,59 +165,64 @@
       
       </div>
 
-      <!-- Logo Showcase on Solid #000 Plate -->
+      <!-- Brand assets: logos, marks, patterns -->
       
-      <div class="cs-logo-showcase">
-        <img src="/assets/projects/oakmere/identity/oakmere-logo-transparent-1.webp" alt="Oakmere logo" loading="lazy">
+      <div class="cs-assets" aria-label="Brand assets">
+        
+        <figure class="cs-asset cs-asset--light">
+          <div class="cs-asset-plate"><img src="/assets/projects/oakmere/identity/oakmere-logo-transparent-1.webp" alt="Oakmere Logo Transparent" width="708" height="656" loading="lazy"></div>
+          <figcaption class="mono-label">Oakmere Logo Transparent</figcaption>
+        </figure>
+        <figure class="cs-asset cs-asset--dark">
+          <div class="cs-asset-plate"><img src="/assets/projects/oakmere/identity/oakmere-logo-cropped-0.webp" alt="Oakmere Logo Cropped" width="708" height="656" loading="lazy"></div>
+          <figcaption class="mono-label">Oakmere Logo Cropped</figcaption>
+        </figure>
+        <figure class="cs-asset cs-asset--dark">
+          <div class="cs-asset-plate"><img src="/assets/projects/oakmere/identity/oakmere-logo-white-2.png" alt="Oakmere Logo White" width="708" height="656" loading="lazy"></div>
+          <figcaption class="mono-label">Oakmere Logo White</figcaption>
+        </figure>
       </div>
     
     </section>
 
-    <!-- BEAT 6: DESIGN EXECUTION (Layer carousel) -->
+    <!-- BEAT 6: DESIGN EXECUTION (masonry gallery + lightbox) -->
     <section class="cs-gallery-section" aria-label="Design Showcase">
       <div class="cs-gallery-header">
-        <div>
-          <p class="mono-label">// craft &amp; execution</p>
-          <h3 style="font-size: var(--text-h2); font-weight: 300; margin-top: var(--space-2);">in the wild.</h3>
-        </div>
-        <div class="cs-layer-controls">
-          <span class="mono-label cs-layer-count" aria-live="polite">01 / 09</span>
-          <button class="cs-layer-btn cs-layer-prev" aria-label="Previous image">&larr;</button>
-          <button class="cs-layer-btn cs-layer-next" aria-label="Next image">&rarr;</button>
-        </div>
+        <p class="mono-label">// craft &amp; execution</p>
+        <h3 style="font-size: var(--text-h2); font-weight: 300; margin-top: var(--space-2);">in the wild.</h3>
       </div>
 
-      <div class="cs-layer" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Oakmere gallery, use arrow keys to browse">
+      <div class="cs-gallery-grid">
         
-        <figure class="cs-layer-item" data-index="0">
-          <img src="/assets/projects/oakmere/oakmere-1.webp" alt="Oakmere hero"  draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="1">
-          <img src="/assets/projects/oakmere/oakmere-2.webp" alt="Oakmere secondary"  draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="2">
-          <img src="/assets/projects/oakmere/oakmere-3.webp" alt="Oakmere origin"  draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="3">
-          <img src="/assets/projects/oakmere/identity/oakmere-logo-cropped-0.webp" alt="Oakmere Logo Cropped" loading="lazy" draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="4">
-          <img src="/assets/projects/oakmere/identity/oakmere-logo-transparent-1.webp" alt="Oakmere Logo Transparent" loading="lazy" draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="5">
-          <img src="/assets/projects/oakmere/identity/oakmere-logo-white-2.png" alt="Oakmere Logo White" loading="lazy" draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="6">
-          <img src="/assets/projects/oakmere/oakmere-4.webp" alt="Oakmere process" loading="lazy" draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="7">
-          <img src="/assets/projects/oakmere/oakmere-5.webp" alt="Oakmere process" loading="lazy" draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="8">
-          <img src="/assets/projects/oakmere/oakmere-6.webp" alt="Oakmere process" loading="lazy" draggable="false">
-        </figure>
+        <button class="cs-gallery-item" type="button" data-index="0" aria-label="Enlarge: Oakmere hero">
+          <img src="/assets/projects/oakmere/oakmere-1.webp" alt="Oakmere hero" width="1080" height="1920" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="1" aria-label="Enlarge: Oakmere secondary">
+          <img src="/assets/projects/oakmere/oakmere-2.webp" alt="Oakmere secondary" width="1080" height="1920" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="2" aria-label="Enlarge: Oakmere origin">
+          <img src="/assets/projects/oakmere/oakmere-3.webp" alt="Oakmere origin" width="1080" height="1920" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="3" aria-label="Enlarge: Oakmere process">
+          <img src="/assets/projects/oakmere/oakmere-4.webp" alt="Oakmere process" width="1080" height="1920" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="4" aria-label="Enlarge: Oakmere process">
+          <img src="/assets/projects/oakmere/oakmere-5.webp" alt="Oakmere process" width="2800" height="2200" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="5" aria-label="Enlarge: Oakmere process">
+          <img src="/assets/projects/oakmere/oakmere-6.webp" alt="Oakmere process" width="1024" height="1024" loading="lazy">
+        </button>
       </div>
-      <p class="cs-layer-caption mono-label" aria-hidden="true"></p>
+
+      <dialog class="cs-lightbox" aria-label="Oakmere gallery viewer">
+        <button class="cs-lb-btn cs-lb-close" type="button" aria-label="Close">&times;</button>
+        <button class="cs-lb-btn cs-lb-prev" type="button" aria-label="Previous image">&larr;</button>
+        <figure class="cs-lb-figure">
+          <img class="cs-lb-img" alt="">
+          <figcaption class="mono-label"><span class="cs-lb-count"></span><span class="cs-lb-caption"></span></figcaption>
+        </figure>
+        <button class="cs-lb-btn cs-lb-next" type="button" aria-label="Next image">&rarr;</button>
+      </dialog>
     </section>
 
     <!-- BEAT 7: BUSINESS IMPACT (Conditional) -->

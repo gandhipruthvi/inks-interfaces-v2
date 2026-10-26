@@ -11,7 +11,7 @@ assert(fs.existsSync(jsonPath), 'projects.json must exist');
 const data = JSON.parse(fs.readFileSync(jsonPath, 'utf-8'));
 
 console.log(`Checking data for ${data.length} projects...`);
-assert.strictEqual(data.length, 28, 'Must have exactly 28 projects');
+assert.strictEqual(data.length, 31, 'Must have exactly 31 projects');
 
 const slugs = new Set();
 let featuredCount = 0;
@@ -50,4 +50,4 @@ for (const p of data) {
 assert.strictEqual(featuredCount, 8, `Featured projects count must be exactly 8, got ${featuredCount}`);
 assert.strictEqual(missingImages, 0, `There are ${missingImages} missing images`);
 
-console.log('✅ check-data.mjs PASSED: 28 unique projects, 8 featured, all images exist on disk!');
+console.log(`✅ check-data.mjs PASSED: ${data.length} unique projects, 8 featured, all images exist on disk!`);

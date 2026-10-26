@@ -2,9 +2,7 @@
 // the page loader and the halftone footer. Rendered here once so
 // no page can drift out of sync.
 import { createShaderCanvas } from '../webgl/shaderCanvas.js';
-import { scrollToTop } from './scroll.js';
-
-const EMAIL = 'letscreate.inksandinterfaces@gmail.com';
+const EMAIL = 'studio@inksandinterfaces.design';
 
 // Covers that stream past the edges of the loader (small 360px thumbs)
 const LOADER_CARDS = ['waggle', 'zestee', 'satori-bites', 'vanya-luxe', 'terra-cork', 'the-ube-press', 'globetap', 'silver-sphere-tech', 'golden-crust', 'hardin-jewels'];
@@ -157,13 +155,7 @@ export function initFooter() {
     <div class="ft-bottom">
       <span>&copy; 2026 inks &amp; interfaces &middot; based in india &middot; operating globally</span>
       <span>branding &middot; rebranding &middot; identity systems</span>
-      <a href="#top" class="ft-top-link">back to top &uarr;</a>
     </div>`;
-
-  footer.querySelector('.ft-top-link').addEventListener('click', (e) => {
-    e.preventDefault();
-    scrollToTop();
-  });
 
   createShaderCanvas(footer.querySelector('.ft-scene-canvas'), HALFTONE_HILLS, { dpr: 2, stillTime: 20 });
 }

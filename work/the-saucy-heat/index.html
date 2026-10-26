@@ -169,62 +169,65 @@
       
       </div>
 
-      <!-- Logo Showcase on Solid #000 Plate -->
+      <!-- Brand assets: logos, marks, patterns -->
       
-      <div class="cs-logo-showcase">
-        <img src="/assets/projects/the-saucy-heat/identity/primary logo.png" alt="The Saucy Heat logo" loading="lazy">
+      <div class="cs-assets cs-assets--single" aria-label="Brand assets">
+        
+        <figure class="cs-asset cs-asset--dark">
+          <div class="cs-asset-plate"><img src="/assets/projects/the-saucy-heat/identity/primary logo.png" alt="Primary Logo" width="2048" height="2048" loading="lazy"></div>
+          <figcaption class="mono-label">Primary Logo</figcaption>
+        </figure>
       </div>
     
     </section>
 
-    <!-- BEAT 6: DESIGN EXECUTION (Layer carousel) -->
+    <!-- BEAT 6: DESIGN EXECUTION (masonry gallery + lightbox) -->
     <section class="cs-gallery-section" aria-label="Design Showcase">
       <div class="cs-gallery-header">
-        <div>
-          <p class="mono-label">// craft &amp; execution</p>
-          <h3 style="font-size: var(--text-h2); font-weight: 300; margin-top: var(--space-2);">in the wild.</h3>
-        </div>
-        <div class="cs-layer-controls">
-          <span class="mono-label cs-layer-count" aria-live="polite">01 / 10</span>
-          <button class="cs-layer-btn cs-layer-prev" aria-label="Previous image">&larr;</button>
-          <button class="cs-layer-btn cs-layer-next" aria-label="Next image">&rarr;</button>
-        </div>
+        <p class="mono-label">// craft &amp; execution</p>
+        <h3 style="font-size: var(--text-h2); font-weight: 300; margin-top: var(--space-2);">in the wild.</h3>
       </div>
 
-      <div class="cs-layer" tabindex="0" role="region" aria-roledescription="carousel" aria-label="The Saucy Heat gallery, use arrow keys to browse">
+      <div class="cs-gallery-grid">
         
-        <figure class="cs-layer-item" data-index="0">
-          <img src="/assets/projects/the-saucy-heat/the-saucy-heat-3.webp" alt="The Saucy Heat hero"  draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="1">
-          <img src="/assets/projects/the-saucy-heat/the-saucy-heat-8.webp" alt="The Saucy Heat secondary"  draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="2">
-          <img src="/assets/projects/the-saucy-heat/the-saucy-heat-4.webp" alt="The Saucy Heat origin"  draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="3">
-          <img src="/assets/projects/the-saucy-heat/identity/primary logo.png" alt="Primary Logo" loading="lazy" draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="4">
-          <img src="/assets/projects/the-saucy-heat/the-saucy-heat-5.webp" alt="The Saucy Heat statement" loading="lazy" draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="5">
-          <img src="/assets/projects/the-saucy-heat/the-saucy-heat-7.webp" alt="The Saucy Heat form" loading="lazy" draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="6">
-          <img src="/assets/projects/the-saucy-heat/the-saucy-heat-9.webp" alt="The Saucy Heat form" loading="lazy" draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="7">
-          <img src="/assets/projects/the-saucy-heat/the-saucy-heat-6.webp" alt="The Saucy Heat in context" loading="lazy" draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="8">
-          <img src="/assets/projects/the-saucy-heat/the-saucy-heat-1.webp" alt="The Saucy Heat in context" loading="lazy" draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="9">
-          <img src="/assets/projects/the-saucy-heat/the-saucy-heat-2.webp" alt="The Saucy Heat in context" loading="lazy" draggable="false">
-        </figure>
+        <button class="cs-gallery-item" type="button" data-index="0" aria-label="Enlarge: The Saucy Heat hero">
+          <img src="/assets/projects/the-saucy-heat/the-saucy-heat-3.webp" alt="The Saucy Heat hero" width="768" height="1376" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="1" aria-label="Enlarge: The Saucy Heat secondary">
+          <img src="/assets/projects/the-saucy-heat/the-saucy-heat-8.webp" alt="The Saucy Heat secondary" width="768" height="1376" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="2" aria-label="Enlarge: The Saucy Heat origin">
+          <img src="/assets/projects/the-saucy-heat/the-saucy-heat-4.webp" alt="The Saucy Heat origin" width="1536" height="2752" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="3" aria-label="Enlarge: The Saucy Heat statement">
+          <img src="/assets/projects/the-saucy-heat/the-saucy-heat-5.webp" alt="The Saucy Heat statement" width="1536" height="2730" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="4" aria-label="Enlarge: The Saucy Heat form">
+          <img src="/assets/projects/the-saucy-heat/the-saucy-heat-7.webp" alt="The Saucy Heat form" width="768" height="1376" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="5" aria-label="Enlarge: The Saucy Heat form">
+          <img src="/assets/projects/the-saucy-heat/the-saucy-heat-9.webp" alt="The Saucy Heat form" width="768" height="1376" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="6" aria-label="Enlarge: The Saucy Heat in context">
+          <img src="/assets/projects/the-saucy-heat/the-saucy-heat-6.webp" alt="The Saucy Heat in context" width="1536" height="2752" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="7" aria-label="Enlarge: The Saucy Heat in context">
+          <img src="/assets/projects/the-saucy-heat/the-saucy-heat-1.webp" alt="The Saucy Heat in context" width="941" height="1672" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="8" aria-label="Enlarge: The Saucy Heat in context">
+          <img src="/assets/projects/the-saucy-heat/the-saucy-heat-2.webp" alt="The Saucy Heat in context" width="1122" height="1402" loading="lazy">
+        </button>
       </div>
-      <p class="cs-layer-caption mono-label" aria-hidden="true"></p>
+
+      <dialog class="cs-lightbox" aria-label="The Saucy Heat gallery viewer">
+        <button class="cs-lb-btn cs-lb-close" type="button" aria-label="Close">&times;</button>
+        <button class="cs-lb-btn cs-lb-prev" type="button" aria-label="Previous image">&larr;</button>
+        <figure class="cs-lb-figure">
+          <img class="cs-lb-img" alt="">
+          <figcaption class="mono-label"><span class="cs-lb-count"></span><span class="cs-lb-caption"></span></figcaption>
+        </figure>
+        <button class="cs-lb-btn cs-lb-next" type="button" aria-label="Next image">&rarr;</button>
+      </dialog>
     </section>
 
     <!-- BEAT 7: BUSINESS IMPACT (Conditional) -->

@@ -164,7 +164,6 @@ html:not(.is-loaded) .page-loader { pointer-events: auto; }
   text-transform: uppercase;
   color: var(--ash);
 }
-.ft-top-link:hover { color: var(--coral); }
 
 @media (max-width: 960px) {
   .ft-top { grid-template-columns: 1fr; gap: var(--space-8); }

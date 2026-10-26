@@ -8,13 +8,13 @@ const ROOT_DIR = path.resolve(__dirname, '..');
 const projects = JSON.parse(fs.readFileSync(path.join(ROOT_DIR, 'src/data/projects.json'), 'utf-8'));
 
 async function buildAtlas() {
-  const ATLAS_SIZE = 2048;
+  const ATLAS_SIZE = 2048; // width
   const COLS = 6;
-  const ROWS = 5;
   const CELL_W = Math.floor(ATLAS_SIZE / COLS); // 341
-  const CELL_H = Math.floor(ATLAS_SIZE / ROWS); // 409
+  const CELL_H = 409; // keeps the ring card's ~0.83 aspect
+  const ATLAS_H = Math.ceil(projects.length / COLS) * CELL_H; // grows a row per 6 projects
 
-  console.log(`Building 2048x2048 texture atlas for ${projects.length} covers...`);
+  console.log(`Building ${ATLAS_SIZE}x${ATLAS_H} texture atlas for ${projects.length} covers...`);
 
   const composites = [];
   const uvs = [];
@@ -48,8 +48,8 @@ async function buildAtlas() {
       name: p.name,
       uMin: left / ATLAS_SIZE,
       uMax: (left + CELL_W) / ATLAS_SIZE,
-      vMin: 1 - ((top + CELL_H) / ATLAS_SIZE),
-      vMax: 1 - (top / ATLAS_SIZE)
+      vMin: 1 - ((top + CELL_H) / ATLAS_H),
+      vMax: 1 - (top / ATLAS_H)
     });
   }
 
@@ -57,7 +57,7 @@ async function buildAtlas() {
   const atlasBuffer = await sharp({
     create: {
       width: ATLAS_SIZE,
-      height: ATLAS_SIZE,
+      height: ATLAS_H,
       channels: 4,
       background: { r: 11, g: 11, b: 11, alpha: 1 }
     }

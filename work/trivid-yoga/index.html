@@ -169,68 +169,72 @@
       
       </div>
 
-      <!-- Logo Showcase on Solid #000 Plate -->
+      <!-- Brand assets: logos, marks, patterns -->
       
-      <div class="cs-logo-showcase">
-        <img src="/assets/projects/trivid-yoga/identity/primary-logo-transparent-background-0.webp" alt="Trivid Yoga logo" loading="lazy">
+      <div class="cs-assets" aria-label="Brand assets">
+        
+        <figure class="cs-asset cs-asset--dark">
+          <div class="cs-asset-plate"><img src="/assets/projects/trivid-yoga/identity/primary-logo-transparent-background-0.webp" alt="Primary Logo Transparent Background" width="2000" height="2000" loading="lazy"></div>
+          <figcaption class="mono-label">Primary Logo Transparent Background</figcaption>
+        </figure>
+        <figure class="cs-asset cs-asset--dark">
+          <div class="cs-asset-plate"><img src="/assets/projects/trivid-yoga/identity/primary-logo-1.webp" alt="Primary Logo" width="2000" height="2000" loading="lazy"></div>
+          <figcaption class="mono-label">Primary Logo</figcaption>
+        </figure>
       </div>
     
     </section>
 
-    <!-- BEAT 6: DESIGN EXECUTION (Layer carousel) -->
+    <!-- BEAT 6: DESIGN EXECUTION (masonry gallery + lightbox) -->
     <section class="cs-gallery-section" aria-label="Design Showcase">
       <div class="cs-gallery-header">
-        <div>
-          <p class="mono-label">// craft &amp; execution</p>
-          <h3 style="font-size: var(--text-h2); font-weight: 300; margin-top: var(--space-2);">in the wild.</h3>
-        </div>
-        <div class="cs-layer-controls">
-          <span class="mono-label cs-layer-count" aria-live="polite">01 / 12</span>
-          <button class="cs-layer-btn cs-layer-prev" aria-label="Previous image">&larr;</button>
-          <button class="cs-layer-btn cs-layer-next" aria-label="Next image">&rarr;</button>
-        </div>
+        <p class="mono-label">// craft &amp; execution</p>
+        <h3 style="font-size: var(--text-h2); font-weight: 300; margin-top: var(--space-2);">in the wild.</h3>
       </div>
 
-      <div class="cs-layer" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Trivid Yoga gallery, use arrow keys to browse">
+      <div class="cs-gallery-grid">
         
-        <figure class="cs-layer-item" data-index="0">
-          <img src="/assets/projects/trivid-yoga/trivid-yoga-1.webp" alt="Trivid Yoga hero"  draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="1">
-          <img src="/assets/projects/trivid-yoga/trivid-yoga-2.webp" alt="Trivid Yoga secondary"  draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="2">
-          <img src="/assets/projects/trivid-yoga/trivid-yoga-3.webp" alt="Trivid Yoga origin"  draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="3">
-          <img src="/assets/projects/trivid-yoga/identity/primary-logo-1.webp" alt="Primary Logo" loading="lazy" draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="4">
-          <img src="/assets/projects/trivid-yoga/identity/primary-logo-transparent-background-0.webp" alt="Primary Logo Transparent Background" loading="lazy" draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="5">
-          <img src="/assets/projects/trivid-yoga/trivid-yoga-7.webp" alt="Trivid Yoga statement" loading="lazy" draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="6">
-          <img src="/assets/projects/trivid-yoga/trivid-yoga-5.webp" alt="Trivid Yoga form" loading="lazy" draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="7">
-          <img src="/assets/projects/trivid-yoga/trivid-yoga-6.webp" alt="Trivid Yoga form" loading="lazy" draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="8">
-          <img src="/assets/projects/trivid-yoga/trivid-yoga-4.webp" alt="Trivid Yoga form" loading="lazy" draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="9">
-          <img src="/assets/projects/trivid-yoga/trivid-yoga-8.webp" alt="Trivid Yoga in context" loading="lazy" draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="10">
-          <img src="/assets/projects/trivid-yoga/trivid-yoga-9.webp" alt="Trivid Yoga in context" loading="lazy" draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="11">
-          <img src="/assets/projects/trivid-yoga/trivid-yoga-10.webp" alt="Trivid Yoga in context" loading="lazy" draggable="false">
-        </figure>
+        <button class="cs-gallery-item" type="button" data-index="0" aria-label="Enlarge: Trivid Yoga hero">
+          <img src="/assets/projects/trivid-yoga/trivid-yoga-1.webp" alt="Trivid Yoga hero" width="2380" height="2380" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="1" aria-label="Enlarge: Trivid Yoga secondary">
+          <img src="/assets/projects/trivid-yoga/trivid-yoga-2.webp" alt="Trivid Yoga secondary" width="2380" height="2380" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="2" aria-label="Enlarge: Trivid Yoga origin">
+          <img src="/assets/projects/trivid-yoga/trivid-yoga-3.webp" alt="Trivid Yoga origin" width="2380" height="2380" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="3" aria-label="Enlarge: Trivid Yoga statement">
+          <img src="/assets/projects/trivid-yoga/trivid-yoga-7.webp" alt="Trivid Yoga statement" width="853" height="1280" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="4" aria-label="Enlarge: Trivid Yoga form">
+          <img src="/assets/projects/trivid-yoga/trivid-yoga-5.webp" alt="Trivid Yoga form" width="4500" height="3200" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="5" aria-label="Enlarge: Trivid Yoga form">
+          <img src="/assets/projects/trivid-yoga/trivid-yoga-6.webp" alt="Trivid Yoga form" width="6000" height="4500" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="6" aria-label="Enlarge: Trivid Yoga form">
+          <img src="/assets/projects/trivid-yoga/trivid-yoga-4.webp" alt="Trivid Yoga form" width="3000" height="2250" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="7" aria-label="Enlarge: Trivid Yoga in context">
+          <img src="/assets/projects/trivid-yoga/trivid-yoga-8.webp" alt="Trivid Yoga in context" width="1080" height="1080" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="8" aria-label="Enlarge: Trivid Yoga in context">
+          <img src="/assets/projects/trivid-yoga/trivid-yoga-9.webp" alt="Trivid Yoga in context" width="1080" height="1080" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="9" aria-label="Enlarge: Trivid Yoga in context">
+          <img src="/assets/projects/trivid-yoga/trivid-yoga-10.webp" alt="Trivid Yoga in context" width="1080" height="708" loading="lazy">
+        </button>
       </div>
-      <p class="cs-layer-caption mono-label" aria-hidden="true"></p>
+
+      <dialog class="cs-lightbox" aria-label="Trivid Yoga gallery viewer">
+        <button class="cs-lb-btn cs-lb-close" type="button" aria-label="Close">&times;</button>
+        <button class="cs-lb-btn cs-lb-prev" type="button" aria-label="Previous image">&larr;</button>
+        <figure class="cs-lb-figure">
+          <img class="cs-lb-img" alt="">
+          <figcaption class="mono-label"><span class="cs-lb-count"></span><span class="cs-lb-caption"></span></figcaption>
+        </figure>
+        <button class="cs-lb-btn cs-lb-next" type="button" aria-label="Next image">&rarr;</button>
+      </dialog>
     </section>
 
     <!-- BEAT 7: BUSINESS IMPACT (Conditional) -->

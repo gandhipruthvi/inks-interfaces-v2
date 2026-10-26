@@ -219,87 +219,113 @@ main :is(p, h1, h2, h3, h4, li, blockquote, strong, span) { overflow-wrap: break
   flex: 2;
 }
 
-.cs-logo-showcase {
-  background: #000000; /* Strict solid #000 logo plate */
+/* Brand assets: each mark on a plate that keeps it visible (black, or paper for dark marks) */
+.cs-assets {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: var(--space-4);
+}
+.cs-assets--single { grid-template-columns: 1fr; }
+.cs-asset { margin: 0; }
+.cs-asset-plate {
+  aspect-ratio: 4 / 3;
   border-radius: 12px;
   border: 1px solid var(--line);
-  padding: var(--space-8);
+  background: #000000;
+  padding: var(--space-5);
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 240px;
-}
-
-.cs-logo-showcase img {
-  max-height: 120px;
-  width: auto;
-  object-fit: contain;
-}
-
-/* --- Beat 6: Design Execution (Layer carousel) --- */
-.cs-gallery-section {
-  position: relative;
-  background-color: var(--ink);
   overflow: hidden;
-  padding: var(--space-10) 0 var(--space-9);
 }
-
-.cs-gallery-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  gap: var(--space-5);
-  flex-wrap: wrap;
-  padding: 0 var(--gutter) var(--space-7);
-}
-.cs-layer-controls { display: flex; align-items: center; gap: var(--space-3); }
-.cs-layer-count { color: var(--paper); margin-right: var(--space-3); font-variant-numeric: tabular-nums; }
-.cs-layer-btn {
-  width: 48px; height: 48px; border-radius: 50%;
-  border: 1px solid var(--line-strong); color: var(--paper); font-size: 18px;
-  transition: background-color var(--t-fast) var(--ease-out), color var(--t-fast), border-color var(--t-fast);
-}
-.cs-layer-btn:hover { background: var(--coral); border-color: var(--coral); color: var(--ink); }
-
-.cs-layer {
-  position: relative;
-  height: clamp(300px, 64vh, 660px);
-  touch-action: pan-y;
-  user-select: none;
-  cursor: grab;
-}
-.cs-layer:active { cursor: grabbing; }
-.cs-layer-item {
-  position: absolute;
-  top: 0; bottom: 0;
-  left: 50%;
-  width: min(72vw, 980px);
-  margin-left: calc(min(72vw, 980px) / -2);
-  border-radius: 14px;
-  overflow: hidden;
-  background: var(--ink-2);
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.55);
-  transition: transform .7s var(--ease-out), opacity .5s var(--ease-out), filter .5s var(--ease-out);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.cs-layer-item img {
+.cs-assets--single .cs-asset-plate { aspect-ratio: auto; min-height: 240px; }
+.cs-asset--light .cs-asset-plate { background: var(--paper); }
+.cs-asset-plate img {
   max-width: 100%;
   max-height: 100%;
   width: auto;
   height: auto;
   object-fit: contain;
-  pointer-events: none;
 }
-.cs-layer-caption {
-  text-align: center;
-  margin: var(--space-5) auto 0;
-  padding: 0 var(--gutter);
-  max-width: 70ch;
-  min-height: 1em;
-  color: var(--ash);
+.cs-assets--single .cs-asset-plate img { max-height: 160px; }
+.cs-asset figcaption { color: var(--ash); margin-top: var(--space-2); }
+
+/* --- Beat 6: Design Execution (masonry gallery) --- */
+.cs-gallery-section {
+  position: relative;
+  background-color: var(--ink);
+  padding: var(--space-10) var(--gutter) var(--space-9);
 }
+.cs-gallery-header { padding-bottom: var(--space-7); }
+
+/* CSS columns keep every image at its own aspect ratio, so portraits stay tall */
+.cs-gallery-grid { columns: 3 320px; column-gap: var(--space-4); }
+.cs-gallery-item {
+  display: block;
+  width: 100%;
+  margin: 0 0 var(--space-4);
+  padding: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--ink-2);
+  break-inside: avoid;
+  cursor: zoom-in;
+}
+.cs-gallery-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform .8s var(--ease-out);
+}
+.cs-gallery-item:hover img { transform: scale(1.03); }
+
+/* Lightbox */
+html.lb-open { overflow: hidden; }
+.cs-lightbox {
+  width: 100vw; height: 100dvh;
+  max-width: none; max-height: none;
+  margin: 0; padding: var(--space-5);
+  border: 0;
+  background: rgba(11, 11, 11, 0.96);
+  color: var(--paper);
+  touch-action: pan-y;
+}
+.cs-lightbox[open] {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: var(--space-4);
+}
+.cs-lightbox::backdrop { background: rgba(0, 0, 0, 0.6); }
+.cs-lb-figure {
+  margin: 0;
+  height: 100%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+}
+.cs-lb-img {
+  max-width: 100%;
+  max-height: calc(100dvh - 120px);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+.cs-lb-figure figcaption { display: flex; gap: var(--space-3); color: var(--ash); text-align: center; }
+.cs-lb-count { color: var(--paper); font-variant-numeric: tabular-nums; }
+.cs-lb-btn {
+  width: 52px; height: 52px; border-radius: 50%;
+  border: 1px solid var(--line-strong); color: var(--paper); font-size: 20px;
+  transition: background-color var(--t-fast) var(--ease-out), color var(--t-fast), border-color var(--t-fast);
+}
+.cs-lb-btn:hover { background: var(--coral); border-color: var(--coral); color: var(--ink); }
+.cs-lb-close { position: absolute; top: var(--space-4); right: var(--space-4); z-index: 1; }
 
 /* --- Beat 7: Business Impact --- */
 .cs-impact-section {
@@ -468,8 +494,15 @@ main :is(p, h1, h2, h3, h4, li, blockquote, strong, span) { overflow-wrap: break
   .cs-quote-split {
     grid-template-columns: 1fr;
   }
-  .cs-layer { height: 58vw; min-height: 260px; }
-  .cs-layer-item { width: 82vw; margin-left: -41vw; }
+  .cs-gallery-grid { columns: 2; column-gap: var(--space-2); }
+  .cs-gallery-item { margin-bottom: var(--space-2); border-radius: 8px; }
+  .cs-assets { grid-template-columns: repeat(2, 1fr); gap: var(--space-2); }
+  /* arrows drop below the image on phones; swipe still works */
+  .cs-lightbox[open] { grid-template-columns: 1fr 1fr; grid-template-rows: 1fr auto; padding: var(--space-3); }
+  .cs-lb-figure { grid-column: 1 / -1; grid-row: 1; }
+  .cs-lb-prev { grid-row: 2; justify-self: end; }
+  .cs-lb-next { grid-row: 2; justify-self: start; }
+  .cs-lb-img { max-height: calc(100dvh - 160px); }
   .cs-next-thumb { height: auto; }
   .cs-quote-img { height: auto; max-height: 380px; }
   .cs-problem-grid { gap: var(--space-6); }

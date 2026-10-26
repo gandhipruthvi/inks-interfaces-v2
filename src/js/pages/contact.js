@@ -59,20 +59,38 @@ document.addEventListener('DOMContentLoaded', () => {
     splashCanvas.width = 280;
     splashCanvas.height = 90;
 
-    form.addEventListener('submit', (e) => {
+    const errorEl = form.querySelector('.form-error-msg');
+
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
 
       // Simple inline validation
       const name = form.querySelector('#nameInput')?.value.trim();
       const email = form.querySelector('#emailInput')?.value.trim();
       if (!name || !email) {
-        const errorEl = form.querySelector('.form-error-msg');
-        if (errorEl) errorEl.textContent = 'Please provide both your name and work email.';
+        errorEl.textContent = 'Please provide both your name and work email.';
+        return;
+      }
+      errorEl.textContent = '';
+      submitBtn.disabled = true;
+
+      // Send to /api/inquiry (Vercel function); only celebrate once it has actually arrived
+      let sent = false;
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(Object.fromEntries(new FormData(form)))
+        });
+        sent = res.ok;
+      } catch {}
+      if (!sent) {
+        submitBtn.disabled = false;
+        errorEl.innerHTML = 'That did not go through. Try again, or email us at <a href="mailto:studio@inksandinterfaces.design">studio@inksandinterfaces.design</a>.';
         return;
       }
 
       // Ink Drop Splash Animation
-      submitBtn.disabled = true;
       let dropY = -20;
       let splashRadius = 0;
       let isSplashing = false;

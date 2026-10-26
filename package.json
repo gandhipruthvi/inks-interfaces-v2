@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/generate-case-studies.mjs && node scripts/build-sitemap.mjs && vite build",
+    "build": "node scripts/generate-case-studies.mjs && node scripts/generate-work-page.mjs &&node scripts/build-sitemap.mjs && vite build",
     "preview": "vite preview",
     "check-data": "node scripts/check-data.mjs",
     "images": "node scripts/images.mjs"

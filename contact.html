@@ -66,8 +66,8 @@
 
           <div style="margin-bottom: var(--space-6);">
             <span class="mono-label" style="display: block; margin-bottom: 4px;">email</span>
-            <a href="mailto:letscreate.inksandinterfaces@gmail.com" style="font-size: var(--text-body-lg); color: var(--ink); text-decoration: underline;">
-              letscreate.inksandinterfaces@gmail.com
+            <a href="mailto:studio@inksandinterfaces.design" style="font-size: var(--text-body-lg); color: var(--ink); text-decoration: underline;">
+              studio@inksandinterfaces.design
             </a>
           </div>
 
@@ -88,7 +88,7 @@
           <div style="margin-top: var(--space-8); padding-top: var(--space-6); border-top: 1px solid var(--paper-2);">
             <span class="mono-label" style="display: block; margin-bottom: 8px;">discovery call</span>
             <!-- TODO: swap for the Calendly embed once the founders set it up -->
-            <a href="mailto:letscreate.inksandinterfaces@gmail.com?subject=Project%20Discovery%20Call" class="coral-pill" data-magnetic style="background: var(--ink); color: #FFFFFF !important;">
+            <a href="mailto:studio@inksandinterfaces.design?subject=Project%20Discovery%20Call" class="coral-pill" data-magnetic style="background: var(--ink); color: #FFFFFF !important;">
               request a 20-min discovery call &nearr;
             </a>
           </div>
@@ -96,27 +96,29 @@
 
         <!-- Right: Inquiry Form -->
         <div>
-          <form class="contact-form" aria-label="Project details form">
+          <!-- Sent by api/inquiry.js (Vercel function) to studio@inksandinterfaces.design -->
+          <form class="contact-form" action="/api/inquiry" method="POST" aria-label="Project details form">
+            <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position: absolute; left: -9999px;">
             <div class="form-error-msg" style="color: var(--coral); font-size: 13px; font-family: var(--font-mono); margin-bottom: var(--space-3);"></div>
 
             <div class="form-group">
               <label for="nameInput">your name *</label>
-              <input type="text" id="nameInput" class="form-input" placeholder="your name" required>
+              <input type="text" id="nameInput" name="name" autocomplete="name" class="form-input" placeholder="your name" required>
             </div>
 
             <div class="form-group">
               <label for="emailInput">work email *</label>
-              <input type="email" id="emailInput" class="form-input" placeholder="you@yourcompany.com" required>
+              <input type="email" id="emailInput" name="email" autocomplete="email" class="form-input" placeholder="you@yourcompany.com" required>
             </div>
 
             <div class="form-group">
               <label for="companyInput">company or project name</label>
-              <input type="text" id="companyInput" class="form-input" placeholder="your brand or business">
+              <input type="text" id="companyInput" name="company" autocomplete="organization" class="form-input" placeholder="your brand or business">
             </div>
 
             <div class="form-group">
-              <label>what do you need to build?</label>
-              <select class="form-select">
+              <label for="needInput">what do you need to build?</label>
+              <select id="needInput" name="need" class="form-select">
                 <option value="full-system">Full brand system (strategy + identity + website)</option>
                 <option value="rebrand">Rebrand of an existing business</option>
                 <option value="new-identity">New brand identity</option>
@@ -126,7 +128,7 @@
 
             <div class="form-group">
               <span class="form-label" id="budgetLabel">approximate investment range</span>
-              <input type="hidden" id="budgetInput" value="INR 1L-3L">
+              <input type="hidden" id="budgetInput" name="budget" value="INR 1L-3L">
               <div class="currency-toggle" role="radiogroup" aria-label="Select currency">
                 <button type="button" class="curr-btn active" role="radio" aria-checked="true" data-currency="INR">INR (&#8377;)</button>
                 <button type="button" class="curr-btn" role="radio" aria-checked="false" data-currency="USD">USD ($)</button>
@@ -147,7 +149,7 @@
 
             <div class="form-group">
               <label for="messageInput">project summary &amp; goals</label>
-              <textarea id="messageInput" class="form-textarea" rows="4" placeholder="Tell us about what you're making, who it's for, and why now..."></textarea>
+              <textarea id="messageInput" name="message" class="form-textarea" rows="4" placeholder="Tell us about what you're making, who it's for, and why now..."></textarea>
             </div>
 
             <button type="submit" class="contact-submit-btn coral-pill" data-magnetic style="width: 100%; padding: 16px; font-size: 16px; position: relative; overflow: hidden;">

@@ -173,61 +173,63 @@
       
       </div>
 
-      <!-- Logo Showcase on Solid #000 Plate -->
+      <!-- Brand assets: logos, marks, patterns -->
       
     </section>
 
-    <!-- BEAT 6: DESIGN EXECUTION (Layer carousel) -->
+    <!-- BEAT 6: DESIGN EXECUTION (masonry gallery + lightbox) -->
     <section class="cs-gallery-section" aria-label="Design Showcase">
       <div class="cs-gallery-header">
-        <div>
-          <p class="mono-label">// craft &amp; execution</p>
-          <h3 style="font-size: var(--text-h2); font-weight: 300; margin-top: var(--space-2);">in the wild.</h3>
-        </div>
-        <div class="cs-layer-controls">
-          <span class="mono-label cs-layer-count" aria-live="polite">01 / 11</span>
-          <button class="cs-layer-btn cs-layer-prev" aria-label="Previous image">&larr;</button>
-          <button class="cs-layer-btn cs-layer-next" aria-label="Next image">&rarr;</button>
-        </div>
+        <p class="mono-label">// craft &amp; execution</p>
+        <h3 style="font-size: var(--text-h2); font-weight: 300; margin-top: var(--space-2);">in the wild.</h3>
       </div>
 
-      <div class="cs-layer" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Kitkat Protein Bar gallery, use arrow keys to browse">
+      <div class="cs-gallery-grid">
         
-        <figure class="cs-layer-item" data-index="0">
-          <img src="/assets/projects/kitkat-protein-bar/kitkat-protein-bar-9.webp" alt="Kit-Kat Protein hero"  draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="1">
-          <img src="/assets/projects/kitkat-protein-bar/kitkat-protein-bar-7.webp" alt="Kit-Kat Protein secondary"  draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="2">
-          <img src="/assets/projects/kitkat-protein-bar/kitkat-protein-bar-10.webp" alt="Kit-Kat Protein origin"  draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="3">
-          <img src="/assets/projects/kitkat-protein-bar/kitkat-protein-bar-1.webp" alt="Kitkat protein bar 1" loading="lazy" draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="4">
-          <img src="/assets/projects/kitkat-protein-bar/kitkat-protein-bar-11.webp" alt="Kitkat protein bar 11" loading="lazy" draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="5">
-          <img src="/assets/projects/kitkat-protein-bar/kitkat-protein-bar-2.webp" alt="Kitkat protein bar 2" loading="lazy" draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="6">
-          <img src="/assets/projects/kitkat-protein-bar/kitkat-protein-bar-3.webp" alt="Kitkat protein bar 3" loading="lazy" draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="7">
-          <img src="/assets/projects/kitkat-protein-bar/kitkat-protein-bar-4.webp" alt="Kitkat protein bar 4" loading="lazy" draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="8">
-          <img src="/assets/projects/kitkat-protein-bar/kitkat-protein-bar-5.webp" alt="Kitkat protein bar 5" loading="lazy" draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="9">
-          <img src="/assets/projects/kitkat-protein-bar/kitkat-protein-bar-6.webp" alt="Kitkat protein bar 6" loading="lazy" draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="10">
-          <img src="/assets/projects/kitkat-protein-bar/kitkat-protein-bar-8.webp" alt="Kitkat protein bar 8" loading="lazy" draggable="false">
-        </figure>
+        <button class="cs-gallery-item" type="button" data-index="0" aria-label="Enlarge: Kit-Kat Protein hero">
+          <img src="/assets/projects/kitkat-protein-bar/kitkat-protein-bar-9.webp" alt="Kit-Kat Protein hero" width="1129" height="1393" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="1" aria-label="Enlarge: Kit-Kat Protein secondary">
+          <img src="/assets/projects/kitkat-protein-bar/kitkat-protein-bar-7.webp" alt="Kit-Kat Protein secondary" width="1023" height="1537" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="2" aria-label="Enlarge: Kit-Kat Protein origin">
+          <img src="/assets/projects/kitkat-protein-bar/kitkat-protein-bar-10.webp" alt="Kit-Kat Protein origin" width="941" height="1672" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="3" aria-label="Enlarge: Kitkat protein bar 1">
+          <img src="/assets/projects/kitkat-protein-bar/kitkat-protein-bar-1.webp" alt="Kitkat protein bar 1" width="941" height="1672" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="4" aria-label="Enlarge: Kitkat protein bar 11">
+          <img src="/assets/projects/kitkat-protein-bar/kitkat-protein-bar-11.webp" alt="Kitkat protein bar 11" width="1146" height="1373" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="5" aria-label="Enlarge: Kitkat protein bar 2">
+          <img src="/assets/projects/kitkat-protein-bar/kitkat-protein-bar-2.webp" alt="Kitkat protein bar 2" width="941" height="1672" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="6" aria-label="Enlarge: Kitkat protein bar 3">
+          <img src="/assets/projects/kitkat-protein-bar/kitkat-protein-bar-3.webp" alt="Kitkat protein bar 3" width="941" height="1672" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="7" aria-label="Enlarge: Kitkat protein bar 4">
+          <img src="/assets/projects/kitkat-protein-bar/kitkat-protein-bar-4.webp" alt="Kitkat protein bar 4" width="941" height="1672" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="8" aria-label="Enlarge: Kitkat protein bar 5">
+          <img src="/assets/projects/kitkat-protein-bar/kitkat-protein-bar-5.webp" alt="Kitkat protein bar 5" width="941" height="1672" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="9" aria-label="Enlarge: Kitkat protein bar 6">
+          <img src="/assets/projects/kitkat-protein-bar/kitkat-protein-bar-6.webp" alt="Kitkat protein bar 6" width="941" height="1672" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="10" aria-label="Enlarge: Kitkat protein bar 8">
+          <img src="/assets/projects/kitkat-protein-bar/kitkat-protein-bar-8.webp" alt="Kitkat protein bar 8" width="1023" height="1537" loading="lazy">
+        </button>
       </div>
-      <p class="cs-layer-caption mono-label" aria-hidden="true"></p>
+
+      <dialog class="cs-lightbox" aria-label="Kitkat Protein Bar gallery viewer">
+        <button class="cs-lb-btn cs-lb-close" type="button" aria-label="Close">&times;</button>
+        <button class="cs-lb-btn cs-lb-prev" type="button" aria-label="Previous image">&larr;</button>
+        <figure class="cs-lb-figure">
+          <img class="cs-lb-img" alt="">
+          <figcaption class="mono-label"><span class="cs-lb-count"></span><span class="cs-lb-caption"></span></figcaption>
+        </figure>
+        <button class="cs-lb-btn cs-lb-next" type="button" aria-label="Next image">&rarr;</button>
+      </dialog>
     </section>
 
     <!-- BEAT 7: BUSINESS IMPACT (Conditional) -->

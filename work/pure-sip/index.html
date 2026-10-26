@@ -165,62 +165,68 @@
       
       </div>
 
-      <!-- Logo Showcase on Solid #000 Plate -->
+      <!-- Brand assets: logos, marks, patterns -->
       
-      <div class="cs-logo-showcase">
-        <img src="/assets/projects/pure-sip/identity/primary-logo-3.png" alt="Pure Sip logo" loading="lazy">
+      <div class="cs-assets" aria-label="Brand assets">
+        
+        <figure class="cs-asset cs-asset--dark">
+          <div class="cs-asset-plate"><img src="/assets/projects/pure-sip/identity/primary-logo-3.png" alt="Primary Logo" width="1080" height="1080" loading="lazy"></div>
+          <figcaption class="mono-label">Primary Logo</figcaption>
+        </figure>
+        <figure class="cs-asset cs-asset--light">
+          <div class="cs-asset-plate"><img src="/assets/projects/pure-sip/identity/primary-logo-green-0.png" alt="Primary Logo Green" width="1080" height="1080" loading="lazy"></div>
+          <figcaption class="mono-label">Primary Logo Green</figcaption>
+        </figure>
+        <figure class="cs-asset cs-asset--light">
+          <div class="cs-asset-plate"><img src="/assets/projects/pure-sip/identity/primary-logo-purple-1.png" alt="Primary Logo Purple" width="1080" height="1080" loading="lazy"></div>
+          <figcaption class="mono-label">Primary Logo Purple</figcaption>
+        </figure>
+        <figure class="cs-asset cs-asset--dark">
+          <div class="cs-asset-plate"><img src="/assets/projects/pure-sip/identity/primary-logo-yellow-2.png" alt="Primary Logo Yellow" width="1080" height="1080" loading="lazy"></div>
+          <figcaption class="mono-label">Primary Logo Yellow</figcaption>
+        </figure>
       </div>
     
     </section>
 
-    <!-- BEAT 6: DESIGN EXECUTION (Layer carousel) -->
+    <!-- BEAT 6: DESIGN EXECUTION (masonry gallery + lightbox) -->
     <section class="cs-gallery-section" aria-label="Design Showcase">
       <div class="cs-gallery-header">
-        <div>
-          <p class="mono-label">// craft &amp; execution</p>
-          <h3 style="font-size: var(--text-h2); font-weight: 300; margin-top: var(--space-2);">in the wild.</h3>
-        </div>
-        <div class="cs-layer-controls">
-          <span class="mono-label cs-layer-count" aria-live="polite">01 / 10</span>
-          <button class="cs-layer-btn cs-layer-prev" aria-label="Previous image">&larr;</button>
-          <button class="cs-layer-btn cs-layer-next" aria-label="Next image">&rarr;</button>
-        </div>
+        <p class="mono-label">// craft &amp; execution</p>
+        <h3 style="font-size: var(--text-h2); font-weight: 300; margin-top: var(--space-2);">in the wild.</h3>
       </div>
 
-      <div class="cs-layer" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Pure Sip gallery, use arrow keys to browse">
+      <div class="cs-gallery-grid">
         
-        <figure class="cs-layer-item" data-index="0">
-          <img src="/assets/projects/pure-sip/pure-sip-1.webp" alt="Pure Sip hero"  draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="1">
-          <img src="/assets/projects/pure-sip/pure-sip-2.webp" alt="Pure Sip secondary"  draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="2">
-          <img src="/assets/projects/pure-sip/pure-sip-3.webp" alt="Pure Sip origin"  draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="3">
-          <img src="/assets/projects/pure-sip/identity/primary-logo-3.png" alt="Primary Logo" loading="lazy" draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="4">
-          <img src="/assets/projects/pure-sip/identity/primary-logo-green-0.png" alt="Primary Logo Green" loading="lazy" draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="5">
-          <img src="/assets/projects/pure-sip/identity/primary-logo-purple-1.png" alt="Primary Logo Purple" loading="lazy" draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="6">
-          <img src="/assets/projects/pure-sip/identity/primary-logo-yellow-2.png" alt="Primary Logo Yellow" loading="lazy" draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="7">
-          <img src="/assets/projects/pure-sip/pure-sip-4.webp" alt="Pure Sip process" loading="lazy" draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="8">
-          <img src="/assets/projects/pure-sip/pure-sip-5.webp" alt="Pure Sip process" loading="lazy" draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="9">
-          <img src="/assets/projects/pure-sip/pure-sip-6.webp" alt="Pure Sip process" loading="lazy" draggable="false">
-        </figure>
+        <button class="cs-gallery-item" type="button" data-index="0" aria-label="Enlarge: Pure Sip hero">
+          <img src="/assets/projects/pure-sip/pure-sip-1.webp" alt="Pure Sip hero" width="4500" height="3000" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="1" aria-label="Enlarge: Pure Sip secondary">
+          <img src="/assets/projects/pure-sip/pure-sip-2.webp" alt="Pure Sip secondary" width="5000" height="3750" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="2" aria-label="Enlarge: Pure Sip origin">
+          <img src="/assets/projects/pure-sip/pure-sip-3.webp" alt="Pure Sip origin" width="5000" height="3750" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="3" aria-label="Enlarge: Pure Sip process">
+          <img src="/assets/projects/pure-sip/pure-sip-4.webp" alt="Pure Sip process" width="5000" height="3750" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="4" aria-label="Enlarge: Pure Sip process">
+          <img src="/assets/projects/pure-sip/pure-sip-5.webp" alt="Pure Sip process" width="5000" height="3750" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="5" aria-label="Enlarge: Pure Sip process">
+          <img src="/assets/projects/pure-sip/pure-sip-6.webp" alt="Pure Sip process" width="5200" height="3750" loading="lazy">
+        </button>
       </div>
-      <p class="cs-layer-caption mono-label" aria-hidden="true"></p>
+
+      <dialog class="cs-lightbox" aria-label="Pure Sip gallery viewer">
+        <button class="cs-lb-btn cs-lb-close" type="button" aria-label="Close">&times;</button>
+        <button class="cs-lb-btn cs-lb-prev" type="button" aria-label="Previous image">&larr;</button>
+        <figure class="cs-lb-figure">
+          <img class="cs-lb-img" alt="">
+          <figcaption class="mono-label"><span class="cs-lb-count"></span><span class="cs-lb-caption"></span></figcaption>
+        </figure>
+        <button class="cs-lb-btn cs-lb-next" type="button" aria-label="Next image">&rarr;</button>
+      </dialog>
     </section>
 
     <!-- BEAT 7: BUSINESS IMPACT (Conditional) -->

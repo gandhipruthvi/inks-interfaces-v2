@@ -169,74 +169,77 @@
       
       </div>
 
-      <!-- Logo Showcase on Solid #000 Plate -->
+      <!-- Brand assets: logos, marks, patterns -->
       
-      <div class="cs-logo-showcase">
-        <img src="/assets/projects/zestee/identity/primary-logo-transparent-background-0.png" alt="Zestee logo" loading="lazy">
+      <div class="cs-assets cs-assets--single" aria-label="Brand assets">
+        
+        <figure class="cs-asset cs-asset--dark">
+          <div class="cs-asset-plate"><img src="/assets/projects/zestee/identity/primary-logo-transparent-background-0.png" alt="Primary Logo Transparent Background" width="1080" height="1350" loading="lazy"></div>
+          <figcaption class="mono-label">Primary Logo Transparent Background</figcaption>
+        </figure>
       </div>
     
     </section>
 
-    <!-- BEAT 6: DESIGN EXECUTION (Layer carousel) -->
+    <!-- BEAT 6: DESIGN EXECUTION (masonry gallery + lightbox) -->
     <section class="cs-gallery-section" aria-label="Design Showcase">
       <div class="cs-gallery-header">
-        <div>
-          <p class="mono-label">// craft &amp; execution</p>
-          <h3 style="font-size: var(--text-h2); font-weight: 300; margin-top: var(--space-2);">in the wild.</h3>
-        </div>
-        <div class="cs-layer-controls">
-          <span class="mono-label cs-layer-count" aria-live="polite">01 / 14</span>
-          <button class="cs-layer-btn cs-layer-prev" aria-label="Previous image">&larr;</button>
-          <button class="cs-layer-btn cs-layer-next" aria-label="Next image">&rarr;</button>
-        </div>
+        <p class="mono-label">// craft &amp; execution</p>
+        <h3 style="font-size: var(--text-h2); font-weight: 300; margin-top: var(--space-2);">in the wild.</h3>
       </div>
 
-      <div class="cs-layer" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Zestee gallery, use arrow keys to browse">
+      <div class="cs-gallery-grid">
         
-        <figure class="cs-layer-item" data-index="0">
-          <img src="/assets/projects/zestee/zestee-9.webp" alt="Zestee hero"  draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="1">
-          <img src="/assets/projects/zestee/zestee-7.webp" alt="Zestee secondary"  draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="2">
-          <img src="/assets/projects/zestee/zestee-11.webp" alt="Zestee origin"  draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="3">
-          <img src="/assets/projects/zestee/identity/primary-logo-transparent-background-0.png" alt="Primary Logo Transparent Background" loading="lazy" draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="4">
-          <img src="/assets/projects/zestee/zestee-6.webp" alt="Zestee statement" loading="lazy" draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="5">
-          <img src="/assets/projects/zestee/zestee-1.webp" alt="Zestee form" loading="lazy" draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="6">
-          <img src="/assets/projects/zestee/zestee-2.webp" alt="Zestee form" loading="lazy" draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="7">
-          <img src="/assets/projects/zestee/zestee-8.webp" alt="Zestee form" loading="lazy" draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="8">
-          <img src="/assets/projects/zestee/zestee-12.webp" alt="Zestee in context" loading="lazy" draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="9">
-          <img src="/assets/projects/zestee/zestee-5.webp" alt="Zestee in context" loading="lazy" draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="10">
-          <img src="/assets/projects/zestee/zestee-10.webp" alt="Zestee in context" loading="lazy" draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="11">
-          <img src="/assets/projects/zestee/zestee-13.webp" alt="Zestee showcase asset" loading="lazy" draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="12">
-          <img src="/assets/projects/zestee/zestee-3.webp" alt="Zestee showcase asset" loading="lazy" draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="13">
-          <img src="/assets/projects/zestee/zestee-4.webp" alt="Zestee showcase asset" loading="lazy" draggable="false">
-        </figure>
+        <button class="cs-gallery-item" type="button" data-index="0" aria-label="Enlarge: Zestee hero">
+          <img src="/assets/projects/zestee/zestee-9.webp" alt="Zestee hero" width="1536" height="2752" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="1" aria-label="Enlarge: Zestee secondary">
+          <img src="/assets/projects/zestee/zestee-7.webp" alt="Zestee secondary" width="768" height="1376" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="2" aria-label="Enlarge: Zestee origin">
+          <img src="/assets/projects/zestee/zestee-11.webp" alt="Zestee origin" width="1536" height="2752" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="3" aria-label="Enlarge: Zestee statement">
+          <img src="/assets/projects/zestee/zestee-6.webp" alt="Zestee statement" width="768" height="1376" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="4" aria-label="Enlarge: Zestee form">
+          <img src="/assets/projects/zestee/zestee-1.webp" alt="Zestee form" width="1080" height="1350" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="5" aria-label="Enlarge: Zestee form">
+          <img src="/assets/projects/zestee/zestee-2.webp" alt="Zestee form" width="1080" height="1350" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="6" aria-label="Enlarge: Zestee form">
+          <img src="/assets/projects/zestee/zestee-8.webp" alt="Zestee form" width="768" height="1376" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="7" aria-label="Enlarge: Zestee in context">
+          <img src="/assets/projects/zestee/zestee-12.webp" alt="Zestee in context" width="1536" height="2752" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="8" aria-label="Enlarge: Zestee in context">
+          <img src="/assets/projects/zestee/zestee-5.webp" alt="Zestee in context" width="768" height="1376" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="9" aria-label="Enlarge: Zestee in context">
+          <img src="/assets/projects/zestee/zestee-10.webp" alt="Zestee in context" width="1080" height="1350" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="10" aria-label="Enlarge: Zestee showcase asset">
+          <img src="/assets/projects/zestee/zestee-13.webp" alt="Zestee showcase asset" width="1200" height="900" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="11" aria-label="Enlarge: Zestee showcase asset">
+          <img src="/assets/projects/zestee/zestee-3.webp" alt="Zestee showcase asset" width="1080" height="1350" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="12" aria-label="Enlarge: Zestee showcase asset">
+          <img src="/assets/projects/zestee/zestee-4.webp" alt="Zestee showcase asset" width="1080" height="1350" loading="lazy">
+        </button>
       </div>
-      <p class="cs-layer-caption mono-label" aria-hidden="true"></p>
+
+      <dialog class="cs-lightbox" aria-label="Zestee gallery viewer">
+        <button class="cs-lb-btn cs-lb-close" type="button" aria-label="Close">&times;</button>
+        <button class="cs-lb-btn cs-lb-prev" type="button" aria-label="Previous image">&larr;</button>
+        <figure class="cs-lb-figure">
+          <img class="cs-lb-img" alt="">
+          <figcaption class="mono-label"><span class="cs-lb-count"></span><span class="cs-lb-caption"></span></figcaption>
+        </figure>
+        <button class="cs-lb-btn cs-lb-next" type="button" aria-label="Next image">&rarr;</button>
+      </dialog>
     </section>
 
     <!-- BEAT 7: BUSINESS IMPACT (Conditional) -->

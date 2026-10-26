@@ -165,65 +165,72 @@
       
       </div>
 
-      <!-- Logo Showcase on Solid #000 Plate -->
+      <!-- Brand assets: logos, marks, patterns -->
       
-      <div class="cs-logo-showcase">
-        <img src="/assets/projects/satori-bites/identity/primary-logo-transparent-background-2.png" alt="Satori Bites logo" loading="lazy">
+      <div class="cs-assets" aria-label="Brand assets">
+        
+        <figure class="cs-asset cs-asset--dark">
+          <div class="cs-asset-plate"><img src="/assets/projects/satori-bites/identity/primary-logo-transparent-background-2.png" alt="Primary Logo Transparent Background" width="1080" height="1080" loading="lazy"></div>
+          <figcaption class="mono-label">Primary Logo Transparent Background</figcaption>
+        </figure>
+        <figure class="cs-asset cs-asset--dark">
+          <div class="cs-asset-plate"><img src="/assets/projects/satori-bites/identity/pattern-0.webp" alt="Pattern" width="1080" height="1080" loading="lazy"></div>
+          <figcaption class="mono-label">Pattern</figcaption>
+        </figure>
+        <figure class="cs-asset cs-asset--light">
+          <div class="cs-asset-plate"><img src="/assets/projects/satori-bites/identity/primary-logo-red-1.png" alt="Primary Logo Red" width="1080" height="1080" loading="lazy"></div>
+          <figcaption class="mono-label">Primary Logo Red</figcaption>
+        </figure>
+        <figure class="cs-asset cs-asset--dark">
+          <div class="cs-asset-plate"><img src="/assets/projects/satori-bites/identity/primary-logo-white-3.png" alt="Primary Logo White" width="1080" height="1080" loading="lazy"></div>
+          <figcaption class="mono-label">Primary Logo White</figcaption>
+        </figure>
+        <figure class="cs-asset cs-asset--dark">
+          <div class="cs-asset-plate"><img src="/assets/projects/satori-bites/identity/primary-logo-with-symbol-4.png" alt="Primary Logo With Symbol" width="1080" height="1080" loading="lazy"></div>
+          <figcaption class="mono-label">Primary Logo With Symbol</figcaption>
+        </figure>
       </div>
     
     </section>
 
-    <!-- BEAT 6: DESIGN EXECUTION (Layer carousel) -->
+    <!-- BEAT 6: DESIGN EXECUTION (masonry gallery + lightbox) -->
     <section class="cs-gallery-section" aria-label="Design Showcase">
       <div class="cs-gallery-header">
-        <div>
-          <p class="mono-label">// craft &amp; execution</p>
-          <h3 style="font-size: var(--text-h2); font-weight: 300; margin-top: var(--space-2);">in the wild.</h3>
-        </div>
-        <div class="cs-layer-controls">
-          <span class="mono-label cs-layer-count" aria-live="polite">01 / 11</span>
-          <button class="cs-layer-btn cs-layer-prev" aria-label="Previous image">&larr;</button>
-          <button class="cs-layer-btn cs-layer-next" aria-label="Next image">&rarr;</button>
-        </div>
+        <p class="mono-label">// craft &amp; execution</p>
+        <h3 style="font-size: var(--text-h2); font-weight: 300; margin-top: var(--space-2);">in the wild.</h3>
       </div>
 
-      <div class="cs-layer" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Satori Bites gallery, use arrow keys to browse">
+      <div class="cs-gallery-grid">
         
-        <figure class="cs-layer-item" data-index="0">
-          <img src="/assets/projects/satori-bites/satori-bites-1.webp" alt="Satori Bites hero"  draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="1">
-          <img src="/assets/projects/satori-bites/satori-bites-2.webp" alt="Satori Bites secondary"  draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="2">
-          <img src="/assets/projects/satori-bites/satori-bites-3.webp" alt="Satori Bites origin"  draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="3">
-          <img src="/assets/projects/satori-bites/identity/pattern-0.webp" alt="Pattern" loading="lazy" draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="4">
-          <img src="/assets/projects/satori-bites/identity/primary-logo-red-1.png" alt="Primary Logo Red" loading="lazy" draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="5">
-          <img src="/assets/projects/satori-bites/identity/primary-logo-transparent-background-2.png" alt="Primary Logo Transparent Background" loading="lazy" draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="6">
-          <img src="/assets/projects/satori-bites/identity/primary-logo-white-3.png" alt="Primary Logo White" loading="lazy" draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="7">
-          <img src="/assets/projects/satori-bites/identity/primary-logo-with-symbol-4.png" alt="Primary Logo With Symbol" loading="lazy" draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="8">
-          <img src="/assets/projects/satori-bites/satori-bites-4.webp" alt="Satori Bites process" loading="lazy" draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="9">
-          <img src="/assets/projects/satori-bites/satori-bites-5.webp" alt="Satori Bites process" loading="lazy" draggable="false">
-        </figure>
-        <figure class="cs-layer-item" data-index="10">
-          <img src="/assets/projects/satori-bites/satori-bites-6.webp" alt="Satori Bites process" loading="lazy" draggable="false">
-        </figure>
+        <button class="cs-gallery-item" type="button" data-index="0" aria-label="Enlarge: Satori Bites hero">
+          <img src="/assets/projects/satori-bites/satori-bites-1.webp" alt="Satori Bites hero" width="1080" height="1080" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="1" aria-label="Enlarge: Satori Bites secondary">
+          <img src="/assets/projects/satori-bites/satori-bites-2.webp" alt="Satori Bites secondary" width="4000" height="3000" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="2" aria-label="Enlarge: Satori Bites origin">
+          <img src="/assets/projects/satori-bites/satori-bites-3.webp" alt="Satori Bites origin" width="1080" height="1080" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="3" aria-label="Enlarge: Satori Bites process">
+          <img src="/assets/projects/satori-bites/satori-bites-4.webp" alt="Satori Bites process" width="6240" height="4160" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="4" aria-label="Enlarge: Satori Bites process">
+          <img src="/assets/projects/satori-bites/satori-bites-5.webp" alt="Satori Bites process" width="5000" height="3500" loading="lazy">
+        </button>
+        <button class="cs-gallery-item" type="button" data-index="5" aria-label="Enlarge: Satori Bites process">
+          <img src="/assets/projects/satori-bites/satori-bites-6.webp" alt="Satori Bites process" width="1419" height="1109" loading="lazy">
+        </button>
       </div>
-      <p class="cs-layer-caption mono-label" aria-hidden="true"></p>
+
+      <dialog class="cs-lightbox" aria-label="Satori Bites gallery viewer">
+        <button class="cs-lb-btn cs-lb-close" type="button" aria-label="Close">&times;</button>
+        <button class="cs-lb-btn cs-lb-prev" type="button" aria-label="Previous image">&larr;</button>
+        <figure class="cs-lb-figure">
+          <img class="cs-lb-img" alt="">
+          <figcaption class="mono-label"><span class="cs-lb-count"></span><span class="cs-lb-caption"></span></figcaption>
+        </figure>
+        <button class="cs-lb-btn cs-lb-next" type="button" aria-label="Next image">&rarr;</button>
+      </dialog>
     </section>
 
     <!-- BEAT 7: BUSINESS IMPACT (Conditional) -->

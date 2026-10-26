@@ -19,17 +19,21 @@ export function initOrbitSection(container) {
     { x: 74, y: 12, w: 20, depth: 0.85, z: 4 },  // in front top-right
     { x: 5,  y: 42, w: 22, depth: 0.75, z: 4 },  // in front mid-left
     { x: 82, y: 46, w: 16, depth: 0.40, z: 1 },  // behind mid-right
-    { x: 18, y: 72, w: 19, depth: 0.50, z: 1 },  // behind bottom-left
-    { x: 68, y: 75, w: 24, depth: 0.90, z: 5 },  // in front bottom-right
+    { x: 18, y: 68, w: 19, depth: 0.50, z: 1 },  // behind bottom-left
+    { x: 68, y: 64, w: 24, depth: 0.90, z: 5 },  // in front bottom-right
     { x: 42, y: 15, w: 17, depth: 0.30, z: 1 },  // behind top-mid
-    { x: 45, y: 78, w: 18, depth: 0.55, z: 1 }   // behind bottom-mid
+    { x: 45, y: 66, w: 18, depth: 0.55, z: 1 }   // behind bottom-mid
   ];
 
   covers.forEach((card, i) => {
     const cfg = configs[i % configs.length];
+    // images keep their own aspect ratio; scale width so a tall portrait
+    // covers about the same area as the 4:3 card the slot was designed for
+    const img = card.querySelector('img');
+    const ratio = img.getAttribute('width') / img.getAttribute('height') || 4 / 3;
     card.style.left = `${cfg.x}%`;
     card.style.top = `${cfg.y}%`;
-    card.style.width = `${cfg.w}vw`;
+    card.style.width = `${(cfg.w * Math.sqrt(ratio / (4 / 3))).toFixed(2)}vw`;
     card.style.zIndex = cfg.z;
     card.dataset.depth = cfg.depth;
   });

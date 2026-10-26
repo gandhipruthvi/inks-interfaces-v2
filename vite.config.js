@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite';
+import { defineConfig, loadEnv } from 'vite';
 import { resolve } from 'path';
 import fs from 'fs';
 
@@ -48,9 +48,34 @@ const caseStudyRewrite = {
   }
 };
 
+// Dev only: run the Vercel functions in /api so the contact form works locally.
+// Secrets come from .env.local (gitignored), e.g. RESEND_API_KEY=...
+const devApi = {
+  name: 'dev-api',
+  configureServer(server) {
+    Object.assign(process.env, loadEnv('development', process.cwd(), ''));
+    server.middlewares.use(async (req, res, next) => {
+      const m = req.url.match(/^\/api\/([a-z0-9-]+)\/?(\?.*)?$/);
+      if (!m) return next();
+      let raw = '';
+      for await (const chunk of req) raw += chunk;
+      try { req.body = raw ? JSON.parse(raw) : {}; } catch { req.body = {}; }
+      res.status = (code) => { res.statusCode = code; return res; };
+      res.json = (obj) => { res.setHeader('Content-Type', 'application/json'); res.end(JSON.stringify(obj)); return res; };
+      try {
+        const { default: handler } = await server.ssrLoadModule(`/api/${m[1]}.js`);
+        await handler(req, res);
+      } catch (e) {
+        console.error(e);
+        res.statusCode = 404; res.end();
+      }
+    });
+  }
+};
+
 export default defineConfig({
   root: '.',
-  plugins: [caseStudyRewrite],
+  plugins: [caseStudyRewrite, devApi],
   publicDir: 'public',
   build: {
     outDir: 'dist',

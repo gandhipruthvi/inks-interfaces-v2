@@ -60,7 +60,7 @@ function generateWorkHtml() {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>work — inks &amp; interfaces</title>
-  <meta name="description" content="All twenty-eight brand identities, rebrands and digital products designed by inks &amp; interfaces." />
+  <meta name="description" content="All ${projects.length} brand identities, rebrands and digital products designed by inks &amp; interfaces." />
   <link rel="canonical" href="https://inksandinterfaces.design/work" />
   <link rel="icon" href="/brand/secondary-monogram.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -150,7 +150,7 @@ function generateWorkHtml() {
 </html>`;
 
   fs.writeFileSync(path.join(ROOT_DIR, 'work.html'), html, 'utf-8');
-  console.log('✅ Generated work.html with all 28 projects in Grid and List views');
+  console.log(`✅ Generated work.html with all ${projects.length} projects in Grid and List views`);
 }
 
 generateWorkHtml();
