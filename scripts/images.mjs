@@ -36,6 +36,15 @@ async function processImages() {
           .toFile(thumbOut);
         processed++;
       }
+      // 4:5 cards for the home hero's work wall (sharp on 2x screens)
+      const cardOut = path.join(targetDir, 'card-640.webp');
+      if (!fs.existsSync(cardOut)) {
+        await sharp(coverPath)
+          .resize(640, 800, { fit: 'cover' })
+          .webp({ quality: 74 })
+          .toFile(cardOut);
+        processed++;
+      }
     }
   }
 

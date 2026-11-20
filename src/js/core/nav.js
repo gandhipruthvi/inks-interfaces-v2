@@ -1,4 +1,4 @@
-import { scrollToTop } from './scroll.js';
+import { scrollToTop, lockScroll } from './scroll.js';
 
 // Sections with a paper background; the header flips to ink over them.
 const LIGHT = '.hero-section, .theme-paper, .cs-problem-section, .cs-quote-section, .manifesto-section, .contact-section, .founders-section, .story-card-shell';
@@ -66,19 +66,20 @@ export function initNav() {
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
-  // Mobile menu toggle
+  // Mobile menu toggle: locks page scroll while open, Escape or a link closes it
   if (navToggle && mobileNav) {
-    navToggle.addEventListener('click', () => {
-      const isOpen = mobileNav.classList.toggle('is-open');
-      navToggle.setAttribute('aria-expanded', isOpen);
+    const setOpen = (open) => {
+      mobileNav.classList.toggle('is-open', open);
+      mobileNav.setAttribute('aria-hidden', String(!open));
+      navToggle.setAttribute('aria-expanded', String(open));
+      lockScroll(open);
+    };
+    navToggle.addEventListener('click', () => setOpen(!mobileNav.classList.contains('is-open')));
+    mobileNav.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setOpen(false)));
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileNav.classList.contains('is-open')) { setOpen(false); navToggle.focus(); }
     });
-
-    // Close when clicking a link
-    mobileNav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileNav.classList.remove('is-open');
-        navToggle.setAttribute('aria-expanded', 'false');
-      });
-    });
+    // rotating a phone past the breakpoint hides the toggle; don't leave the page locked
+    matchMedia('(min-width: 861px)').addEventListener('change', (e) => { if (e.matches) setOpen(false); });
   }
 }

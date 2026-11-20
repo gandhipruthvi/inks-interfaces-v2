@@ -32,8 +32,10 @@ export function initCursor() {
 
   // Lerp ring for inertia follow-through
   gsap.ticker.add(() => {
-    ringX += (mouseX - ringX) * 0.15;
-    ringY += (mouseY - ringY) * 0.15;
+    const dx = mouseX - ringX, dy = mouseY - ringY;
+    if (Math.abs(dx) < 0.1 && Math.abs(dy) < 0.1) return;   // at rest: no style writes
+    ringX += dx * 0.15;
+    ringY += dy * 0.15;
     gsap.set(ring, { x: ringX, y: ringY });
   });
 

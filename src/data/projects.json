@@ -73,7 +73,10 @@
     },
     "logo": "/assets/projects/azonix/identity/logo-with-transparency.webp",
     "results": [],
-    "quote": null,
+    "quote": {
+      "text": "The final logo and app icon turned out exactly as I had envisioned.",
+      "author": "Yannick Meincke"
+    },
     "isConcept": false,
     "featured": true
   },
@@ -177,7 +180,10 @@
     },
     "logo": "/assets/projects/yellow-pod/identity/logo-transparent.webp",
     "results": [],
-    "quote": null,
+    "quote": {
+      "text": "I wanted a bakery name that carried meaning and truly reflected my vision for the brand.",
+      "author": "Zeal Shah"
+    },
     "isConcept": false,
     "featured": true
   },
@@ -284,7 +290,10 @@
     },
     "logo": "/assets/projects/tritaksh/identity/primary-logo.webp",
     "results": [],
-    "quote": null,
+    "quote": {
+      "text": "Every masterpiece begins long before the first stitch.",
+      "author": "Tritaksh"
+    },
     "isConcept": false,
     "featured": true
   },

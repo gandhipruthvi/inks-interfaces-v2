@@ -3,6 +3,7 @@ import '../../styles/base.css';
 import '../../styles/case-study.css';
 
 import { bootstrapApp } from '../main.js';
+import { lockScroll } from '../core/scroll.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   bootstrapApp();
@@ -67,17 +68,20 @@ function initLightbox(section) {
   };
 
   section.querySelectorAll('.cs-gallery-item').forEach((btn, i) =>
-    btn.addEventListener('click', () => { show(i); box.showModal(); document.documentElement.classList.add('lb-open'); }));
-  box.addEventListener('close', () => document.documentElement.classList.remove('lb-open'));
+    btn.addEventListener('click', () => { show(i); box.showModal(); lockScroll(true); }));
+  // unlock on every close path directly; the async 'close' event is only a backup
+  const closeBox = () => { box.close(); lockScroll(false); };
+  box.addEventListener('close', () => lockScroll(false));
+  box.addEventListener('cancel', () => lockScroll(false));   // Escape key
   box.querySelector('.cs-lb-prev').addEventListener('click', () => show(active - 1));
   box.querySelector('.cs-lb-next').addEventListener('click', () => show(active + 1));
-  box.querySelector('.cs-lb-close').addEventListener('click', () => box.close());
+  box.querySelector('.cs-lb-close').addEventListener('click', closeBox);
   box.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowLeft') { e.preventDefault(); show(active - 1); }
     if (e.key === 'ArrowRight') { e.preventDefault(); show(active + 1); }
   });
   // click on the backdrop (the dialog itself, not its contents) closes it
-  box.addEventListener('click', (e) => { if (e.target === box) box.close(); });
+  box.addEventListener('click', (e) => { if (e.target === box) closeBox(); });
 
   // swipe
   let x0 = null;

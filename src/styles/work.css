@@ -162,7 +162,7 @@ body:has(.site-header.header-hidden) .work-controls-bar { transform: translateY(
 /* Asymmetric 12-col Masonry Grid */
 .work-grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(12, minmax(0, 1fr));
   gap: var(--space-8) var(--space-6);
   align-items: start;
 }
@@ -255,14 +255,14 @@ body:has(.site-header.header-hidden) .work-controls-bar { transform: translateY(
   align-items: center;
   padding: var(--space-6) 0;
   border-bottom: 1px solid var(--line);
-  transition: opacity 0.3s ease, padding 0.2s ease;
+  transition: opacity 0.3s ease;
   position: relative;
 }
 
-.work-list-row:hover {
-  padding-left: var(--space-4);
-  border-color: var(--coral);
-}
+/* nudge with transform, not padding: padding re-lays-out the whole list on every hover */
+.work-list-row > * { transition: transform 0.25s var(--ease-out); }
+.work-list-row:hover { border-color: var(--coral); }
+.work-list-row:hover > * { transform: translateX(var(--space-4)); }
 
 .work-list-name {
   font-size: clamp(24px, 3.2vw, 44px);
@@ -304,12 +304,15 @@ body:has(.site-header.header-hidden) .work-controls-bar { transform: translateY(
 }
 
 @media (max-width: 900px) {
+  /* one column: twelve tracks keep their 11 gaps even when every card spans all 12,
+     which is wider than a 360px phone */
+  .work-grid { grid-template-columns: minmax(0, 1fr); }
   .work-grid-card.span-7,
   .work-grid-card.span-5,
   .work-grid-card.span-4,
   .work-grid-card.span-8,
   .work-grid-card.span-6 {
-    grid-column: span 12;
+    grid-column: auto;
   }
   .work-list-row {
     grid-template-columns: 1fr auto;

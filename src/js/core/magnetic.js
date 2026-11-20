@@ -11,18 +11,13 @@ export function initMagnetic() {
     const strength = parseFloat(el.getAttribute('data-magnetic-strength')) || 0.35;
     const radius = parseFloat(el.getAttribute('data-magnetic-radius')) || 85;
 
-    let rect = el.getBoundingClientRect();
+    // measured on hover only: measuring on every scroll forced a layout per frame
+    let rect = null;
     let isHovering = false;
-
-    function updateRect() {
-      rect = el.getBoundingClientRect();
-    }
-    window.addEventListener('scroll', updateRect, { passive: true });
-    window.addEventListener('resize', updateRect);
 
     el.addEventListener('mouseenter', () => {
       isHovering = true;
-      updateRect();
+      rect = el.getBoundingClientRect();
     });
 
     el.addEventListener('mousemove', (e) => {

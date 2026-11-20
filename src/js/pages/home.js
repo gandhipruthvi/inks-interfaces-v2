@@ -11,9 +11,9 @@ import { initProofSection } from '../sections/proof.js';
 document.addEventListener('DOMContentLoaded', () => {
   bootstrapApp();
 
-  const hero = document.querySelector('.hero-canvas-container');
-  // the desk of tools is three.js, so it loads in its own chunk
-  if (hero) import('../scenes/hero.js').then((m) => m.initHeroScene({ container: hero }));
+  // hero work wall: stop the CSS drift while the hero is scrolled away
+  const hero = document.querySelector('.hero-section');
+  if (hero) new IntersectionObserver(([en]) => hero.classList.toggle('is-offscreen', !en.isIntersecting)).observe(hero);
 
   const orbit = document.querySelector('.orbit-section');
   if (orbit) initOrbitSection(orbit);

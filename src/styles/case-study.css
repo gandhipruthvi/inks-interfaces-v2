@@ -280,7 +280,6 @@ main :is(p, h1, h2, h3, h4, li, blockquote, strong, span) { overflow-wrap: break
 .cs-gallery-item:hover img { transform: scale(1.03); }
 
 /* Lightbox */
-html.lb-open { overflow: hidden; }
 .cs-lightbox {
   width: 100vw; height: 100dvh;
   max-width: none; max-height: none;

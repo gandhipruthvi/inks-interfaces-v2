@@ -31,7 +31,7 @@ function initReviews(root) {
 
   deck.innerHTML = reviews.map((r, i) => {
     const initials = r.name.split(' ').map((w) => w[0]).join('').toLowerCase();
-    return `<figure class="review-card" data-i="${i}" style="--tint: ${TINTS[i % TINTS.length]}">
+    return `<figure class="review-card${r.quote.length > 280 ? ' review-card--long' : ''}" data-i="${i}" style="--tint: ${TINTS[i % TINTS.length]}">
       <p class="mono-label review-project"><a href="/work/${r.slug}" tabindex="-1">${r.role.split(', ')[1].toLowerCase()} &nearr;</a></p>
       <blockquote>&ldquo;${r.quote}&rdquo;</blockquote>
       <figcaption><span class="review-avatar" aria-hidden="true">${initials}</span><span><strong>${r.name}</strong><span>${r.role}</span></span></figcaption>
@@ -48,6 +48,7 @@ function initReviews(root) {
       c.style.transform = `translateX(${k * 58}%) translateY(${a * 26}px) rotate(${k * 5}deg) scale(${1 - a * 0.07})`;
       c.style.zIndex = String(10 - a);
       c.style.opacity = a > 1 ? '0' : '1';
+      c.style.visibility = a > 1 ? 'hidden' : 'visible';   // invisible back cards must not catch taps
       c.classList.toggle('is-front', a === 0);
       c.setAttribute('aria-hidden', a ? 'true' : 'false');
       c.querySelector('a').tabIndex = a ? -1 : 0;
@@ -99,9 +100,12 @@ function initMarquee(box) {
     <div class="marquee-track marquee-track--rev">${row([...logos].reverse())}</div>`;
 }
 
+// Brand story deck, in this order. Every slug here needs a quote in projects.json.
+const STORY_SLUGS = ['azonix', 'yellow-pod', 'tritaksh', 'zestee', 'piq', 'terra-cork', 'the-saucy-heat', 'lab-coat-media', 'waggle', 'silver-sphere-tech'];
+
 function initStories(root) {
   if (!root) return;
-  const items = projects.filter((p) => p.founder && p.quote && !p.isConcept);
+  const items = STORY_SLUGS.map((s) => projects.find((p) => p.slug === s)).filter((p) => p?.quote);
   const deck = root.querySelector('.story-deck');
   const text = root.querySelector('.story-text');
   const n = items.length;
@@ -127,8 +131,9 @@ function initStories(root) {
     text.querySelector('.story-index').textContent = `${String(current + 1).padStart(2, '0')} / ${String(n).padStart(2, '0')}`;
     text.querySelector('.story-title').innerHTML = p.headline;
     text.querySelector('.story-quote').innerHTML = `&ldquo;${p.quote.text}&rdquo;`;
-    text.querySelector('.story-name').textContent = p.founder.name;
-    text.querySelector('.story-role').textContent = `founder, ${p.name.toLowerCase()}`;
+    // no named founder (Tritaksh): the line belongs to the house itself
+    text.querySelector('.story-name').textContent = p.founder?.name || p.name;
+    text.querySelector('.story-role').textContent = p.founder ? `founder, ${p.name.toLowerCase()}` : 'the house line';
     text.querySelector('.story-link').href = `/work/${p.slug}`;
   };
 

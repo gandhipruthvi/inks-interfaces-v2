@@ -367,7 +367,7 @@
 
 .contact-layout {
   display: grid;
-  grid-template-columns: 5fr 7fr;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
   gap: var(--space-9);
 }
 
@@ -375,7 +375,7 @@
   background: #FFFFFF;
   border-radius: 12px;
   border: 1px solid var(--paper-2);
-  padding: var(--space-8);
+  padding: clamp(var(--space-5), 5vw, var(--space-8));   /* 64px left phones a 137px-wide form */
   box-shadow: 0 16px 36px rgba(0,0,0,0.06);
 }
 
@@ -515,6 +515,6 @@
     grid-template-columns: 1fr;
   }
   .contact-layout {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
