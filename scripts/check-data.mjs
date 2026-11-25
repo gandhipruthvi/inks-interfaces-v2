@@ -23,8 +23,10 @@ for (const p of data) {
 
   if (p.featured) featuredCount++;
 
-  assert(['branding', 'ui-ux', 'packaging', 'concept'].includes(p.category), `Unknown category "${p.category}" for ${p.slug}`);
-  assert(typeof p.industry === 'string' && p.industry, `Missing industry for ${p.slug}`);
+  assert(Array.isArray(p.category) && p.category.length, `category must be a non-empty list for ${p.slug}`);
+  for (const c of p.category) assert(['branding', 'ui-ux', 'packaging', 'concept'].includes(c), `Unknown category "${c}" for ${p.slug}`);
+  assert(Array.isArray(p.industry) && p.industry.length, `industry must be a non-empty list for ${p.slug}`);
+  assert.strictEqual(p.isConcept, p.category.includes('concept'), `isConcept out of sync for ${p.slug}`);
   assert.strictEqual(new Set(p.gallery).size, p.gallery.length, `Duplicate gallery images for ${p.slug}`);
 
   // Verify cover image

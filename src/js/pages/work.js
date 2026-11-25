@@ -68,8 +68,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let shown = 0;
     const matches = (el) =>
-      (filters.scope === 'all' || el.dataset.category === filters.scope) &&
-      (filters.industry === 'all' || el.dataset.industry === filters.industry);
+      (filters.scope === 'all' || el.dataset.category.split(' ').includes(filters.scope)) &&
+      (filters.industry === 'all' || el.dataset.industry.split(' ').includes(filters.industry));
     document.querySelectorAll('.work-grid-card').forEach(card => {
       const m = matches(card);
       card.style.display = m ? 'flex' : 'none';

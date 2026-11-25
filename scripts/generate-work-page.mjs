@@ -7,7 +7,9 @@ const ROOT_DIR = path.resolve(__dirname, '..');
 const projects = JSON.parse(fs.readFileSync(path.join(ROOT_DIR, 'src/data/projects.json'), 'utf-8'));
 
 const SCOPES = { branding: 'branding', 'ui-ux': 'ui/ux', packaging: 'packaging', concept: 'concept' };
-const INDUSTRIES = { 'f-and-b': 'f&amp;b', d2c: 'd2c', 'tech-saas': 'tech/saas', luxury: 'luxury', 'pet-care': 'pet care', wellness: 'wellness' };
+const INDUSTRIES = { 'f-and-b': 'f&amp;b', d2c: 'd2c', 'tech-saas': 'tech', luxury: 'luxury', 'pet-care': 'pet', wellness: 'wellness' };
+// a project can have several scopes/sectors: data attributes hold them space-separated
+const scopeLabel = (p) => p.category.map((c) => SCOPES[c]).join(' &amp; ');
 const chips = (tier, map, allLabel) =>
   `<button class="work-filter-chip active" data-${tier}="all" aria-pressed="true">${allLabel}</button>` +
   Object.entries(map).map(([k, label]) => `<button class="work-filter-chip" data-${tier}="${k}" aria-pressed="false">${label}</button>`).join('');
@@ -26,7 +28,7 @@ function generateWorkHtml() {
     const span = spanPatterns[i % spanPatterns.length];
     const conceptTag = p.isConcept ? `<span class="concept-tag">concept</span>` : '';
     return `
-      <article class="work-grid-card ${span}" data-category="${p.category}" data-industry="${p.industry}" data-cursor="view" data-cursor-label="${p.slug}">
+      <article class="work-grid-card ${span}" data-category="${p.category.join(' ')}" data-industry="${p.industry.join(' ')}" data-cursor="view" data-cursor-label="${p.slug}">
         <a href="/work/${p.slug}" class="work-card-thumb" aria-label="${p.name} case study">
           <img src="${p.cover}" alt="${p.alt[p.cover] || p.name}" loading="lazy">
         </a>
@@ -34,7 +36,7 @@ function generateWorkHtml() {
           <div>
             <h2 class="work-card-title"><a href="/work/${p.slug}">${p.name}</a>${conceptTag}</h2>
           </div>
-          <div class="work-card-sub">${SCOPES[p.category]} &middot; ${p.year}</div>
+          <div class="work-card-sub">${scopeLabel(p)} &middot; ${p.year}</div>
         </div>
       </article>
     `;
@@ -45,9 +47,9 @@ function generateWorkHtml() {
     const conceptTag = p.isConcept ? `<span class="concept-tag">concept</span>` : '';
     const servicesStr = p.services.slice(0, 3).join(', ');
     return `
-      <div class="work-list-row" data-category="${p.category}" data-industry="${p.industry}" data-cover="${p.cover}">
+      <div class="work-list-row" data-category="${p.category.join(' ')}" data-industry="${p.industry.join(' ')}" data-cover="${p.cover}">
         <h2 class="work-list-name"><a href="/work/${p.slug}">${p.name}</a>${conceptTag}</h2>
-        <span class="work-list-category">${SCOPES[p.category]}</span>
+        <span class="work-list-category">${scopeLabel(p)}</span>
         <span class="work-list-services">${servicesStr}</span>
         <span class="work-list-year">${p.year}</span>
       </div>

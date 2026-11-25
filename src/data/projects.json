@@ -3,8 +3,12 @@
     "slug": "azonix",
     "subtitle": "branding case study",
     "name": "Azonix",
-    "category": "branding",
-    "industry": "tech-saas",
+    "category": [
+      "branding"
+    ],
+    "industry": [
+      "tech-saas"
+    ],
     "year": "2026",
     "location": "Ireland",
     "role": "App identity, icon, splash and loader",
@@ -84,8 +88,12 @@
     "slug": "yellow-pod",
     "subtitle": "branding case study",
     "name": "Yellow Pod",
-    "category": "branding",
-    "industry": "f-and-b",
+    "category": [
+      "branding"
+    ],
+    "industry": [
+      "f-and-b"
+    ],
     "year": "2026",
     "location": "Surat, IN",
     "role": "Naming, identity, mascot, collateral",
@@ -191,8 +199,13 @@
     "slug": "tritaksh",
     "subtitle": "branding case study",
     "name": "Tritaksh",
-    "category": "branding",
-    "industry": "luxury",
+    "category": [
+      "branding"
+    ],
+    "industry": [
+      "luxury",
+      "d2c"
+    ],
     "year": "2026",
     "location": "India",
     "role": "Brand strategy, identity, launch content",
@@ -301,7 +314,9 @@
     "slug": "mickey-minnie-playschool",
     "name": "Mickey Minnie Playschool",
     "subtitle": "branding case study",
-    "category": "branding",
+    "category": [
+      "branding"
+    ],
     "tags": [
       "#branding",
       "#identity",
@@ -373,13 +388,17 @@
     "isConcept": false,
     "featured": false,
     "headline": "A playful rebrand for a beloved playschool.",
-    "industry": "education"
+    "industry": [
+      "education"
+    ]
   },
   {
     "slug": "zestee",
     "name": "Zestee",
     "subtitle": "ui-ux case study",
-    "category": "ui-ux",
+    "category": [
+      "branding"
+    ],
     "tags": [
       "#ui-ux",
       "#product",
@@ -468,13 +487,17 @@
     "isConcept": false,
     "featured": false,
     "headline": "From juice bar to destination café.",
-    "industry": "f-and-b"
+    "industry": [
+      "f-and-b"
+    ]
   },
   {
     "slug": "vanya-luxe",
     "name": "Vanya Luxe",
     "subtitle": "ui-ux case study",
-    "category": "ui-ux",
+    "category": [
+      "branding"
+    ],
     "tags": [
       "#ui-ux",
       "#product",
@@ -548,13 +571,19 @@
     "isConcept": false,
     "featured": true,
     "headline": "Vanya Luxe.",
-    "industry": "luxury"
+    "industry": [
+      "luxury",
+      "d2c"
+    ]
   },
   {
     "slug": "piq",
     "name": "PIQ",
     "subtitle": "branding case study",
-    "category": "packaging",
+    "category": [
+      "branding",
+      "packaging"
+    ],
     "tags": [
       "#branding",
       "#packaging",
@@ -635,13 +664,18 @@
     "isConcept": false,
     "featured": true,
     "headline": "Caffeine, lemonade, and an exclamation mark.",
-    "industry": "d2c"
+    "industry": [
+      "f-and-b",
+      "d2c"
+    ]
   },
   {
     "slug": "the-ube-press",
     "name": "The Ube Press",
     "subtitle": "branding case study",
-    "category": "branding",
+    "category": [
+      "branding"
+    ],
     "tags": [
       "#branding",
       "#identity",
@@ -729,13 +763,17 @@
     "isConcept": false,
     "featured": true,
     "headline": "A modern café rooted in heritage.",
-    "industry": "f-and-b"
+    "industry": [
+      "f-and-b"
+    ]
   },
   {
     "slug": "globetap",
     "name": "GlobeTap",
     "subtitle": "branding case study",
-    "category": "ui-ux",
+    "category": [
+      "ui-ux"
+    ],
     "tags": [
       "#branding",
       "#identity",
@@ -810,13 +848,17 @@
     "isConcept": false,
     "featured": false,
     "headline": "A travel booking habit, mapped to your day.",
-    "industry": "tech-saas"
+    "industry": [
+      "tech-saas"
+    ]
   },
   {
     "slug": "terra-cork",
     "name": "Terra Cork",
     "subtitle": "branding case study",
-    "category": "branding",
+    "category": [
+      "branding"
+    ],
     "tags": [
       "#branding",
       "#identity",
@@ -925,13 +967,17 @@
     "isConcept": false,
     "featured": true,
     "headline": "Cork, finally treated like a material instead of a fix.",
-    "industry": "d2c"
+    "industry": [
+      "d2c"
+    ]
   },
   {
     "slug": "ciao",
     "name": "Ciao",
     "subtitle": "branding case study",
-    "category": "branding",
+    "category": [
+      "branding"
+    ],
     "tags": [
       "#branding",
       "#identity",
@@ -997,13 +1043,17 @@
     "isConcept": false,
     "featured": false,
     "headline": "Wood-fired Naples, on a side street in Bopal.",
-    "industry": "f-and-b"
+    "industry": [
+      "f-and-b"
+    ]
   },
   {
     "slug": "go-miles",
     "name": "Go Miles",
     "subtitle": "branding case study",
-    "category": "branding",
+    "category": [
+      "branding"
+    ],
     "tags": [
       "#branding",
       "#identity",
@@ -1064,13 +1114,17 @@
     "isConcept": false,
     "featured": false,
     "headline": "Go Miles.",
-    "industry": "tech-saas"
+    "industry": [
+      "tech-saas"
+    ]
   },
   {
     "slug": "oakmere",
     "name": "Oakmere",
     "subtitle": "ui-ux case study",
-    "category": "ui-ux",
+    "category": [
+      "branding"
+    ],
     "tags": [
       "#ui-ux",
       "#product",
@@ -1144,13 +1198,17 @@
     "isConcept": false,
     "featured": false,
     "headline": "Oakmere.",
-    "industry": "luxury"
+    "industry": [
+      "luxury"
+    ]
   },
   {
     "slug": "matcha-den",
     "name": "Matcha Den",
     "subtitle": "branding case study",
-    "category": "branding",
+    "category": [
+      "branding"
+    ],
     "tags": [
       "#branding",
       "#identity",
@@ -1228,13 +1286,18 @@
     "isConcept": false,
     "featured": false,
     "headline": "A modern den for an ancient ritual.",
-    "industry": "f-and-b"
+    "industry": [
+      "f-and-b"
+    ]
   },
   {
     "slug": "the-saucy-heat",
     "name": "The Saucy Heat",
     "subtitle": "branding case study",
-    "category": "packaging",
+    "category": [
+      "branding",
+      "packaging"
+    ],
     "tags": [
       "#branding",
       "#packaging",
@@ -1315,13 +1378,19 @@
     "isConcept": false,
     "featured": true,
     "headline": "A chilli oil that prefers a long, slow burn.",
-    "industry": "f-and-b"
+    "industry": [
+      "f-and-b",
+      "d2c"
+    ]
   },
   {
     "slug": "lab-coat-media",
     "name": "Lab Coat Media",
     "subtitle": "branding case study",
-    "category": "branding",
+    "category": [
+      "branding",
+      "ui-ux"
+    ],
     "tags": [
       "#branding",
       "#identity",
@@ -1391,13 +1460,17 @@
     "isConcept": false,
     "featured": false,
     "headline": "A media brand built to be readable by everyone.",
-    "industry": "tech-saas"
+    "industry": [
+      "tech-saas"
+    ]
   },
   {
     "slug": "waggle",
     "name": "Waggle",
     "subtitle": "branding case study",
-    "category": "packaging",
+    "category": [
+      "branding"
+    ],
     "tags": [
       "#branding",
       "#packaging",
@@ -1484,13 +1557,18 @@
     "isConcept": false,
     "featured": false,
     "headline": "A pet brand designed for the human who actually buys it.",
-    "industry": "pet-care"
+    "industry": [
+      "pet-care",
+      "d2c"
+    ]
   },
   {
     "slug": "misomaki",
     "name": "Misomaki",
     "subtitle": "branding case study",
-    "category": "branding",
+    "category": [
+      "branding"
+    ],
     "tags": [
       "#branding",
       "#identity",
@@ -1561,13 +1639,17 @@
     "isConcept": false,
     "featured": false,
     "headline": "Misomaki.",
-    "industry": "f-and-b"
+    "industry": [
+      "f-and-b"
+    ]
   },
   {
     "slug": "hardin-jewels",
     "name": "Hardin Jewels",
     "subtitle": "branding case study",
-    "category": "branding",
+    "category": [
+      "branding"
+    ],
     "tags": [
       "#branding",
       "#identity",
@@ -1646,13 +1728,17 @@
     "isConcept": false,
     "featured": false,
     "headline": "Hardin Jewels.",
-    "industry": "luxury"
+    "industry": [
+      "luxury"
+    ]
   },
   {
     "slug": "evoque",
     "name": "Evoque",
     "subtitle": "branding case study",
-    "category": "branding",
+    "category": [
+      "branding"
+    ],
     "tags": [
       "#branding",
       "#identity",
@@ -1718,13 +1804,17 @@
     "isConcept": false,
     "featured": false,
     "headline": "Evoque.",
-    "industry": "luxury"
+    "industry": [
+      "luxury"
+    ]
   },
   {
     "slug": "trivid-yoga",
     "name": "Trivid Yoga",
     "subtitle": "branding case study",
-    "category": "branding",
+    "category": [
+      "branding"
+    ],
     "tags": [
       "#branding",
       "#identity",
@@ -1806,13 +1896,18 @@
     "isConcept": false,
     "featured": false,
     "headline": "Twenty years of teaching, finally given a name.",
-    "industry": "wellness"
+    "industry": [
+      "wellness"
+    ]
   },
   {
     "slug": "paperboat",
     "name": "Paperboat",
     "subtitle": "concept case study",
-    "category": "concept",
+    "category": [
+      "packaging",
+      "concept"
+    ],
     "tags": [
       "#branding",
       "#identity",
@@ -1890,13 +1985,17 @@
     "isConcept": true,
     "featured": false,
     "headline": "A nostalgic Indian icon, rebuilt for its next decade.",
-    "industry": "f-and-b"
+    "industry": [
+      "f-and-b"
+    ]
   },
   {
     "slug": "woven-wax",
     "name": "Woven Wax",
     "subtitle": "branding case study",
-    "category": "branding",
+    "category": [
+      "branding"
+    ],
     "tags": [
       "#branding",
       "#identity",
@@ -1964,13 +2063,17 @@
     "isConcept": false,
     "featured": false,
     "headline": "Woven Wax.",
-    "industry": "d2c"
+    "industry": [
+      "d2c"
+    ]
   },
   {
     "slug": "golden-crust",
     "name": "Golden Crust",
     "subtitle": "ui-ux case study",
-    "category": "ui-ux",
+    "category": [
+      "branding"
+    ],
     "tags": [
       "#ui-ux",
       "#product",
@@ -2058,13 +2161,17 @@
     "isConcept": false,
     "featured": false,
     "headline": "A neighbourhood bakery, treated like an heirloom.",
-    "industry": "f-and-b"
+    "industry": [
+      "f-and-b"
+    ]
   },
   {
     "slug": "royal-eats",
     "name": "Royal Eats",
     "subtitle": "branding case study",
-    "category": "branding",
+    "category": [
+      "branding"
+    ],
     "tags": [
       "#branding",
       "#identity",
@@ -2142,13 +2249,18 @@
     "isConcept": false,
     "featured": false,
     "headline": "A modern identity for a beloved snack brand.",
-    "industry": "f-and-b"
+    "industry": [
+      "f-and-b",
+      "d2c"
+    ]
   },
   {
     "slug": "plush-paws",
     "name": "Plush Paws",
     "subtitle": "branding case study",
-    "category": "packaging",
+    "category": [
+      "branding"
+    ],
     "tags": [
       "#branding",
       "#packaging",
@@ -2227,13 +2339,18 @@
     "isConcept": false,
     "featured": false,
     "headline": "Pet food, finally treated like premium FMCG.",
-    "industry": "pet-care"
+    "industry": [
+      "pet-care",
+      "d2c"
+    ]
   },
   {
     "slug": "pure-sip",
     "name": "Pure Sip",
     "subtitle": "ui-ux case study",
-    "category": "ui-ux",
+    "category": [
+      "packaging"
+    ],
     "tags": [
       "#ui-ux",
       "#product",
@@ -2305,13 +2422,18 @@
     "isConcept": false,
     "featured": false,
     "headline": "Pure Sip.",
-    "industry": "d2c"
+    "industry": [
+      "f-and-b",
+      "d2c"
+    ]
   },
   {
     "slug": "rich-kanya",
     "name": "Rich Kanya",
     "subtitle": "branding case study",
-    "category": "branding",
+    "category": [
+      "branding"
+    ],
     "tags": [
       "#branding",
       "#identity",
@@ -2363,13 +2485,18 @@
     "isConcept": false,
     "featured": false,
     "headline": "Rich Kanya.",
-    "industry": "wellness"
+    "industry": [
+      "luxury",
+      "d2c"
+    ]
   },
   {
     "slug": "kitkat-protein-bar",
     "name": "Kitkat Protein Bar",
     "subtitle": "concept case study",
-    "category": "concept",
+    "category": [
+      "concept"
+    ],
     "tags": [
       "#branding",
       "#identity",
@@ -2449,13 +2576,18 @@
     "isConcept": true,
     "featured": false,
     "headline": "A childhood favourite, rebuilt for the gym.",
-    "industry": "f-and-b"
+    "industry": [
+      "f-and-b",
+      "d2c"
+    ]
   },
   {
     "slug": "satori-bites",
     "name": "Satori Bites",
     "subtitle": "branding case study",
-    "category": "packaging",
+    "category": [
+      "branding"
+    ],
     "tags": [
       "#branding",
       "#packaging",
@@ -2524,13 +2656,17 @@
     "isConcept": false,
     "featured": false,
     "headline": "Satori Bites.",
-    "industry": "f-and-b"
+    "industry": [
+      "f-and-b"
+    ]
   },
   {
     "slug": "silver-sphere-tech",
     "name": "Silver Sphere Tech",
     "subtitle": "branding case study",
-    "category": "branding",
+    "category": [
+      "branding"
+    ],
     "tags": [
       "#branding",
       "#identity",
@@ -2627,6 +2763,8 @@
     "isConcept": false,
     "featured": false,
     "headline": "IT services with an AI layer — finally branded like it.",
-    "industry": "tech-saas"
+    "industry": [
+      "tech-saas"
+    ]
   }
 ]

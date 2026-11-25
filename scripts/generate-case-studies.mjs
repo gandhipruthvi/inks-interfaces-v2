@@ -27,6 +27,12 @@ function escapeHtml(str) {
     .replace(/'/g, '&#039;');
 }
 
+// category and industry are lists (a project can be branding + packaging, f&b + d2c)
+const SCOPE_LABEL = { branding: 'branding', 'ui-ux': 'ui/ux', packaging: 'packaging', concept: 'concept' };
+const SECTOR_LABEL = { 'f-and-b': 'f&b', d2c: 'd2c', 'tech-saas': 'tech', luxury: 'luxury', 'pet-care': 'pet', wellness: 'wellness', education: 'education' };
+const scopes = (p) => p.category.map((c) => SCOPE_LABEL[c] || c).join(' & ');
+const sectors = (p, sep = ', ') => p.industry.map((s) => SECTOR_LABEL[s] || s).join(sep);
+
 // Image size (for width/height attrs) and, for logos, which plate keeps them visible:
 // a transparent mark drawn in dark ink goes on paper, everything else on black.
 async function inspect(url) {
@@ -193,7 +199,7 @@ async function generateCaseStudies() {
     },
     "image": "https://inksandinterfaces.design${p.cover}",
     "dateCreated": "${p.year}",
-    "genre": "${p.category}"
+    "genre": "${escapeHtml(scopes(p))}"
   }
   </script>
 </head>
@@ -233,7 +239,7 @@ async function generateCaseStudies() {
       </div>
 
       <div class="cs-hero-content">
-        <p class="mono-label" style="color: var(--coral); margin-bottom: var(--space-2);">// ${p.category} &middot; ${p.year}</p>
+        <p class="mono-label" style="color: var(--coral); margin-bottom: var(--space-2);">// ${escapeHtml(scopes(p))} &middot; ${p.year}</p>
         <h1 class="cs-hero-name${p.name.length > 14 ? ' cs-hero-name--long' : ''}">${escapeHtml(p.name)}</h1>
 
         <div class="cs-hero-meta-grid">
@@ -243,7 +249,11 @@ async function generateCaseStudies() {
           </div>
           <div class="cs-meta-col">
             <span>category</span>
-            <strong>${escapeHtml(p.category)}</strong>
+            <strong>${escapeHtml(scopes(p))}</strong>
+          </div>
+          <div class="cs-meta-col">
+            <span>sector</span>
+            <strong>${escapeHtml(sectors(p))}</strong>
           </div>
           <div class="cs-meta-col">
             <span>year</span>
@@ -369,7 +379,7 @@ async function generateCaseStudies() {
     <section class="cs-next-section" aria-label="Next Case Study">
       <p class="mono-label">// building next?</p>
       <h2 style="font-size: var(--text-h1); font-weight: 300; margin: var(--space-3) 0 var(--space-4);">
-        building in ${escapeHtml(p.category)}? send us your brief.
+        building in ${escapeHtml(sectors(p, ' or '))}? send us your brief.
       </h2>
       <a href="/contact" class="coral-pill" data-magnetic style="font-size: 18px; padding: 14px 32px;">
         start a project &rarr;

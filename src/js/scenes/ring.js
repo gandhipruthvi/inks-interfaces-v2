@@ -104,7 +104,7 @@ export function initRingScene(section) {
     const f = chip.dataset.filter;
     cards.forEach((c) => {
       const p = c.userData.project;
-      const match = f === 'all' || (f === 'concept' ? p.isConcept : !p.isConcept && p.category === f);
+      const match = f === 'all' || p.category.includes(f);   // category is a list; concepts carry 'concept'
       c.userData.dimTarget = match ? 1 : 0.12;
     });
   }));
@@ -114,7 +114,7 @@ export function initRingScene(section) {
     if (!card) { label.classList.remove('is-on'); return; }
     const p = card.userData.project;
     label.querySelector('strong').textContent = p.name.toLowerCase();
-    label.querySelector('span').textContent = `${p.isConcept ? 'concept' : p.category} · ${p.year}`;
+    label.querySelector('span').textContent = `${p.category.map((c) => (c === 'ui-ux' ? 'ui/ux' : c)).join(' & ')} · ${p.year}`;
     label.classList.add('is-on');
   };
 
