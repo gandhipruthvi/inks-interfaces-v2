@@ -193,63 +193,72 @@ main :is(p, h1, h2, h3, h4, li, blockquote, strong, span) { overflow-wrap: break
   border-bottom: 1px solid var(--line);
 }
 
-.cs-palette-row {
-  display: flex;
-  flex-wrap: wrap;
-  min-height: 80px;
-  border-radius: 8px;
-  overflow: hidden;
-  margin: var(--space-6) 0 var(--space-8);
-  border: 1px solid var(--line);
-}
-
-.cs-palette-swatch {
-  flex: 1 1 96px;
-  min-height: 80px;
-  min-width: 0;
-  overflow: hidden;
-  display: flex;
-  align-items: flex-end;
-  padding: var(--space-2) var(--space-3);
-  font-family: var(--font-mono);
-  font-size: var(--text-mono-label);
-  transition: flex 0.4s var(--ease-out);
-}
-.cs-palette-swatch:hover {
-  flex: 2;
-}
-
-/* Brand assets: each mark on a plate that keeps it visible (black, or paper for dark marks) */
-.cs-assets {
+/* Brand sheet: primary logo (large) + palette column, then the other assets as equal tiles.
+   Logos are trimmed display copies, so padding here sets their size consistently. */
+.cs-brand-sheet {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
   gap: var(--space-4);
+  margin-top: var(--space-6);
 }
-.cs-assets--single { grid-template-columns: 1fr; }
-.cs-asset { margin: 0; }
-.cs-asset-plate {
+.cs-brand-sheet--no-logo { grid-template-columns: minmax(0, 1fr); }
+
+.cs-asset {
+  position: relative;
+  margin: 0;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr);
+  place-items: center;
   aspect-ratio: 4 / 3;
-  border-radius: 12px;
+  padding: 16% 18% 20%;
+  border-radius: 14px;
   border: 1px solid var(--line);
   background: #000000;
-  padding: var(--space-5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
 }
-.cs-assets--single .cs-asset-plate { aspect-ratio: auto; min-height: 240px; }
-.cs-asset--light .cs-asset-plate { background: var(--paper); }
-.cs-asset-plate img {
+.cs-asset--light { background: var(--paper); border-color: var(--paper-2); }
+.cs-asset--primary { aspect-ratio: 16 / 10; padding: 13% 20% 15%; }
+.cs-asset img {
   max-width: 100%;
   max-height: 100%;
   width: auto;
   height: auto;
   object-fit: contain;
 }
-.cs-assets--single .cs-asset-plate img { max-height: 160px; }
-.cs-asset figcaption { color: var(--ash); margin-top: var(--space-2); }
+.cs-asset figcaption {
+  position: absolute;
+  left: var(--space-4); right: var(--space-4); bottom: var(--space-3);
+  color: var(--ash);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.cs-asset--light figcaption { color: var(--ash-dark); }
 
+.cs-palette {
+  display: flex;
+  flex-direction: column;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+.cs-brand-sheet--no-logo .cs-palette { flex-direction: row; min-height: 140px; }
+.cs-swatch {
+  flex: 1 1 0;
+  min-height: 56px;
+  display: flex;
+  align-items: flex-end;
+  padding: var(--space-3) var(--space-4);
+  font-family: var(--font-mono);
+  font-size: var(--text-mono-label);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.cs-assets {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
 /* --- Beat 6: Design Execution (masonry gallery) --- */
 .cs-gallery-section {
   position: relative;
@@ -495,7 +504,11 @@ main :is(p, h1, h2, h3, h4, li, blockquote, strong, span) { overflow-wrap: break
   }
   .cs-gallery-grid { columns: 2; column-gap: var(--space-2); }
   .cs-gallery-item { margin-bottom: var(--space-2); border-radius: 8px; }
-  .cs-assets { grid-template-columns: repeat(2, 1fr); gap: var(--space-2); }
+  .cs-brand-sheet { grid-template-columns: minmax(0, 1fr); }
+  .cs-palette { flex-direction: row; min-height: 96px; }
+  .cs-swatch { min-height: 0; padding: var(--space-2); font-size: 10px; }
+  .cs-assets { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-2); }
+  .cs-asset figcaption { left: var(--space-3); right: var(--space-3); bottom: var(--space-2); font-size: 10px; }
   /* arrows drop below the image on phones; swipe still works */
   .cs-lightbox[open] { grid-template-columns: 1fr 1fr; grid-template-rows: 1fr auto; padding: var(--space-3); }
   .cs-lb-figure { grid-column: 1 / -1; grid-row: 1; }

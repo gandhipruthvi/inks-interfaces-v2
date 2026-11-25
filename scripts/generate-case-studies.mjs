@@ -50,6 +50,24 @@ async function inspect(url) {
   return { width, height, plate: transparent && lum / weight < 0.45 ? 'light' : 'dark' };
 }
 
+// Logo files often sit in a big empty canvas (Zestee: 629x271 of art in 1080x1350), which
+// makes them tiny on the plate. Show a copy trimmed to the artwork; originals stay untouched.
+// Opaque files (logo already on its own background) are used as-is.
+async function displayCopy(slug, url, { width, height, plate }) {
+  const file = path.join(ROOT_DIR, 'public', url);
+  const { hasAlpha } = await sharp(file).metadata();
+  if (!hasAlpha) return { src: url, width, height, plate };
+  const outUrl = `/work-media/${slug}/identity/${path.basename(url).replace(/\.[^.]+$/, '')}.webp`;
+  const out = path.join(ROOT_DIR, 'public', outUrl);
+  if (!fs.existsSync(out) || fs.statSync(out).mtimeMs < fs.statSync(file).mtimeMs) {
+    fs.mkdirSync(path.dirname(out), { recursive: true });
+    const trimmed = await sharp(file).trim({ threshold: 1 }).toBuffer();
+    await sharp(trimmed).resize(1400, 1400, { fit: 'inside', withoutEnlargement: true }).webp({ quality: 90 }).toFile(out);
+  }
+  const m = await sharp(out).metadata();
+  return { src: outUrl, width: m.width, height: m.height, plate };
+}
+
 async function generateCaseStudies() {
   const workDir = path.join(ROOT_DIR, 'work');
   if (!fs.existsSync(workDir)) {
@@ -69,13 +87,10 @@ async function generateCaseStudies() {
       .map(s => `<span>${escapeHtml(s)}</span>`)
       .join('');
 
-    // 2. Palette swatches
+    // 2. Palette swatches (a column beside the primary logo, or a row when there's no logo)
     const paletteHtml = (p.palette || ['#f25b54', '#141414', '#f5f1ec'])
       .map(hex => `
-        <div class="cs-palette-swatch" style="background: ${hex}; color: ${isLight(hex) ? '#0B0B0B' : '#FFFFFF'};">
-          <span>${hex}</span>
-        </div>
-      `).join('');
+          <div class="cs-swatch" style="background: ${hex}; color: ${isLight(hex) ? '#0B0B0B' : '#FFFFFF'};"><span>${hex}</span></div>`).join('');
 
     // 3. Brand assets (logos, marks, patterns) live in identity/ folders; they get their
     // own grid here. Everything else is a mockup and goes to the gallery.
@@ -85,15 +100,22 @@ async function generateCaseStudies() {
     const info = Object.fromEntries(await Promise.all([...assets, ...mockups].map(async (img) => [img, await inspect(img)])));
     const label = (img) => escapeHtml(p.alt[img] || `${p.name} logo`);
 
-    const assetsHtml = assets.length ? `
-      <div class="cs-assets${assets.length === 1 ? ' cs-assets--single' : ''}" aria-label="Brand assets">
-        ${assets.map((img) => `
-        <figure class="cs-asset cs-asset--${info[img].plate}">
-          <div class="cs-asset-plate"><img src="${img}" alt="${label(img)}" width="${info[img].width}" height="${info[img].height}" loading="lazy"></div>
+    // Brand sheet: primary logo large with the palette beside it, every other asset
+    // below as equal tiles. One logo or thirteen, the layout keeps the same proportions.
+    const shown = await Promise.all(assets.map((img) => displayCopy(p.slug, img, info[img])));
+    const tile = (img, d, cls = '') => `
+        <figure class="cs-asset cs-asset--${d.plate}${cls}">
+          <img src="${d.src}" alt="${label(img)}" width="${d.width}" height="${d.height}" loading="lazy">
           <figcaption class="mono-label">${label(img)}</figcaption>
-        </figure>`).join('')}
+        </figure>`;
+    const brandSheetHtml = `
+      <div class="cs-brand-sheet${assets.length ? '' : ' cs-brand-sheet--no-logo'}">
+        ${assets.length ? tile(assets[0], shown[0], ' cs-asset--primary') : ''}
+        <div class="cs-palette" aria-label="Colour palette">${paletteHtml}
+        </div>
       </div>
-    ` : '';
+      ${assets.length > 1 ? `<div class="cs-assets" aria-label="Brand assets">${assets.slice(1).map((img, i) => tile(img, shown[i + 1])).join('')}
+      </div>` : ''}`;
 
     // 4. Gallery: masonry at each image's own aspect ratio; click opens the lightbox
     const galleryHtml = mockups.map((img, i) => `
@@ -308,13 +330,8 @@ async function generateCaseStudies() {
       <p class="mono-label">// color &amp; mark</p>
       <h3 style="font-size: var(--text-h2); font-weight: 300; margin-top: var(--space-2);">the visual signature.</h3>
 
-      <!-- Palette Bands -->
-      <div class="cs-palette-row" aria-label="Color Palette">
-        ${paletteHtml}
-      </div>
-
-      <!-- Brand assets: logos, marks, patterns -->
-      ${assetsHtml}
+      <!-- Brand sheet: primary logo + palette, then the other assets -->
+      ${brandSheetHtml}
     </section>
 
     <!-- BEAT 6: DESIGN EXECUTION (masonry gallery + lightbox) -->
