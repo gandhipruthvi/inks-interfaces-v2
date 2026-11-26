@@ -9,10 +9,8 @@ import logoDisplay from '../../data/logo-display.json';   // logos trimmed to th
 gsap.registerPlugin(ScrollTrigger);
 
 // story deck image: the cover, unless another mockup shows the logo better
-const STORY_IMAGE = { zestee: '/assets/projects/zestee/zestee-2.webp' };
+const STORY_IMAGE = { zestee: '/assets/projects/zestee/zestee-11.webp' };
 const cover = (p) => STORY_IMAGE[p.slug] || `/work-media/${p.slug}/cover-1280.webp`;
-// ponytail: these two logo files have no alpha channel; re-check if logos are swapped
-const OPAQUE_LOGOS = { 'vanya-luxe': 'is-light-ground', 'the-saucy-heat': 'is-dark-ground' };
 
 export function initProofSection(section) {
   initMarquee(section.querySelector('.marquee-container'));
@@ -94,7 +92,7 @@ function initMarquee(box) {
   if (!box) return;
   const logos = projects.filter((p) => p.logo && !p.isConcept);
   const plate = (p, hidden) =>
-    `<a class="marquee-logo-plate${OPAQUE_LOGOS[p.slug] ? ' ' + OPAQUE_LOGOS[p.slug] : ''}" href="/work/${p.slug}" ${hidden ? 'aria-hidden="true" tabindex="-1"' : ''}>
+    `<a class="marquee-logo-plate" href="/work/${p.slug}" ${hidden ? 'aria-hidden="true" tabindex="-1"' : ''}>
        <img src="${encodeURI(logoDisplay[p.slug] || p.logo)}" alt="${hidden ? '' : p.name}" loading="lazy">
      </a>`;
   const row = (list) => list.map((p) => plate(p)).join('') + list.map((p) => plate(p, true)).join('');

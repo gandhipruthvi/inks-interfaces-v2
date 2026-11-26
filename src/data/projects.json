@@ -528,14 +528,15 @@
       "/assets/projects/vanya-luxe/vanya-luxe-1.webp": "Vanya Luxe hero",
       "/assets/projects/vanya-luxe/vanya-luxe-2.webp": "Vanya Luxe secondary",
       "/assets/projects/vanya-luxe/vanya-luxe-3.webp": "Vanya Luxe origin",
-      "/assets/projects/vanya-luxe/identity/primary-logo-1.png": "Primary Logo",
+      "/assets/projects/vanya-luxe/identity/primary-logo-1.png": "Primary logo on background",
       "/assets/projects/vanya-luxe/identity/primary-logo-with-background-0.webp": "Primary Logo With Background",
       "/assets/projects/vanya-luxe/identity/secondary-logo-2.png": "Secondary Logo",
       "/assets/projects/vanya-luxe/vanya-luxe-4.webp": "Vanya Luxe process",
       "/assets/projects/vanya-luxe/vanya-luxe-5.webp": "Vanya Luxe process",
-      "/assets/projects/vanya-luxe/vanya-luxe-6.webp": "Vanya Luxe process"
+      "/assets/projects/vanya-luxe/vanya-luxe-6.webp": "Vanya Luxe process",
+      "/assets/projects/vanya-luxe/identity/logo-transparent-background.png": "Primary logo"
     },
-    "logo": "/assets/projects/vanya-luxe/identity/primary-logo-1.png",
+    "logo": "/assets/projects/vanya-luxe/identity/logo-transparent-background.png",
     "founder": null,
     "problem": "Balancing Act: The brand needed to communicate clinical science without looking like medicine. | Tactile Digital: How do you convey the texture of a luxury cream through a website? | Information Hierarchy: Customers need to know active ingredients, but too much text breaks the luxury aesthetic. | Packaging Constraints: Sustainable materials had to feel heavy and premium.",
     "strategy": "Whitespace as Luxury: Letting the products breathe on the page. | Macro Photography: Showing the exact texture of the product. | Clear Typography: Elegant serifs paired with highly legible sans-serifs for ingredients. | Frictionless UX: A checkout process that feels effortless.",
@@ -1330,15 +1331,16 @@
       "/assets/projects/the-saucy-heat/the-saucy-heat-3.webp": "The Saucy Heat hero",
       "/assets/projects/the-saucy-heat/the-saucy-heat-8.webp": "The Saucy Heat secondary",
       "/assets/projects/the-saucy-heat/the-saucy-heat-4.webp": "The Saucy Heat origin",
-      "/assets/projects/the-saucy-heat/identity/primary logo.png": "Primary Logo",
+      "/assets/projects/the-saucy-heat/identity/primary logo.png": "Primary logo on background",
       "/assets/projects/the-saucy-heat/the-saucy-heat-5.webp": "The Saucy Heat statement",
       "/assets/projects/the-saucy-heat/the-saucy-heat-7.webp": "The Saucy Heat form",
       "/assets/projects/the-saucy-heat/the-saucy-heat-9.webp": "The Saucy Heat form",
       "/assets/projects/the-saucy-heat/the-saucy-heat-6.webp": "The Saucy Heat in context",
       "/assets/projects/the-saucy-heat/the-saucy-heat-1.webp": "The Saucy Heat in context",
-      "/assets/projects/the-saucy-heat/the-saucy-heat-2.webp": "The Saucy Heat in context"
+      "/assets/projects/the-saucy-heat/the-saucy-heat-2.webp": "The Saucy Heat in context",
+      "/assets/projects/the-saucy-heat/identity/logo-transparent-background.png": "Primary logo"
     },
-    "logo": "/assets/projects/the-saucy-heat/identity/primary logo.png",
+    "logo": "/assets/projects/the-saucy-heat/identity/logo-transparent-background.png",
     "founder": {
       "name": "Wei Lin Tan",
       "role": "Founder"
@@ -1687,9 +1689,10 @@
       "/assets/projects/hardin-jewels/identity/submark-logo-3.png": "Submark Logo",
       "/assets/projects/hardin-jewels/hardin-jewels-4.webp": "Hardin Jewels process",
       "/assets/projects/hardin-jewels/hardin-jewels-5.webp": "Hardin Jewels process",
-      "/assets/projects/hardin-jewels/hardin-jewels-6.webp": "Hardin Jewels process"
+      "/assets/projects/hardin-jewels/hardin-jewels-6.webp": "Hardin Jewels process",
+      "/assets/projects/hardin-jewels/identity/logo-transparent-background.png": "Primary logo"
     },
-    "logo": "/assets/projects/hardin-jewels/identity/primary-logo-with-transparent-background-1.png",
+    "logo": "/assets/projects/hardin-jewels/identity/logo-transparent-background.png",
     "founder": {
       "name": "Krutie Jariwala",
       "role": "Founder"
