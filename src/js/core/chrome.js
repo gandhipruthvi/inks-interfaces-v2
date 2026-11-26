@@ -132,7 +132,7 @@ export function initFooter() {
         </div>
         <div class="ft-col">
           <h3>recent brands</h3>
-          <a href="/work/waggle">waggle</a><a href="/work/zestee">zestee</a><a href="/work/satori-bites">satori bites</a><a href="/work/terra-cork">terra cork</a><a href="/work/silver-sphere-tech">silver sphere</a>
+          <a href="/work/azonix">azonix</a><a href="/work/yellow-pod">yellow pod</a><a href="/work/tritaksh">tritaksh</a><a href="/work/the-ube-press">the ube press</a><a href="/work/the-saucy-heat">the saucy heat</a>
         </div>
         <div class="ft-col">
           <h3>follow</h3>

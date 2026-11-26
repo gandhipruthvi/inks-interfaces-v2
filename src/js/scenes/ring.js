@@ -1,10 +1,10 @@
-// Project library: all 28 covers as paper cards fanned around a slowly turning ring.
+// Project library: every cover as paper cards fanned around a slowly turning ring.
 // Hover lifts a card and names it, click opens the case study, drag spins the ring.
 import * as THREE from 'three';
 import projects from '../../data/projects.json';
 import uvs from '../../data/atlas-uvs.json';
 
-const CARD_W = 0.62, CARD_H = 0.74, BORDER = 0.035;
+const CARD_W = 0.9, CARD_H = 1.08, BORDER = 0.04;   // ~45% larger than v1 so covers read at a glance
 
 export function initRingScene(section) {
   const host = section.querySelector('.ring-canvas');
@@ -30,7 +30,7 @@ export function initRingScene(section) {
   atlas.anisotropy = 8;
 
   const paper = new THREE.MeshBasicMaterial({ color: 0xf5f1ec, side: THREE.DoubleSide, transparent: true });
-  const R = mobile ? 2.1 : 2.7;
+  const R = mobile ? 2.6 : 3.5;   // wider ring keeps 31 bigger cards from crowding
   const ring = new THREE.Group();
   scene.add(ring);
 
@@ -72,7 +72,7 @@ export function initRingScene(section) {
     const w = host.clientWidth, h = host.clientHeight;
     renderer.setSize(w, h, false);
     camera.aspect = w / h;
-    camera.position.set(0, mobile ? 3.6 : 3.1, mobile ? 8.2 : 7.8);
+    camera.position.set(0, mobile ? 3.8 : 3.3, mobile ? 9 : 8.6);
     camera.lookAt(target);
     camera.updateProjectionMatrix();
   };

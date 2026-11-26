@@ -68,16 +68,4 @@ document.addEventListener('DOMContentLoaded', () => {
   if (foundersSection) {
     initBadgesSection(foundersSection);
   }
-
-  // 2. Coral wipe into the founders section, scrubbed so it can't end on a hard cut
-  const wipe = document.querySelector('.section-wipe span');
-  if (wipe && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    gsap.fromTo(wipe,
-      { clipPath: 'inset(0% 0% 0% 0%)' },
-      {
-        clipPath: 'inset(0% 0% 100% 0%)',
-        ease: 'power2.inOut',
-        scrollTrigger: { trigger: '.section-wipe', start: 'top 85%', end: 'top 30%', scrub: 0.6 }
-      });
-  }
 });

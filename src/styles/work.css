@@ -159,39 +159,21 @@ body:has(.site-header.header-hidden) .work-controls-bar { transform: translateY(
   min-height: 40vh;   /* keeps the footer from jumping up when a filter returns few projects */
 }
 
-/* Asymmetric 12-col Masonry Grid */
+/* Even grid: same-shape (4:5) covers, so no card dwarfs its neighbour,
+   and filtering never leaves an odd-sized gap. */
 .work-grid {
   display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  gap: var(--space-8) var(--space-6);
-  align-items: start;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-7) var(--space-5);
 }
+@media (max-width: 1024px) { .work-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .work-grid { grid-template-columns: minmax(0, 1fr); } }
 
 .work-grid-card {
   display: flex;
   flex-direction: column;
   position: relative;
-  transition: transform var(--t-fast) var(--ease-out);
-}
-
-.work-grid-card.span-7 {
-  grid-column: span 7;
-}
-
-.work-grid-card.span-5 {
-  grid-column: span 5;
-}
-
-.work-grid-card.span-4 {
-  grid-column: span 4;
-}
-
-.work-grid-card.span-8 {
-  grid-column: span 8;
-}
-
-.work-grid-card.span-6 {
-  grid-column: span 6;
+  min-width: 0;
 }
 
 .work-empty {
@@ -212,8 +194,9 @@ body:has(.site-header.header-hidden) .work-controls-bar { transform: translateY(
 .work-card-thumb img {
   width: 100%;
   height: auto;
+  aspect-ratio: 4 / 5;
   display: block;
-  object-fit: contain;
+  object-fit: cover;
   transition: transform 0.6s var(--ease-out);
 }
 
@@ -304,16 +287,6 @@ body:has(.site-header.header-hidden) .work-controls-bar { transform: translateY(
 }
 
 @media (max-width: 900px) {
-  /* one column: twelve tracks keep their 11 gaps even when every card spans all 12,
-     which is wider than a 360px phone */
-  .work-grid { grid-template-columns: minmax(0, 1fr); }
-  .work-grid-card.span-7,
-  .work-grid-card.span-5,
-  .work-grid-card.span-4,
-  .work-grid-card.span-8,
-  .work-grid-card.span-6 {
-    grid-column: auto;
-  }
   .work-list-row {
     grid-template-columns: 1fr auto;
     gap: var(--space-2);

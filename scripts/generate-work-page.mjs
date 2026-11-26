@@ -22,15 +22,13 @@ function generateWorkHtml() {
             <img src="/work-media/${p.slug}/thumb-360.webp" alt="" width="360" height="450" loading="${i < 12 ? 'eager' : 'lazy'}" draggable="false">
           </a>`).join('');
 
-  // Grid view items (row pairs: 7/5, 4/8, 6/6)
-  const spanPatterns = ['span-7', 'span-5', 'span-4', 'span-8', 'span-6', 'span-6'];
+  // Grid view items: an even grid of same-shape (4:5) covers
   const gridHtml = projects.map((p, i) => {
-    const span = spanPatterns[i % spanPatterns.length];
     const conceptTag = p.isConcept ? `<span class="concept-tag">concept</span>` : '';
     return `
-      <article class="work-grid-card ${span}" data-category="${p.category.join(' ')}" data-industry="${p.industry.join(' ')}" data-cursor="view" data-cursor-label="${p.slug}">
+      <article class="work-grid-card" data-category="${p.category.join(' ')}" data-industry="${p.industry.join(' ')}" data-cursor="view" data-cursor-label="${p.slug}">
         <a href="/work/${p.slug}" class="work-card-thumb" aria-label="${p.name} case study">
-          <img src="${p.cover}" alt="${p.alt[p.cover] || p.name}" loading="lazy">
+          <img src="/work-media/${p.slug}/card-640.webp" alt="${p.alt[p.cover] || p.name}" width="640" height="800" loading="${i < 6 ? 'eager' : 'lazy'}" decoding="async">
         </a>
         <div class="work-card-meta">
           <div>

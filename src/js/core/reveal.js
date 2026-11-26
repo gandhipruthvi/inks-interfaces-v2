@@ -47,6 +47,10 @@ function splitLines(element) {
     lineWrap.className = 'reveal-line-wrap';
     lineWrap.style.display = 'block';
     lineWrap.style.overflow = 'hidden';
+    // tight line-heights (0.95) made the mask shorter than the glyphs, cutting off
+    // descenders ("strategy" lost the tails of g and y); pad the mask, cancel the extra space
+    lineWrap.style.paddingBottom = '0.16em';
+    lineWrap.style.marginBottom = '-0.16em';
 
     const lineInner = document.createElement('span');
     lineInner.className = 'reveal-line-inner';

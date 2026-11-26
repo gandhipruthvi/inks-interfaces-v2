@@ -67,13 +67,26 @@ html:not(.is-loaded) .page-loader { pointer-events: auto; }
    Pattern SVG straight from the brand files, coral on pure black,
    scaled boldly (~128px tiles), never behind body text. */
 .pattern-band {
+  position: relative;
+  overflow: hidden;
   height: clamp(96px, 12vw, 168px);
   background: #000 url('/brand/Pattern.svg') repeat;
   background-size: 128px auto;
   border-block: 1px solid #000;
 }
-.pattern-band--drift { animation: patternDrift 40s linear infinite; }
-@keyframes patternDrift { to { background-position: -1152px 0; } } /* 9 tiles of 128px: seamless */
+/* drift moves a wider pattern layer with transform (compositor only); animating
+   background-position repainted the whole band every frame and stuttered scrolling */
+.pattern-band--drift { background: #000; }
+.pattern-band--drift::before {
+  content: '';
+  position: absolute;
+  inset: 0 -1152px 0 0;   /* 9 tiles of 128px wider, so the loop is seamless */
+  background: url('/brand/Pattern.svg') repeat;
+  background-size: 128px auto;
+  animation: patternDrift 40s linear infinite;
+  will-change: transform;
+}
+@keyframes patternDrift { to { transform: translate3d(-1152px, 0, 0); } }
 
 .pattern-plate { /* a solid pattern panel used beside (not behind) copy */
   background: #000 url('/brand/Pattern.svg') repeat;
@@ -171,5 +184,5 @@ html:not(.is-loaded) .page-loader { pointer-events: auto; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .pattern-band--drift { animation: none; }
+  .pattern-band--drift::before { animation: none; }
 }

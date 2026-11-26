@@ -38,7 +38,8 @@ export function initOrbitSection(container) {
     card.dataset.depth = cfg.depth;
   });
 
-  if (prefersReduced) return;
+  // phones/tablets get a plain swipe row (CSS); no parallax or hover dimming there
+  if (prefersReduced || matchMedia('(max-width: 1024px)').matches) return;
 
   // Scroll Parallax across section
   ScrollTrigger.create({

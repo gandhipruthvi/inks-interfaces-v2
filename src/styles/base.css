@@ -392,6 +392,8 @@ img, picture, svg, video {
   .site-header .header-time {
     display: none;
   }
+  /* case-study pages put an "all work" link in the header; it lives in the menu on phones */
+  .site-header .header-right > .nav-link { display: none; }
   .nav-toggle {
     display: flex;
   }

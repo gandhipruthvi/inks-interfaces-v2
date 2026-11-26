@@ -207,17 +207,33 @@
 .roadmap-head h2 { font-size: var(--text-h2); font-weight: var(--fw-light); margin: var(--space-2) 0 var(--space-3); }
 .roadmap-head p { color: var(--ash); max-width: 52ch; }
 
-.road { position: relative; height: clamp(180px, 26vw, 340px); margin: var(--space-7) calc(var(--gutter) * -1) 0; }
+/* Vertical road down the middle; acts alternate left/right of it. Phones: road on the left. */
+.road-map {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) clamp(96px, 11vw, 150px) minmax(0, 1fr);
+  grid-template-rows: repeat(4, auto);
+  gap: var(--space-6) var(--space-6);
+  max-width: 1120px;
+  margin: var(--space-8) auto 0;
+}
+.road { grid-column: 2; grid-row: 1 / -1; position: relative; min-height: 100%; }
+.road-act[data-act="0"], .road-act[data-act="2"] { grid-column: 1; justify-self: end; text-align: right; }
+.road-act[data-act="1"], .road-act[data-act="3"] { grid-column: 3; justify-self: start; }
+.road-act[data-act="0"] { grid-row: 1; }
+.road-act[data-act="1"] { grid-row: 2; }
+.road-act[data-act="2"] { grid-row: 3; }
+.road-act[data-act="3"] { grid-row: 4; }
+
 .road-svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
 .road-svg path { fill: none; vector-effect: non-scaling-stroke; stroke-linecap: round; }
 .road-edge { stroke: #262626; stroke-width: 46; }
 .road-surface { stroke: #161616; stroke-width: 40; }
 .road-lane { stroke: rgba(245, 241, 236, .35); stroke-width: 2; stroke-dasharray: 14 16; }
-.road-trail { stroke: var(--coral); stroke-width: 4; clip-path: inset(0 100% 0 0); }
+.road-trail { stroke: var(--coral); stroke-width: 4; clip-path: inset(0 0 100% 0); }
 
 .road-car, .road-pins span { position: absolute; top: 0; left: 0; will-change: transform; }
 .road-car {
-  width: 26px; height: 14px; margin: -7px 0 0 -13px; border-radius: 7px;
+  width: 26px; height: 14px; margin: -7px 0 0 -13px; border-radius: 7px; z-index: 2;
   background: var(--coral); box-shadow: 0 0 0 4px rgba(242, 91, 84, .2), 0 6px 14px rgba(0,0,0,.5);
 }
 .road-car::after { /* headlight */
@@ -225,33 +241,35 @@
   background: rgba(245, 241, 236, .5); clip-path: polygon(0 35%, 100% 0, 100% 100%, 0 65%);
 }
 .road-pins span {
-  width: 22px; height: 22px; margin: -40px 0 0 -11px;
+  width: 22px; height: 22px; margin: -30px 0 0 -11px;
   border-radius: 50% 50% 50% 0; transform-origin: 50% 100%;
   background: var(--ink-3); border: 2px solid var(--ash-dark);
   transition: background-color .4s var(--ease-out), border-color .4s var(--ease-out);
 }
 .road-pins span.is-reached { background: var(--coral); border-color: var(--coral); }
 
-.road-acts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-4); margin-top: var(--space-6); }
 .road-act {
+  width: 100%; max-width: 440px;
   padding: var(--space-5); border-radius: 14px; border: 1px solid var(--line); background: var(--ink-2);
-  transition: border-color .5s var(--ease-out), transform .5s var(--ease-out), opacity .5s var(--ease-out);
-  opacity: .55;
+  transition: border-color .5s var(--ease-out), transform .5s var(--ease-out), opacity .5s var(--ease-out), background-color .5s var(--ease-out);
+  opacity: .45;
 }
-.road-act.is-current { border-color: var(--coral); transform: translateY(-6px); opacity: 1; }
-.road-act.is-done { opacity: 1; }
+.road-act.is-current { border-color: var(--coral); background: #1a1212; transform: scale(1.03); opacity: 1; }
+.road-act.is-done { opacity: .85; }
 .road-act-num, .road-act-time { font-family: var(--font-mono); font-size: var(--text-mono-label); letter-spacing: .1em; }
 .road-act-num { color: var(--coral); }
 .road-act h3 { font-size: var(--text-h3); font-weight: var(--fw-medium); margin: var(--space-2) 0 var(--space-1); }
 .road-act-time { color: var(--ash); display: block; margin-bottom: var(--space-3); }
 .road-act p { font-size: var(--text-body-sm); color: var(--ash); line-height: 1.55; }
-@media (max-width: 900px) {
-  .road-acts { grid-template-columns: 1fr 1fr; }
-}
-@media (max-width: 560px) {
-  .road-acts { grid-template-columns: 1fr; }
-}
 
+@media (max-width: 760px) {
+  .road-map { grid-template-columns: 56px minmax(0, 1fr); gap: var(--space-5) var(--space-4); }
+  .road { grid-column: 1; }
+  .road-act[data-act] { grid-column: 2; justify-self: stretch; text-align: left; max-width: none; }
+  .road-edge { stroke-width: 30; }
+  .road-surface { stroke-width: 25; }
+  .road-act.is-current { transform: none; }
+}
 /* --- Studio Page Styles (/studio) --- */
 /* Coral panel on a paper backing: clip-path lifts it away, so the strip ends
    in the founders section's paper instead of a bare ink gap */
@@ -268,6 +286,15 @@
 @media (prefers-reduced-motion: reduce) {
   .section-wipe { display: none; }
 }
+
+/* Studio: sections were 192px top and bottom; tighter rhythm, still scales with the screen */
+.page-studio .manifesto-section,
+.page-studio .founders-section,
+.page-studio .alignment-section,
+.page-studio .studio-cta {
+  padding: clamp(56px, 7vw, 104px) var(--gutter);
+}
+.page-studio .page-header { padding-bottom: clamp(32px, 4vw, 56px); }
 
 .manifesto-section {
   padding: var(--space-11) var(--gutter);

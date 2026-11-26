@@ -3,8 +3,32 @@ import { scrollToTop, lockScroll } from './scroll.js';
 // Sections with a paper background; the header flips to ink over them.
 const LIGHT = '.hero-section, .theme-paper, .cs-problem-section, .cs-quote-section, .manifesto-section, .contact-section, .founders-section, .story-card-shell';
 
+// Only the home page ships the menu button + overlay in its HTML. Every other page
+// (studio, services, work, contact, all case studies) gets them built here.
+function ensureMobileMenu(header) {
+  if (!header || header.querySelector('.nav-toggle')) return;
+  let right = header.querySelector('.header-right');
+  if (!right) { right = document.createElement('div'); right.className = 'header-right'; header.appendChild(right); }
+  const btn = document.createElement('button');
+  btn.className = 'nav-toggle';
+  btn.setAttribute('aria-label', 'Toggle navigation menu');
+  btn.setAttribute('aria-expanded', 'false');
+  btn.innerHTML = '<span></span><span></span>';
+  right.appendChild(btn);
+
+  if (document.querySelector('.mobile-nav-overlay')) return;
+  const overlay = document.createElement('div');
+  overlay.className = 'mobile-nav-overlay';
+  overlay.setAttribute('aria-hidden', 'true');
+  const links = [...header.querySelectorAll('.header-nav a')]
+    .map((a) => `<a href="${a.getAttribute('href')}" class="nav-link">${a.textContent.trim()}</a>`).join('');
+  overlay.innerHTML = `${links}<div style="margin-top: var(--space-6);"><a href="/contact" class="coral-pill">start a project &rarr;</a></div>`;
+  header.after(overlay);   // after the header: the header's :has(~ overlay) rule depends on it
+}
+
 export function initNav() {
   const header = document.querySelector('.site-header');
+  ensureMobileMenu(header);
   const timeEl = document.querySelector('.header-time');
   const navToggle = document.querySelector('.nav-toggle');
   const mobileNav = document.querySelector('.mobile-nav-overlay');

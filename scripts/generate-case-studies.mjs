@@ -74,6 +74,7 @@ async function generateCaseStudies() {
     fs.mkdirSync(workDir, { recursive: true });
   }
 
+  const logoDisplay = {};   // slug -> trimmed primary logo, used by the home page logo strip
   for (const [idx, p] of projects.entries()) {
     const slugDir = path.join(workDir, p.slug);
     if (!fs.existsSync(slugDir)) {
@@ -103,6 +104,7 @@ async function generateCaseStudies() {
     // Brand sheet: primary logo large with the palette beside it, every other asset
     // below as equal tiles. One logo or thirteen, the layout keeps the same proportions.
     const shown = await Promise.all(assets.map((img) => displayCopy(p.slug, img, info[img])));
+    if (p.logo) logoDisplay[p.slug] = shown[0].src;
     const tile = (img, d, cls = '') => `
         <figure class="cs-asset cs-asset--${d.plate}${cls}">
           <img src="${d.src}" alt="${label(img)}" width="${d.width}" height="${d.height}" loading="lazy">
@@ -423,6 +425,7 @@ async function generateCaseStudies() {
     fs.writeFileSync(path.join(slugDir, 'index.html'), html, 'utf-8');
   }
 
+  fs.writeFileSync(path.join(ROOT_DIR, 'src/data/logo-display.json'), JSON.stringify(logoDisplay, null, 2));
   console.log(`✅ Generated ${projects.length} case study pages in /work/<slug>/index.html`);
 }
 

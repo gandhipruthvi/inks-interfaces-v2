@@ -191,24 +191,25 @@
 
     <div class="pattern-band pattern-band--drift" aria-hidden="true"></div>
 
-    <!-- 4-act roadmap: a road with a coral marker driving it on a loop -->
+    <!-- 4-act roadmap: a car drives a winding road and stops at each act -->
     <section class="roadmap-section" aria-label="Studio Process">
       <div class="roadmap-head">
         <p class="mono-label" style="color: var(--coral);">// how we operate</p>
         <h2>the four-act roadmap.</h2>
         <p>Every project travels the same road, from a sharp strategic truth to a brand that is live everywhere.</p>
       </div>
-      <div class="road">
-        <svg class="road-svg" viewBox="0 0 1200 360" preserveAspectRatio="none" aria-hidden="true">
-          <path class="road-edge" d="M -20 250 C 150 250 170 110 330 110 S 520 270 640 250 S 860 90 980 110 S 1140 250 1240 230"/>
-          <path class="road-surface" d="M -20 250 C 150 250 170 110 330 110 S 520 270 640 250 S 860 90 980 110 S 1140 250 1240 230"/>
-          <path class="road-lane" d="M -20 250 C 150 250 170 110 330 110 S 520 270 640 250 S 860 90 980 110 S 1140 250 1240 230"/>
-          <path class="road-trail" d="M -20 250 C 150 250 170 110 330 110 S 520 270 640 250 S 860 90 980 110 S 1140 250 1240 230"/>
-        </svg>
-        <span class="road-car" aria-hidden="true"></span>
-        <div class="road-pins" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-      </div>
-      <div class="road-acts">
+      <!-- vertical road down the middle, acts alternate either side; the car stops at each act -->
+      <div class="road-map">
+        <div class="road" aria-hidden="true">
+          <svg class="road-svg" viewBox="0 0 200 1000" preserveAspectRatio="none">
+            <path class="road-edge" d="M 100 -10 C 175 90 25 160 100 250 S 175 410 100 500 S 25 660 100 750 S 175 910 100 1010"/>
+            <path class="road-surface" d="M 100 -10 C 175 90 25 160 100 250 S 175 410 100 500 S 25 660 100 750 S 175 910 100 1010"/>
+            <path class="road-lane" d="M 100 -10 C 175 90 25 160 100 250 S 175 410 100 500 S 25 660 100 750 S 175 910 100 1010"/>
+            <path class="road-trail" d="M 100 -10 C 175 90 25 160 100 250 S 175 410 100 500 S 25 660 100 750 S 175 910 100 1010"/>
+          </svg>
+          <span class="road-car"></span>
+          <div class="road-pins"><span></span><span></span><span></span><span></span></div>
+        </div>
         <article class="road-act" data-act="0">
           <span class="road-act-num">ACT 01</span>
           <h3>discover</h3>
