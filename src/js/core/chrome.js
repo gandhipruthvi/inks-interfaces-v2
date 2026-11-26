@@ -137,7 +137,8 @@ export function initFooter() {
         <div class="ft-col">
           <h3>follow</h3>
           <a href="https://www.instagram.com/inks.and.interfaces" target="_blank" rel="noopener">instagram</a>
-          <a href="https://www.linkedin.com/company/inksandinterfaces" target="_blank" rel="noopener">linkedin</a>
+          <a href="https://contra.com/shivani_rotliwala/work" target="_blank" rel="noopener">contra</a>
+          <a href="https://www.linkedin.com/company/inks-and-interfaces" target="_blank" rel="noopener">linkedin</a>
           <a href="https://x.com/Inks_Interfaces" target="_blank" rel="noopener">x / twitter</a>
           <a href="https://www.behance.net/shivanirotliwala" target="_blank" rel="noopener">behance</a>
         </div>
