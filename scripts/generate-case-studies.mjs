@@ -271,7 +271,7 @@ async function generateCaseStudies() {
 
       <!-- Cursor Spotlight Mask (§8.1 / Video 3) -->
       <div class="cs-spotlight-overlay" aria-hidden="true">
-        <img src="${p.logo || p.cover}" alt="">
+        <img src="${p.logo || p.cover}" alt="${escapeHtml(p.name)} logo">
       </div>
 
       <div class="cs-hero-content">
@@ -363,7 +363,7 @@ async function generateCaseStudies() {
         <button class="cs-lb-btn cs-lb-close" type="button" aria-label="Close">&times;</button>
         <button class="cs-lb-btn cs-lb-prev" type="button" aria-label="Previous image">&larr;</button>
         <figure class="cs-lb-figure">
-          <img class="cs-lb-img" alt="">
+          <img class="cs-lb-img" alt="${escapeHtml(p.name)} project image, enlarged">
           <figcaption class="mono-label"><span class="cs-lb-count"></span><span class="cs-lb-caption"></span></figcaption>
         </figure>
         <button class="cs-lb-btn cs-lb-next" type="button" aria-label="Next image">&rarr;</button>
