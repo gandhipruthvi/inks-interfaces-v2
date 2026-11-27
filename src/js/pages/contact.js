@@ -3,6 +3,7 @@ import '../../styles/base.css';
 import '../../styles/secondary.css';
 
 import { bootstrapApp } from '../main.js';
+import { track } from '../core/analytics.js';
 document.addEventListener('DOMContentLoaded', () => {
   bootstrapApp();
 
@@ -89,6 +90,8 @@ document.addEventListener('DOMContentLoaded', () => {
         errorEl.innerHTML = 'That did not go through. Try again, or email us at <a href="mailto:studio@inksandinterfaces.design">studio@inksandinterfaces.design</a>.';
         return;
       }
+      // Key conversion: mark it as a key event in GA4 (Admin → Events)
+      track('generate_lead', { budget: form.elements.budget?.value || '', need: form.elements.need?.value || '' });
 
       // Ink Drop Splash Animation
       let dropY = -20;

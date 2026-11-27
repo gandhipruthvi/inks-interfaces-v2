@@ -187,7 +187,7 @@ async function generateCaseStudies() {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>${escapeHtml(p.name)} — Inks &amp; Interfaces</title>
+  <title>${escapeHtml(p.name)} brand identity case study · inks &amp; interfaces</title>
   <meta name="description" content="${escapeHtml(p.solution || p.headline || p.name + ' case study by Inks & Interfaces.')}" />
   <link rel="canonical" href="https://inksandinterfaces.design/work/${p.slug}" />
   <link rel="icon" href="/brand/secondary-monogram.png" />
@@ -195,7 +195,8 @@ async function generateCaseStudies() {
   <!-- Open Graph -->
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="Inks &amp; Interfaces" />
-  <meta property="og:title" content="${escapeHtml(p.name)} — Inks &amp; Interfaces" />
+  <meta property="og:url" content="https://inksandinterfaces.design/work/${p.slug}" />
+  <meta property="og:title" content="${escapeHtml(p.name)} brand identity case study · inks &amp; interfaces" />
   <meta property="og:description" content="${escapeHtml(p.solution || p.name + ' case study')}" />
   <meta property="og:image" content="https://inksandinterfaces.design${p.cover}" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -211,20 +212,31 @@ async function generateCaseStudies() {
 
   <!-- JSON-LD CreativeWork -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "CreativeWork",
-    "name": "${escapeHtml(p.name)}",
-    "headline": "${escapeHtml(p.headline || p.name)}",
-    "creator": {
-      "@type": "Organization",
-      "name": "Inks & Interfaces",
-      "url": "https://inksandinterfaces.design"
-    },
-    "image": "https://inksandinterfaces.design${p.cover}",
-    "dateCreated": "${p.year}",
-    "genre": "${escapeHtml(scopes(p))}"
-  }
+  ${JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'CreativeWork',
+    name: `${decode(p.name)} brand identity`,
+    headline: decode(p.headline || p.name),
+    description: decode(p.solution || p.headline || ''),
+    url: `https://inksandinterfaces.design/work/${p.slug}`,
+    creator: { '@type': 'Organization', '@id': 'https://inksandinterfaces.design/#org', name: 'Inks & Interfaces', url: 'https://inksandinterfaces.design/' },
+    image: `https://inksandinterfaces.design${p.cover}`,
+    dateCreated: String(p.year),
+    ...(p.isConcept ? {} : { locationCreated: { '@type': 'Place', name: p.location } }),
+    keywords: [...(p.services || []), ...(p.industry || [])].join(', '),
+    genre: decode(scopes(p))
+  }).replace(/</g, '\\u003c')}
+  </script>
+  <script type="application/ld+json">
+  ${JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://inksandinterfaces.design/' },
+      { '@type': 'ListItem', position: 2, name: 'Work', item: 'https://inksandinterfaces.design/work' },
+      { '@type': 'ListItem', position: 3, name: decode(p.name), item: `https://inksandinterfaces.design/work/${p.slug}` }
+    ]
+  })}
   </script>
 </head>
 <body>

@@ -7,10 +7,12 @@ import { initNav } from './core/nav.js';
 import { initReveals } from './core/reveal.js';
 import { initMagnetic } from './core/magnetic.js';
 import { initLoader, initFooter } from './core/chrome.js';
+import { initAnalytics } from './core/analytics.js';
 
 // Every page script calls this once. It used to also auto-run here, which
 // started two Lenis loops per page and made scrolling judder.
 export function bootstrapApp() {
+  initAnalytics();
   initLoader();
   initFooter();
   const lenis = initScroll();

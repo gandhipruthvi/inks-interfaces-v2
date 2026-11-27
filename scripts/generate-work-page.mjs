@@ -59,8 +59,14 @@ function generateWorkHtml() {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>work — inks &amp; interfaces</title>
-  <meta name="description" content="All ${projects.length} brand identities, rebrands and digital products designed by inks &amp; interfaces." />
+  <title>branding &amp; logo design portfolio · inks &amp; interfaces</title>
+  <meta name="description" content="${projects.length} brand identity, logo design and rebranding case studies for founders in the US, UK, Europe, Singapore, Dubai, Australia and India." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="inks &amp; interfaces" />
+  <meta property="og:url" content="https://inksandinterfaces.design/work" />
+  <meta property="og:title" content="branding &amp; logo design portfolio · inks &amp; interfaces" />
+  <meta property="og:image" content="https://inksandinterfaces.design/assets/projects/azonix/azonix-c2-m7-macbook.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="canonical" href="https://inksandinterfaces.design/work" />
   <link rel="icon" href="/brand/secondary-monogram.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
